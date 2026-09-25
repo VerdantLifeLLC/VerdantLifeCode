@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Left or Right? Political Quiz</title>
+  <meta name="description" content="Answer 10 questions to find out if you're liberal or conservative, then 5 more to see if you're a Democrat or Republican. Share your results!" />
+
+  <!-- Social media link previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Left or Right? Take the Political Quiz" />
+  <meta property="og:description" content="Liberal or conservative? Democrat or Republican? 15 quick questions to find out where you stand." />
+  <meta property="og:image" content="og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Left or Right? Take the Political Quiz" />
+  <meta name="twitter:description" content="Liberal or conservative? Democrat or Republican? 15 quick questions to find out where you stand." />
+  <meta name="theme-color" content="#1e293b" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗳️</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Start screen -->
+    <section id="screen-start" class="screen active" aria-labelledby="start-title">
+      <div class="hero-badge" aria-hidden="true"><span class="blue">L</span><span class="red">R</span></div>
+      <h1 id="start-title">Left or Right?</h1>
+      <p class="lead">Answer <strong>10 questions</strong> to find out whether you're <span class="text-blue">liberal</span> or <span class="text-red">conservative</span>. Then answer <strong>5 more</strong> to see if you're a <span class="text-blue">Democrat</span> or <span class="text-red">Republican</span>.</p>
+      <ul class="facts">
+        <li>⏱️ About 3 minutes</li>
+        <li>🎲 Questions are randomized every time</li>
+        <li>📣 Share your result on social media</li>
+      </ul>
+      <button id="btn-start" class="btn btn-primary">Start the quiz</button>
+      <p class="fine-print">For entertainment only. Your answers never leave your device.</p>
+    </section>
+
+    <!-- Question screen (used for both rounds) -->
+    <section id="screen-quiz" class="screen" aria-live="polite">
+      <div class="quiz-header">
+        <span id="round-label" class="round-label">Part 1 of 2 · Ideology</span>
+        <span id="progress-text" class="progress-text">1 / 10</span>
+      </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <h2 id="question-text" class="question"></h2>
+      <div id="answers" class="answers"></div>
+      <div class="quiz-footer">
+        <button id="btn-back" class="btn btn-ghost">← Back</button>
+        <span class="hint">Tip: press 1–4 to answer</span>
+      </div>
+    </section>
+
+    <!-- Between rounds: ideology result -->
+    <section id="screen-halftime" class="screen" aria-labelledby="halftime-title">
+      <p class="eyebrow">Part 1 complete</p>
+      <h2 id="halftime-title">You are…</h2>
+      <div id="halftime-label" class="result-label"></div>
+      <div id="halftime-meter"></div>
+      <p class="lead">Now for <strong>5 more questions</strong> to find out whether you're a Democrat or a Republican.</p>
+      <button id="btn-continue" class="btn btn-primary">Continue to Part 2</button>
+    </section>
+
+    <!-- Final result -->
+    <section id="screen-result" class="screen" aria-labelledby="result-title">
+      <p id="result-eyebrow" class="eyebrow">Your results</p>
+      <h2 id="result-title" class="sr-only">Your results</h2>
+
+      <div class="result-card">
+        <div class="result-row">
+          <span class="result-kicker">Ideology</span>
+          <div id="result-ideology" class="result-label"></div>
+          <div id="meter-ideology"></div>
+        </div>
+        <div class="result-row">
+          <span class="result-kicker">Party</span>
+          <div id="result-party" class="result-label"></div>
+          <div id="meter-party"></div>
+        </div>
+        <p id="result-blurb" class="blurb"></p>
+      </div>
+
+      <div id="share-block">
+        <h3 class="share-title">Share your result</h3>
+        <div class="share-grid">
+          <button class="share-btn" data-share="native" id="btn-native-share" hidden>📤 Share…</button>
+          <a class="share-btn x" data-share="x" target="_blank" rel="noopener">𝕏 Post</a>
+          <a class="share-btn facebook" data-share="facebook" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn threads" data-share="threads" target="_blank" rel="noopener">Threads</a>
+          <a class="share-btn bluesky" data-share="bluesky" target="_blank" rel="noopener">Bluesky</a>
+          <a class="share-btn reddit" data-share="reddit" target="_blank" rel="noopener">Reddit</a>
+          <a class="share-btn linkedin" data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="share-btn whatsapp" data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="share-btn email" data-share="email">✉️ Email</a>
+          <button class="share-btn" data-share="copy" id="btn-copy">🔗 Copy link</button>
+          <button class="share-btn" data-share="image" id="btn-image">🖼️ Save image</button>
+        </div>
+        <p class="fine-print">Posting to Instagram or TikTok? Tap <strong>Save image</strong> and upload it to your story.</p>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-retake" class="btn btn-primary">Take the quiz again</button>
+      </div>
+      <p class="fine-print">For entertainment only — real political views are more nuanced than any quiz.</p>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
