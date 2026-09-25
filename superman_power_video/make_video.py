@@ -26,7 +26,8 @@ SR = 44100
 G = 4  # glow layer downscale factor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, "hero_origin.mp4")
+FACE_PHOTO = os.path.join(HERE, "face_photo.jpg")  # optional: puts your face on the hero
+OUT = os.path.join(HERE, "hero_origin_starring_you.mp4" if os.path.exists(FACE_PHOTO) else "hero_origin.mp4")
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
@@ -161,6 +162,45 @@ _yy, _xx = np.mgrid[0:H, 0:W]
 _vr = np.sqrt(((_xx - W / 2) / (W / 2)) ** 2 + ((_yy - H / 2) / (H / 2)) ** 2)
 VIGNETTE = Image.fromarray((np.clip(1.08 - 0.38 * _vr ** 2, 0, 1)[..., None].repeat(3, 2) * 255).astype(np.uint8))
 
+def build_face():
+    """Cut the face out of the photo (drop the light, unsaturated background and
+    fade the edges with an ellipse). Returns (RGBA sprite, eye positions)."""
+    if not os.path.exists(FACE_PHOTO):
+        return None, None
+    im = Image.open(FACE_PHOTO).convert("RGB")
+    a = np.asarray(im).astype(int)
+    h, w = a.shape[:2]
+    yy, xx = np.mgrid[0:h, 0:w]
+    cx, cy, rx, ry = w * 0.494, h * 0.42, w * 0.347, h * 0.40
+    ell = ((xx - cx) / rx) ** 2 + ((yy - cy) / ry) ** 2
+    bg = (a.min(2) > 125) & ((a.max(2) - a.min(2)) < 32)
+    m = Image.fromarray(((ell < 1) & ~bg).astype(np.uint8) * 255)
+    m = m.filter(ImageFilter.MedianFilter(9)).filter(ImageFilter.GaussianBlur(3))
+    m = Image.fromarray((np.asarray(m) * np.clip((1 - ell) * 6, 0, 1)).astype(np.uint8))
+    im.putalpha(m)
+    box = m.getbbox()
+    eyes = [(w * 0.362 - box[0], h * 0.3975 - box[1]), (w * 0.621 - box[0], h * 0.3975 - box[1])]
+    return im.crop(box), eyes
+
+
+FACE, FACE_EYES = build_face()
+
+
+def scaled_face(height, light=1.0, tint=None):
+    f = FACE.resize((max(1, int(FACE.width * height / FACE.height)), int(height)), Image.LANCZOS)
+    rgb, alpha = f.convert("RGB"), f.getchannel("A")
+    if light != 1.0:
+        rgb = rgb.point(lambda v: int(v * light))
+    if tint:
+        rgb = ImageChops.multiply(rgb, Image.new("RGB", rgb.size, tint))
+    rgb.putalpha(alpha)
+    return rgb
+
+
+if FACE is not None:
+    SMALL_FACE = {"civ": scaled_face(FIG_H / 8 * 1.5, 0.75, (200, 205, 255)), "hero": scaled_face(FIG_H / 8 * 1.5)}
+
+
 FONTS = {}
 
 
@@ -191,7 +231,7 @@ def blend_pose(a, b, k):
                   for j in range(2)) for i in range(2)]
 
 
-def draw_hero(d, cx, fy, h, pal, pose, t, s=1.0, mono=None, cape_len=1.0):
+def draw_hero(d, cx, fy, h, pal, pose, t, s=1.0, mono=None, cape_len=1.0, img=None):
     """Draw the figure with feet at (cx, fy). s scales coordinates (for glow layer);
     mono paints everything a single colour (for halos)."""
     u = h / 8.0 * s
@@ -238,6 +278,10 @@ def draw_hero(d, cx, fy, h, pal, pose, t, s=1.0, mono=None, cape_len=1.0):
     d.line([P(0, -6.7), P(0, -7.0)], fill=col(pal["skin"]), width=int(lw * 0.9))
     hx, hy = P(0, -7.55)
     r = 0.55 * u
+    if img is not None and FACE is not None and not mono:
+        f = SMALL_FACE["hero" if pal is HERO else "civ"]
+        img.paste(f, (int(hx - f.width / 2), int(fy - 8.35 * u)), f)
+        return
     d.ellipse([hx - r * 0.85, hy - r, hx + r * 0.85, hy + r], fill=col(pal["skin"]))
     d.chord([hx - r * 0.9, hy - r * 1.08, hx + r * 0.9, hy + r * 0.5], 180, 360, fill=col(pal["hair"]))
 
@@ -293,6 +337,91 @@ def text_center(frame, txt, y, size, alpha, bold=True, color=(255, 255, 255), bo
     d.text(((W - w) / 2 + 2, y + 2), txt, font=f, fill=(0, 0, 0, int(a * 0.8)))
     d.text(((W - w) / 2, y), txt, font=f, fill=color + (a,))
     return Image.alpha_composite(frame.convert("RGBA"), layer).convert("RGB")
+
+
+# (start, end, mode, centre, diameter) close-up shots of the hero's face
+PORTRAITS = [
+    (43.0, 49.8, "awaken", (1070, 250), 300),
+    (63.3, 69.8, "hero", (1070, 250), 300),
+    (73.3, 77.4, "eyes", (1070, 250), 300),
+    (108.5, 125, "final", (1040, 410), 330),
+]
+
+
+def portrait(frame, t, t0, t1, mode, centre, size):
+    a = fade_window(t, t0, t1, 0.7)
+    if a <= 0:
+        return frame
+    S = size
+    pan = Image.new("RGB", (S, S))
+    top, bot = {"awaken": ((10, 30, 70), (40, 110, 170)), "hero": ((30, 60, 150), (120, 170, 255)),
+                "eyes": ((40, 5, 10), (140, 30, 30)), "final": ((255, 190, 110), (120, 150, 220))}[mode]
+    k = np.linspace(0, 1, S)[:, None, None]
+    pan = Image.fromarray(np.broadcast_to(np.array(top) * (1 - k) + np.array(bot) * k, (S, S, 3)).astype(np.uint8))
+    d = ImageDraw.Draw(pan)
+    zoom = 1 + 0.06 * clamp((t - t0) / (t1 - t0))
+    fh = S * 0.76 * zoom
+    fw = FACE.width * fh / FACE.height
+    fx, fy0 = (S - fw) / 2, S * 0.05 - (zoom - 1) * S * 0.3
+    # neck + shoulders
+    d.rectangle([S * 0.4, fy0 + fh * 0.85, S * 0.6, S], fill=(170, 116, 86))
+    civ = mode == "awaken"
+    body = (62, 68, 86) if civ else (28, 72, 205)
+    if not civ:
+        d.polygon([(0, S * 0.86), (S * 0.12, S * 0.8), (S * 0.88, S * 0.8), (S, S * 0.86), (S, S), (0, S)], fill=(205, 22, 36))
+    d.polygon([(S * 0.1, S), (S * 0.18, S * 0.83), (S * 0.36, S * 0.79), (S * 0.5, S * 0.84),
+               (S * 0.64, S * 0.79), (S * 0.82, S * 0.83), (S * 0.9, S)], fill=body)
+    if civ:
+        d.chord([S * 0.36, S * 0.72, S * 0.64, S * 0.88], 0, 180, fill=(235, 235, 235))
+    else:
+        d.polygon([(S * 0.5, S * 0.88), (S * 0.58, S * 0.95), (S * 0.5, S * 1.02), (S * 0.42, S * 0.95)], fill=(250, 205, 40))
+    light, tint = 1.0, None
+    if mode == "awaken":
+        pulse = 0.5 + 0.5 * math.sin(t * 5)
+        light, tint = 0.9, lerp_col((200, 215, 255), (150, 225, 255), pulse)
+    elif mode == "eyes":
+        light, tint = 0.85, (255, 200, 190)
+    elif mode == "final":
+        tint = (255, 240, 225)
+    f = scaled_face(fh, light, tint)
+    pan.paste(f, (int(fx), int(fy0)), f)
+    # glow effects on the panel
+    g = Image.new("RGB", (S, S))
+    gd = ImageDraw.Draw(g)
+    sc = fh / FACE.height
+    if mode == "eyes":
+        e = prog(t, t0 + 0.3, t0 + 1.8) * (0.8 + 0.2 * math.sin(t * 20))
+        for ex, ey in FACE_EYES:
+            x, y = fx + ex * sc, fy0 + ey * sc
+            gd.ellipse([x - 26, y - 14, x + 26, y + 14], fill=lerp_col((0, 0, 0), (255, 60, 30), e))
+            gd.ellipse([x - 8, y - 6, x + 8, y + 6], fill=lerp_col((0, 0, 0), (255, 230, 200), e))
+    if mode == "awaken":
+        for j in range(24):
+            ph = (t * 0.7 + j / 24) % 1
+            ang = j * 2.4 + t * 2
+            rr = (1 - ph) * S * 0.55
+            x, y = S / 2 + math.cos(ang) * rr, S * 0.5 + math.sin(ang) * rr
+            c = (120, 230, 255) if j % 3 else (255, 215, 90)
+            gd.ellipse([x - 4, y - 4, x + 4, y + 4], fill=c)
+    pan = ImageChops.add(pan, g.filter(ImageFilter.GaussianBlur(5)))
+    pan = ImageChops.add(pan, g)
+    # circular mask, pop-in scale, ring
+    scale = lerp(0.85, 1.0, ease((t - t0) / 0.5))
+    D = int(S * scale)
+    pan = pan.resize((D, D), Image.BILINEAR)
+    mask = Image.new("L", (D * 2, D * 2), 0)
+    ImageDraw.Draw(mask).ellipse([0, 0, D * 2 - 1, D * 2 - 1], fill=int(255 * a))
+    mask = mask.resize((D, D), Image.LANCZOS)
+    ring = {"awaken": (130, 220, 255), "hero": (250, 205, 40), "eyes": (255, 70, 50), "final": (250, 205, 40)}[mode]
+    x0, y0 = int(centre[0] - D / 2), int(centre[1] - D / 2)
+    glow = Image.new("RGB", (W // G, H // G))
+    ImageDraw.Draw(glow).ellipse([(x0 - 14) / G, (y0 - 14) / G, (x0 + D + 14) / G, (y0 + D + 14) / G],
+                                 fill=lerp_col((0, 0, 0), tuple(c // 2 for c in ring), a))
+    frame = ImageChops.add(frame, glow.filter(ImageFilter.GaussianBlur(4)).resize((W, H), Image.BILINEAR))
+    frame.paste(pan, (x0, y0), mask)
+    ImageDraw.Draw(frame).ellipse([x0 - 3, y0 - 3, x0 + D + 3, y0 + D + 3],
+                                  outline=lerp_col((0, 0, 0), ring, a), width=5)
+    return frame
 
 
 def paste_cloud(frame, idx, x, y, scale, alpha, tint=(255, 255, 255)):
@@ -454,7 +583,7 @@ def render(i):
 
     # ---- the hero
     pal = HERO if suited else CIVILIAN
-    draw_hero(d, fig_x, fig_fy, FIG_H, pal, pose, t, cape_len=1.0 + 0.35 * lift * (1 - hover))
+    draw_hero(d, fig_x, fig_fy, FIG_H, pal, pose, t, cape_len=1.0 + 0.35 * lift * (1 - hover), img=frame)
     if suited:
         aura = 0.35 + 0.65 * (1 - prog(t, T_TRANSFORM, T_TRANSFORM + 6))
         if 74 <= t < 80:
@@ -564,6 +693,11 @@ def render(i):
         shake = max(shake, 10 * (1 - (t - T_LIFTOFF)))
     if shake > 0:
         frame = ImageChops.offset(frame, int(rng.normal(0, shake)), int(rng.normal(0, shake)))
+
+    # ---- close-ups of the hero's face
+    if FACE is not None:
+        for p in PORTRAITS:
+            frame = portrait(frame, t, *p)
 
     # ---- titles & captions
     if t < 8.5:
