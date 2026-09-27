@@ -210,7 +210,7 @@
         partyRaw * (1 - IDEOLOGY_WEIGHT_IN_PARTY) + state.ideologyScore * IDEOLOGY_WEIGHT_IN_PARTY
       );
       showResults(state.ideologyScore, state.partyScore, false);
-      history.replaceState(null, "", shareUrl());
+      try { history.replaceState(null, "", shareUrl()); } catch (e) { /* desktop app: different origin */ }
     }
   }
 
@@ -236,7 +236,7 @@
   }
 
   function baseUrl() {
-    return location.origin + location.pathname;
+    return window.QUIZ_PUBLIC_URL || location.origin + location.pathname;
   }
 
   function shareUrl() {
@@ -432,7 +432,7 @@
   }
 
   function reset() {
-    history.replaceState(null, "", baseUrl());
+    try { history.replaceState(null, "", baseUrl()); } catch (e) { /* desktop app: different origin */ }
     startRound("ideology");
   }
 

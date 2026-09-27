@@ -38,6 +38,19 @@ You can also open `index.html` directly in a browser. Share links need the app t
 
 Netlify, Vercel, and Cloudflare Pages also work: drag and drop the `political-quiz` folder.
 
+## Desktop app (Windows .exe)
+
+The `desktop/` folder packages the quiz as a small desktop app (about 3 MB) using [Neutralinojs](https://neutralino.js.org/). You need Node.js to build it:
+
+```bash
+./desktop/build.sh
+# Windows: desktop/dist/LeftOrRightQuiz/LeftOrRightQuiz-win_x64.exe
+```
+
+- The .exe needs Windows 10 or 11. It uses the WebView2 engine built into Windows.
+- The .exe isn't code-signed, so Windows shows an "unknown publisher" warning the first time it runs.
+- In the desktop app, share links open in the default browser and point to `QUIZ_PUBLIC_URL` in `desktop/desktop.js`. Change that if the quiz is hosted somewhere other than GitHub Pages.
+
 ## How scoring works
 
 - Each answer has a score from **-2 to +2**.
