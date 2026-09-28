@@ -112,3 +112,34 @@ PART FOUR: THE WAYSTONE
 - Kote: three silences noticed first winter. Bard sang Tariniel in yr 1: Kote broke a glass, corrected verse 3 tempo & the last line ("a beginning"). Paid Jake's taxes (yr 2). Bast's heartbreak over Emberlee (yr 3). Scrael came yr 5 (Carter's horse Nelly); Kote killed 6 with iron pokers; brief return of color. Yr 6 spring: SKIN DANCER in a traveler killed SHEP; Kote's naming-command failed ("there's nothing there"); AARON killed it with an iron firedog. Bast began plotting (talking at night to someone not there).
 - Autumn yr ~7: Kote saved CHRONICLER from 5 scrael in a gully west of town (arm cut elbow→wrist). Deserters beat Kote (he let them — wanted to feel/rest); Bast stopped them. Telling = naming; Kote felt the fire growing from Day 1.
 - ch 099 ends: "There's one more part. And it hasn't happened yet."
+
+## Expansion pass 2 — continuity notes (inserted chapters)
+- 001a Anker: a stranger with a pale mark on the back of his right hand asked about Kvothe the autumn he left; ring of frost on the step (one of the Seven).
+- 002b Hemme's debate ("masters would never abuse their power") foreshadows the 5–3 vote.
+- 004b Kilvin's ledger: 131 blue-candle dates in 20 yrs; ~40 with no known event; Chandrian hunt stories; a visitor signing "Brand" (late spring) coincided with candle blue dawn–noon.
+- 011a/012a snow: Auri — the Valaritas door "listens", lullabies calm it; Elodin's naming class (Fela, Uresta, Inyssa, Kvothe; Brey dropped) — "snow forgets, or pretends to"; "When the time comes, don't [cover it over]" (recanted in 090a).
+- 016c Chronicler's scabbed knuckles: punched a Tehlin priest in Rannish burning a schoolmaster's book; saved 12 of 300 pages (singer who sang to the door); gives them to Kvothe on the last morning. Kvothe left him salve signed "—K."
+- 021a Lorren voted to expel to get Kvothe away from Bredon ("Beredon"), who hid 9 Amyr-cipher books in a secret room; Lorren gave the sword to Kilvin.
+- 024a highwayman Ferrin Vell (Beech Wood) finishes Kvothe's story; "Gone to be what we meant to be. Thank the storyteller."
+- 026a frame tak: Kote plays a "beautiful game"; pattern = circle with seven spokes (doors).
+- 027b Stapes: Maer's elder brother Aurel drowned in the mill race; "hold on".  027c Meluan gives Moss, a one-eared felt rabbit Netalia made; Kvothe later gives Moss to Lark (same spring morning as the lock of hair).
+- 031a Orla (Mill Race landlady) finds Denna's knot-letter: "He will kill you if I do not take it… Do not follow"; last knot = the "holding" knot (hand holding) — same knot as the tinker's.
+- 049b Wil secretly loves Fela; never told; Kvothe promised silence.  050b Auri visits Merra's window: owl feather (kept in lute case), honey, a brass key that opens nothing ("still a key"); Kote keeps key in apron pocket.
+- 053b frame: why Kvothe forgives Denna (she learned Bredon's knots to undo them; carried the hair cord in her sleeve a year).
+- 056a Lantern-bearer child in the Fae keeps Kvothe's memory of his mother's face; he refuses to trade the Felurian song.
+- 058b Kvothe teaches Bast to read; graffiti in Myr Tariniel "Here I sat and wept"; Bast keeps journals of Kote's 7 years (4th/5th book).
+- 060a Gate-warden (walnut-faced) — riddle: the true name of Fela's stone; it could not answer.
+- 061a Piper frozen in the Stormwal ice; his cracked bone flute made whole after Kvothe plays.
+- 064c Lyra's house; her lamp in the window; Selitos: "make a light… because you hope."
+- 065a Bast's mother's humming "turn"; shepherd Aled; Bast hums it in the Waystone kitchen for 7 years.
+- 066b frame: Bast at the waystone (hears it as a waterfall), confesses the soldiers to it; Chronicler sent to fetch him (Chronicler is a little bit of a namer).
+- 067a Tempi's first-contract story (freed slave children, broke contract); promise to "sit with you after"; later sat 3 days silent with grey Kvothe.  067aa Tessit teaches "how to be no one" (walk like Brin, play badly); Bast glamours the color next morning.
+- 069a candle burns blue and LEANS toward the woods (Cinder close).  070a Netalia's letter ("Mel… —Tally"), found in Meluan's scorched writing desk; asks for a small name for any daughter; letter ends under the Lackless box in the chest.  070b regulars' evening: levy rumour, a new southern song about the Kingkiller closing a door; Old Cob: "Not even the running."
+- 078a Bast's account of the name leaving (hair darkened briefly; eyes "went grey").  080b the mouse in the Tower; tapper: "A man who feeds a mouse is not gone."  080c Bast's tale "The Girl Who Tied the Moon".
+- 082b the Penitent King visits the cell, gives back Bredon's white corner tak stone (Kote has kept it in his apron pocket 7 yrs).
+- 086b Nell tells Kvothe his own story nightly (with dragons).  088a farm girl Wren; fiddle bow of Uncle Fen kept upstairs with the candle.
+- 089a Devi's ledger page "Paid in full. —D." placed in the chest; 105 now lists it.  090a Elodin recants: snow keeps seeds alive; "Stories are very good at carrying heavy things."
+- 091a Kilvin teaches nails; the Waystone is held together by Kilvin's nails.  093a midwinter Ruh play "The Tinker and the Nine Doors"; Kellen (old Hallow's grandson) runs it; Mirra plays the 8th door; old Brann (walnut-brown tinker) = the tinker who later brings the knot.
+- 094a Tinuë fair puppet show; Kote's near-smile.  096a Father Anselm (priest) gives Kote a wooden Tehlin wheel; dies yr 5; new young priest from Rannish.
+- 097b Rike (Jessom's boy) learns to read; repays 4 jots.  097c Old Cob saw Cinder at the Hollis farm near Hallowfell ~20 yrs ago and ran.  097d Graham's barn: Kote catches grandson Tobin; "K." carved on post.  097e yearly attempt to open the chest on the Nighting; Denna's knot whispers "Not like this. Not alone. Wait."  098a Aaron forges 53 iron bars for Newarre.
+- 105 addition: afternoon after the chest opens, Kvothe annotates Chronicler's pages (explains later knowledge in the narration).

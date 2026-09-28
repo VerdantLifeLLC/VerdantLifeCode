@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble chapters/*.md into a Word document (and PDF via LibreOffice).
+"""Assemble chapters/*.md into a Word document (and a PDF via ReportLab).
 
 Chapter file conventions:
   - Optional first line "@@PART <title>" starts a new part (own page).
@@ -11,7 +11,6 @@ Chapter file conventions:
 import glob
 import os
 import re
-import subprocess
 import sys
 
 from docx import Document
@@ -182,11 +181,111 @@ def main():
     print(f"chapters numbered: {chapter_no}; files: {len(files)}; words: {words}")
     print("wrote", docx_path)
     if "--pdf" in sys.argv:
-        subprocess.run(
-            ["soffice", "--headless", "--convert-to", "pdf", "--outdir", OUT_DIR, docx_path],
-            check=True,
-        )
-        print("wrote", os.path.join(OUT_DIR, "The_Doors_of_Stone.pdf"))
+        pdf_path = os.path.join(OUT_DIR, "The_Doors_of_Stone.pdf")
+        build_pdf(files, pdf_path)
+        print("wrote", pdf_path)
+
+def build_pdf(files, pdf_path):
+    from xml.sax.saxutils import escape
+
+    from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
+    from reportlab.lib.styles import ParagraphStyle
+    from reportlab.lib.units import inch
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+    from reportlab.platypus import (Flowable, PageBreak, Paragraph,
+                                    SimpleDocTemplate, Spacer)
+
+    font_dir = "/usr/share/fonts/truetype/liberation"
+    for name, fname in (("Serif", "LiberationSerif-Regular.ttf"),
+                        ("Serif-Bold", "LiberationSerif-Bold.ttf"),
+                        ("Serif-Italic", "LiberationSerif-Italic.ttf"),
+                        ("Serif-BoldItalic", "LiberationSerif-BoldItalic.ttf")):
+        pdfmetrics.registerFont(TTFont(name, os.path.join(font_dir, fname)))
+    pdfmetrics.registerFontFamily("Serif", normal="Serif", bold="Serif-Bold",
+                                  italic="Serif-Italic", boldItalic="Serif-BoldItalic")
+
+    body = ParagraphStyle("body", fontName="Serif", fontSize=11, leading=15,
+                          alignment=TA_JUSTIFY, firstLineIndent=0.3 * inch)
+    body_first = ParagraphStyle("body_first", parent=body, firstLineIndent=0)
+    center = ParagraphStyle("center", parent=body, alignment=TA_CENTER, firstLineIndent=0)
+    chap_no = ParagraphStyle("chap_no", parent=center, fontSize=12, leading=16)
+    chap_title = ParagraphStyle("chap_title", parent=center, fontName="Serif-Bold",
+                                fontSize=18, leading=24)
+    part_style = ParagraphStyle("part", parent=center, fontName="Serif-Bold",
+                                fontSize=22, leading=30)
+    title_style = ParagraphStyle("title", parent=center, fontName="Serif-Bold",
+                                 fontSize=28, leading=36)
+    sub_style = ParagraphStyle("sub", parent=center, fontName="Serif-Italic",
+                               fontSize=13, leading=18)
+
+    def markup(text):
+        text = escape(text)
+        return re.sub(r"\*([^*]+)\*", r"<i>\1</i>", text)
+
+    class Outline(Flowable):
+        def __init__(self, title, key, level=0):
+            super().__init__()
+            self.title, self.key, self.level = title, key, level
+            self.width = self.height = 0
+
+        def draw(self):
+            self.canv.bookmarkPage(self.key)
+            self.canv.addOutlineEntry(self.title, self.key, level=self.level)
+
+    def footer(canvas, doc):
+        if doc.page > 2:
+            canvas.saveState()
+            canvas.setFont("Serif", 9)
+            canvas.drawCentredString(3 * inch, 0.45 * inch, str(doc.page))
+            canvas.restoreState()
+
+    story = [Spacer(1, 2.2 * inch), Paragraph(TITLE.upper(), title_style),
+             Spacer(1, 0.2 * inch), Paragraph(SUBTITLE, sub_style),
+             Spacer(1, 0.6 * inch),
+             Paragraph("A continuation in the spirit of Patrick Rothfuss", sub_style),
+             PageBreak(), Spacer(1, 1.2 * inch),
+             Paragraph("<b>A Note</b>", center), Spacer(1, 0.2 * inch),
+             Paragraph(markup(NOTE), center)]
+
+    chapter_no = 0
+    part_level_open = False
+    for i, path in enumerate(files):
+        part, title, paragraphs = parse_chapter(path)
+        if part:
+            story += [PageBreak(), Outline(part, "part%d" % i, 0),
+                      Spacer(1, 2.8 * inch), Paragraph(markup(part), part_style)]
+            part_level_open = True
+        story.append(PageBreak())
+        upper = title.upper()
+        numbered = not (upper.startswith("INTERLUDE") or upper.startswith("PROLOGUE")
+                        or upper.startswith("EPILOGUE"))
+        level = 1 if part_level_open else 0
+        if numbered:
+            chapter_no += 1
+            label = "Chapter " + number_to_words(chapter_no)
+            story += [Outline("%s: %s" % (label, title), "ch%d" % i, level),
+                      Spacer(1, 1.1 * inch), Paragraph(label, chap_no), Spacer(1, 6)]
+        else:
+            story += [Outline(title, "ch%d" % i, level), Spacer(1, 1.2 * inch)]
+        story += [Paragraph(markup(title), chap_title), Spacer(1, 0.4 * inch)]
+        first = True
+        for para in paragraphs:
+            if para == "---":
+                story += [Spacer(1, 6), Paragraph("*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*", center),
+                          Spacer(1, 6)]
+                first = True
+                continue
+            style = body_first if first else body
+            first = False
+            story.append(Paragraph(markup(para.replace("\n", " ")), style))
+
+    doc = SimpleDocTemplate(pdf_path, pagesize=(6 * inch, 9 * inch),
+                            leftMargin=0.75 * inch, rightMargin=0.75 * inch,
+                            topMargin=0.75 * inch, bottomMargin=0.8 * inch,
+                            title=TITLE, author="Unofficial fan continuation",
+                            subject=SUBTITLE)
+    doc.build(story, onFirstPage=footer, onLaterPages=footer)
 
 
 if __name__ == "__main__":
