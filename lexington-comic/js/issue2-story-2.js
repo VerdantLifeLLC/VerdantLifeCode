@@ -688,4 +688,84 @@
       return s;
     },
   });
+
+  // ---------- extra pages (bring the book to KDP's 24-page paperback minimum) ----------
+  const header = (W, title, sub, color) =>
+    `<rect width="${W}" height="150" fill="${color}"/><rect width="${W}" height="150" fill="url(#dotsWhite)"/>` +
+    line(0, 150, W, 150, { sw: 5 }) +
+    text(W / 2 + 5, 86, title, { size: 62, font: "title", fill: INK, stroke: INK, sw: 9, ls: 2 }) +
+    text(W / 2, 81, title, { size: 62, font: "title", fill: "#ffd95e", stroke: INK, sw: 6, ls: 2 }) +
+    text(W / 2, 126, sub, { size: 22, fill: "#ffffff" });
+
+  page({
+    noNumber: true,
+    alt: "This comic belongs to: a name line, with Lexington, Jonathan and Big Tony waving, and the copyright notice.",
+    full(W, Hh) {
+      let s = `<rect width="${W}" height="${Hh}" fill="#fffaf0"/>`;
+      s += bubbles(W, Hh * 0.6, 31, 16, 22);
+      s += text(W / 2 + 5, 236, "THIS COMIC BELONGS TO", { size: 70, font: "title", fill: INK, stroke: INK, sw: 10, ls: 2 });
+      s += text(W / 2, 230, "THIS COMIC BELONGS TO", { size: 70, font: "title", fill: "#4fb3e8", stroke: INK, sw: 7, ls: 2 });
+      s += rect(140, 290, 720, 110, "#ffffff", { sw: 5, r: 14 }) + line(180, 370, 820, 370, { sw: 3, stroke: "#c9c3b5" });
+      s += frect(0, 900, W, 20, "#c9c3b5") + line(0, 900, W, 900, { sw: 3 });
+      s += jon({ x: 250, y: 900, s: 1.25, outfit: "crew", expr: "joy", pose: "wave" });
+      s += lexC({ x: 500, y: 905, s: 1.35, expr: "grin", pose: "thumbs" });
+      s += tonyC({ x: 760, y: 905, s: 1.2, f: -1, expr: "happy", pose: "wave" });
+      const notes = [
+        "Lexington, Issue #2: Down to Business",
+        "Story and art © 2026 Verdant Life LLC. All rights reserved.",
+        "No part of this book may be reproduced without written permission,",
+        "except short quotations in reviews.",
+        "",
+        "This is a work of fiction. Names, characters and events are imaginary.",
+        "Scripture is quoted from the King James Version of the Bible",
+        "and the Book of Mormon.",
+        "This book is not an official publication of",
+        "The Church of Jesus Christ of Latter-day Saints.",
+      ];
+      notes.forEach((t, i) => (s += text(W / 2, 1030 + i * 34, t, { size: 22, weight: i === 0 ? 700 : 400, fill: i === 0 ? INK : "#4a4658" })));
+      return s;
+    },
+  });
+  // the "belongs to" page goes right after the cover
+  C.STORY.splice(1, 0, C.STORY.pop());
+
+  page({
+    alt: "My Business Ideas: a notes page with prompts for brainstorming a business.",
+    full(W, Hh) {
+      let s = `<rect width="${W}" height="${Hh}" fill="#fffaf0"/>`;
+      s += header(W, "MY BUSINESS IDEAS", "Every business starts with one good idea. Write yours down.", "#e09a3e");
+      const prompts = ["Things I'm good at:", "Problems I see around me:", "People who might pay me to help:", "My best idea:"];
+      let y = 210;
+      prompts.forEach((p) => {
+        s += text(56, y, p, { size: 28, font: "title", anchor: "start", fill: "#c9473c", ls: 1 });
+        for (let i = 0; i < 4; i++) s += line(56, y + 44 + i * 44, W - 56, y + 44 + i * 44, { sw: 2, stroke: "#c9c3b5" });
+        y += 44 * 4 + 90;
+      });
+      s += jon({ x: 900, y: Hh - 30, s: 0.6, f: -1, outfit: "crew", expr: "think", pose: "think" });
+      return s;
+    },
+  });
+
+  page({
+    alt: "My Money Tracker: a ledger page with columns for date, job, money earned, tithing, savings and spending.",
+    full(W, Hh) {
+      let s = `<rect width="${W}" height="${Hh}" fill="#fffaf0"/>`;
+      s += header(W, "MY MONEY TRACKER", "Write down every job. Watch your hard work add up.", "#3f9b5a");
+      const cols = [["DATE", 120], ["JOB", 270], ["EARNED", 130], ["TITHING", 130], ["SAVE", 120], ["SPEND", 118]];
+      const x0 = 46,
+        y0 = 200,
+        rh = 46,
+        rows = 24;
+      let x = x0;
+      cols.forEach(([t, w], i) => {
+        s += rect(x, y0, w, 52, ["#4fb3e8", "#2a8f86", "#3f9b5a", "#f0b429", "#3f6fb5", "#e85d75"][i], { sw: 3 }) + text(x + w / 2, y0 + 36, t, { size: 22, font: "title", fill: "#ffffff", ls: 1 });
+        for (let r = 0; r < rows; r++) s += rect(x, y0 + 52 + r * rh, w, rh, r % 2 ? "#ffffff" : "#f3eedf", { sw: 1.6, stroke: "#c9c3b5" });
+        x += w;
+      });
+      s += rect(x0, y0, x - x0, 52 + rows * rh, "none", { sw: 3 });
+      s += text(x0, y0 + 52 + rows * rh + 46, "TOTAL SAVED: $ __________", { size: 30, font: "title", anchor: "start", fill: "#2a8f86", ls: 1 });
+      s += tonyC({ x: 900, y: Hh - 18, s: 0.55, f: -1, expr: "confident", pose: "holdBoth", hold: { c: H.clipboard } });
+      return s;
+    },
+  });
 })();

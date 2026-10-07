@@ -10,12 +10,12 @@ An illustrated comic book about Lexington, a brilliant 13-year-old who keeps mak
 
 ![Issue 2 cover](cover-issue-2.png)
 
-Lexington, his best friend Jonathan (from their ward) and Big Tony start the **Suds Brothers** car wash and learn the value of money and hard work: borrowing from Dad and paying him back, budgeting, marketing (never at church or on Sunday), honesty when they find cash in a customer's truck, redoing rushed work, tithing and fast offerings, service for the missionaries, and working out a fight between partners. The family is shown as members of The Church of Jesus Christ of Latter-day Saints, with Family Home Evening, passing the sacrament, the bishop, and scripture from the Bible and the Book of Mormon. It ends with "The Money Rules" and a "Start Your Own Business" worksheet.
+Lexington, his best friend Jonathan (from their ward) and Big Tony start the **Suds Brothers** car wash and learn the value of money and hard work: borrowing from Dad and paying him back, budgeting, marketing (never at church or on Sunday), honesty when they find cash in a customer's truck, redoing rushed work, tithing and fast offerings, service for the missionaries, and working out a fight between partners. The family is shown as members of The Church of Jesus Christ of Latter-day Saints, with Family Home Evening, passing the sacrament, the bishop, and scripture from the Bible and the Book of Mormon. It ends with "The Money Rules", a "Start Your Own Business" worksheet, a "My Business Ideas" notes page and a "My Money Tracker" ledger. Page 2 is a "This comic belongs to" page with the copyright notice.
 
 | | |
 |---|---|
 | Web page | `issue-2.html` |
-| PDF (21 pages) | `Lexington-Issue-2-Down-to-Business.pdf` |
+| PDF (24 pages) | `Lexington-Issue-2-Down-to-Business.pdf` |
 | Single file | `Lexington-Issue-2-Down-to-Business.html` |
 | Script | `js/issue2-world.js` (new cast, props, places), `js/issue2-story-1.js`, `js/issue2-story-2.js` |
 
@@ -40,6 +40,21 @@ Wraparound covers (back + spine + front) for a **6.75 × 10.25 in** paperback ar
 - The spine depends on the interior page count. If your interior PDF ends up with a different count, rebuild: `node tools/kdp-covers.cjs --book=issue2 --pages=24` (needs Playwright, plus `pypdf` to set the exact page size).
 
 The cover layout lives in `kdp-cover.html` and `js/kdp-cover.js`.
+
+## KDP paperback interiors and Kindle ebooks
+
+Also in `kdp/`, for each book:
+
+| File | What it is |
+|---|---|
+| `<book>-KDP-Paperback-Interior.pdf` | Paperback interior: 6.875 × 10.5 in pages (6.75 × 10.25 trim + bleed). Upload with **Bleed: yes**, **Premium Color**, white paper. 26 / 28 / 24 pages, matching the cover spines. |
+| `<book>-Kindle-eBook.pdf` | The ebook pages (cover left out, since Kindle adds it), for Kindle Create or Kindle Comic Creator. |
+| `<book>-Kindle-Pages/` | The same ebook pages as 1800 × 2700 JPEGs. |
+| `<book>-Kindle-Cover.jpg` | Kindle ebook cover, 1600 × 2560 px. |
+
+Every page sits at least 0.375 in inside the trim (KDP's margin for 24–150 page books). Full-page art is framed inside the margins, panel grids fill the live area, and paper color runs out to the bleed. Page 1 is a right-hand page, so odd pages put their bleed on the right and even pages on the left.
+
+Rebuild with `node tools/kdp-interiors.cjs` (or `--book=issue2`). The layout lives in `kdp-interior.html` and `js/kdp-interior.js`.
 
 ## Issue #1 editions
 

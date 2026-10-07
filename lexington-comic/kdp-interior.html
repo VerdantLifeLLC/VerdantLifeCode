@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lexington KDP Interior</title>
+  <!-- KDP paperback interior and Kindle ebook pages.
+       kdp-interior.html?book=original|caucasian|issue2&mode=print|ebook|kcover&guides=1 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Lora:ital,wght@0,500;1,500&family=Patrick+Hand&display=swap" />
+  <style>
+    html, body { margin: 0; padding: 0; background: #ffffff; }
+    .sheet { display: block; break-after: page; page-break-after: always; }
+    .sheet svg { display: block; }
+    @page { margin: 0; }
+  </style>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var book = q.get("book") || "original";
+      window.KDP_BOOK = book;
+      window.COMIC_EDITION = book === "original" ? "original" : "caucasian";
+      var files = ["core", "characters", "props", "scenes", "reader"];
+      files = files.concat(book === "issue2" ? ["kit", "issue2-world", "issue2-story-1", "issue2-story-2"] : ["story-1", "story-2", "story-3"]);
+      files.push("kdp-interior");
+      files.forEach(function (f) {
+        document.write('<script src="js/' + f + '.js"><\/script>');
+      });
+    })();
+  </script>
+</head>
+<body>
+  <div id="pages"></div>
+</body>
+</html>
