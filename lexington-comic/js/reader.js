@@ -133,7 +133,7 @@
     C.STORY.forEach((pg) => {
       if (pg.chapter) opts += `<option value="ch${pg.chapter.n}">${pg.chapter.n}. ${C.esc(pg.chapter.title)}</option>`;
     });
-    opts += `<option value="extras">Then &amp; Now + Checklist</option>`;
+    opts += `<option value="extras">${C.EXTRAS_LABEL || "Then &amp; Now + Checklist"}</option>`;
     sel.innerHTML = opts;
     sel.addEventListener("change", () => {
       const el = sel.value === "extras" ? document.querySelector("[data-extras]") || document.querySelector(".page:last-child") : document.getElementById(sel.value);

@@ -5,8 +5,8 @@
      cover.png                      the cover, for link previews
    Usage (from the lexington-comic folder):  npm install playwright && node tools/build.cjs
    Options:
-     --edition=caucasian   build the Caucasian family edition (with Big Tony) from caucasian.html;
-                           outputs get a -Caucasian / -caucasian suffix
+     --edition=caucasian   Issue #1, Caucasian family edition (with Big Tony), from caucasian.html
+     --edition=issue2      Issue #2: Down to Business, from issue-2.html
      --skin=tan --hair=brown  bake a different look into the outputs */
 "use strict";
 const fs = require("fs");
@@ -21,9 +21,13 @@ const args = Object.fromEntries(
     return [k, v ?? "true"];
   })
 );
-const edition = args.edition === "caucasian" ? "caucasian" : "original";
-const pageFile = edition === "caucasian" ? "caucasian.html" : "index.html";
-const suffix = edition === "caucasian" ? "-Caucasian" : "";
+const EDITIONS = {
+  original: { page: "index.html", name: "Lexington-The-Turnaround", cover: "cover" },
+  caucasian: { page: "caucasian.html", name: "Lexington-The-Turnaround-Caucasian", cover: "cover-caucasian" },
+  issue2: { page: "issue-2.html", name: "Lexington-Issue-2-Down-to-Business", cover: "cover-issue-2" },
+};
+const ed = EDITIONS[args.edition] || EDITIONS.original;
+const pageFile = ed.page;
 const look = ["skin", "hair"].filter((k) => args[k]).map((k) => `&${k}=${encodeURIComponent(args[k])}`).join("");
 
 function singleFile() {
@@ -38,7 +42,7 @@ function singleFile() {
 }
 
 (async () => {
-  const out = path.join(root, `Lexington-The-Turnaround${suffix}.html`);
+  const out = path.join(root, `${ed.name}.html`);
   fs.writeFileSync(out, singleFile());
   console.log("wrote", path.relative(root, out));
 
@@ -50,7 +54,7 @@ function singleFile() {
   await page.goto(`${url}?print=1${look}`, { waitUntil: "networkidle" });
   await page.waitForSelector("html.ready", { timeout: 20000 });
   await page.waitForTimeout(500);
-  const pdf = path.join(root, `Lexington-The-Turnaround${suffix}.pdf`);
+  const pdf = path.join(root, `${ed.name}.pdf`);
   await page.pdf({ path: pdf, width: "7in", height: "10.5in", printBackground: true, margin: { top: 0, right: 0, bottom: 0, left: 0 } });
   console.log("wrote", path.relative(root, pdf));
 
@@ -60,7 +64,7 @@ function singleFile() {
   await shot.waitForSelector("html.ready", { timeout: 20000 });
   await shot.waitForTimeout(500);
   const cover = await shot.$("section.page");
-  const png = path.join(root, `cover${suffix.toLowerCase()}.png`);
+  const png = path.join(root, `${ed.cover}.png`);
   await cover.screenshot({ path: png });
   console.log("wrote", path.relative(root, png));
 

@@ -881,6 +881,19 @@
     if (top.stole) {
       [-1, 1].forEach((sx) => (afterTorso += path(`M${n(sx * 4 * k)} ${n(neckY + 4)} L${n(sx * 15 * k)} ${n(neckY - 2)} L${n(sx * 18 * k)} ${n(B.hy + 40)} L${n(sx * 7 * k)} ${n(B.hy + 40)} Z`, top.stole, { sw: 2.2 })));
     }
+    if (top.nametag) {
+      // missionary-style black name tag
+      const nx = B.tb * 0.42,
+        ny = B.sy + 34 * k;
+      torso += C.rect(nx - 15 * k, ny - 6 * k, 30 * k, 12 * k, "#1f1a2b", { sw: 1.4, r: 2 });
+      torso += line(nx - 10 * k, ny - 1.5 * k, nx + 10 * k, ny - 1.5 * k, { sw: 1.6, stroke: "#ffffff" }) + line(nx - 8 * k, ny + 2.5 * k, nx + 8 * k, ny + 2.5 * k, { sw: 1, stroke: "#c9c3b5" });
+    }
+    if (top.badge === "bubbles") {
+      const bx = B.tb * 0.32,
+        by = B.sy + 40 * k;
+      torso += circle(bx, by, 9 * k, "#ffffff", { sw: 2 }) + circle(bx + 11 * k, by - 9 * k, 6 * k, "#ffffff", { sw: 1.8 }) + circle(bx + 13 * k, by + 6 * k, 4.5 * k, "#ffffff", { sw: 1.6 });
+      torso += path(`M${n(bx - 4 * k)} ${n(by - 3 * k)} q${n(3 * k)} ${n(-3 * k)} ${n(6 * k)} ${n(-1 * k)}`, "none", { sw: 1.6, stroke: "#4fb3e8" });
+    }
     if (top.emblem) torso += gear(B.tb * 0.3 + 4, B.sy + 38 * k, 11 * k, top.emblem);
     if (top.apron) {
       const ap = top.apron;

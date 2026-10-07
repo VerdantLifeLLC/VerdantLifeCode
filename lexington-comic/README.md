@@ -6,7 +6,24 @@ An illustrated comic book about Lexington, a brilliant 13-year-old who keeps mak
 |---|---|
 | ![Original cover](cover.png) | ![Caucasian edition cover](cover-caucasian.png) |
 
-## Editions
+## Issue #2: Down to Business
+
+![Issue 2 cover](cover-issue-2.png)
+
+Lexington, his best friend Jonathan (from their ward) and Big Tony start the **Suds Brothers** car wash and learn the value of money and hard work: borrowing from Dad and paying him back, budgeting, marketing (never at church or on Sunday), honesty when they find cash in a customer's truck, redoing rushed work, tithing and fast offerings, service for the missionaries, and working out a fight between partners. The family is shown as members of The Church of Jesus Christ of Latter-day Saints, with Family Home Evening, passing the sacrament, the bishop, and scripture from the Bible and the Book of Mormon. It ends with "The Money Rules" and a "Start Your Own Business" worksheet.
+
+| | |
+|---|---|
+| Web page | `issue-2.html` |
+| PDF (21 pages) | `Lexington-Issue-2-Down-to-Business.pdf` |
+| Single file | `Lexington-Issue-2-Down-to-Business.html` |
+| Script | `js/issue2-world.js` (new cast, props, places), `js/issue2-story-1.js`, `js/issue2-story-2.js` |
+
+Issue #2 uses the Caucasian family look and loads `js/kit.js` instead of Issue #1's story files.
+
+KDP descriptions for the series and each issue are in `KDP-DESCRIPTIONS.md`.
+
+## Issue #1 editions
 
 | | Original | Caucasian family edition |
 |---|---|---|
@@ -87,5 +104,6 @@ npm install playwright
 npx playwright install chromium
 node tools/build.cjs                      # original edition
 node tools/build.cjs --edition=caucasian  # Caucasian family edition
+node tools/build.cjs --edition=issue2     # Issue #2: Down to Business
 node tools/build.cjs --skin=tan --hair=brown
 ```
