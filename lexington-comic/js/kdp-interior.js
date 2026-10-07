@@ -64,7 +64,7 @@
   function render() {
     let html = "";
     if (mode === "print") C.STORY.forEach((pg, i) => (html += printPage(pg, i + 1)));
-    else if (mode === "ebook") C.STORY.forEach((pg, i) => i > 0 && (html += ebookPage(pg, i + 1)));
+    else if (mode === "ebook") C.STORY.forEach((pg, i) => (i > 0 || q.get("cover")) && (html += ebookPage(pg, i + 1)));
     else html = kindleCover();
     document.getElementById("pages").innerHTML = C.defs() + html;
     window.KDP_INFO = { pages: C.STORY.length };

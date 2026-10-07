@@ -54,6 +54,15 @@ Also in `kdp/`, for each book:
 
 Every page sits at least 0.375 in inside the trim (KDP's margin for 24–150 page books). Full-page art is framed inside the margins, panel grids fill the live area, and paper color runs out to the bleed. Page 1 is a right-hand page, so odd pages put their bleed on the right and even pages on the left.
 
+### Word (.docx) versions
+
+| File | What it is |
+|---|---|
+| `<book>-KDP-Paperback.docx` | 6.75 × 10.25 in Word pages, one comic page per page as a 300 DPI image (6.0 × 9.0 in, at least 0.375 in from every edge). Same page count as the PDF. |
+| `<book>-Kindle-eBook.docx` | 6.667 × 10 in Word pages, cover left out. |
+
+KDP accepts bleed only from PDF uploads, so the Word versions keep the art inside white margins. Upload the paperback .docx with **Bleed: no**. Rebuild with `node tools/kdp-docx.cjs`.
+
 Rebuild with `node tools/kdp-interiors.cjs` (or `--book=issue2`). The layout lives in `kdp-interior.html` and `js/kdp-interior.js`.
 
 ## Issue #1 editions
