@@ -65,7 +65,10 @@
   page({
     alt: "Cover: Lexington: The Turnaround. A confident Lexington stands in golden sunrise light while a faded, messy version of his old self slumps in a storm behind him.",
     noNumber: true,
-    full(W, Hh) {
+    // o.insetX / o.insetY pull the corner badges in from the edges for print covers
+    full(W, Hh, o = {}) {
+      const ix = o.insetX || 0,
+        iy = o.insetY || 0;
       let s = `<rect width="${W}" height="${Hh}" fill="url(#skySunset)"/>`;
       s += fx.rays(W * 0.64, Hh * 0.56, 1500, "#fff6c8", 26, 0.55);
       // storm wedge: the old Lexington
@@ -93,10 +96,10 @@
       s += title(250);
       s += `<g transform="rotate(-3 ${W / 2} 320)"><rect x="${W / 2 - 250 + 7}" y="${288 + 7}" width="500" height="70" fill="${INK}"/><rect x="${W / 2 - 250}" y="288" width="500" height="70" fill="#ffd95e" stroke="${INK}" stroke-width="5"/>${text(W / 2, 340, "THE TURNAROUND", { size: 52, font: "title", ls: 5 })}</g>`;
       // issue badge
-      s += `<g transform="rotate(-10 104 96)">${circle(104, 96, 62, "#2a8f86", { sw: 5 })}${text(104, 86, "ISSUE", { size: 24, font: "title", fill: "#fff", ls: 2 })}${text(104, 126, "#1", { size: 44, font: "title", fill: "#ffd95e", stroke: INK, sw: 4 })}</g>`;
-      s += `<g transform="rotate(6 880 92)">${rect(790, 60, 180, 64, "#ffffff", { sw: 4, r: 8 })}${text(880, 88, "FAITH • GRIT", { size: 22, font: "title", fill: "#c9473c", ls: 1 })}${text(880, 114, "& GROWING UP", { size: 22, font: "title", fill: "#2a8f86", ls: 1 })}</g>`;
+      s += C.mv(`<g transform="rotate(-10 104 96)">${circle(104, 96, 62, "#2a8f86", { sw: 5 })}${text(104, 86, "ISSUE", { size: 24, font: "title", fill: "#fff", ls: 2 })}${text(104, 126, "#1", { size: 44, font: "title", fill: "#ffd95e", stroke: INK, sw: 4 })}</g>`, ix, iy);
+      s += C.mv(`<g transform="rotate(6 880 92)">${rect(790, 60, 180, 64, "#ffffff", { sw: 4, r: 8 })}${text(880, 88, "FAITH • GRIT", { size: 22, font: "title", fill: "#c9473c", ls: 1 })}${text(880, 114, "& GROWING UP", { size: 22, font: "title", fill: "#2a8f86", ls: 1 })}</g>`, W - 1000 - ix, iy);
       // tagline
-      s += `<g transform="rotate(-2 250 1380)">${rect(36 + 6, 1318 + 6, 440, 112, INK, { sw: 0 })}${rect(36, 1318, 440, 112, "#ffffff", { sw: 5 })}${text(256, 1362, "SMART KID. DUMB CHOICES.", { size: 34, font: "title", ls: 1 })}${text(256, 1406, "ONE BIG TURNAROUND.", { size: 38, font: "title", fill: "#c9473c", ls: 1 })}</g>`;
+      s += C.mv(`<g transform="rotate(-2 250 1380)">${rect(36 + 6, 1318 + 6, 440, 112, INK, { sw: 0 })}${rect(36, 1318, 440, 112, "#ffffff", { sw: 5 })}${text(256, 1362, "SMART KID. DUMB CHOICES.", { size: 34, font: "title", ls: 1 })}${text(256, 1406, "ONE BIG TURNAROUND.", { size: 38, font: "title", fill: "#c9473c", ls: 1 })}</g>`, ix, -iy);
       return s;
     },
   });

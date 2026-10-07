@@ -36,7 +36,10 @@
   page({
     alt: "Cover: Lexington Issue 2, Down to Business. Lexington, his best friend Jonathan and big brother Big Tony stand in Suds Brothers shirts in front of a sparkling car surrounded by soap bubbles.",
     noNumber: true,
-    full(W, Hh) {
+    // o.insetX / o.insetY pull the corner badges in from the edges for print covers
+    full(W, Hh, o = {}) {
+      const ix = o.insetX || 0,
+        iy = o.insetY || 0;
       let s = `<rect width="${W}" height="${Hh}" fill="url(#skyDay)"/>`;
       s += fx.rays(W * 0.5, Hh * 0.62, 1500, "#ffffff", 26, 0.35);
       s += bubbles(W, Hh * 0.75, 9, 30, 30);
@@ -52,8 +55,8 @@
         text(W / 2, y, "LEXINGTON", { size: 178, font: "title", fill: "#e65a45", ls: 4 });
       s += title(250);
       s += `<g transform="rotate(-3 ${W / 2} 320)"><rect x="${W / 2 - 260 + 7}" y="${288 + 7}" width="520" height="70" fill="${INK}"/><rect x="${W / 2 - 260}" y="288" width="520" height="70" fill="#ffd95e" stroke="${INK}" stroke-width="5"/>${text(W / 2, 340, "DOWN TO BUSINESS", { size: 52, font: "title", ls: 4 })}</g>`;
-      s += `<g transform="rotate(-10 104 96)">${circle(104, 96, 62, "#2a8f86", { sw: 5 })}${text(104, 86, "ISSUE", { size: 24, font: "title", fill: "#fff", ls: 2 })}${text(104, 126, "#2", { size: 44, font: "title", fill: "#ffd95e", stroke: INK, sw: 4 })}</g>`;
-      s += `<g transform="rotate(6 880 92)">${rect(790, 60, 180, 64, "#ffffff", { sw: 4, r: 8 })}${text(880, 88, "HARD WORK", { size: 22, font: "title", fill: "#c9473c", ls: 1 })}${text(880, 114, "& HONEST MONEY", { size: 22, font: "title", fill: "#2a8f86", ls: 1 })}</g>`;
+      s += C.mv(`<g transform="rotate(-10 104 96)">${circle(104, 96, 62, "#2a8f86", { sw: 5 })}${text(104, 86, "ISSUE", { size: 24, font: "title", fill: "#fff", ls: 2 })}${text(104, 126, "#2", { size: 44, font: "title", fill: "#ffd95e", stroke: INK, sw: 4 })}</g>`, ix, iy);
+      s += C.mv(`<g transform="rotate(6 880 92)">${rect(790, 60, 180, 64, "#ffffff", { sw: 4, r: 8 })}${text(880, 88, "HARD WORK", { size: 22, font: "title", fill: "#c9473c", ls: 1 })}${text(880, 114, "& HONEST MONEY", { size: 22, font: "title", fill: "#2a8f86", ls: 1 })}</g>`, W - 1000 - ix, iy);
       s += `<g transform="rotate(-2 ${W / 2} 418)">${rect(W / 2 - 300 + 6, 386 + 6, 600, 64, INK, { sw: 0 })}${rect(W / 2 - 300, 386, 600, 64, "#ffffff", { sw: 4 })}${text(W / 2, 430, "THREE PARTNERS. ONE BUCKET. A LOT TO LEARN.", { size: 30, font: "title", ls: 1 })}</g>`;
       return s;
     },

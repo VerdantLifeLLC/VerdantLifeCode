@@ -95,6 +95,8 @@
       o.sw ?? C.SW
     }" stroke-linecap="round"${o.op != null ? ` opacity="${o.op}"` : ""}${o.dash ? ` stroke-dasharray="${o.dash}"` : ""}/>`;
   C.poly = (pts, fill, o = {}) => C.path("M" + pts.map(C.pt).join(" L") + " Z", fill, o);
+  // shift a piece of artwork only when there is somewhere to move it (keeps default output unchanged)
+  C.mv = (inner, dx, dy) => (dx || dy ? `<g transform="translate(${n(dx || 0)} ${n(dy || 0)})">${inner}</g>` : inner);
   C.g = (inner, tf, extra) => `<g${tf ? ` transform="${tf}"` : ""}${extra || ""}>${inner}</g>`;
   C.text = (x, y, str, o = {}) => {
     const size = o.size || 20;

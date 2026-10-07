@@ -23,6 +23,24 @@ Issue #2 uses the Caucasian family look and loads `js/kit.js` instead of Issue #
 
 KDP descriptions for the series and each issue are in `KDP-DESCRIPTIONS.md`.
 
+## KDP paperback covers
+
+Wraparound covers (back + spine + front) for a **6.75 × 10.25 in** paperback are in `kdp/`:
+
+| Book | Cover PDF (upload to KDP) | Full size | Spine |
+|---|---|---|---|
+| Issue #1, original | `kdp/Lexington-The-Turnaround-KDP-Cover.pdf` | 13.8110 × 10.5 in | 0.0610 in (26 pages) |
+| Issue #1, Caucasian family | `kdp/Lexington-The-Turnaround-Caucasian-KDP-Cover.pdf` | 13.8157 × 10.5 in | 0.0657 in (28 pages) |
+| Issue #2 | `kdp/Lexington-Issue-2-Down-to-Business-KDP-Cover.pdf` | 13.8063 × 10.5 in | 0.0563 in (24 pages) |
+
+- 0.125 in bleed on every outside edge. Text stays at least 0.25 in inside the trim.
+- Spine width uses KDP's **premium color** rate (0.002347 in per page). Color books under 72 pages must use premium color, and books under 80 pages can't have spine text, so the spine is plain artwork.
+- The back cover leaves KDP's 2 × 1.2 in barcode area empty (lower right). Choose "KDP will add the barcode" when uploading.
+- Each book also has a 300 DPI PNG and a `-guides.png` preview showing trim (red), safe zone (blue), spine (green) and the barcode area.
+- The spine depends on the interior page count. If your interior PDF ends up with a different count, rebuild: `node tools/kdp-covers.cjs --book=issue2 --pages=24` (needs Playwright, plus `pypdf` to set the exact page size).
+
+The cover layout lives in `kdp-cover.html` and `js/kdp-cover.js`.
+
 ## Issue #1 editions
 
 | | Original | Caucasian family edition |
