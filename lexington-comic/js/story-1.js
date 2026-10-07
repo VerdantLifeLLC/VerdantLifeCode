@@ -52,7 +52,12 @@
   const lex = C.lex,
     mom = C.mom,
     dad = C.dad,
-    npc = C.npc;
+    npc = C.npc,
+    tony = C.tony;
+  // The caucasian edition adds Big Tony, Lexington's 18-year-old brother.
+  const CAU = (C.kit.CAU = C.edition === "caucasian");
+  H.bowl = (x, y, s, f) => T(x, y, s, `${path("M-22 -6 Q-20 16 0 16 Q20 16 22 -6 Z", "#f4c542", { sw: 2.4 })}${ellipse(0, -6, 22, 6, "#fff6dc", { sw: 2.2 })}${line(6, -8, 22, -30, { sw: 3, stroke: "#a9b3c4" })}`);
+  H.dressShoe = (x, y, s, f) => T(x, y, s, `<g transform="scale(${f} 1)">${path("M-30 6 Q-32 -14 -16 -16 L0 -12 Q14 -4 30 -2 Q40 0 38 8 Z", "#2a1d15", { sw: 2.6 })}${path("M-26 -8 Q-10 -12 4 -8", "none", { sw: 2, stroke: "#6b4a35" })}${line(-31, 6, 38, 6, { sw: 3, stroke: "#140d09" })}</g>`);
 
   // =====================================================================
   // COVER
@@ -104,7 +109,7 @@
     s += rect(x, y, w, h, "#ffffff", { sw: 5, r: 18 });
     s += `<path d="M${x} ${y + 18} Q${x} ${y} ${x + 18} ${y} L${x + w - 18} ${y} Q${x + w} ${y} ${x + w} ${y + 18} L${x + w} ${y + 64} L${x} ${y + 64} Z" fill="${o.color}" stroke="${INK}" stroke-width="5"/>`;
     s += text(x + 20, y + 47, o.name, { size: 40, font: "title", anchor: "start", fill: "#ffffff", stroke: INK, sw: 6, ls: 1.5 });
-    s += text(x + w - 18, y + 44, o.role, { size: 18, font: "title", anchor: "end", fill: INK, ls: 1 });
+    s += text(x + w - 18, y + 44, o.role, { size: 18, font: "title", anchor: "end", fill: o.roleColor || INK, ls: 1 });
     const ph = h * 0.5;
     s += `<svg x="${x + 16}" y="${y + 78}" width="${w - 32}" height="${ph}" viewBox="0 0 ${w - 32} ${ph}" overflow="hidden"><rect width="${w - 32}" height="${ph}" fill="${o.bg}"/><rect width="${w - 32}" height="${ph}" fill="url(#dots)"/>${o.art(w - 32, ph)}</svg>`;
     s += rect(x + 16, y + 78, w - 32, ph, "none", { sw: 3.5 });
@@ -121,10 +126,116 @@
     });
     return s;
   }
+  // narrow trading card for the five-card cast page
+  function cardN(x, y, w, h, o) {
+    let s = `<rect x="${x + 7}" y="${y + 7}" width="${w}" height="${h}" rx="16" fill="${INK}"/>`;
+    s += rect(x, y, w, h, "#ffffff", { sw: 5, r: 16 });
+    s += `<path d="M${x} ${y + 16} Q${x} ${y} ${x + 16} ${y} L${x + w - 16} ${y} Q${x + w} ${y} ${x + w} ${y + 16} L${x + w} ${y + 58} L${x} ${y + 58} Z" fill="${o.color}" stroke="${INK}" stroke-width="5"/>`;
+    s += text(x + 16, y + 43, o.name, { size: 34, font: "title", anchor: "start", fill: "#ffffff", stroke: INK, sw: 6, ls: 1.2 });
+    s += text(x + w - 14, y + 40, o.role, { size: 14, font: "title", anchor: "end", fill: INK, ls: 0.6 });
+    const ph = h * 0.52;
+    s += `<svg x="${x + 14}" y="${y + 70}" width="${w - 28}" height="${ph}" viewBox="0 0 ${w - 28} ${ph}" overflow="hidden"><rect width="${w - 28}" height="${ph}" fill="${o.bg}"/><rect width="${w - 28}" height="${ph}" fill="url(#dots)"/>${o.art(w - 28, ph)}</svg>`;
+    s += rect(x + 14, y + 70, w - 28, ph, "none", { sw: 3.5 });
+    let ty = y + 70 + ph + 30;
+    o.lines.forEach((l) => {
+      s += text(x + 18, ty, l, { size: 16, anchor: "start" });
+      ty += 21;
+    });
+    ty += 6;
+    (o.stats || []).forEach(([label, val, col]) => {
+      s += text(x + 18, ty + 12, label, { size: 13, font: "title", anchor: "start", ls: 0.8 });
+      for (let i = 0; i < 10; i++) s += rect(x + 108 + i * ((w - 128) / 10), ty, (w - 128) / 10 - 3, 14, i < val ? col : "#ece6da", { sw: 1.8, r: 3 });
+      ty += 23;
+    });
+    return s;
+  }
+  function castFive(W, Hh) {
+    let s = `<rect width="${W}" height="${Hh}" fill="#2a8f86"/><rect width="${W}" height="${Hh}" fill="url(#dotsWhite)"/>`;
+    s += text(W / 2 + 6, 128, "MEET THE CAST", { size: 104, font: "title", fill: INK, stroke: INK, sw: 12, ls: 3 });
+    s += text(W / 2, 122, "MEET THE CAST", { size: 104, font: "title", fill: "#ffd95e", stroke: INK, sw: 8, ls: 3 });
+    s += card(42, 162, 440, 586, {
+      name: "LEXINGTON",
+      role: "AGE 13",
+      color: "#c9473c",
+      bg: "#bfe0f0",
+      art: (w, h) => lex({ x: w / 2, y: h + 150, s: 1.32, messy: true, expr: "grin", pose: "thumbs", stink: false }),
+      lines: ["Genius brain. Builds robots for fun.", "Also forgets to shower for days."],
+      stats: [
+        ["BRAINS", 10, "#2a8f86"],
+        ["LISTENING", 2, "#c9473c"],
+        ["HYGIENE", 1, "#c9473c"],
+        ["FAITH", 3, "#f0b429"],
+        ["CONFIDENCE", 4, "#f0b429"],
+      ],
+    });
+    s += card(518, 162, 440, 586, {
+      name: "BIG TONY",
+      role: "AGE 18 • SENIOR",
+      roleColor: "#f0b429",
+      color: "#24345e",
+      bg: "#e6e0f0",
+      art: (w, h) => tony({ x: w / 2, y: h + 175, s: 1.12, expr: "confident", pose: "cross" }),
+      lines: ["Lexington's big brother. High school", "senior. Almost out the door."],
+      stats: [
+        ["SENIOR STATUS", 10, "#24345e"],
+        ["BIG-BRO SKILLS", 10, "#f0b429"],
+        ["COOL FACTOR", 9, "#2a8f86"],
+        ["PATIENCE", 4, "#c9473c"],
+      ],
+    });
+    const cw = 292,
+      cy = 776,
+      ch = 590;
+    s += cardN(42, cy, cw, ch, {
+      name: "MOM",
+      role: "CHIEF OF EVERYTHING",
+      color: "#e09a3e",
+      bg: "#ffe3c2",
+      art: (w, h) => mom({ x: w / 2, y: h + 200, s: 1.08, expr: "happy", pose: "heart" }) + fx.heart(w * 0.84, 50, 13),
+      lines: ["Loves hard. Prays harder.", "Smells trouble two rooms away."],
+      stats: [
+        ["PATIENCE", 7, "#2a8f86"],
+        ["PRAYERS", 10, "#f0b429"],
+        ["HUGS", 10, "#e8536b"],
+      ],
+    });
+    s += cardN(42 + cw + 20, cy, cw, ch, {
+      name: "DAD",
+      role: "BUILDER • COACH",
+      color: "#3f6fb5",
+      bg: "#d6e4f5",
+      art: (w, h) => dad({ x: w / 2, y: h + 175, s: 1.02, expr: "proud", pose: "cross" }),
+      lines: ["Built the chore chart.", "Will build ten more if he has to."],
+      stats: [
+        ["STRENGTH", 9, "#2a8f86"],
+        ["DAD JOKES", 10, "#f0b429"],
+        ["WISDOM", 9, "#3f6fb5"],
+      ],
+    });
+    s += cardN(42 + (cw + 20) * 2, cy, cw, ch, {
+      name: "BISCUIT",
+      role: "GOOD DOG",
+      color: "#b5843c",
+      bg: "#f6e6c8",
+      art: (w, h) => P.dog(w / 2 - 8, h - 30, 1.85, { mood: "happy" }),
+      lines: ["Family dog. Pro sniffer.", "Strong opinions about smells."],
+      stats: [
+        ["NOSE", 10, "#b5843c"],
+        ["LOYALTY", 10, "#e8536b"],
+        ["PATIENCE", 3, "#c9473c"],
+      ],
+    });
+    s += text(W / 2, 1418, "For every kid who is smart enough to choose better,", { size: 24, font: "hand", fill: "#ffffff" });
+    s += text(W / 2, 1450, "and for the parents who never stop praying.", { size: 24, font: "hand", fill: "#ffffff" });
+    return s;
+  }
   page({
     noNumber: true,
-    alt: "Meet the cast: Lexington, Mom, Dad and Biscuit the dog, drawn as trading cards with stats.",
+    alt: CAU
+      ? "Meet the cast: Lexington, his big brother Big Tony, Mom, Dad and Biscuit the dog, drawn as trading cards with stats."
+      : "Meet the cast: Lexington, Mom, Dad and Biscuit the dog, drawn as trading cards with stats.",
     full(W, Hh) {
+      if (CAU) return castFive(W, Hh);
       let s = `<rect width="${W}" height="${Hh}" fill="#2a8f86"/><rect width="${W}" height="${Hh}" fill="url(#dotsWhite)"/>`;
       s += text(W / 2 + 6, 128, "MEET THE CAST", { size: 104, font: "title", fill: INK, stroke: INK, sw: 12, ls: 3 });
       s += text(W / 2, 122, "MEET THE CAST", { size: 104, font: "title", fill: "#ffd95e", stroke: INK, sw: 8, ls: 3 });
@@ -333,7 +444,9 @@
         ],
       },
       {
-        alt: "In the kitchen, Mom and Dad gag at the breakfast table as smelly Lexington walks in. The dog runs away.",
+        alt: CAU
+          ? "In the kitchen, Mom and Dad gag at the breakfast table and Big Tony pinches his nose as smelly Lexington walks in. The dog runs away."
+          : "In the kitchen, Mom and Dad gag at the breakfast table as smelly Lexington walks in. The dog runs away.",
         art(w, h) {
           const gy = h * 0.97,
             k = 0.85,
@@ -343,15 +456,23 @@
           s += dad({ x: 680, y: gy, s: 0.86, f: -1, expr: "disgust", pose: "facepalm", seated: true });
           s += P.table(590, gy, 0.86, { cloth: "#e8536b" });
           s += T(560, gy - 92, 0.86, ellipse(-40, 0, 24, 7, "#ffffff", { sw: 2.2 }) + ellipse(60, 0, 24, 7, "#ffffff", { sw: 2.2 }) + rect(10, -26, 18, 24, "#c9473c", { sw: 2.2, r: 3 }));
+          if (CAU) s += tony({ x: 368, y: gy + 4, s: 0.84, f: -1, expr: "disgust", pose: "pinchNose", hold: { l: H.bowl } });
           s += lex({ x: 205, y: gy, s: 0.9, messy: true, expr: "happy", pose: "wave", flies: 3 });
           s += fx.stink(205, gy - 140, 1.3, "#8fbf4a");
           s += P.dog(860, gy - 4, 0.9, { mood: "flee" }) + fx.motion(800, gy - 40, 1, 1);
           return s;
         },
-        b: (w, h) => [
-          say("Son. When did you last SHOWER?", 760, 70, top("man", 680, h * 0.97, 0.86, { seated: true, dx: 10 }), { w: 170 }),
-          say("Define 'last.'", 210, 60, top("teen", 205, h * 0.97, 0.9), { w: 120 }),
-        ],
+        b: (w, h) =>
+          CAU
+            ? [
+                say("Bro. Close the door. We can SMELL you.", 400, 56, top("man", 368, h * 0.97 + 4, 0.84, { dx: 10 }), { w: 150 }),
+                say("Son. When did you last SHOWER?", 760, 70, top("man", 680, h * 0.97, 0.86, { seated: true, dx: 10 }), { w: 170 }),
+                say("Define 'last.'", 110, 132, top("teen", 205, h * 0.97, 0.9, { dx: -14 }), { w: 100 }),
+              ]
+            : [
+                say("Son. When did you last SHOWER?", 760, 70, top("man", 680, h * 0.97, 0.86, { seated: true, dx: 10 }), { w: 170 }),
+                say("Define 'last.'", 210, 60, top("teen", 205, h * 0.97, 0.9), { w: 120 }),
+              ],
       },
     ],
   });

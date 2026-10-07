@@ -93,8 +93,9 @@
   const state = { view: "pages" };
   function store(key, val) {
     try {
-      if (val === undefined) return localStorage.getItem("lexington-comic:" + key);
-      localStorage.setItem("lexington-comic:" + key, val);
+      const ns = C.edition === "original" ? "lexington-comic:" : `lexington-comic:${C.edition}:`;
+      if (val === undefined) return localStorage.getItem(ns + key);
+      localStorage.setItem(ns + key, val);
     } catch (e) {
       return null;
     }

@@ -11,7 +11,9 @@
   const lex = C.lex,
     mom = C.mom,
     dad = C.dad,
-    npc = C.npc;
+    npc = C.npc,
+    tony = C.tony;
+  const CAU = C.kit.CAU;
 
   // ---------- extra props for these chapters ----------
   H.drill = (x, y, s, f) => T(x, y, s, `<g transform="scale(${f} 1)">${rect(-10, -16, 46, 24, "#f0b429", { sw: 2.6, r: 6 })}${rect(-6, 6, 16, 30, "#3a3a4a", { sw: 2.4, r: 4 })}${rect(36, -10, 22, 10, "#a9b3c4", { sw: 2 })}${line(58, -5, 74, -5, { sw: 3 })}</g>`);
@@ -232,7 +234,7 @@
           shout("LEXINGTON!!!", 160, 90, [-30, 30], { w: 200, size: 30, seed: 4 }),
           shout("LEXINGTON!", w - 180, 110, [w + 30, 40], { w: 170, size: 26, seed: 9 }),
           shout("LEXINGTON?!", 150, h - 120, [-30, h], { w: 170, size: 24, seed: 2 }),
-          shout("LEX-ING-TON!", w - 170, h - 110, [w + 30, h], { w: 180, size: 24, seed: 6 }),
+          CAU ? shout("LEX! THAT'S MY HOODIE!", w - 170, h - 110, [w + 30, h], { w: 170, size: 22, seed: 6 }) : shout("LEX-ING-TON!", w - 170, h - 110, [w + 30, h], { w: 180, size: 24, seed: 6 }),
           cap("His name got yelled so much, it practically echoed.", w / 2 - 190, 14, { w: 360, align: "center" }),
         ],
       },
@@ -480,6 +482,93 @@
       },
     ],
   });
+
+  // ---------- caucasian edition: Big Tony's advice ----------
+  function tonyRoom(w, h, gy, o = {}) {
+    let s = S.walls(w, h, gy, "#c9d3e6", "#7d7f99", { stripe: true });
+    const pennant = (x, y, c1, c2, t, rot) => `<g transform="rotate(${rot} ${x} ${y})">${path(`M${x} ${y} L${x + 150} ${y + 26} L${x} ${y + 52} Z`, c1, { sw: 2.6 })}${rect(x - 8, y - 4, 10, 60, c2, { sw: 2 })}${text(x + 56, y + 33, t, { size: 18, font: "title", fill: c2, ls: 1 })}</g>`;
+    if (o.pennants !== false) s += pennant(o.px ?? 40, 50, "#24345e", "#f0b429", "STATE", -4) + pennant((o.px ?? 40) + 20, 130, "#7a2236", "#ffffff", "SENIORS", 3);
+    if (o.letter !== false) s += `<g transform="rotate(2 ${o.lx ?? w - 150} 110)">${rect(o.lx ?? w - 150, 60, 110, 120, "#b07a4a", { sw: 2.6 })}${rect((o.lx ?? w - 150) + 8, 68, 94, 104, "#ffffff", { sw: 1.6 })}${text((o.lx ?? w - 150) + 55, 98, "ACCEPTED!", { size: 18, font: "title", fill: "#2a9d5a" })}${[0, 1, 2].map((i) => line((o.lx ?? w - 150) + 18, 118 + i * 14, (o.lx ?? w - 150) + 92, 118 + i * 14, { sw: 1.6, stroke: "#9a9ab0" })).join("")}</g>`;
+    return s;
+  }
+  if (CAU)
+    page({
+      rows: [
+        [0.34, [0.5, 0.5]],
+        [0.34, [1]],
+        [0.32, [0.55, 0.45]],
+      ],
+      panels: [
+        {
+          alt: "The next morning, Lexington knocks on his big brother Tony's bedroom door.",
+          art(w, h) {
+            const gy = h * 0.97;
+            let s = S.walls(w, h, gy, "#d8c8e6", "#b9814f", { stripe: true }) + `<rect x="0" y="${gy}" width="${w}" height="${h - gy}" fill="url(#planks)"/>`;
+            s += P.door(30, 70, 190, gy - 70, { color: "#24345e" });
+            s += `<g transform="rotate(-3 115 170)">${rect(55, 130, 120, 70, "#ffffff", { sw: 2.6 })}${text(115, 160, "TONY'S ROOM", { size: 18, font: "title", fill: "#24345e" })}${text(115, 184, "knock first!", { size: 17, font: "hand", weight: 400 })}</g>`;
+            s += lex({ x: 300, y: h + 30, s: 1.0, f: -1, outfit: "pjs", expr: "determined", pose: "holdOut", handR: "fist" });
+            return s;
+          },
+          b: (w, h) => [cap("The next morning, Lexington went to see the one person who'd been thirteen in this house before him.", 14, 14, { w: 300 }), sfx("KNOCK KNOCK", 128, h * 0.56, { size: 32, rot: -8, color: "#ffffff" }), say("It's open!", 110, h * 0.82, [-20, h * 0.7], { w: 80 })],
+        },
+        {
+          alt: "In his room full of college pennants, Big Tony turns from his laptop as Lexington asks for help.",
+          art(w, h) {
+            const gy = h * 0.97;
+            let s = tonyRoom(w, h, gy, { px: 30, lx: w - 140 });
+            s += tony({ x: 130, y: h + 90, s: 0.95, expr: "surprised", pose: "sitHands", seated: true, outfit: "casual" });
+            s += rect(-10, h * 0.86, 200, 24, "#b07a4a", { sw: 3 });
+            s += lex({ x: 350, y: h + 50, s: 1.0, f: -1, outfit: "pjs", expr: "worried", pose: "shrug" });
+            return s;
+          },
+          b: (w, h) => [
+            say("Tony... how do you keep it all together? School, chores, college stuff. You never get in trouble.", w - 130, 70, top("teen", 350, h + 50, 1.0, { dx: 10 }), { w: 200, size: 17 }),
+            say("NEVER? Ha! Ask Mom about eighth grade.", 112, 150, top("man", 130, h + 90, 0.95, { seated: true, dx: 10 }), { w: 130 }),
+          ],
+        },
+        {
+          alt: "Sitting side by side on Tony's bed, Big Tony explains routines to his little brother.",
+          art(w, h) {
+            const gy = h * 0.97;
+            let s = tonyRoom(w, h, gy, { pennants: false, letter: false });
+            s += P.bed(w * 0.5, gy, 1.0, { blanket: "#24345e" });
+            const mt = gy - 104;
+            s += tony({ x: w * 0.42, y: mt + 88 * 0.92, s: 0.92, expr: "talk", pose: "sitHands", seated: true, outfit: "casual" });
+            s += lex({ x: w * 0.62, y: mt + 64 * 0.98, s: 0.98, f: -1, outfit: "pjs", expr: "think", pose: "sitHands", seated: true });
+            // a little routine loop sketch
+            const cx = w * 0.82,
+              cy = 130;
+            s += circle(cx, cy, 72, "#fff8b8", { sw: 3 }) + circle(cx, cy, 58, "none", { sw: 4, stroke: "#2a8f86", dash: "60 12" }) + path(`M${cx + 50} ${cy - 34} l8 -16 l6 18 Z`, "#2a8f86", { sw: 2, stroke: "#2a8f86" });
+            ["WAKE", "PRAY", "WASH", "WORK"].forEach((t, i) => (s += text(cx + Math.cos((i / 4) * Math.PI * 2 - Math.PI / 2) * 40, cy + Math.sin((i / 4) * Math.PI * 2 - Math.PI / 2) * 40 + 6, t, { size: 15, font: "title" })));
+            return s;
+          },
+          b: (w, h) => [
+            cap("Big Tony had been there.", 16, h - 58, { w: 220 }),
+            say("Routines, little bro. Same time, same order, every day. Do it long enough and you don't even have to THINK about it.", w * 0.2, 104, top("man", w * 0.42, h * 0.97 - 104 + 88 * 0.92, 0.92, { seated: true, dx: -10 }), { w: 260 }),
+          ],
+        },
+        {
+          alt: "Big Tony puts a hand on Lexington's shoulder and tells him to get back up whenever he messes up.",
+          art(w, h) {
+            let s = S.rays(w, h, "#d6e4f5", "#ffffff", w * 0.5, h * 0.6);
+            s += tony({ x: w * 0.33, y: h + 200, s: 1.1, expr: "determined", pose: "stand", ra: C.ik(112, -230), outfit: "casual" });
+            s += lex({ x: w * 0.72, y: h + 90, s: 1.1, f: -1, outfit: "pjs", expr: "hopeful", pose: "stand" });
+            return s;
+          },
+          b: (w, h) => [say("And when you mess up (and you WILL), you just get back up. That's the whole secret.", w * 0.3, 70, top("man", w * 0.33, h + 200, 1.1, { dx: -10 }), { w: 200 })],
+        },
+        {
+          alt: "Tony grins and pinches his nose, telling Lexington to go take a shower. Lexington laughs.",
+          art(w, h) {
+            let s = S.rays(w, h, "#ffe3c2", "#fff6e6", w * 0.5, h * 0.5);
+            s += tony({ x: w * 0.3, y: h + 200, s: 1.05, expr: "grin", pose: "pinchNose", outfit: "casual" });
+            s += lex({ x: w * 0.74, y: h + 90, s: 1.05, f: -1, outfit: "pjs", expr: "laugh", pose: "stand" });
+            return s;
+          },
+          b: (w, h) => [say("Now go take a shower. Seriously.", w * 0.3, 60, top("man", w * 0.3, h + 200, 1.05), { w: 130 }), say("Ha! Okay, okay!", w * 0.76, 150, top("teen", w * 0.74, h + 90, 1.05), { w: 90 })],
+        },
+      ],
+    });
 
   // =====================================================================
   // CHAPTER 5 — DAY BY DAY

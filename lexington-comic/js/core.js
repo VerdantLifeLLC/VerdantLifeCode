@@ -29,7 +29,14 @@
     auburn: { hair: "#8c3f22", label: "Auburn" },
     blond: { hair: "#c99a4b", label: "Blond" },
   };
-  C.family = { skin: "brown", hair: "black" };
+  // Two editions share all the artwork. The page sets window.COMIC_EDITION before this file loads.
+  C.EDITIONS = {
+    original: { skin: "brown", hair: "black", texture: "curly" },
+    caucasian: { skin: "light", hair: "brown", texture: "straight" },
+  };
+  C.edition = C.EDITIONS[window.COMIC_EDITION] ? window.COMIC_EDITION : "original";
+  C.family = Object.assign({}, C.EDITIONS[C.edition]);
+  C.straight = () => C.family.texture === "straight";
   C.famSkin = () => C.SKINS[C.family.skin] || C.SKINS.brown;
   C.famHair = () => (C.HAIRS[C.family.hair] || C.HAIRS.black).hair;
 

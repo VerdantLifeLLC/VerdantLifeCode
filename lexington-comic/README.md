@@ -1,14 +1,29 @@
 # Lexington: The Turnaround
 
-A 26-page illustrated comic book about Lexington, a brilliant 13-year-old who keeps making bad choices. He forgets to shower, ignores his parents, and stays in trouble. Through prayer, determination and a lot of daily practice, he turns his life around.
+An illustrated comic book about Lexington, a brilliant 13-year-old who keeps making bad choices. He forgets to shower, ignores his parents, and stays in trouble. Through prayer, determination and a lot of daily practice, he turns his life around.
 
-![Cover](cover.png)
+| Original edition | Caucasian family edition |
+|---|---|
+| ![Original cover](cover.png) | ![Caucasian edition cover](cover-caucasian.png) |
+
+## Editions
+
+| | Original | Caucasian family edition |
+|---|---|---|
+| Family | Brown skin, black curly hair | Light skin, brown straight and wavy hair |
+| Big Tony | Not in this edition | Lexington's 18-year-old brother, a high school senior |
+| Pages | 26 | 28 (adds Big Tony's advice page and his graduation day) |
+| Web page | `index.html` | `caucasian.html` |
+| PDF | `Lexington-The-Turnaround.pdf` | `Lexington-The-Turnaround-Caucasian.pdf` |
+| Single file | `Lexington-The-Turnaround.html` | `Lexington-The-Turnaround-Caucasian.html` |
+
+Both editions share the same artwork code. The Caucasian edition turns on with `window.COMIC_EDITION = "caucasian"`, which `caucasian.html` sets before the scripts load. Every Big Tony scene in `js/story-*.js` sits behind a `CAU` check, so the original edition draws exactly as before.
 
 ## Read it
 
-- **On the web:** open `index.html` in a browser. Choose **Full pages** to read like a printed comic, or **Panel by panel** for phones (phones start in this mode).
-- **Print or share:** `Lexington-The-Turnaround.pdf` has one comic page per sheet at 7 × 10.5 in.
-- **Email or offline:** `Lexington-The-Turnaround.html` is the whole comic in a single file.
+- **On the web:** open `index.html` (original) or `caucasian.html` in a browser. Choose **Full pages** to read like a printed comic, or **Panel by panel** for phones (phones start in this mode).
+- **Print or share:** each PDF has one comic page per sheet at 7 × 10.5 in.
+- **Email or offline:** each single-file `.html` is the whole comic in one file.
 
 The lettering fonts load from Google Fonts. Without an internet connection the comic still works, with system fonts.
 
@@ -30,11 +45,13 @@ The lettering fonts load from Google Fonts. Without an internet connection the c
 | 11. The Last Time | 23–24 | He can't remember the last time he got in trouble, or why he'd want to |
 | Then & Now, Daily Checklist | 25–26 | Before/after stats, his verses, and a printable weekly routine chart |
 
+The Caucasian family edition also introduces **Big Tony** on the cast page and at breakfast, then gives him his own page after Lexington's prayer (big-brother advice about routines and getting back up), and a graduation day page before chapter 11. He also joins game night, dinner, church, the sneaker line with his prom shoes, the business expo and the finale.
+
 Scripture is quoted from the King James Version.
 
 ## Change Lexington's look
 
-Use **Lexington's look** in the reader toolbar to change the family's skin tone and hair color. Every page redraws, and the choice is remembered in that browser. You can also link straight to a look, for example `index.html?skin=tan&hair=brown`.
+Use **Lexington's look** in the reader toolbar to change the family's skin tone and hair color. Every page redraws, and the choice is remembered in that browser. You can also link straight to a look, for example `index.html?skin=tan&hair=brown`. Each edition remembers its own choice.
 
 Skin options: `deep`, `brown`, `tan`, `light`, `fair`. Hair options: `black`, `brown`, `auburn`, `blond`.
 
@@ -49,7 +66,8 @@ Skin options: `deep`, `brown`, `tan`, `light`, `fair`. Hair options: `black`, `b
 | `js/scenes.js` | Backgrounds: bedroom, bathroom, kitchen, church, school, garage, yard and more |
 | `js/reader.js` | Page layout, the two reading modes, and the toolbar |
 | `js/story-1.js` to `js/story-3.js` | The script: every page, panel, line of dialogue and caption |
-| `tools/build.cjs` | Rebuilds the PDF, the single-file HTML and `cover.png` |
+| `caucasian.html` | The reader page for the Caucasian family edition |
+| `tools/build.cjs` | Rebuilds the PDF, the single-file HTML and the cover image for one edition |
 
 All artwork is drawn in code as SVG, so it stays sharp at any size.
 
@@ -67,6 +85,7 @@ After editing, refresh `index.html` to see the change. To rebuild the PDF and si
 cd lexington-comic
 npm install playwright
 npx playwright install chromium
-node tools/build.cjs                      # default look
+node tools/build.cjs                      # original edition
+node tools/build.cjs --edition=caucasian  # Caucasian family edition
 node tools/build.cjs --skin=tan --hair=brown
 ```

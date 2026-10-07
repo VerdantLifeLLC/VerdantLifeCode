@@ -425,6 +425,69 @@
       front += `<path d="M${n(0.86 * r)} ${n(hc - 0.36 * r)} q${n(5 * k)} ${n(4 * k)} ${n(1 * k)} ${n(8 * k)} q${n(-3 * k)} ${n(-3 * k)} ${n(1 * k)} ${n(-4 * k)}" fill="none" stroke="${col}" stroke-width="1.8"/>`;
       return { back, front };
     },
+    // short side-swept boy's cut
+    lexStraight(B, col, o) {
+      const r = B.r,
+        hc = B.hcy,
+        k = r / 40,
+        look = 5 * k;
+      const messy = o.messy;
+      let d = `M${n(0.97 * r)} ${n(hc + 0.08 * r)} Q${n(1.1 * r)} ${n(hc - 0.55 * r)} ${n(0.82 * r)} ${n(hc - 1.0 * r)} Q${n(0.4 * r)} ${n(hc - 1.42 * r)} ${n(-0.18 * r)} ${n(hc - 1.34 * r)} Q${n(-0.86 * r)} ${n(hc - 1.24 * r)} ${n(-1.06 * r)} ${n(hc - 0.62 * r)} Q${n(-1.1 * r)} ${n(hc - 0.2 * r)} ${n(-0.97 * r)} ${n(hc + 0.08 * r)}`;
+      const fr = [[-0.88, -0.3], [-0.64, -0.2], [-0.56, -0.5], [-0.3, -0.22], [-0.2, -0.54], [0.08, -0.26], [0.16, -0.56], [0.44, -0.3], [0.52, -0.54], [0.76, -0.32], [0.82, -0.48], [0.94, -0.22]];
+      fr.forEach(([x, y], i) => {
+        const X = x * r + look * 0.5,
+          Y = hc + y * r;
+        if (i % 2 === 1) d += ` Q${n(fr[i - 1][0] * r + look * 0.5 + 0.06 * r)} ${n(Y - 0.04 * r)} ${n(X)} ${n(Y)}`;
+        else d += ` L${n(X)} ${n(Y)}`;
+      });
+      let front = path(d + " Z", col, { sw: 2.8 });
+      const st = shade(col, -0.32);
+      [[-0.15, -1.2, -0.4, -0.62], [0.25, -1.18, 0.05, -0.64], [0.6, -1.0, 0.45, -0.64], [-0.6, -1.02, -0.72, -0.62]].forEach(([x1, y1, x2, y2]) => {
+        front += `<path d="M${n(x1 * r)} ${n(hc + y1 * r)} Q${n(((x1 + x2) / 2) * r + 0.08 * r)} ${n(hc + ((y1 + y2) / 2) * r)} ${n(x2 * r + look * 0.5)} ${n(hc + y2 * r)}" fill="none" stroke="${st}" stroke-width="2" stroke-linecap="round"/>`;
+      });
+      front += `<path d="M${n(-0.55 * r)} ${n(hc - 1.08 * r)} Q${n(-0.1 * r)} ${n(hc - 1.28 * r)} ${n(0.35 * r)} ${n(hc - 1.16 * r)}" fill="none" stroke="${shade(col, 0.35)}" stroke-width="${n(4 * k)}" stroke-linecap="round" opacity=".6"/>`;
+      if (messy) {
+        [[-0.5, -1.28, -25], [0.05, -1.42, 5], [0.55, -1.25, 35], [-0.98, -0.8, -70], [0.95, -0.85, 70]].forEach(([tx, ty, a]) => {
+          const x = tx * r,
+            y = hc + ty * r;
+          front += `<path d="M${n(x - 6 * k)} ${n(y + 8 * k)} Q${n(x)} ${n(y - 10 * k)} ${n(x + 9 * k)} ${n(y - 14 * k)} Q${n(x + 4 * k)} ${n(y - 2 * k)} ${n(x + 6 * k)} ${n(y + 8 * k)} Z" fill="${col}" stroke="${INK}" stroke-width="2.4" stroke-linejoin="round" transform="rotate(${a} ${n(x)} ${n(y)})"/>`;
+        });
+      }
+      return { back: "", front };
+    },
+    // shoulder-length waves with a headband
+    wavy(B, col, o) {
+      const r = B.r,
+        hc = B.hcy,
+        k = r / 40,
+        look = 5 * k;
+      let b = `M${n(-1.0 * r)} ${n(hc - 0.5 * r)} Q${n(-1.32 * r)} ${n(hc + 0.4 * r)} ${n(-1.22 * r)} ${n(hc + 1.3 * r)}`;
+      for (let i = 0; i < 6; i++) b += ` q${n(0.205 * r)} ${n(0.16 * r)} ${n(0.41 * r)} 0`;
+      b += ` Q${n(1.32 * r)} ${n(hc + 0.4 * r)} ${n(1.0 * r)} ${n(hc - 0.5 * r)} Q${n(1.1 * r)} ${n(hc - 1.38 * r)} 0 ${n(hc - 1.34 * r)} Q${n(-1.1 * r)} ${n(hc - 1.38 * r)} ${n(-1.0 * r)} ${n(hc - 0.5 * r)} Z`;
+      let back = path(b, col, { sw: 2.8 });
+      [-1, 1].forEach((sx) => (back += `<path d="M${n(sx * 1.08 * r)} ${n(hc + 0.1 * r)} q${n(sx * 0.12 * r)} ${n(0.3 * r)} 0 ${n(0.55 * r)} t0 ${n(0.5 * r)}" fill="none" stroke="${shade(col, -0.3)}" stroke-width="2" stroke-linecap="round"/>`));
+      let d = `M${n(0.98 * r)} ${n(hc + 0.5 * r)} Q${n(1.12 * r)} ${n(hc - 0.6 * r)} ${n(0.62 * r)} ${n(hc - 1.08 * r)} Q0 ${n(hc - 1.34 * r)} ${n(-0.62 * r)} ${n(hc - 1.08 * r)} Q${n(-1.12 * r)} ${n(hc - 0.6 * r)} ${n(-0.98 * r)} ${n(hc + 0.5 * r)}`;
+      d += ` L${n(-0.86 * r)} ${n(hc + 0.42 * r)} Q${n(-0.92 * r)} ${n(hc - 0.1 * r)} ${n(-0.84 * r)} ${n(hc - 0.36 * r)} Q${n(-0.45 * r + look)} ${n(hc - 0.82 * r)} ${n(look - 0.12 * r)} ${n(hc - 0.66 * r)} Q${n(0.35 * r + look)} ${n(hc - 0.52 * r)} ${n(0.86 * r)} ${n(hc - 0.3 * r)} Q${n(0.92 * r)} ${n(hc + 0.05 * r)} ${n(0.86 * r)} ${n(hc + 0.44 * r)} Z`;
+      let front = path(d, col, { sw: 2.6 });
+      const band = o.band || "#e0533d";
+      front += path(`M${n(-0.98 * r)} ${n(hc - 0.6 * r)} Q0 ${n(hc - 1.26 * r)} ${n(0.98 * r)} ${n(hc - 0.6 * r)} L${n(0.92 * r)} ${n(hc - 0.8 * r)} Q0 ${n(hc - 1.42 * r)} ${n(-0.92 * r)} ${n(hc - 0.8 * r)} Z`, band, { sw: 2.4 });
+      front += `<path d="M${n(-0.4 * r)} ${n(hc - 1.18 * r)} Q${n(0.1 * r)} ${n(hc - 1.32 * r)} ${n(0.5 * r)} ${n(hc - 1.16 * r)}" fill="none" stroke="${shade(col, 0.35)}" stroke-width="${n(3.4 * k)}" stroke-linecap="round" opacity=".55"/>`;
+      return { back, front };
+    },
+    // short side part; o.quiff adds a lifted front wave
+    short(B, col, o) {
+      const r = B.r,
+        hc = B.hcy,
+        k = r / 40,
+        look = 5 * k;
+      let d = `M${n(0.97 * r)} ${n(hc)} L${n(1.01 * r)} ${n(hc - 0.32 * r)} Q${n(0.98 * r)} ${n(hc - 1.18 * r)} ${n(0.1 * r)} ${n(hc - 1.22 * r)} Q${n(-0.92 * r)} ${n(hc - 1.2 * r)} ${n(-1.01 * r)} ${n(hc - 0.32 * r)} L${n(-0.97 * r)} ${n(hc)}`;
+      d += ` L${n(-0.88 * r)} ${n(hc - 0.45 * r)} Q${n(-0.55 * r)} ${n(hc - 0.78 * r)} ${n(look - 0.28 * r)} ${n(hc - 0.74 * r)} L${n(look - 0.22 * r)} ${n(hc - 0.86 * r)} Q${n(0.35 * r + look)} ${n(hc - 0.9 * r)} ${n(0.88 * r)} ${n(hc - 0.45 * r)} Z`;
+      let front = path(d, col, { sw: 2.6 });
+      if (o.quiff) front += path(`M${n(look - 0.24 * r)} ${n(hc - 0.84 * r)} Q${n(look - 0.1 * r)} ${n(hc - 1.42 * r)} ${n(look + 0.42 * r)} ${n(hc - 1.3 * r)} Q${n(look + 0.72 * r)} ${n(hc - 1.18 * r)} ${n(0.86 * r)} ${n(hc - 0.6 * r)} Q${n(0.4 * r + look)} ${n(hc - 0.98 * r)} ${n(look - 0.24 * r)} ${n(hc - 0.84 * r)} Z`, col, { sw: 2.6 });
+      const st = shade(col, -0.3);
+      [[-0.1, -0.9, 0.5, -1.08], [0.0, -0.86, 0.66, -0.9], [-0.35, -0.8, -0.7, -0.98]].forEach(([x1, y1, x2, y2]) => (front += `<path d="M${n(x1 * r + look)} ${n(hc + y1 * r)} Q${n(((x1 + x2) / 2) * r + look)} ${n(hc + Math.min(y1, y2) * r - 0.06 * r)} ${n(x2 * r + look * 0.5)} ${n(hc + y2 * r)}" fill="none" stroke="${st}" stroke-width="1.8" stroke-linecap="round"/>`));
+      return { back: "", front };
+    },
     pastor(B, col, o) {
       const r = B.r,
         hc = B.hcy,
@@ -801,8 +864,22 @@
     } else if (tt === "dress") {
       afterTorso += path(`M${n(-11 * k)} ${n(neckY + 2)} Q0 ${n(neckY + 16)} ${n(11 * k)} ${n(neckY + 2)}`, shade(topC, -0.15), { sw: 2.4 });
       if (top.necklace) afterTorso += path(`M${n(-10 * k)} ${n(neckY + 6)} Q0 ${n(neckY + 22)} ${n(10 * k)} ${n(neckY + 6)}`, "none", { sw: 2, stroke: "#f6f0e6" });
+    } else if (tt === "letterman") {
+      const pc = top.patch || "#f0b429";
+      torso += line(0, neckY + 8, 0, B.hy + drop - 10, { sw: 2.2 });
+      [0.28, 0.48, 0.68].forEach((fy) => (torso += circle(0, B.sy + (B.hy - B.sy) * fy, 2.6, "#e9e4da", { sw: 1.4 })));
+      torso += C.rect(-B.tb - 1, B.hy + drop - 12, B.tb * 2 + 2, 14, topC, { sw: 2.4 }) + line(-B.tb, B.hy + drop - 8, B.tb, B.hy + drop - 8, { sw: 2, stroke: pc }) + line(-B.tb, B.hy + drop - 3, B.tb, B.hy + drop - 3, { sw: 2, stroke: pc });
+      afterTorso += path(`M${n(-14 * k)} ${n(neckY - 2)} Q0 ${n(neckY + 16)} ${n(14 * k)} ${n(neckY - 2)} L${n(17 * k)} ${n(neckY + 6)} Q0 ${n(neckY + 26)} ${n(-17 * k)} ${n(neckY + 6)} Z`, topC, { sw: 2.2 });
+      afterTorso += path(`M${n(-15.5 * k)} ${n(neckY + 2)} Q0 ${n(neckY + 21)} ${n(15.5 * k)} ${n(neckY + 2)}`, "none", { sw: 1.8, stroke: pc });
+      const px = B.tb * 0.45,
+        py = B.sy + 42 * k;
+      torso += circle(px, py, 14 * k, pc, { sw: 2.2 });
+      if (top.letter !== false) torso += path(`M${n(px - 8 * k)} ${n(py - 8 * k)} H${n(px + 8 * k)} V${n(py - 3.5 * k)} H${n(px + 2.5 * k)} V${n(py + 9 * k)} H${n(px - 2.5 * k)} V${n(py - 3.5 * k)} H${n(px - 8 * k)} Z`, topC, { sw: 1.4, stroke: "#ffffff" });
     } else if (tt === "vest") {
       torso += path(`M${n(-14 * k)} ${n(neckY)} L${n(14 * k)} ${n(neckY)} L${n(6 * k)} ${n(B.hy + drop)} L${n(-6 * k)} ${n(B.hy + drop)} Z`, top.inner || "#ffffff", { sw: 2.2 });
+    }
+    if (top.stole) {
+      [-1, 1].forEach((sx) => (afterTorso += path(`M${n(sx * 4 * k)} ${n(neckY + 4)} L${n(sx * 15 * k)} ${n(neckY - 2)} L${n(sx * 18 * k)} ${n(B.hy + 40)} L${n(sx * 7 * k)} ${n(B.hy + 40)} Z`, top.stole, { sw: 2.2 })));
     }
     if (top.emblem) torso += gear(B.tb * 0.3 + 4, B.sy + 38 * k, 11 * k, top.emblem);
     if (top.apron) {
@@ -851,6 +928,14 @@
       [-0.32, 0.38].forEach((fx2) => (head += circle(fx2 * r, gy2 - 2, 0.27 * r, "#9fe0ff", { sw: 3 }) + circle(fx2 * r - 3, gy2 - 6, 0.08 * r, "#ffffff", { sw: 0 })));
     }
     if (o.cap) head += o.cap;
+    if (o.mortarboard) {
+      const mc = o.mortarboard,
+        gold = "#f0b429";
+      head += path(`M${n(-0.92 * r)} ${n(hc - 0.6 * r)} Q${n(-0.95 * r)} ${n(hc - 1.05 * r)} 0 ${n(hc - 1.08 * r)} Q${n(0.95 * r)} ${n(hc - 1.05 * r)} ${n(0.92 * r)} ${n(hc - 0.6 * r)} Q0 ${n(hc - 0.76 * r)} ${n(-0.92 * r)} ${n(hc - 0.6 * r)} Z`, mc, { sw: 2.6 });
+      head += path(`M${n(-1.45 * r)} ${n(hc - 1.12 * r)} L0 ${n(hc - 1.38 * r)} L${n(1.45 * r)} ${n(hc - 1.12 * r)} L0 ${n(hc - 0.9 * r)} Z`, mc, { sw: 2.8 });
+      head += fcircle(0, hc - 1.13 * r, 3 * k, gold) + path(`M0 ${n(hc - 1.13 * r)} L${n(0.95 * r)} ${n(hc - 1.04 * r)} L${n(0.98 * r)} ${n(hc - 0.62 * r)}`, "none", { sw: 2.4, stroke: gold });
+      head += C.rect(0.98 * r - 3 * k, hc - 0.66 * r, 6 * k, 12 * k, gold, { sw: 1.4 });
+    }
 
     const headTf = `translate(${n(o.headDx || 0)} ${n(o.headDy || 0)}) rotate(${o.headTilt || 0} 0 ${n(B.sy - 14)})`;
     up += arms.back + neck + torso + afterTorso;
@@ -981,7 +1066,7 @@
   C.cast = {
     lex(outfit) {
       const sk = famSkin();
-      const base = { type: "teen", skin: sk.skin, shade: sk.shade, hair: { style: "lex", color: C.famHair() }, eyeScale: 1.05, lip: shade(sk.skin, -0.25) };
+      const base = { type: "teen", skin: sk.skin, shade: sk.shade, hair: { style: C.straight() ? "lexStraight" : "lex", color: C.famHair() }, eyeScale: 1.05, lip: shade(sk.skin, -0.25) };
       const outfits = {
         messy: { top: { type: "hoodie", color: "#c9473c" }, bottom: { type: "pants", color: "#59698c", baggy: true }, shoes: { color: "#d9d2c3", sole: "#b9b2a3" } },
         hoodie: { top: { type: "hoodie", color: "#c9473c" }, bottom: { type: "pants", color: "#3c4d78" }, shoes: { color: "#ffffff", sole: "#d8402f" } },
@@ -999,7 +1084,7 @@
       const sk = famSkin();
       const skin = shade(sk.skin, 0.06),
         sh = shade(sk.shade, 0.06);
-      const base = { type: "woman", skin, shade: sh, hair: { style: "puff", color: C.famHair(), band: "#e0533d" }, earrings: true, lip: "#9b3b44" };
+      const base = { type: "woman", skin, shade: sh, hair: { style: C.straight() ? "wavy" : "puff", color: C.famHair(), band: "#e0533d" }, earrings: true, lip: "#9b3b44" };
       const outfits = {
         home: { top: { type: "cardigan", color: "#e09a3e", blouse: "#f6efe0", necklace: true }, bottom: { type: "pants", color: "#40557d" }, shoes: { color: "#9b3b44", sole: "#6e2830" } },
         church: { top: { type: "dress", color: "#2f8a84", necklace: true }, bottom: { type: "skirt", color: "#2f8a84" }, shoes: { color: "#2a1d15", sole: null } },
@@ -1010,7 +1095,7 @@
       const sk = famSkin();
       const skin = shade(sk.skin, -0.06),
         sh = shade(sk.shade, -0.06);
-      const base = { type: "man", skin, shade: sh, hair: { style: "crop", color: C.famHair() }, beard: C.famHair(), mustache: C.famHair(), lip: shade(skin, -0.25) };
+      const base = { type: "man", skin, shade: sh, hair: { style: C.straight() ? "short" : "crop", color: C.famHair() }, beard: C.famHair(), mustache: C.famHair(), lip: shade(skin, -0.25) };
       const outfits = {
         home: { top: { type: "tucked", color: "#8db3d8", collar: "#a3c4e4" }, bottom: { type: "pants", color: "#4a4f60" }, shoes: { color: "#5a3a26", sole: "#2a1d15" } },
         church: { top: { type: "suit", color: "#2b3550", tie: "#b5843c" }, bottom: { type: "pants", color: "#2b3550" }, shoes: { color: "#2a1d15", sole: "#140d09" } },
@@ -1027,9 +1112,22 @@
     friend2: () => ({ type: "teen", skin: "#f3d0b5", shade: "#ddb194", hair: { style: "shag", color: "#a0652e" }, freckles: true, top: { type: "hoodie", color: "#6a5acd" }, bottom: { type: "pants", color: "#3d4f7a" }, shoes: { color: "#222222", sole: "#ffffff" } }),
     girl: () => ({ type: "teen", skin: "#7a4a30", shade: "#613a24", hair: { style: "puffs", color: "#1f1512" }, earrings: true, top: { type: "tee", color: "#e85d75", sleeve: "short" }, bottom: { type: "pants", color: "#33416b" }, shoes: { color: "#ffffff", sole: "#e85d75" } }),
     girl2: () => ({ type: "teen", skin: "#e9be98", shade: "#d0a17a", hair: { style: "pony", color: "#3a2416" }, top: { type: "hoodie", color: "#3fa7a0" }, bottom: { type: "pants", color: "#2a2f45" }, shoes: { color: "#ffffff", sole: "#3fa7a0" } }),
-    kid: () => ({ type: "child", skin: C.famSkin().skin, shade: C.famSkin().shade, hair: { style: "crop", color: C.famHair() }, top: { type: "tee", color: "#f08a3c", sleeve: "short" }, bottom: { type: "shorts", color: "#3d4f7a" }, shoes: { color: "#ffffff", sole: "#2d6fb5" } }),
+    kid: () => ({ type: "child", skin: C.famSkin().skin, shade: C.famSkin().shade, hair: { style: C.straight() ? "shag" : "crop", color: C.famHair() }, top: { type: "tee", color: "#f08a3c", sleeve: "short" }, bottom: { type: "shorts", color: "#3d4f7a" }, shoes: { color: "#ffffff", sole: "#2d6fb5" } }),
     kid2: () => ({ type: "child", skin: "#b07850", shade: "#93603d", hair: { style: "braids", color: "#1f1512" }, top: { type: "tee", color: "#7cc35a", sleeve: "short" }, bottom: { type: "shorts", color: "#6a4a8a" }, shoes: { color: "#ffffff", sole: "#e85d75" } }),
     boy3: () => ({ type: "teen", skin: "#5b3a27", shade: "#472c1d", hair: { style: "crop", color: "#120c0a" }, top: { type: "tee", color: "#d64545", sleeve: "short" }, bottom: { type: "pants", color: "#2a2f45" }, shoes: { color: "#111111", sole: "#ffffff" } }),
+  };
+
+  // Big Tony, Lexington's 18-year-old brother (caucasian edition)
+  C.cast.tony = function (outfit) {
+    const sk = famSkin();
+    const base = { type: "man", skin: sk.skin, shade: sk.shade, hair: { style: "short", color: C.famHair(), quiff: true }, eyeScale: 1.12, lip: shade(sk.skin, -0.25), jaw: 0.94 };
+    const outfits = {
+      letterman: { top: { type: "letterman", color: "#24345e", armColor: "#efe6d0", patch: "#f0b429" }, bottom: { type: "pants", color: "#3d4f7a" }, shoes: { color: "#ffffff", sole: "#24345e" } },
+      church: { top: { type: "shirtTie", color: "#eaf2fb", tie: "#7a2236", collar: "#ffffff" }, bottom: { type: "pants", color: "#2a2f45" }, shoes: { color: "#2a1d15", sole: "#140d09" } },
+      gown: { top: { type: "dress", color: "#24345e", stole: "#f0b429" }, bottom: { type: "skirt", color: "#24345e", len: 128 }, socks: "#2a2f45", shoes: { color: "#2a1d15", sole: null } },
+      casual: { top: { type: "tee", color: "#7a2236", sleeve: "short" }, bottom: { type: "pants", color: "#3d4f7a" }, shoes: { color: "#ffffff", sole: "#24345e" } },
+    };
+    return Object.assign(base, outfits[outfit || "letterman"] || outfits.letterman);
   };
 
   // Convenience wrappers: lex({...}), mom({...}), ...
@@ -1037,4 +1135,5 @@
   C.mom = (o = {}) => person(C.cast.mom(o.outfit), o);
   C.dad = (o = {}) => person(C.cast.dad(o.outfit), o);
   C.npc = (who, o = {}) => person(C.cast[who](o.outfit), o);
+  C.tony = (o = {}) => person(C.cast.tony(o.outfit), Object.assign({ mortarboard: o.outfit === "gown" ? "#24345e" : undefined }, o));
 })();

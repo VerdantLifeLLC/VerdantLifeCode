@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Lexington: The Turnaround (Caucasian Edition)</title>
+  <meta name="description" content="An illustrated comic about Lexington, a brilliant 13-year-old who keeps making bad choices, until faith, determination and a lot of practice turn his life around." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Lora:ital,wght@0,500;1,500&family=Patrick+Hand&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand">
+      <p class="kicker">Issue #1 · A Verdant Life comic</p>
+      <h1>Lexington <span>The Turnaround</span></h1>
+    </div>
+    <nav class="tools" aria-label="Reader settings">
+      <div class="seg" id="view-toggle" role="group" aria-label="Reading mode">
+        <button type="button" data-view="pages">Full pages</button>
+        <button type="button" data-view="panels">Panel by panel</button>
+      </div>
+      <label class="jump">Go to
+        <select id="jump"></select>
+      </label>
+      <details class="look">
+        <summary>Lexington's look</summary>
+        <div class="look-body">
+          <p>Match the family's skin tone and hair color. Every page redraws.</p>
+          <div class="look-row"><span>Skin</span><div id="skin-swatches" class="swatches"></div></div>
+          <div class="look-row"><span>Hair</span><div id="hair-swatches" class="swatches"></div></div>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main id="book" class="book" aria-label="Comic pages">
+    <p class="loading">Inking the pages…</p>
+  </main>
+
+  <footer class="colophon">
+    <p>Written and illustrated for Lexington. Scripture quoted from the King James Version.</p>
+  </footer>
+
+  <script>window.COMIC_EDITION = "caucasian";</script>
+  <script src="js/core.js"></script>
+  <script src="js/characters.js"></script>
+  <script src="js/props.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/reader.js"></script>
+  <script src="js/story-1.js"></script>
+  <script src="js/story-2.js"></script>
+  <script src="js/story-3.js"></script>
+  <script>window.Comic.boot();</script>
+</body>
+</html>

@@ -12,7 +12,9 @@
     mom = C.mom,
     dad = C.dad,
     npc = C.npc,
+    tony = C.tony,
     sub = C.sub;
+  const CAU = C.kit.CAU;
 
   // ---------- props for these chapters ----------
   const reportCard = (x, y, s, rot) =>
@@ -93,16 +95,24 @@
         b: (w, h) => [say("Straight A's, Lexington. You've really GROWN this year.", 130, 60, top("woman", 110, h + 60, 0.92, { dx: 10 }), { w: 170 })],
       },
       {
-        alt: "Family game night: Mom, Dad and Lexington laugh around a board game. Biscuit wears a party hat.",
+        alt: CAU ? "Family game night: Mom, Dad, Big Tony and Lexington laugh around a board game. Biscuit wears a party hat." : "Family game night: Mom, Dad and Lexington laugh around a board game. Biscuit wears a party hat.",
         art(w, h) {
           const gy = h * 0.98,
             k = 0.9;
           let s = S.living(w, h, { k, gy, ox: w * 0.5, couch: false, time: "night" });
           s += `<ellipse cx="${w * 0.5}" cy="${h * 0.5}" rx="${w * 0.4}" ry="${h * 0.5}" fill="url(#lampGlow)" opacity=".5"/>`;
-          s += dad({ x: w * 0.3, y: gy, s: 0.85, expr: "laugh", pose: "sitHands", seated: true });
-          s += lex({ x: w * 0.5, y: gy, s: 0.92, expr: "laugh", pose: "cheer", seated: true });
-          s += mom({ x: w * 0.7, y: gy, s: 0.85, f: -1, expr: "laugh", pose: "sitHands", seated: true });
-          s += P.table(w * 0.5, gy + 14, 1.15, { cloth: "#2a8f86" });
+          if (CAU) {
+            s += dad({ x: w * 0.27, y: gy, s: 0.82, expr: "laugh", pose: "sitHands", seated: true });
+            s += tony({ x: w * 0.42, y: gy, s: 0.82, expr: "shock", pose: "handsHead", seated: true, outfit: "casual" });
+            s += lex({ x: w * 0.58, y: gy, s: 0.9, expr: "laugh", pose: "cheer", seated: true });
+            s += mom({ x: w * 0.74, y: gy, s: 0.82, f: -1, expr: "laugh", pose: "sitHands", seated: true });
+            s += P.table(w * 0.5, gy + 14, 1.62, { cloth: "#2a8f86" });
+          } else {
+            s += dad({ x: w * 0.3, y: gy, s: 0.85, expr: "laugh", pose: "sitHands", seated: true });
+            s += lex({ x: w * 0.5, y: gy, s: 0.92, expr: "laugh", pose: "cheer", seated: true });
+            s += mom({ x: w * 0.7, y: gy, s: 0.85, f: -1, expr: "laugh", pose: "sitHands", seated: true });
+            s += P.table(w * 0.5, gy + 14, 1.15, { cloth: "#2a8f86" });
+          }
           s += boardGame(w * 0.5, gy - 104, 1.1);
           s += P.dog(w * 0.1, gy, 0.9, { mood: "love" }) + partyHat(w * 0.1 + 40, gy - 78, 0.9);
           return s;
@@ -110,7 +120,9 @@
         b: (w, h) => [
           cap("No yelling. No whoopings. Just peace.", 16, 16, { w: 300 }),
           cap("Turns out when you do the right thing the FIRST time, there's a lot more time left for fun.", w - 330, h - 90, { w: 300, bg: "#ffffff" }),
-          shout("UNO... I mean, I WIN!", w * 0.52, 70, top("teen", w * 0.5, h * 0.98, 0.92, { seated: true }), { w: 140, size: 18 }),
+          ...(CAU
+            ? [shout("UNO... I mean, I WIN!", w * 0.64, 64, top("teen", w * 0.58, h * 0.98, 0.9, { seated: true }), { w: 140, size: 18 }), say("No WAY. Rematch!", w * 0.36, 70, top("man", w * 0.42, h * 0.98, 0.82, { seated: true }), { w: 100 })]
+            : [shout("UNO... I mean, I WIN!", w * 0.52, 70, top("teen", w * 0.5, h * 0.98, 0.92, { seated: true }), { w: 140, size: 18 })]),
         ],
       },
     ],
@@ -181,6 +193,16 @@
         art(w, h) {
           const gy = h * 0.98;
           let s = S.kitchen(w, h, { k: 0.85, gy, ox: w * 0.3, table: false, time: "night" });
+          if (CAU) {
+            s += mom({ x: w * 0.24, y: gy, s: 0.82, expr: "touched", pose: "sitHands", seated: true });
+            s += lex({ x: w * 0.42, y: gy, s: 0.9, expr: "pray", pose: "sitPray", seated: true });
+            s += tony({ x: w * 0.58, y: gy, s: 0.82, f: -1, expr: "pray", pose: "sitHands", seated: true, outfit: "casual" });
+            s += dad({ x: w * 0.76, y: gy, s: 0.82, f: -1, expr: "pray", pose: "sitHands", seated: true });
+            s += P.table(w * 0.5, gy + 12, 1.7, { cloth: "#e8536b" });
+            s += T(w * 0.5, gy - 125, 1, ellipse(0, 0, 40, 12, "#ffffff", { sw: 2.4 }) + fellipse(0, -6, 26, 10, "#c9673c") + fx.steam(0, -14, 0.4));
+            [0.3, 0.4, 0.6, 0.7].forEach((fx2) => (s += T(w * fx2, gy - 124, 1, ellipse(0, 0, 24, 8, "#ffffff", { sw: 2 }))));
+            return s;
+          }
           s += mom({ x: w * 0.3, y: gy, s: 0.85, expr: "touched", pose: "sitHands", seated: true });
           s += lex({ x: w * 0.5, y: gy, s: 0.92, expr: "pray", pose: "sitPray", seated: true });
           s += dad({ x: w * 0.7, y: gy, s: 0.85, f: -1, expr: "pray", pose: "sitHands", seated: true });
@@ -189,10 +211,16 @@
           s += T(w * 0.36, gy - 124, 1, ellipse(0, 0, 26, 8, "#ffffff", { sw: 2 })) + T(w * 0.64, gy - 124, 1, ellipse(0, 0, 26, 8, "#ffffff", { sw: 2 }));
           return s;
         },
-        b: (w, h) => [
-          say("Lex, would you bless the food tonight?", w * 0.82, 60, top("man", w * 0.7, h * 0.98, 0.85, { seated: true, dx: 10 }), { w: 170 }),
-          pray("Lord, thank You for this food, for Mom and Dad... and for second chances. Amen.", w * 0.4, 70, top("teen", w * 0.5, h * 0.98, 0.92, { seated: true }), { w: 260 }),
-        ],
+        b: (w, h) =>
+          CAU
+            ? [
+                say("Lex, would you bless the food tonight?", w * 0.86, 60, top("man", w * 0.76, h * 0.98, 0.82, { seated: true, dx: 10 }), { w: 170 }),
+                pray("Lord, thank You for this food, for Mom and Dad and Tony... and for second chances. Amen.", w * 0.36, 66, top("teen", w * 0.42, h * 0.98, 0.9, { seated: true }), { w: 270 }),
+              ]
+            : [
+                say("Lex, would you bless the food tonight?", w * 0.82, 60, top("man", w * 0.7, h * 0.98, 0.85, { seated: true, dx: 10 }), { w: 170 }),
+                pray("Lord, thank You for this food, for Mom and Dad... and for second chances. Amen.", w * 0.4, 70, top("teen", w * 0.5, h * 0.98, 0.92, { seated: true }), { w: 260 }),
+              ],
       },
     ],
   });
@@ -220,13 +248,20 @@
         b: (w, h) => [cap("Church used to look like this...", 16, 16, { w: 260, bg: "#e9d6b0" }), sfx("SNORRRE", 320, 120, { size: 34, rot: -8, color: "#e9d6b0" })],
       },
       {
-        alt: "Now Lexington sits up straight in church in a shirt and tie, Bible open, taking notes, between proud parents.",
+        alt: CAU ? "Now Lexington sits up straight in church in a shirt and tie, Bible open, taking notes, with his proud parents and Big Tony." : "Now Lexington sits up straight in church in a shirt and tie, Bible open, taking notes, between proud parents.",
         art(w, h) {
           const gy = h * 0.98;
           let s = S.church(w, h, { k: 0.55, gy: h * 0.6, ox: w * 0.5, light: true });
-          s += mom({ x: 80, y: gy, s: 0.85, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
-          s += lex({ x: 230, y: gy + 6, s: 0.95, outfit: "church", expr: "focus", pose: "sitRead", seated: true, hold: { c: H.bookOpen } });
-          s += dad({ x: 380, y: gy, s: 0.85, f: -1, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
+          if (CAU) {
+            s += mom({ x: 62, y: gy, s: 0.8, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
+            s += lex({ x: 182, y: gy + 6, s: 0.9, outfit: "church", expr: "focus", pose: "sitRead", seated: true, hold: { c: H.bookOpen } });
+            s += dad({ x: 300, y: gy, s: 0.8, f: -1, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
+            s += tony({ x: 412, y: gy, s: 0.8, f: -1, expr: "happy", pose: "sitHands", seated: true, outfit: "church" });
+          } else {
+            s += mom({ x: 80, y: gy, s: 0.85, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
+            s += lex({ x: 230, y: gy + 6, s: 0.95, outfit: "church", expr: "focus", pose: "sitRead", seated: true, hold: { c: H.bookOpen } });
+            s += dad({ x: 380, y: gy, s: 0.85, f: -1, expr: "proud", pose: "sitHands", seated: true, outfit: "church" });
+          }
           s += P.pew(-20, gy + 30, w + 40, {});
           return s;
         },
@@ -338,17 +373,22 @@
             ["girl", { pose: "holdOut", hold: { r: H.sneakerDirty } }],
             ["boy3", { pose: "stand" }],
             ["girl2", { pose: "holdBoth", hold: { c: H.sneakerDirty } }],
-            ["friend", { pose: "wave" }],
+            CAU ? ["tony", { pose: "holdOut", hold: { r: H.dressShoe } }] : ["friend", { pose: "wave" }],
             ["kid2", { pose: "stand" }],
           ];
           q.forEach(([who, o], i) => {
             const x = w * 0.46 + i * 100;
             if (i === 1) s += P.bike(x + 30, gy + 6, 0.75, { color: "#4fb3e8" });
-            s += npc(who, Object.assign({ x, y: gy + 6 + (i % 2) * 6, s: who === "kid2" ? 0.85 : 0.82, f: -1, expr: i % 2 ? "happy" : "talk" }, o));
+            const opts = Object.assign({ x, y: gy + 6 + (i % 2) * 6, s: who === "kid2" ? 0.85 : 0.82, f: -1, expr: i % 2 ? "happy" : "talk" }, o);
+            s += who === "tony" ? tony(Object.assign(opts, { s: 0.78, expr: "grin" })) : npc(who, opts);
           });
           return s;
         },
-        b: (w, h) => [cap("Lexington Enterprises was open for business.", w * 0.42, h - 62, { w: 340 }), say("Next customer!", w * 0.08, 150, top("teen", w * 0.16, h * 0.96 + 4, 0.95, { dx: -6 }), { w: 110 })],
+        b: (w, h) => [
+          cap("Lexington Enterprises was open for business.", w * 0.42, h - 62, { w: 340 }),
+          say("Next customer!", w * 0.08, 150, top("teen", w * 0.16, h * 0.96 + 4, 0.95, { dx: -6 }), { w: 110 }),
+          ...(CAU ? [say("Bro. Prom is Saturday. Do my shoes!", w * 0.83, 56, top("man", w * 0.46 + 300, h * 0.96 + 12, 0.78, { dx: 6 }), { w: 150 })] : []),
+        ],
       },
     ],
   });
@@ -547,7 +587,7 @@
         b: (w, h) => [say("Nah. That's not who I am anymore.", 120, 70, top("teen", w * 0.28, h + 80, 1.15, { dx: -10 }), { w: 150 })],
       },
       {
-        alt: "At the Youth Business Expo, Lexington speaks confidently at a podium beside a chart. The crowd claps and Mom and Dad cheer from the front row.",
+        alt: CAU ? "At the Youth Business Expo, Lexington speaks confidently at a podium beside a chart. The crowd claps while Mom, Dad and Big Tony cheer from the front row." : "At the Youth Business Expo, Lexington speaks confidently at a podium beside a chart. The crowd claps and Mom and Dad cheer from the front row.",
         art(w, h) {
           const gy = h * 0.8;
           let s = S.expo(w, h, { k: 1.0, gy, ox: w * 0.5 });
@@ -558,12 +598,14 @@
           s += S.crowd(w, h, h - 70, { clap: true });
           s += mom({ x: w * 0.1, y: h + 230, s: 0.95, expr: "joy", pose: "cheer" });
           s += dad({ x: w * 0.22, y: h + 250, s: 0.95, expr: "joy", pose: "fistPump" });
+          if (CAU) s += tony({ x: w * 0.9, y: h + 250, s: 0.95, f: -1, expr: "joy", pose: "cheer", outfit: "letterman" });
           return s;
         },
         b: (w, h) => [
           say("My name is Lexington. I'm thirteen... and I run TWO businesses.", w * 0.17, h * 0.42, top("teen", w * 0.45, h * 0.8, 1.25, { dx: -40 }), { w: 210 }),
-          sfx("CLAP! CLAP! CLAP!", w * 0.72, h - 100, { size: 44, rot: -6, color: "#ffd23f" }),
+          CAU ? sfx("CLAP! CLAP! CLAP!", w * 0.6, h - 50, { size: 44, rot: -6, color: "#ffd23f" }) : sfx("CLAP! CLAP! CLAP!", w * 0.72, h - 100, { size: 44, rot: -6, color: "#ffd23f" }),
           shout("THAT'S OUR SON!", w * 0.14, h - 210, top("woman", w * 0.1, h + 230, 0.95), { w: 120, size: 18 }),
+          ...(CAU ? [shout("THAT'S MY LITTLE BRO!", w * 0.84, h - 220, top("man", w * 0.9, h + 250, 0.95), { w: 130, size: 18, seed: 5 })] : []),
         ],
       },
     ],
@@ -650,6 +692,71 @@
     ],
   });
 
+  H.diploma = (x, y, s, f) => T(x, y, s, `<g transform="rotate(${f * -20})">${rect(-30, -8, 60, 16, "#fffaf0", { sw: 2.4, r: 8 })}${ellipse(30, 0, 4, 8, "#f6efe0", { sw: 2 })}${rect(-4, -9, 8, 18, "#c9473c", { sw: 1.6 })}</g>`);
+  const capToss = (x, y, s, rot) => T(x, y, s, `<g transform="rotate(${rot})">${path("M-30 0 L0 -12 L30 0 L0 12 Z", "#24345e", { sw: 2.4 })}${line(0, 0, 18, 16, { sw: 2, stroke: "#f0b429" })}</g>`);
+  if (CAU)
+    page({
+      rows: [
+        [0.44, [1]],
+        [0.3, [0.5, 0.5]],
+        [0.26, [1]],
+      ],
+      panels: [
+        {
+          alt: "Graduation day. Big Tony, in a navy cap and gown, crosses the stage to get his diploma while Lexington, Mom and Dad cheer from the front.",
+          art(w, h) {
+            const sy = h * 0.66;
+            let s = frect(0, 0, w, h, "#7a2236");
+            for (let x = 0; x < w; x += 46) s += path(`M${x} 0 Q${x + 23} ${sy * 0.5} ${x} ${sy}`, "none", { sw: 2, stroke: "#5e1a2a" });
+            s += rect(w * 0.12, 30, w * 0.76, 74, "#f0b429", { sw: 3, r: 6 }) + text(w / 2, 82, "CONGRATULATIONS, CLASS OF 2027!", { size: 40, font: "title", fill: "#24345e", ls: 2 });
+            s += rect(-10, sy, w + 20, 40, "#b07a4a", { sw: 3 }) + frect(-10, sy + 40, w + 20, h, "#3a3f5a");
+            s += npc("teacher", { x: w * 0.55, y: sy + 6, s: 0.72, f: -1, expr: "joy", pose: "handshake" });
+            s += tony({ x: w * 0.72, y: sy + 6, s: 0.72, f: -1, outfit: "gown", expr: "joy", pose: "handshake", hold: { l: H.diploma } });
+            s += S.crowd(w, h, h - 60, { clap: true, seed: 7 });
+            s += mom({ x: w * 0.12, y: h + 240, s: 0.92, expr: "touched", pose: "heart", outfit: "church" });
+            s += dad({ x: w * 0.26, y: h + 270, s: 0.92, expr: "joy", pose: "cheer", outfit: "church" });
+            s += lex({ x: w * 0.42, y: h + 150, s: 1.05, outfit: "church", expr: "joy", pose: "cheer" });
+            return s;
+          },
+          b: (w, h) => [cap("Graduation day.", 16, 120, { w: 160 }), shout("THAT'S MY BROTHER!!!", w * 0.26, h * 0.5, top("teen", w * 0.42, h + 150, 1.05, { dx: -10 }), { w: 170, size: 22, seed: 8 })],
+        },
+        {
+          alt: "After the ceremony, Big Tony in his cap and gown hugs Lexington.",
+          art(w, h) {
+            let s = S.sky(w, h, "day") + capToss(w * 0.2, 60, 1, -20) + capToss(w * 0.82, 90, 0.8, 25);
+            s += frect(0, h * 0.8, w, h * 0.2, "#69a94f");
+            s += tony({ x: w * 0.4, y: h + 230, s: 1.1, outfit: "gown", expr: "proud", pose: "hug" });
+            s += lex({ x: w * 0.66, y: h + 110, s: 1.1, f: -1, outfit: "church", expr: "touched", pose: "hug" });
+            return s;
+          },
+          b: (w, h) => [say("Know what I'm proudest of this year? Not this diploma. YOU, little bro.", w * 0.3, 74, top("man", w * 0.4, h + 230, 1.1, { dx: -10 }), { w: 190 })],
+        },
+        {
+          alt: "Lexington tells Tony he'll walk across that stage someday too, and Tony grins.",
+          art(w, h) {
+            let s = S.rays(w, h, "#fff3c8", "#ffffff", w * 0.5, h * 0.5);
+            s += lex({ x: w * 0.3, y: h + 90, s: 1.1, outfit: "church", expr: "confident", pose: "hips" });
+            s += tony({ x: w * 0.72, y: h + 230, s: 1.1, f: -1, outfit: "gown", expr: "grin", pose: "thumbs" });
+            return s;
+          },
+          b: (w, h) => [say("Someday I'll walk across that stage too.", w * 0.26, 60, top("teen", w * 0.3, h + 90, 1.1), { w: 150 }), say("With YOUR grades? You'll be up there giving the speech.", w * 0.72, 140, top("man", w * 0.72, h + 230, 1.1, { dx: 10 }), { w: 170 })],
+        },
+        {
+          alt: "The whole family squeezes together for a graduation selfie as caps fly through the air.",
+          art(w, h) {
+            let s = S.sky(w, h, "day") + [0.1, 0.3, 0.62, 0.9].map((fx2, i) => capToss(w * fx2, 50 + (i % 2) * 40, 0.9, i * 30 - 30)).join("");
+            s += frect(0, h * 0.85, w, h * 0.15, "#69a94f");
+            s += dad({ x: w * 0.3, y: h + 205, s: 1.0, expr: "laugh", pose: "stand" });
+            s += tony({ x: w * 0.44, y: h + 195, s: 1.0, outfit: "gown", expr: "laugh", pose: "stand" });
+            s += lex({ x: w * 0.57, y: h + 105, s: 1.05, outfit: "church", expr: "laugh", pose: "cheer" });
+            s += mom({ x: w * 0.72, y: h + 190, s: 1.0, f: -1, expr: "joy", pose: "reachUp", hold: { r: H.phone }, outfit: "church" });
+            return s;
+          },
+          b: (w, h) => [say("Everybody say BLESSED!", w * 0.88, 70, top("woman", w * 0.72, h + 190, 1.0, { dx: 10 }), { w: 130 }), cap("Two sons. One very proud family.", 16, 16, { w: 290 })],
+        },
+      ],
+    });
+
   // =====================================================================
   // CHAPTER 11 — THE LAST TIME
   // =====================================================================
@@ -724,7 +831,7 @@
     ],
     panels: [
       {
-        alt: "From the doorway, Mom and Dad hold each other and watch Lexington and Jace on the porch steps in the sunset.",
+        alt: CAU ? "From the doorway, Mom and Dad hold each other and Big Tony smiles as they watch Lexington and Jace on the porch steps in the sunset." : "From the doorway, Mom and Dad hold each other and watch Lexington and Jace on the porch steps in the sunset.",
         art(w, h) {
           const gy = h * 0.55;
           let s = S.sky(w, h, "sunset") + P.sun(w * 0.15, h * 0.32, 70);
@@ -734,6 +841,7 @@
           s += mom({ x: w * 0.5 + 70, y: gy, s: 0.95, expr: "touched", pose: "heart" });
           s += dad({ x: w * 0.5 + 150, y: gy + 4, s: 0.95, f: -1, expr: "proud", pose: "stand", ra: C.ik(46, -258) });
           s += P.window(w * 0.82, gy - 330, 120, 140, { time: "sunset" });
+          if (CAU) s += tony({ x: w * 0.78, y: gy + 6, s: 0.95, f: -1, expr: "proud", pose: "cross", outfit: "casual" });
           s += frect(0, gy, w, h - gy, "#b8a38a") + line(0, gy, w, gy, { sw: 3 });
           s += steps(w * 0.05, gy + 40, w * 0.5, 4, (h - gy - 40) / 4, "#b8a38a");
           s += rect(w * 0.42 - 14, 0, 22, gy, "#f6f1e6", { sw: 3 });
@@ -744,7 +852,7 @@
           return s;
         },
         b: (w, h) => [
-          say("That's our son.", w * 0.86, 90, top("man", w * 0.5 + 150, h * 0.55 + 4, 0.95, { dx: 10 }), { w: 120 }),
+          CAU ? say("That's our son.", w * 0.9, 70, top("man", w * 0.5 + 150, h * 0.55 + 4, 0.95, { dx: 10 }), { w: 110 }) : say("That's our son.", w * 0.86, 90, top("man", w * 0.5 + 150, h * 0.55 + 4, 0.95, { dx: 10 }), { w: 120 }),
           say("God answered every single prayer.", w * 0.32, 90, top("woman", w * 0.5 + 70, h * 0.55, 0.95, { dx: -10 }), { w: 170 }),
         ],
       },
