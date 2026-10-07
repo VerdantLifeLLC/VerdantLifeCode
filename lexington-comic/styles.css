@@ -1,0 +1,263 @@
+/* Layout: a centred reading column of comic pages on a newsprint-blue table;
+   in panel mode each panel stacks full width for phones. */
+:root {
+  --bg: #dfe5ee;
+  --bg-2: #cfd7e4;
+  --fg: #1f1a2b;
+  --muted: #5a5670;
+  --accent: #c9473c;
+  --gold: #ffd95e;
+  --card: #fffaf0;
+  --line: #1f1a2b;
+  --shadow: rgba(31, 26, 43, 0.28);
+  --display: "Bangers", Impact, "Arial Black", sans-serif;
+  --body: "Comic Neue", "Comic Sans MS", "Chalkboard SE", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141824;
+    --bg-2: #1d2333;
+    --fg: #eee7da;
+    --muted: #a9a3b8;
+    --accent: #ef6b5a;
+    --gold: #ffd95e;
+    --card: #fffaf0;
+    --line: #0b0d14;
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141824;
+  --bg-2: #1d2333;
+  --fg: #eee7da;
+  --muted: #a9a3b8;
+  --accent: #ef6b5a;
+  --gold: #ffd95e;
+  --card: #fffaf0;
+  --line: #0b0d14;
+  --shadow: rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  background-image: radial-gradient(var(--bg-2) 1.2px, transparent 1.4px);
+  background-size: 14px 14px;
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+  padding-inline: 16px;
+}
+
+.masthead {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-block: 22px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+.brand { min-width: 0; }
+.kicker {
+  margin: 0;
+  font-family: var(--display);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-size: 1rem;
+}
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 8vw, 4.2rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  text-shadow: 3px 3px 0 var(--line);
+  -webkit-text-stroke: 1.5px var(--line);
+  text-wrap: balance;
+}
+h1 span {
+  display: block;
+  font-size: 0.42em;
+  color: var(--fg);
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  letter-spacing: 0.12em;
+  margin-top: 6px;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.seg {
+  display: inline-flex;
+  border: 2.5px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 3px 3px 0 var(--line);
+}
+.seg button {
+  font: 700 0.95rem var(--body);
+  border: 0;
+  background: transparent;
+  color: #1f1a2b;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--gold); }
+.seg button + button { border-left: 2.5px solid var(--line); }
+.jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+.jump select {
+  font: 700 0.95rem var(--body);
+  border: 2.5px solid var(--line);
+  border-radius: 10px;
+  padding: 6px 8px;
+  background: var(--card);
+  color: #1f1a2b;
+  max-width: 62vw;
+  box-shadow: 3px 3px 0 var(--line);
+}
+button:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.look { position: relative; }
+.look summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  border: 2.5px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  background: var(--card);
+  color: #1f1a2b;
+  box-shadow: 3px 3px 0 var(--line);
+}
+.look summary::-webkit-details-marker { display: none; }
+.look-body {
+  position: absolute;
+  right: 0;
+  z-index: 5;
+  margin-top: 10px;
+  width: min(300px, calc(100vw - 32px));
+  background: var(--card);
+  color: #1f1a2b;
+  border: 2.5px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 5px 5px 0 var(--line);
+}
+.look-body p { margin: 0 0 8px; font-size: 0.92rem; }
+.look-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.look-row > span { width: 38px; font-weight: 700; font-size: 0.9rem; }
+.swatches { display: flex; flex-wrap: wrap; gap: 8px; }
+.swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2.5px solid #1f1a2b;
+  background: var(--sw);
+  cursor: pointer;
+  padding: 0;
+}
+.swatch[aria-pressed="true"] { box-shadow: 0 0 0 3px var(--card), 0 0 0 6px var(--accent); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.book {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-block: 10px 40px;
+  display: grid;
+  gap: 34px;
+}
+.loading {
+  text-align: center;
+  font-family: var(--display);
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  padding-block: 120px;
+}
+.page {
+  margin: 0;
+  background: #fffaf0;
+  box-shadow: 0 2px 0 var(--line), 8px 10px 0 var(--shadow);
+  border-radius: 3px;
+  overflow: hidden;
+  scroll-margin-top: 12px;
+}
+.page-svg, .panel-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* panel-by-panel mode */
+.book[data-view="panels"] { max-width: 640px; gap: 26px; }
+.book[data-view="panels"] .page.full { max-width: 100%; }
+.strip { display: grid; gap: 14px; scroll-margin-top: 12px; }
+.strip-title {
+  margin: 10px 0 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 7vw, 2.4rem);
+  line-height: 1;
+  color: var(--accent);
+  -webkit-text-stroke: 1px var(--line);
+  text-shadow: 2px 2px 0 var(--line);
+  letter-spacing: 0.04em;
+  text-wrap: balance;
+}
+.strip-title span {
+  display: block;
+  font-size: 0.5em;
+  color: var(--muted);
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  letter-spacing: 0.14em;
+}
+.panel {
+  margin: 0;
+  background: #fff;
+  box-shadow: 6px 7px 0 var(--shadow);
+}
+
+.colophon {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-block: 0 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* print / PDF export: one comic page per sheet */
+html.print body { background: #fff; padding: 0; }
+html.print .masthead, html.print .colophon { display: none; }
+html.print .book { max-width: none; padding: 0; gap: 0; display: block; }
+html.print .page { width: 7in; height: 10.5in; box-shadow: none; border-radius: 0; break-after: page; page-break-after: always; }
+html.print .page-svg { width: 7in; height: 10.5in; }
+@page { margin: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
