@@ -97,6 +97,8 @@
   C.poly = (pts, fill, o = {}) => C.path("M" + pts.map(C.pt).join(" L") + " Z", fill, o);
   // shift a piece of artwork only when there is somewhere to move it (keeps default output unchanged)
   C.mv = (inner, dx, dy) => (dx || dy ? `<g transform="translate(${n(dx || 0)} ${n(dy || 0)})">${inner}</g>` : inner);
+  // move/scale a piece of artwork around its centre (cx, cy); p = { dx, dy, s }
+  C.place = (inner, cx, cy, p) => (p ? `<g transform="translate(${n(cx + (p.dx || 0))} ${n(cy + (p.dy || 0))}) scale(${p.s || 1}) translate(${n(-cx)} ${n(-cy)})">${inner}</g>` : inner);
   C.g = (inner, tf, extra) => `<g${tf ? ` transform="${tf}"` : ""}${extra || ""}>${inner}</g>`;
   C.text = (x, y, str, o = {}) => {
     const size = o.size || 20;

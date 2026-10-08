@@ -1,5 +1,8 @@
-/* Lexington — KDP paperback wraparound cover (back + spine + front).
-   Units: 144 px per inch. Trim 6.75 x 10.25 in, 0.125 in bleed, premium color spine. */
+/* Lexington — paperback wraparound cover (back + spine + front).
+   Units: 144 px per inch.
+   KDP (default):     trim 6.75 x 10.25 in, 0.125 in bleed, 0.25 in safe zone, premium color spine.
+   Lulu (?printer=lulu): comic book trim 6.625 x 10.25 in, saddle stitch (no spine),
+                      0.125 in bleed, 0.5 in safety margin. */
 (function () {
   "use strict";
   const C = window.Comic;
@@ -7,13 +10,13 @@
   const fx = C.fx;
 
   const DPI = 144;
-  const TRIM_W = 6.75 * DPI,
+  const q = new URLSearchParams(location.search);
+  const LULU = q.get("printer") === "lulu";
+  const TRIM_W = (LULU ? 6.625 : 6.75) * DPI,
     TRIM_H = 10.25 * DPI,
     BLEED = 0.125 * DPI,
-    SAFE = 0.25 * DPI;
-  const PER_PAGE = 0.002347; // KDP premium color, white paper (inches per page)
-
-  const q = new URLSearchParams(location.search);
+    SAFE = (LULU ? 0.5 : 0.25) * DPI;
+  const PER_PAGE = LULU ? 0 : 0.002347; // KDP premium color, white paper (inches per page); saddle stitch has no spine
   const book = window.KDP_BOOK || "original";
   const BOOKS = {
     original: {
@@ -51,13 +54,13 @@
     },
   };
   const B = BOOKS[book] || BOOKS.original;
-  const pages = Math.max(24, parseInt(q.get("pages") || B.pages, 10));
+  const pages = Math.max(LULU ? 4 : 24, parseInt(q.get("pages") || B.pages, 10));
   const SPINE = pages * PER_PAGE * DPI;
   const W = BLEED + TRIM_W + SPINE + TRIM_W + BLEED,
     H = BLEED + TRIM_H + BLEED;
   const FOLD_BACK = BLEED + TRIM_W,
     FOLD_FRONT = FOLD_BACK + SPINE;
-  C.KDP = { W, H, DPI, SPINE, pages, inches: { w: W / DPI, h: H / DPI, spine: SPINE / DPI } };
+  C.KDP = { W, H, DPI, SPINE, pages, printer: LULU ? "lulu" : "kdp", inches: { w: W / DPI, h: H / DPI, spine: SPINE / DPI } };
 
   function findPanel(prefix) {
     for (const pg of C.STORY) {
@@ -84,11 +87,31 @@
     return s + `</g>`;
   }
 
+  // The back-cover layout is drawn in KDP coordinates (content between x 54 and 954, y 40 and 1450)
+  // and scaled into a smaller safe area when the printer needs wider margins.
+  const KDP_L = 0.125 * DPI + 0.25 * DPI,
+    KDP_R = 0.125 * DPI + 6.75 * DPI - 0.25 * DPI,
+    KDP_TOP = 40,
+    KDP_BOTTOM = 1450;
   function back() {
-    const L = BLEED + SAFE,
-      R = FOLD_BACK - SAFE,
-      cx = (BLEED + FOLD_BACK) / 2;
-    let s = frect(0, 0, FOLD_BACK + 1, H, B.bg) + fx.rays(cx, H * 0.45, 1500, B.ray, 24, 0.55) + `<rect width="${n(FOLD_BACK + 1)}" height="${n(H)}" fill="url(#dotsWhite)"/>`;
+    const cxBg = (BLEED + FOLD_BACK) / 2;
+    let bg = frect(0, 0, FOLD_BACK + 1, H, B.bg) + fx.rays(cxBg, H * 0.45, 1500, B.ray, 24, 0.55) + `<rect width="${n(FOLD_BACK + 1)}" height="${n(H)}" fill="url(#dotsWhite)"/>`;
+    const content = backContent();
+    if (!LULU) return bg + content;
+    const sl = BLEED + SAFE,
+      sr = FOLD_BACK - SAFE,
+      st = BLEED + SAFE,
+      sb = H - BLEED - SAFE;
+    const k = Math.min((sr - sl) / (KDP_R - KDP_L), (sb - st) / (KDP_BOTTOM - KDP_TOP));
+    const tx = sl + (sr - sl - (KDP_R - KDP_L) * k) / 2 - KDP_L * k,
+      ty = st + (sb - st - (KDP_BOTTOM - KDP_TOP) * k) / 2 - KDP_TOP * k;
+    return bg + `<g transform="translate(${n(tx)} ${n(ty)}) scale(${k.toFixed(4)})">${content}</g>`;
+  }
+  function backContent() {
+    const L = KDP_L,
+      R = KDP_R,
+      cx = (L + R) / 2;
+    let s = "";
     // series logo
     s += text(cx + 7, 150, "LEXINGTON", { size: 118, font: "title", fill: INK, stroke: INK, sw: 12, ls: 4 });
     s += text(cx, 143, "LEXINGTON", { size: 118, font: "title", fill: "#e65a45", stroke: INK, sw: 9, ls: 4 });
@@ -121,7 +144,10 @@
   function front() {
     const fw = W - FOLD_BACK; // front art also covers the spine, so small fold drift never shows a seam
     const pg = C.STORY[0];
-    const inner = pg.full(fw, H, { insetX: SAFE + 6, insetY: BLEED + 8 });
+    // Lulu's 0.5 in margin: shrink the title a little, tuck the issue badge beside it and the
+    // corner badge under it (positions are relative to the 1000-wide cover design)
+    const luluFront = { insetX: 48, insetY: 40, titleScale: 0.85, badges: { l: { dx: 27, dy: 53, s: 0.85 }, r: { dx: fw - 1000 - 38, dy: 222, s: 0.7 } } };
+    const inner = pg.full(fw, H, LULU ? luluFront : { insetX: SAFE + 6, insetY: BLEED + 8 });
     return `<svg x="${n(FOLD_BACK)}" y="0" width="${n(fw)}" height="${n(H)}" viewBox="0 0 ${n(fw)} ${n(H)}" overflow="hidden">${inner}</svg>`;
   }
 
@@ -132,10 +158,12 @@
     g += rect(BLEED + SAFE, BLEED + SAFE, TRIM_W - 2 * SAFE, TRIM_H - 2 * SAFE, "none", Object.assign({ stroke: "#1f6fe0" }, dash));
     g += rect(FOLD_FRONT + SAFE, BLEED + SAFE, TRIM_W - 2 * SAFE, TRIM_H - 2 * SAFE, "none", Object.assign({ stroke: "#1f6fe0" }, dash));
     g += line(FOLD_BACK, 0, FOLD_BACK, H, { sw: 2, stroke: "#18a558" }) + line(FOLD_FRONT, 0, FOLD_FRONT, H, { sw: 2, stroke: "#18a558" });
-    const bx = FOLD_BACK - SAFE - 2 * DPI,
-      byy = H - BLEED - SAFE - 1.2 * DPI;
-    g += rect(bx, byy, 2 * DPI, 1.2 * DPI, "#ffffff", { sw: 3, stroke: "#f08a00", op: 0.85 }) + text(bx + DPI, byy + 0.66 * DPI, "BARCODE AREA", { size: 22, font: "title", fill: "#f08a00" });
-    g += text(W / 2, 30, `trim (red) · safe zone (blue) · spine ${(SPINE / DPI).toFixed(4)} in (green) · ${pages} pages`, { size: 20, fill: "#e0282e", stroke: "#ffffff", sw: 4 });
+    const bw = LULU ? 1.8 : 2,
+      bh = LULU ? 1.08 : 1.2;
+    const bx = FOLD_BACK - SAFE - bw * DPI,
+      byy = H - BLEED - SAFE - bh * DPI;
+    g += rect(bx, byy, bw * DPI, bh * DPI, "#ffffff", { sw: 3, stroke: "#f08a00", op: 0.85 }) + text(bx + (bw / 2) * DPI, byy + (bh * 0.55) * DPI, "BARCODE AREA", { size: 22, font: "title", fill: "#f08a00" });
+    g += text(W / 2, 30, LULU ? `Lulu saddle stitch · trim (red) · 0.5 in safety (blue) · fold (green) · ${pages} pages` : `trim (red) · safe zone (blue) · spine ${(SPINE / DPI).toFixed(4)} in (green) · ${pages} pages`, { size: 20, fill: "#e0282e", stroke: "#ffffff", sw: 4 });
     return g;
   }
 

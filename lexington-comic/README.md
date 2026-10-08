@@ -65,6 +65,25 @@ KDP accepts bleed only from PDF uploads, so the Word versions keep the art insid
 
 Rebuild with `node tools/kdp-interiors.cjs` (or `--book=issue2`). The layout lives in `kdp-interior.html` and `js/kdp-interior.js`.
 
+## Lulu print files (comic book format)
+
+In `lulu/`, for Book 1 (both editions) and Book 2:
+
+| File | What it is |
+|---|---|
+| `<book>-Lulu-Interior.pdf` | Interior: 6.875 × 10.5 in pages (Lulu comic trim 6.625 × 10.25 + 0.125 in bleed on all four sides). 28 / 28 / 24 pages. |
+| `<book>-Lulu-Cover.pdf` | One-piece cover, back + front, 13.5 × 10.5 in. Saddle stitch has no spine. |
+| `<book>-Lulu-Cover-guides.png` | Preview with trim, 0.5 in safety margin, fold and a kept-clear barcode area marked. |
+
+Choose **Comic Book (6.625 × 10.25 in)**, **Saddle Stitch**, **Premium Color** at Lulu.
+
+- All text and important art sit inside Lulu's 0.5 in safety margin; paper color and background art run to the bleed.
+- Saddle stitch needs a page count that's a multiple of 4 (4–48 pages). The original Book 1 is padded from 26 to 28 with a "This comic belongs to" copyright page and a "My Goals" page; the other books already fit. These pages exist only in the Lulu files.
+- Perfect binding at Lulu needs at least 32 pages, so these books print saddle stitched.
+- Every page is a flattened 300 PPI image: no live transparency and no fonts to embed. No crop marks.
+
+Rebuild with `node tools/lulu.cjs` (or `--book=issue2`).
+
 ## Issue #1 editions
 
 | | Original | Caucasian family edition |
