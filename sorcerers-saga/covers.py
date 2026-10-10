@@ -66,6 +66,7 @@ BOOKS = {
     },
     "book2": {
         "file": "The-Sorcerers-Legacy",
+        "kdp_width": 13.879,   # full cover width KDP asked for (in)
         "pre": "THE SORCERER'S", "main": "LEGACY", "number": "BOOK TWO",
         "sky": ("#04070d", "#0b1424", "#1d0f2b"), "glow": "#ffc35c", "accent": "#f6d48a",
         "tagline": "Leave a light on.",
