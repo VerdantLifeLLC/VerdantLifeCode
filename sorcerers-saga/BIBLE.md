@@ -439,3 +439,118 @@ Gentle, fierce and a hedge-witch (an unlatticed Listener, which is illegal). She
 - 35–37 Reborn in Light I–III (Malachi's sacrifice; Aurelian's last lucid moment; Antho becomes THRESHOLD WARDEN; Lex becomes WORLDFORGER, Tier IV, unmakes the old net and weaves a new one with no Ceiling and no Tithe, and the World Notice goes out)
 - 38 A New Era of Balance (the twelve villages finished; the Sunreach; the ring forged from an old Ashbourne nail; Antho and Seraphine)
 - 39 Epilogue: The Everlasting Legacy (Seren's message: "Leave a light on. I'm coming home — but not alone.")
+
+---
+
+## 9. THE SERIES ARC, BOOKS THREE TO FIVE (the series ends with Book Five)
+
+| Book | Title | Shape |
+|---|---|---|
+| One | The Sorcerer's Reckoning | The brothers find each other and their father. Morvane. |
+| Two | The Sorcerer's Legacy | The Key, Aurelian, the net reforged and given away. |
+| Three | **The Sorcerer's Hollow** | The mother comes home, and brings the seventh Well with her. The Moth Queen. |
+| Four | *The Sorcerer's Crown* | Beyond the Veil. The four sleeping Crowned. The Key turned one last time. Arion's last year. |
+| Five | *The Sorcerer's Dawn* | The Crowned come into the world. Seven Wells. Tier V. The end. |
+
+Books One and Two were about the **father's** secrets. Books Three to Five are about the **mother's**.
+
+### 9.1 The Seventh Well: THE HOLLOW
+- The Listeners' Codex (Book One, Ch 27) shows six circles in a ring with an **empty seventh in the centre**. The seventh Well is **the Hollow**: the Well of *room*, the empty space every new thing is made into. The hollow of a mould, the hollow of a hearth, a cupped hand, a womb, the quiet before a word. Before the Sundering it was the Well that let *new* things into the world.
+- About 900 years ago **the Crowned**, nine sorcerer-kings and queens, drank from it to make themselves deathless. They drank it dry. A Well drunk dry becomes a hunger, a hollow that wants to be filled. That is what **the Unmaker** was: not a thing from outside but the seventh Well, starved. ("It cannot be killed. It can only be held. And whoever holds it, it will try to become.")
+- Aurelian wove the Lattice to put a lid on the starving Well. The same weaving cast the Crowned out beyond the edge of the world: the **Veil** is the seam of their exile, and the Sundered Lands are its scar. The Grey Ferryman rowed them out. The Tithe was fed to the hunger to keep it quiet.
+- Book Two ended it: the hunger unfolded into "a small lonely dark", and Malachi (the *seventh* child) sat with it in the deep and sang until he died. With no Tithe and no lid, kindness did what nine centuries of binding could not: **the seventh Well began to heal**. It is young now, enormous and frightened. It is what follows Seren home ("not alone"; "a big shape").
+- It learned to speak through Antho during his eight mad years. **The Murmur was its voice.** In Book Three that voice comes back, small and scared, asking for "the lamp-lady" and for "Mal" (the only name it was ever sung). Antho must learn to love the thing that tormented him.
+- While it rises, it sheds. Bits of it come up through the ground as **Wild Delves**: unclassified dungeons full of *might-have-been*. Each Delve core is a piece of the Well. Killing a core hurts it, and Antho feels it.
+- Attunement stages are the same: Listening → Answering → Speaking → Commanding → Becoming. **Seraphine**, who has never heard any Well, is the first living person to hear this one ("I've always been good at the spaces between letters"). Lex reaches Hollow Listening in Book Three by learning that every casting needs a mould.
+
+### 9.2 The Crowned and the Harrow line
+- **The Crowned**: nine sorcerer-monarchs of the Sundering. Four died in the exile. Five survive in the **Outer Court**, a dead grey-gold country beyond the Veil, asleep in silk cocoons, deathless and starving.
+  - **Maelis, the Moth Queen** (Book Three villain). Tall, grey-gold, beautiful, eyes like lit windows, wings of silk and dust she wears folded like a cloak. Courteous, patient, funny, *hungry*. She goes towards light: that is what she is. Her servants are the **Mothwing**, people she made deathless by feeding them stolen light: pale, dust-winged, light-eating. Her bite **dims** a person: their warmth goes out and they follow the moth-light. A dimmed person can be **relit** by someone who loves them lighting a lamp and saying their name.
+  - **Oszric, the Gilded King**: the eldest. Wakes in the Book Three epilogue. Book Four and Five villain.
+  - Three others, still asleep: **Ysenne the Glass Queen**, **Caddoc of the Iron Crown**, and **the Thorn-Crowned** (name unknown).
+- **Hesper**, Maelis's younger sister, the tenth heir, refused to drink. She helped Aurelian, gave up her crown, and fled into the world to hide. Her daughters became hedge-witches who never Kindled and never stayed anywhere long, who sang to the dark and *never let a moth in*. The family name was **Harrow** ("to break the ground before sowing"). **Seren Harrow** is the last of that line, so **Lex and Antho are Vey on their father's side and Crowned on their mother's**.
+- Harrow blood can open the Veil from inside, the way Vey blood could touch the Root. That is why Maelis wants the brothers and their mother.
+
+### 9.3 Other long threads
+- **Arion is ageing fast.** With no Root holding him, two centuries are coming due, roughly a year a week in Book Three. He ends Book Three looking about seventy-five and is happy. He dies in Book Four.
+- **Seren gave her memories of Arion to the Ferryman.** She comes home to an old man she does not remember and falls in love with him again. ("You have a nice voice.")
+- **Wren is pregnant** (Book Three). A daughter is born early in Book Four. The Gilded King wants the child.
+- **Elric** is still in the First Knot, holding the Lockward. The **Key of Shadows** is still barred in the Lock. Maelis's siblings will want it in Book Four: the Veil was woven into the net, and only the Key can unwrite it. Elric speaks once in Book Three.
+- **Unbounded growth**: with no Ceiling, the strong grow fast. Book Three's second antagonist, **Corwin Hask**, is a Vhessan miner Unbound by Lex who becomes the most powerful Delve-breaker in Caldor and Maelis's champion.
+- **Ember** lives in Lex's hearth, writing *The Book of What Was, Volume Two*. Ember is a piece of Arion, and it feels him ageing.
+
+### 9.4 Book Four and Book Five in outline
+- **Book Four, *The Sorcerer's Crown***
+  - Maelis's death cry and Seren's stolen blood crack the Veil. Four Crowned wake.
+  - Lex's daughter is born.
+  - The brothers cross the Veil into the Outer Court and find Hesper's refused crown.
+  - Elric comes out of the Knot to turn the Key one last time.
+  - Arion dies, and Ember makes its choice.
+  - Ends with the Veil falling.
+- **Book Five, *The Sorcerer's Dawn***
+  - The Crowned and the grey country come into Aldermere.
+  - All seven Wells.
+  - The brothers reach Tier V. Not as Sovereigns: the net offers them a crown and they refuse it.
+  - Lex forges a new edge for the world that is a door, not a wall. Antho keeps it.
+  - The Hollow, grown, makes room for the Outer Court's dead to come home.
+  - The end: a forge, a child, a lantern.
+
+---
+
+## 10. BOOK THREE: THE SORCERER'S HOLLOW (chapter plan)
+
+**Setting:** begins on the wedding day at the Hollowmaw, about a year and a half after the Heart. Lex is 24 and Antho 29. Seren's message came the night before.
+
+Lex starts at WORLDFORGER Lv 90 (no Root, so he can no longer see threads; he misses it like a lost sense) and ends around Lv 97 with Hollow Listening, then Answering. Antho starts at THRESHOLD WARDEN Lv 79 and ends around Lv 90. Wren is MISTWALKER (Epic) Lv 66, Gale Commanding, and pregnant from Ch 8. Seraphine is LATTICE SCRIBE (Rare) Lv 44 and becomes the first Hollow Listener (Ch 12); her class becomes **[Scribe of the Seventh]** (Epic) in Ch 29.
+
+- **Prologue: The Moth at the Window.** The Outer Court. Maelis wakes in her cocoon when a third lamp is lit before the Hollowmaw door. She tastes the young Well rising. She leaves her four sleeping siblings and crosses the Veil. The net tries to read her: UNKNOWN — NOT OF THIS NET.
+
+### PART ONE: A LIGHT IN THE WINDOW
+1. **Two Weddings and a Cow** (Lex). The double wedding before the black door, with Sister Agathe officiating, Pim as ring-bearer and Prudence the cow. The lamps lean during the vows. Hook: a moth the size of a hand lands on a lantern, the lantern goes dark, and Antho counts 1,112.
+2. **Growth: Unbounded** (Lex). Winter at Harrow and Ashbourne in the new world: no Ceilings, children levelling fast, a Berserker boy hurt from grinding. "Possibilities": a dead apple tree blooms in snow, a spring rises in the forge yard. A Wild Delve opens on the Ashbourne green: DELVE — UNCLASSIFIED.
+3. **The Delve of Might-Have-Been** (Lex, with Wren, Tilda and Pell). Rooms of what might have been. The Unfinished. A small voice: "make room." The boss, then the core: a warm black pebble humming the Lantern Song, flat. Lv 91. Hook: Antho says, "I know. I've been hearing it for a month."
+4. **The Voice Comes Back** (Antho). The Murmur's voice is back: small, frightened, saying "brother?" and "Mal?". Clarity flickers. Moths at the Keep; their dust eats light. Arion is going white. Hook: Seren through the door: "Don't be afraid of it, love. It's only little. It's frightened of the moths."
+5. **The Seventh Circle** (Lex). The Codex's empty centre and Malachi's margin note: *Hollow. The one we drank. Forgive us.* The Unmaker was a starved Well. Debate: kill it, cage it or bring it home? Hook: Roole's raven says the Sundered Lands outposts have gone dark and a woman walks with the moths.
+6. **The Lady of Moths** (Wren). The Veil's edge with Elowen and Fenn. The Mothwing, and a lantern-eaten outpost. Maelis appears and asks courteously for sanctuary. Hook: "You're carrying a light."
+7. **Sanctuary** (Lex). Highcrest. Maelis tells her version of the Sundering: the Crowned were people who grew without a Ceiling, "just like you now", and she can help bind the Unmaker again. The court splits. Hook: "Harrow was my sister's name."
+8. **What the Harrow Women Knew** (Lex). The cellar at Harrow: Seren's chest with a moth sigil and an empty crown-shaped hollow. Old Mag's tale: the Harrow women always moved on when the moths came. Wren is pregnant. Hook: Maelis at the garden gate. "May I come in?" "No." "That's the right answer. She always said no to me too."
+9. **The Uncapped** (Lex). The Delve rush. CORWIN HASK, a Vhessan ex-miner and Lex's own Unbinding, Lv 71 in a year. He kills a core and Antho collapses fifty miles away. "You took off my Ceiling, smith. Don't you dare put a new one on."
+10. **The Ferryman's Keeping** (Antho). The clean river and the lit lantern. The Crowned's exile was by his boat. Seren's memories of Arion are in his keeping, and only an equal price buys them back. Maelis asked him for passage down; he refused, so she will use the Delve-holes. Hook: Arion has aged ten years overnight.
+11. **Borrowed Years** (Arion). About a year a week. Letters for a wife who won't know him. He tells his sons at once. Maelis offers him youth: "Be young when she comes home." Hook: "I'll think about it."
+12. **Hush** (Antho). Antho, Seraphine and Pim learn to close a Delve without killing it. The Well shows Antho the Drinking: nine crowned figures at a black pool, and a tenth, Hesper, who refused. Hook: Seraphine says, "Antho. I can hear it." HOLLOW — LISTENING.
+13. **The Drowned Archive** (Lex). Qel'Varran is a Delve now. A race against Hask and the Mothwing, and the first gentle closing with a Hush-lid. Hask has moth-wings. Lv 92. Hook: a crack down to the deep, and Seren's voice: "They're coming down the holes. She's coming down."
+14. **The Long Walk Up** (Seren). The deep, with Kell and the young Well, vast and soft as a starless sky the size of a valley. Seren remembers her sons and not their father. Moths come down the holes. Hook: Maelis: "Sister's girl. You have something of mine."
+15. **The Door Opens Down** (Antho). Wren is furious and stays to hold the top with Arion, which is her choice and costs her. Antho opens the sealed door as Threshold Warden. Lex, Antho, Seraphine and Kestrel (back from the Sunreach) go down. The Ferryman takes a price from Lex: the smell of the old forge.
+16. **The Deep** (Lex). Down through the empty Drowned Country into Shade's starlit dark. Mothwing ambushes; Lex burns bright as bait. They find Kell alone and wounded, and Seren gone ahead with the Well.
+17. **Mother** (Lex). Seren, like a lamp in a window, inside the young Well. Malachi and Aurelian as two quiet shapes of light at its heart, the song it grew around. Seren asks, "Who is your father?" Harrow, Hesper and the Crowned, in pieces. The Well says "brother" to Antho. Hook: Maelis.
+18. **The Moth Queen Drinks** (Antho). Battle in the deep. Antho stands in the doorway between Maelis and the Well. She bites and drinks, and the net reads her as TIER V — SOVEREIGN. Lex Unmakes at her flaw: she has been hollow for 900 years. She flees up a Delve-hole with stolen light. Lex Lv 93, Antho Lv 82.
+19. **Room** (Lex). The Well cannot fit through any door. Kell stays to sit with it ("Someone did that for its father"). Lex promises it a home: "I'll make room." Seren chooses to go up.
+20. **Leave a Light On** (Antho). Seren comes through the black door, past 1,112 lanterns. Arion is waiting, looking seventy. "You have a nice voice." World Notice: A SOVEREIGN HAS RISEN. Moths over the moon.
+
+### Interlude
+21. **Interlude: The Sister Who Would Not Drink** (Hesper, 900 years ago). The Drinking at the black pool. Hesper refuses, and helps Aurelian. The Ferryman's boat. The moth sigil, and the rule: never let a moth in.
+
+### PART TWO: THE MOTH AND THE FLAME
+22. **The Dimming** (Lex). Maelis drops the mask. The moths come over Highcrest, the Dimmed follow the moth-light, and Hask is made her Champion. The court flees to the Ashbourne Forge. Her terms: the Harrow blood and the Well.
+23. **A Stranger with a Nice Voice** (Seren). Home, and its gaps. Pim, Odile and her grown boys. Her awkward courtship with an old man she doesn't know. Harrow lore. "She needs our blood to open the Veil. Four more of them."
+24. **The Council of Lanterns** (Lex). Every ally gathers. The plan:
+    - make a home for the Well in the **Blightmarch**, through the reopened **Vhessa breach**;
+    - beat moths with light (every lantern in Caldor);
+    - relight the Dimmed.
+
+    Arion: "I tore that breach. I know its edges."
+25. **Relighting** (Wren). Thistledown is dimmed, and her mother Maren with it. Wren finds the way to relight: a lamp, a name and what you love about them. Hook: Hask comes.
+26. **The Uncapped Man** (Lex). Lex against Hask, Lv 94 against Lv 88. Hask's story: his village was eaten by the Gloam out of Arion's breach. Lex spares him.
+27. **The Breach He Made** (Arion). The Blightmarch and Duskhold's ruin. Father and son at the scar. "I tore it trying to free everyone at once. You'll open it by asking." Hook: moths at the Keep.
+28. **Moths at the Keep** (Antho). Odile is hurt, Pim is fierce, and Seren is taken. Antho's Clarity falls, and the Well's voice steadies him (the inversion). The ultimatum: midsummer, at the breach.
+29. **Listening to Nothing** (Seraphine). Hollow Answering. The design for the Cradle. She becomes **[Scribe of the Seventh]**. She hears the Well's name for itself.
+30. **The Cradle** (Lex). The biggest forging of the series: a mould the size of a valley, cut into the Blightmarch with the whole Forge, Sunreach fire and Teo's tide. Lex Hollow LISTENING, Lv 95. Hook: Arion is gone.
+31. **The Old Man and the Moth** (Arion). He takes her stolen youth to get close, is thirty-one again for one night, and rescues Seren by knowing the Spire's secret ways. He gives the light back and is older than before. "I don't remember you. But I think I'd like to." Maelis still gets a cut of Seren's blood.
+32. **The Way Up** (Antho). Down to the Well with Kell to lead it under the Blightmarch. Hask's sister among the Dimmed. Kell asks Antho to take her name from the Ledger and keep it.
+33. **Midsummer Eve** (Lex). Thousands of people, each with a lantern. Lex and Wren, Lex and Brannoc, Lex and his mother. The bell.
+34. **The Opening** (Antho). Antho opens the Vhessa breach by asking, with Arion beside him. The Well rises, and the swarm comes.
+35. **The Moth and the Flame, I** (Lex). The battle of the Blightmarch: lanterns, dragons, the Ashen Banners, the Sunreach riders and the Forge. Losses.
+36. **The Moth and the Flame, II** (Lex). Maelis tries to drink the Well as it emerges. KELL DIES holding her, a Warden by gift. Hask turns. Lex strikes Maelis's hollow. Seren offers her a lamp, and Maelis flies into it and burns. Her last moth goes west carrying Seren's blood.
+37. **The Seventh Well** (Lex). The Well settles into the Cradle and the Blightmarch blooms. WORLD NOTICE: THE SEVENTH WELL HAS COME HOME. Hollow appears in every Attunement panel. Pim names it. Lex Lv 97 with Hollow Answering; Antho Lv 90.
+38. **What the Light Costs** (Lex). Funerals and relightings. Hask becomes the Well's warden in Kell's place. The Ferryman gives Seren back one memory: the steps of the Spire in the rain. Wren is showing.
+39. **Epilogue: The Gilded King** (beyond the Veil). The moth with Seren's blood reaches the Veil, and a crack opens. Four cocoons split. Oszric wakes: "Who killed my sister?" Then: "Bring me the smith's child." In the Knot, Elric says, "They're coming for the Key."
