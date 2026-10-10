@@ -357,56 +357,56 @@ Gentle, fierce and a hedge-witch (an unlatticed Listener, which is illegal). She
 
 ---
 
-## 7. BOOK TWO — THE SORCERER'S LEGACY (chapter plan)
+## 7. BOOK TWO — THE SORCERER'S LEGACY (revised plan, written after Book One)
 
-Three years after Book One. Lex is 22 and Level 58 [Forgeheart Sorcerer]. Antho is 27 and Level 57 [Twilight Warlock]. Wren is Level 44 [Mistwalker].
+**Setting:** three years after Duskhold, two years after the first Festival. Lex is 22, a FORGEHEART SORCERER around Lv 60, master-teacher at the Ashbourne Forge. Antho is 27, at the Lantern Keep. Arion advises Queen Lysandra. "A Key has been turned" was Elric claiming the first piece (the BOW). He has spent two years quietly building the ECLIPSE CONCORD with fled High Warden Isaura Kell and Lord Chancellor VARRIC SORN (nobles who lost their monopoly to the Unbinding). The Concord wants to "re-Ceiling" the world. Elric wants Root of his own. Aurelian, speaking to Elric as a kind voice, wants the Key turned.
 
-**Prologue: A New Threat.** A shepherd in northern Caldor watches his sister forget her own name, then fade. A Warden sees a keyhole-shaped scar in the air.
+**The Key of Shadows:** forged by Aurelian from his own shadow as the key to the lid between the Lattice and the Hollow, then split into three: the BOW (Sundered Lands, found), the BIT (the Glass Desert, Sunreach) and the BLADE (buried beneath the Hollowmaw; the reason a breach opened there). Even one piece can "unwrite" a person's thread from the Lattice. The victims are the UNNAMED, whom everyone forgets, and their freed mana feeds Elric's Authority. That is how he has grown strong.
+
+**Book Two secrets revealed:**
+- Arion is 231. He is the last direct descendant of Aurelian and was once Aurelian's chosen vessel. He hid his sons from Aurelian as well as from the Order.
+- The TITHE: the Lattice skims a tenth of all mana to feed the binding, and Aurelian (merged with the Unmaker) eats it.
+- The "prophecy of return" was written by Aurelian himself to lure his descendants to his tomb.
+- Seren is alive in the Hollow. She has been keeping the door from the other side and holding Aurelian back. Arion has known since the festival year.
 
 ### PART ONE: THE KEY OF SHADOWS
-1. **Three Years of Peace.** The Forge Academy, politics, Queen Lysandra's reforms and noble resentment. Lex senses darkness.
-2. **The Festival of Sorcerers.** An Unnamed incident at the festival. Lex sets out on a solitary journey, leaving Antho and Arion to guard the realm. Wren is furious.
-3. **Unveiling Darkness.** Vanished villages. The Unnamed have had their names deleted from the Lattice, and someone with Root-level power did it.
-4. **The Temple of Ysmir.** A crumbling forgotten temple, its guardians and trials.
-5. **The Cursed Prophecy.** The Key of Shadows: forged by Aurelian from his own shadow and split into three parts, the Bow, the Bit and the Blade. Lex can sense forged things.
-6. **The Brother Who Stayed.** (Antho) The Murmur returns faintly. His need to prove himself. The Hollow's edge thinning.
-7. **The Forbidden Realms.** (Antho) The Threshold, the Grey Ferryman, and a lullaby in the dark: "The Lantern Song."
-8. **The Unlit.** (Lex) The rogue sorcerers: Kestrel, Dorran, the twins and Oriel. Distrust.
-9. **The Glass Desert.** Hunting the first Key part (the Bit) in the Sunreach. Queen Ishara.
-10. **Shadows Awakened.** The Eclipse Concord revealed, Elric's return, and the Bit stolen.
-11. **The Ferryman's Price.** (Antho) He pays a memory for power. Vharuun lives.
-12. **The Queen's Advisor.** (Wren) An assassination attempt on Arion, and a portrait two hundred years old.
-13. **The Dark Alliance.** (Lex) Infiltrating Chancellor Sorn's gala. Kestrel's agenda exposed.
-14. **The Gathering Storm.** The brothers converge at the Blade in the Hollowmaw and are reunited. The puzzle assembles. Elric holds two parts.
-15. **Old Allies, New.** Rallying: Elowen, Seraphine, Roole, Wren, the Unbound, dragons and the Unlit.
-16. **The Wellworld of Flame.**
-17. **The Wellworld of Tide.**
-18. **The Wellworld of Stone.**
-19. **The Wellworld of Gale.**
-20. **The Umbral Rift.** Assault on Elric's fortress. Dorran dies.
-21. **The Key of Shadows.** Elric turns the Key and eternal night begins to fall.
-22. **A Legacy Forged Anew.** Elric learns he was Aurelian's puppet, relocks the Key at the cost of his life and leaves his last words for Arion. Victory.
-23. **Interlude: A Never-Ending Journey.** A season of peace.
+- Prologue: A New Threat
+- 1 Three Years of Peace
+- 2 The Festival of Sorcerers
+- 3 Unveiling Darkness
+- 4 The Temple of Ysmir
+- 5 The Cursed Prophecy (meets Kestrel)
+- 6 The Brother Who Stayed (Antho)
+- 7 The Forbidden Realms (Antho; the Grey Ferryman)
+- 8 The Unlit (Lex)
+- 9 The Glass Desert (Queen Ishara)
+- 10 Shadows Awakened (Elric takes the Bit)
+- 11 The Ferryman's Price (Antho pays the memory of the five-skip stone; finds Vharuun)
+- 12 The Queen's Advisor (Wren POV; Arion's portrait)
+- 13 The Dark Alliance (Sorn's masquerade)
+- 14 The Gathering Storm (Hollowmaw assault; Elric takes the Blade)
+- 15 Old Allies, New
+- 16–19 The Wellworlds of Flame, Tide, Stone and Gale
+- 20 The Umbral Rift (Dorran dies)
+- 21 The Key of Shadows (eternal night)
+- 22 A Legacy Forged Anew (Elric relocks the Key and dies)
+- 23 Interlude: A Never-Ending Journey
 
 ### PART TWO: ECHOES OF THE PAST
-24. **Echoes of the Past.** Tales of a mage from a forgotten era. Dreams. Arion's evasions.
-25. **The Forgotten Chronicles.** Archives with Seraphine. Malachi returns. The bloodline histories.
-26. **The Prophecy of Return.** The prophecy that the ancient evil will return and the descendants must stand against it. Forgotten rituals and arcane mastery.
-27. **The Awakening Darkness.** Villages fall to shadow, and the Unnamed rise as Hollow-born.
-28. **Allies and Adversaries.** The Sunreach and Queen Ishara's warriors, the Hollow Choir revealed.
-29. **The Cantor.** A boss.
-30. **Mother Sallow.** A boss, and losses.
-31. **The Forbidden Lands.** The Sundered Lands.
-32. **The Twinned Knight.** A boss.
-33. **Unveiling the Truth.** Aurelian's Tomb. Aurelian IS the ancient evil: he wrote the prophecy and wants their bodies. The Tithe. Arion's age and his lies. Seren.
-34. **Ysolde the Unnamed.** The last of the Choir, and what she once was.
-35. **Reborn in Light I.** The armies.
-36. **Reborn in Light II.** The brothers versus the Hollow King. Aurelian reaches for Antho, and Malachi's sacrifice.
-37. **Reborn in Light III.** The Worldforger. Lex reforges the Root, ending the Tithe and the Ceiling for all in a World Notice. Antho becomes Threshold Warden. Aurelian's last lucid moment.
-38. **A New Era of Balance.** Rebuilding and teaching. Lex proposes to Wren.
-39. **Epilogue: The Everlasting Legacy.** Years later at the Festival. Hook: Antho in the Hollowmaw hears the lullaby, and a message appears in both brothers' interfaces: `Message received. Sender: Seren Vey. Location: THE HOLLOW. "My boys. Leave a light on. I'm coming home — but not alone."` Arion's face when they show him.
-
----
+- 24 Echoes of the Past (Aurelian appears to Lex, kindly)
+- 25 The Forgotten Chronicles (Malachi leaves the Wastes)
+- 26 The Prophecy of Return
+- 27 The Awakening Darkness
+- 28 Allies and Adversaries (the Hollow Choir: the Cantor, Mother Sallow, the Twinned Knight, and the Unnamed Warden, who is Kell)
+- 29 The Cantor
+- 30 Mother Sallow (Teodra Hale dies)
+- 31 The Forbidden Lands
+- 32 The Twinned Knight
+- 33 Unveiling the Truth
+- 34 The Unnamed Warden
+- 35–37 Reborn in Light I–III (Malachi's sacrifice; Lex becomes WORLDFORGER and ends the Tithe and the Ceiling forever; Antho becomes THRESHOLD WARDEN)
+- 38 A New Era of Balance (proposal)
+- 39 Epilogue: The Everlasting Legacy (message from Seren)
 
 ## 8. Style rules
 - System panels use `:::system` (silver Lattice), `:::root` (gold Root/Ember) and `:::error` (Antho's corrupted panels, the Murmur) blocks. Keep lines at 44 characters or fewer.
