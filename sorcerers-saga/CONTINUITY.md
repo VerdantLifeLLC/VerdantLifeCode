@@ -70,3 +70,45 @@ Running record of levels, stats, skills, items and facts established in the text
 - Antho's account: the Murmur tore a hole in the kitchen; Seren sang into it, said "Look after your brother, Antho. I'll keep the door," walked in, and it closed from the other side; the fire was the backlash. He searched east, as far as the Blightmarch, and Saltreach for Arion during his first two years. He killed some Wardens (or the thing in him did).
 - Antho said Lex's seal "was supposed to hold... he made yours different, I saw him do it."
 - Lex Lv 13 (quest complete). Wren arrives with her arrow drawn on Antho.
+
+### Ch 8
+- Antho's lair: a bell-shaped cavern full of lanterns and paper. The breach is a vertical crack, man-high, with a ring of green ward-fire. It opened 4 years ago at a finger's width and has grown since.
+- Antho has killed 11 Wardens (that he remembers). One was 19, with a cleft chin.
+- Elric visited the Hollowmaw 6–7 years ago. The Murmur "wanted him more than the Wardens" (seed).
+- True Sight of Antho: ANTHOREN VEY (registered HARROW), 24, HOLLOW-TOUCHED WARLOCK, ERROR (corrupted UNIQUE), Tier I▓, Lv 31. MIG 14 AGI 24 VIT 20 INT 41 SPI 58 RES 9. Clarity 44. Skills: Shadowbind Expert 3, Void Bolt Expert 1, Hollow Gate J6, Grave-Speech J2, Ward-Scribing J9 (31% of glyphs invalid). Breach-link ACTIVE (tied to the Hollowmaw breach).
+- BLOODBOND formed: shared XP, shared mana by consent, Clarity anchor, plus a locked feature. Clarity rose to 58.
+- Fight with Roole's 15 Wardens: no deaths. Roole: INQUISITOR (Rare), Tier II Lv 46, silver-lit cold blade. Lex beat him by melting the snow under him and spared him. Roole left: "I'll answer for it."
+- Title: The Merciful Hammer (+5% non-lethal). Lex Lv 14.
+
+### Ch 9
+- Ward-nails ×12 forged from the Wardens' crossbows (glyph BIND, Antho's version). Breach containment 61% → 94%. Hidden quest KEEPER OF THE DOOR. Runic Forging Apprentice 2. Antho's Ward-Scribing reached Expert 1. (Lex Lv 15 off-page.)
+- Distance from the breach weakens the Murmur's hold on Antho.
+- SEREN'S LAMP: clay chapel lamp with the ARDENT rune, burns without fuel while Lex lives. Left on a rock above the Hollowmaw, facing out.
+- Wren joins for good (she gave the money to Grell's wife Hilde to send). Her goal: see the Gloam stopped.
+- Quill's letter: three songs (the Lithic Oracle, the heart of the Thornwood, the Barrow Throne); bounties of 500 crowns each.
+- LODESTONE OF RETURN = Seren's grey pendant, found by Antho in the ashes. Bound to Arion. Verse: "Two of the blood, the bright and the deep, / one who forges, one who keeps..."
+- Antho cleaned up and looks like Arion. Wren calls him "Warlock." The stone skipped five times, not four.
+
+### Ch 10
+- Antho has a staff of black, wind-twisted pine.
+- New skill: Slag Shot (heated crossbow bolts; Lex carries about 40). Ember Strike Apprentice 3 ("shape the channel, then let it flow").
+- The Lithic Oracle: stone sphinx with a woman's face, silver eyes, 212 statues. Riddles: Temper (both kinds) for Lex; the Veil for Wren; guilt and "whose hand?" for Antho, which Lex answered "Mine." Lex forgave Antho. Clarity rose to 79.
+- Song of Stone (1/3). Lex Lv 16, Wren 22, Antho 32.
+- Arion visited the Oracle 11 years ago and asked "how a man might mend a net from inside it." Then went north.
+
+### Ch 11
+- Lv 16 allocation (24): MIG 32 AGI 31 VIT 38 INT 28 SPI 66 RES 29. HP 380, MP 660.
+- Ruined village (unnamed; the miller Hob and his wife Bess). The Gloamed "Miller," Lv 24 Elite, corruption 88%, was purged and lived. The Gloamed can be saved.
+- New skill: Forge-Heart Thrust. Lex Lv 17, Wren 23.
+- Sir Garrick Dunmore: 52, ex-Knight of the Silver Lattice, refused to burn an unlatticed village 6 years ago and was stripped of rank. Wife Mara died of fever the next winter. Daughter Elowen, 23, was training for the Silver Lattice. Proverb: "A man who sharpens his sword at the battle has already bled."
+- OATHKEEPER reforged (MASTERWORK, Rimewarden's heart core): BULWARK, BIND (Gloam can't re-form), OATH. Garrick swore to "stand on the steps." KNIGHT-ERRANT (Rare), Tier II Lv 41, title Oathbound. Runic Forging Apprentice 6.
+
+### Ch 12
+- Thornwood: memory drain, Resolve checks. Wren's climbing rope ties them together.
+- Illusions: Lex saw his father ("you weren't worth staying for"), Wren her father, Garrick his wife Mara, Antho Seren at a stone doorway (Clarity fell to 16).
+- Thorn Mother: blighted by a minor breach under the east root. Healed: Antho drew the Gloam out and Lex burned it with needle-fine heat; the last spare ward-nail went into the breach (contained 78%).
+- Returned memory: Arion, leaving, called four-year-old Lex "little smith" over the horseshoe nail: "Keep it, little smith... Mind the quench." MEMORY PARTITION 3 unlocked. Ember: "I think I know who made me."
+- Brannoc's cat = Slag; the chapel door is faded green with a lantern-shaped brass handle; Brannoc's hymn is "Lantern-bearer, light the way."
+- Song of Leaves (2/3). Lex Lv 19 (18 unspent; SPI 72, INT 31). Antho 33. WREN HIT THE CEILING AT 24.
+- Ember reveals Unbind exists, locked in Lex's panel.
+- Near-kiss interrupted by Garrick. A woman in spectacles with a crossbow stands at the house of leaves.
