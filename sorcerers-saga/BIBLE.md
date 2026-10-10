@@ -416,3 +416,26 @@ Gentle, fierce and a hedge-witch (an unlatticed Listener, which is illegal). She
 - Fights read as fights: concrete terrain, cost, clever use of skills, and consequences such as injury and mana exhaustion.
 - Lex's magic is *physical*: heat, pressure, hammer-rhythm, the ring of struck metal. Antho's magic is *cold and quiet*: absence, hush, the space between heartbeats.
 - Running continuity of levels, stats and skills is kept in `CONTINUITY.md`.
+
+### 7b. PART TWO — revised after drafting Part One (supersedes the Part Two list above)
+
+**State at the end of Part One:** the lid is sealed and the Key is barred by the LOCKWARD, held by Elric's thread inside the First Knot. All the Unnamed are restored except ISAURA KELL, who was taken *below* (she saved Ilse), and ELRIC, who is gone into the Knot. Both names stay in the Ledger. Seren is alive behind the Hollowmaw door, and Arion now keeps this side of it. Arion's age (231) is known to Wren and deduced by Ember; he has promised to tell his sons. The Hollow King (the Unmaker wearing Aurelian) is sealed but patient, and the door at the bottom of Lex's Root is still open a crack. Lex owes three vows: to the Undertow (break the net and weave a new one, ending every Ceiling), to the First Breath, and to Dorran (his twelve villages).
+
+**The enemy's new route:** the TITHE. Every Stone skims a tenth of all mana down a "Tithe-thread" into the deep, and the Hollow King has fed on it for 900 years. With the lid sealed, he pushes *up* the Tithe-threads. The HOLLOW CHOIR comes out of Lattice Stones.
+
+- 23 Interlude: A Never-Ending Journey (Seren POV in the Hollow; Kell becomes the Unnamed Warden; the Choir assembles)
+- **@@PART Part Two: Echoes of the Past**
+- 24 Echoes of the Past: spring, the twelve villages, Arion's confession to his sons, and "Aurelian" (kind and lucid-seeming) appears to Lex in a dream to plant the lure
+- 25 The Forgotten Chronicles: Malachi leaves the Wastes. Founders' chronicles; the Tithe revealed; Malachi was Aurelian's apprentice
+- 26 The Prophecy of Return: a verse calling the heir to the Heart (Aurelian's Tomb, across the grey river under the Drowned Country). First Hollow-born out of a Stone
+- 27 The Awakening Darkness: Choir strikes through Stones across Caldor and the Sunreach
+- 28 Allies and Adversaries: the four of the Choir named; a council of every ally
+- 29 The Cantor (Highcrest; voice that commands; countered by silence: Pim, Antho, and the Hush runes)
+- 30 Mother Sallow (rot in the Vale; Teodra Hale dies saving Ashbourne)
+- 31 The Forbidden Lands (across the grey river; Antho keeps his promise to the grey girl; the Ferryman lets Antho *look*)
+- 32 The Twinned Knight (Ilse and Ivo against a twin bound in one armor)
+- 33 Unveiling the Truth (the Tomb: Aurelian's fall, the Tithe, Arion as the refused vessel, the prophecy as a lure; the true plan is to come up through Lex's Root)
+- 34 The Unnamed Warden (Kell; Lex speaks her name from the Ledger and she remembers, then turns)
+- 35–37 Reborn in Light I–III (Malachi's sacrifice; Aurelian's last lucid moment; Antho becomes THRESHOLD WARDEN; Lex becomes WORLDFORGER, Tier IV, unmakes the old net and weaves a new one with no Ceiling and no Tithe, and the World Notice goes out)
+- 38 A New Era of Balance (the twelve villages finished; the Sunreach; the ring forged from an old Ashbourne nail; Antho and Seraphine)
+- 39 Epilogue: The Everlasting Legacy (Seren's message: "Leave a light on. I'm coming home — but not alone.")
