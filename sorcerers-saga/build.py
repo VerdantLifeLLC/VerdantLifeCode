@@ -78,6 +78,41 @@ def register_fonts():
     addMapping("Mono", 1, 0, "Mono-Bold")
     addMapping("Mono", 0, 1, "Mono-Italic")
     addMapping("Mono", 1, 1, "Mono-Bold")
+    # Fallbacks for glyphs the subsetted web fonts lack (block shading, arrows,
+    # geometric shapes, combining marks). DejaVu is freely embeddable.
+    pdfmetrics.registerFont(TTFont("MonoFB", f("DejaVuSansMono.ttf")))
+    pdfmetrics.registerFont(TTFont("MonoFB-Bold", f("DejaVuSansMono-Bold.ttf")))
+    pdfmetrics.registerFont(TTFont("SansFB", f("DejaVuSans.ttf")))
+    addMapping("MonoFB", 0, 0, "MonoFB")
+    addMapping("MonoFB", 1, 0, "MonoFB-Bold")
+    addMapping("MonoFB", 0, 1, "MonoFB")
+    addMapping("MonoFB", 1, 1, "MonoFB-Bold")
+    from fontTools.ttLib import TTFont as _FT
+    CMAPS["mono"] = set(_FT(f("PlexMono-400.ttf")).getBestCmap())
+    CMAPS["body"] = (set(_FT(f("EBGaramond-400-normal.ttf")).getBestCmap())
+                     & set(_FT(f("EBGaramond-400-italic.ttf")).getBestCmap()))
+
+
+CMAPS = {}
+
+
+def with_fallback(text, which, fb):
+    """Wrap runs of characters missing from the primary font in <font name=fb>."""
+    cmap = CMAPS.get(which)
+    if not cmap:
+        return text
+    out, run = [], []
+    for ch in text:
+        if ord(ch) > 127 and ord(ch) not in cmap:
+            run.append(ch)
+        else:
+            if run:
+                out.append('<font name="%s">%s</font>' % (fb, "".join(run)))
+                run = []
+            out.append(ch)
+    if run:
+        out.append('<font name="%s">%s</font>' % (fb, "".join(run)))
+    return "".join(out)
 
 
 # ---------------------------------------------------------------- page geometry
@@ -265,7 +300,7 @@ def inline(text):
     text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
     text = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<i>\1</i>", text)
-    return text
+    return with_fallback(text, "body", "SansFB")
 
 
 def parse_chapter(path):
@@ -320,7 +355,7 @@ def parse_chapter(path):
 def system_panel(kind, lines, S, width):
     def fmt(l):
         t = l.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace(" ", "&nbsp;")
-        return t or "&nbsp;"
+        return with_fallback(t, "mono", "MonoFB") or "&nbsp;"
     rows = []
     for idx, l in enumerate(lines):
         txt = fmt(l)
