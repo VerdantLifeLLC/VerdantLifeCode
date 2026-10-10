@@ -17,6 +17,8 @@ An epic fantasy LitRPG series about two estranged brothers, Lex and Antho, the h
 | `ORIGINAL-OUTLINE.md` | The author's original outline both books grew from |
 | `build.py` | Builds the KDP 6 x 9 paperback interiors (PDF) and Word files |
 | `output/` | The built books: `*-KDP-6x9-Interior.pdf` (upload-ready interior) and `*-KDP-6x9.docx` (editable) |
+| `covers.py` | Builds the covers: full-wrap KDP paperback covers (back, spine and front, 0.125 in bleed, spine sized from the interior page count), a 6 x 9 front cover and a 1600 x 2560 Kindle cover |
+| `output/covers/` | The built covers |
 | `fonts/` | EB Garamond, Cinzel and IBM Plex Mono (SIL Open Font License); DejaVu Sans / Sans Mono as glyph fallback (see `DejaVu-LICENSE.txt`) |
 
 ## Building
@@ -26,6 +28,8 @@ pip install reportlab python-docx fonttools
 python3 build.py              # both books, PDF + DOCX
 python3 build.py book2        # one book
 python3 build.py book1 --pdf-only
+python3 covers.py             # covers for both books (white paper)
+python3 covers.py book2 --paper cream
 ```
 
 Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
