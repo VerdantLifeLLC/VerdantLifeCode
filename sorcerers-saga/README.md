@@ -34,6 +34,7 @@ python3 build.py book3        # Book Three (author The Skill Junky, published by
 python3 build.py book1 --pdf-only
 python3 covers.py             # covers for both books (white paper)
 python3 covers.py book2 --paper cream
+python3 covers.py book3 --width 13.856   # pass the full width KDP reports
 ```
 
 Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.

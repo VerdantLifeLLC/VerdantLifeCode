@@ -7,7 +7,7 @@ For each book this writes:
   output/covers/<file>-Front-Cover.jpg           front only, 6 x 9 trim, 300 dpi (2.5:3.75 ratio)
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
-Usage: python3 covers.py [book1|book2] [--paper white|cream] [--width INCHES]
+Usage: python3 covers.py [book1|book2|book3] [--paper white|cream] [--width INCHES]
 
 --width sets the full cover width KDP reports (e.g. 13.984); the spine is
 derived from it instead of from the interior page count.
@@ -82,6 +82,26 @@ BOOKS = {
             "you'd least want to lose. Because on the far side of the darkness, someone has been holding a door "
             "shut for eleven years.",
             "And she's their mother.",
+        ],
+        "kicker": "The Lattice Chronicles continue.",
+    },
+    "book3": {
+        "file": "The-Sorcerers-Hollow",
+        "pre": "THE SORCERER'S", "main": "HOLLOW", "number": "BOOK THREE",
+        "sky": ("#05040c", "#120b22", "#2b1733"), "glow": "#ffcf73", "accent": "#f3d18a",
+        "tagline": "Never let a moth in.",
+        "blurb": [
+            "The Ceilings are gone. The net belongs to no one. And at the bottom of the world, the thing that "
+            "was once called the Unmaker is healing. It is young now, and frightened, and the size of a "
+            "country, and it is following Seren Vey home.",
+            "Lex Vey has a wedding, a wife carrying their first child, and a father growing old a year a week. "
+            "Antho has a voice in his head again: the same one that broke him for eight years, only now it is "
+            "small, and sorry, and asking for help. And out of the grey beyond the edge of the world walks a "
+            "beautiful woman with lit eyes, who asks very politely for sanctuary.",
+            "She never lies. She knows their mother's real name. She wants every drop of Harrow blood in the "
+            "world, the newborn Well when it rises, and the newest light of all: the one Wren is carrying.",
+            "Two brothers must learn the hardest thing a smith and a warden can do. "
+            "Not forge. Not hold. Make room.",
         ],
         "kicker": "The Lattice Chronicles continue.",
     },
@@ -362,6 +382,140 @@ def lantern_field(c, x0, y0, w, h, n, rnd, hexcol, avoid=None):
         c.line(x, y + r, x, y + r + 5)
 
 
+
+def hollow_glyph(c, cx, cy, r, accent):
+    """The Wellscript glyph for the seventh Well: a ring that doesn't quite close."""
+    gold = HexColor(accent)
+    gap = 34  # degrees, centred at the bottom
+    for lw, a in ((14, 0.07), (7, 0.12), (2.2, 0.75)):
+        c.setStrokeColor(Color(gold.red, gold.green, gold.blue, alpha=a))
+        c.setLineWidth(lw)
+        p = c.beginPath()
+        p.arc(cx - r, cy - r, cx + r, cy + r, 270 + gap / 2, 360 - gap)
+        c.drawPath(p, stroke=1, fill=0)
+
+
+def moth(c, cx, cy, span, rnd):
+    """A great night-moth, wings spread, painted with eye-rings."""
+    s = span / 2
+    c.saveState()
+    def wing(side, upper):
+        p = c.beginPath()
+        if upper:
+            p.moveTo(cx, cy + 0.04 * s)
+            p.curveTo(cx + side * 0.3 * s, cy + 0.42 * s, cx + side * 0.78 * s, cy + 0.66 * s,
+                      cx + side * 1.04 * s, cy + 0.7 * s)
+            p.curveTo(cx + side * 0.98 * s, cy + 0.42 * s, cx + side * 0.84 * s, cy + 0.1 * s,
+                      cx + side * 0.55 * s, cy - 0.02 * s)
+            p.curveTo(cx + side * 0.3 * s, cy - 0.06 * s, cx + side * 0.1 * s, cy - 0.02 * s, cx, cy + 0.04 * s)
+        else:
+            p.moveTo(cx, cy - 0.02 * s)
+            p.curveTo(cx + side * 0.35 * s, cy - 0.05 * s, cx + side * 0.7 * s, cy - 0.12 * s,
+                      cx + side * 0.72 * s, cy - 0.38 * s)
+            p.curveTo(cx + side * 0.7 * s, cy - 0.62 * s, cx + side * 0.36 * s, cy - 0.72 * s,
+                      cx + side * 0.16 * s, cy - 0.5 * s)
+            p.curveTo(cx + side * 0.06 * s, cy - 0.36 * s, cx + side * 0.02 * s, cy - 0.16 * s, cx, cy - 0.02 * s)
+        p.close()
+        return p
+    for side in (-1, 1):
+        for upper in (True, False):
+            p = wing(side, upper)
+            c.setFillColor(Color(0.62, 0.54, 0.42, alpha=0.55 if upper else 0.48))
+            c.setStrokeColor(Color(0.98, 0.84, 0.55, alpha=0.75))
+            c.setLineWidth(0.9)
+            c.drawPath(p, stroke=1, fill=1)
+            # wing veins
+            c.saveState()
+            c.clipPath(wing(side, upper), stroke=0, fill=0)
+            c.setStrokeColor(Color(1, 0.88, 0.6, alpha=0.22))
+            c.setLineWidth(0.5)
+            for k in range(7):
+                ang = math.radians((15 + k * 14) if upper else (-20 - k * 12))
+                c.line(cx, cy, cx + side * math.cos(ang) * s * 1.1, cy + math.sin(ang) * s * 1.1)
+            c.restoreState()
+        # eye-ring on each upper wing
+        ex, ey = cx + side * 0.58 * s, cy + 0.38 * s
+        c.setFillColor(Color(0.12, 0.08, 0.14, alpha=0.85))
+        c.circle(ex, ey, 0.13 * s, stroke=0, fill=1)
+        c.setStrokeColor(Color(1, 0.84, 0.5, alpha=0.95))
+        c.setLineWidth(1.4)
+        c.circle(ex, ey, 0.13 * s, stroke=1, fill=0)
+        c.setFillColor(Color(1, 0.9, 0.6, alpha=0.9))
+        c.circle(ex - side * 0.03 * s, ey + 0.03 * s, 0.035 * s, stroke=0, fill=1)
+        # smaller ring on the lower wing
+        lx, ly = cx + side * 0.42 * s, cy - 0.36 * s
+        c.setStrokeColor(Color(1, 0.84, 0.5, alpha=0.6))
+        c.setLineWidth(0.9)
+        c.circle(lx, ly, 0.07 * s, stroke=1, fill=0)
+    # body
+    c.setFillColor(HexColor("#1a1220"))
+    c.ellipse(cx - 0.085 * s, cy - 0.46 * s, cx + 0.085 * s, cy + 0.2 * s, stroke=0, fill=1)
+    c.setStrokeColor(Color(0.85, 0.72, 0.5, alpha=0.35))
+    c.setLineWidth(0.5)
+    for k in range(9):
+        yy = cy - 0.4 * s + k * 0.065 * s
+        c.line(cx - 0.08 * s, yy, cx + 0.08 * s, yy + 0.01 * s)
+    c.setFillColor(HexColor("#2a1d2e"))
+    c.ellipse(cx - 0.1 * s, cy + 0.08 * s, cx + 0.1 * s, cy + 0.26 * s, stroke=0, fill=1)
+    c.setFillColor(HexColor("#24182a"))
+    c.circle(cx, cy + 0.29 * s, 0.07 * s, stroke=0, fill=1)
+    # feathered antennae
+    c.setStrokeColor(Color(1, 0.86, 0.55, alpha=0.7))
+    c.setLineWidth(0.7)
+    for side in (-1, 1):
+        p = c.beginPath()
+        p.moveTo(cx + side * 0.02 * s, cy + 0.29 * s)
+        p.curveTo(cx + side * 0.08 * s, cy + 0.45 * s, cx + side * 0.2 * s, cy + 0.55 * s, cx + side * 0.3 * s, cy + 0.6 * s)
+        c.drawPath(p, stroke=1, fill=0)
+        for k in range(1, 7):
+            t = k / 7.0
+            bx = cx + side * (0.02 + 0.28 * t) * s
+            by = cy + (0.29 + 0.31 * t ** 0.8) * s
+            c.line(bx, by, bx + side * 0.03 * s, by + 0.04 * s)
+    c.restoreState()
+
+
+def falling_dust(c, cx, cy, spread, depth, n, rnd, hexcol):
+    """Moth-dust drifting down from the wings."""
+    for _ in range(n):
+        t = rnd.random() ** 1.3
+        x = cx + (rnd.random() - 0.5) * spread * (0.6 + t)
+        y = cy - t * depth
+        r = 0.4 + rnd.random() * 1.1
+        c.setFillColor(rgba(hexcol, 0.15 + (1 - t) * 0.55))
+        c.circle(x, y, r, stroke=0, fill=1)
+
+
+def clay_lamp(c, lx, ly, k, glowcol):
+    """Seren's little clay lamp, lit."""
+    glow(c, lx + 6 * k, ly + 14 * k, 90 * k, glowcol, 0.75)
+    c.saveState()
+    c.setFillColor(HexColor("#2b1a10"))
+    c.ellipse(lx - 16 * k, ly - 4 * k, lx + 16 * k, ly + 10 * k, stroke=0, fill=1)
+    c.setFillColor(HexColor("#3a2414"))
+    c.ellipse(lx + 9 * k, ly + 2 * k, lx + 25 * k, ly + 8 * k, stroke=0, fill=1)
+    c.setFillColor(Color(1, 0.92, 0.6, alpha=1))
+    p = c.beginPath()
+    p.moveTo(lx + 21 * k, ly + 8 * k)
+    p.curveTo(lx + 16 * k, ly + 15 * k, lx + 21 * k, ly + 23 * k, lx + 23 * k, ly + 30 * k)
+    p.curveTo(lx + 27 * k, ly + 22 * k, lx + 29 * k, ly + 14 * k, lx + 23 * k, ly + 8 * k)
+    p.close()
+    c.drawPath(p, stroke=0, fill=1)
+    c.restoreState()
+
+
+def lantern_ring(c, x0, w, y, n, rnd, hexcol):
+    """The given lanterns round the rim of the circle, seen far off along the horizon."""
+    for i in range(n):
+        t = (i + rnd.random() * 0.6) / n
+        x = x0 + t * w
+        yy = y + math.sin(t * math.pi) * 6 + (rnd.random() - 0.5) * 2
+        r = 0.7 + rnd.random() * 0.9
+        glow(c, x, yy, r * 6, hexcol, 0.3, steps=6)
+        c.setFillColor(rgba(hexcol, 0.75 + rnd.random() * 0.25))
+        c.circle(x, yy, r, stroke=0, fill=1)
+
+
 # ---------------------------------------------------------------- typography
 def spaced(c, text, x, y, font, size, fill, tracking=0.0, center=True, shadow=True):
     w = pdfmetrics.stringWidth(text, font, size) + tracking * (len(text) - 1)
@@ -446,6 +600,18 @@ def front_art(c, key, b, x0, W, H, seed):
         # ground
         c.setFillColor(HexColor("#050307"))
         c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.16 + BLEED, stroke=0, fill=1)
+    elif key == "book3":
+        # the seventh circle, a moth drawn down toward Seren's lamp, the lantern-ring on the horizon
+        lattice(c, x0 + W / 2, H * 0.72, W * 1.15, H * 0.5, 26 * W / TRIM_W, 0.16, rnd)
+        glow(c, x0 + W * 0.5, H * 0.38, W * 0.62, "#8f6bd6", 0.35)
+        mountains(c, x0, W, H * 0.17, [H * 0.07, H * 0.1, H * 0.06, H * 0.09], "#0a0712", 0.95, rnd)
+        lantern_ring(c, x0 - BLEED, W + 2 * BLEED, H * 0.175, 46, rnd, b["glow"])
+        hollow_glyph(c, x0 + W * 0.5, H * 0.4, W * 0.32, b["accent"])
+        c.setFillColor(HexColor("#06040a"))
+        c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.17 + BLEED, stroke=0, fill=1)
+        clay_lamp(c, x0 + W * 0.47, H * 0.13, W / TRIM_W * 1.25, b["glow"])
+        falling_dust(c, x0 + W * 0.5, H * 0.34, W * 0.45, H * 0.17, 260, rnd, "#e9cf96")
+        moth(c, x0 + W * 0.5, H * 0.38, W * 0.66, rnd)
     else:
         # cave walls hung with lanterns, the sealed door, the Key above
         lattice(c, x0 + W / 2, H * 0.7, W * 1.15, H * 0.55, 26 * W / TRIM_W, 0.22, rnd,
@@ -527,7 +693,7 @@ def spine(c, b, sx, sw, H):
     c.translate(sx + sw / 2, H)
     c.rotate(-90)
     cap = (sw - 4 * margin)
-    num = {"BOOK ONE": "I", "BOOK TWO": "II"}[b["number"]]
+    num = {"BOOK ONE": "I", "BOOK TWO": "II", "BOOK THREE": "III"}[b["number"]]
     c.setFillColor(gold)
     c.setFont("Cinzel-Bold", cap * 0.5)
     c.drawCentredString(0.75 * inch, -cap * 0.18, num)
