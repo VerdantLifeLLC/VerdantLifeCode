@@ -37,3 +37,36 @@ Running record of levels, stats, skills, items and facts established in the text
 - Runic Forging Novice 6. Lex is Lv 5 at the end (SPI 34, INT 17, 6 free points unspent).
 - Brannoc gave Lex a heavy purse ("eight years of wages") and a pack. Hammer-oath: Lex will come back.
 - Warden riders (a dozen-plus, grey cloaks, silver lattice banner) are seen heading for Ashbourne from the south, too soon to be from Millbridge.
+
+### Ch 4
+- Lattice Watch record: Antho's class "ERROR," Lv 1 → 9 at Kindling, Root signature detected; minor breach at the Harrow house lasting 4 minutes; one fatality presumed. Retrieval teams sent: six (none returned), then eight (two returned), and two more teams after that.
+- Arion's letter to Elric 11 years ago (he sent four years of letters before it): "The way to me runs through Avaloria, and the Way opens only to two of the blood... Mind the quench. —A." Mentions "S. knows what to do."
+- Quest accepted: THE LOST FATHER (Main). Chain: THE BROTHER IN THE MOUNTAIN.
+- Elric leaves to see "old friends"; Quill will find Lex. Elric: "Mind the quench."
+- Warden-Captain Daxian Roole: hatchet face, pale blue eyes, iron-grey hair, 20 years in the Order. Corporal Fenn ([Tracker], squint). Roole carries the High Warden's private orders, sent five days before the flare: Root signature flickering in the southern Vale, "retrieve it, alive if possible." Brannoc lied ("Saltreach"). Roole won't arrest him: "I'd do the same."
+
+### Ch 5
+- Lv 5 points: AGI+3, VIT+3 → MIG 18 AGI 17 VIT 22 INT 17 SPI 34 RES 17.
+- New skill: Heat Shaping (Novice), grown to Novice 4 by Thistledown.
+- Gloam-touched cave bear (Lv 14 Elite, corruption 41%) killed with the Homeward trick → Lv 8.
+- Thistledown: palisade, the Last Hearth ("NO WARLOCKS"), Factor Grell.
+- Wren Ashdown: 20, [Tracker] Common Lv 19, MIG 11 AGI 22 VIT 13 INT 14 SPI 9 RES 16. Tracking J8, Archery J5, Climbing Expert 1, Weather Sense J2, Knife-work A9. Fox-red braid, freckles, green eyes, short bow, two knives. Her father was killed by a rock-wyrm 3 winters ago. Little brothers Tam (11) and Robbie (9). Mother has grey-lung from the Coldwater mines; a physic in Highcrest might treat it. She calls Lex "Hammer." Lex paid her the whole fee up front (quadruple).
+- Wren's bow mended with the rune KNIT → Fine. Runic Forging Novice 8.
+- Roole's squad arrived at Thistledown at night; Lex and Wren escaped through the skating-tarn gap.
+
+### Ch 6
+- Fellowship formed (Lex's class hidden as "—").
+- Frostvault: 3 floors. Frost mites (213), frost-wights (dead miners), Rimewarden (Lv 18 guardian).
+- Founders' waystation behind the ice: open-hand-and-flame door (same as Anvilsong's fourth rune). Wellscript names "Vey," and has the line "a lantern is lit for the ones behind." Ember sang the Lantern Song. MEMORY PARTITION 2 unlocked: a man walking with a feverish child, singing off-key.
+- Loot: Frostwalker's Mantle (Lex, Fine), Rimebite Arrows ×20 (Wren), Rimewarden's Heart (cracked, Superior crafting material, Lex).
+- End: Lex Lv 12 (42 unspent), Wren Lv 21. Wren secretly followed Lex.
+
+### Ch 7
+- Lv 12 allocation (42): VIT+10, MIG+8, AGI+8, RES+10, SPI+6 → MIG 26 AGI 25 VIT 32 INT 24 SPI 54 RES 27. HP 320, MP 540, ST 290.
+- Antho's ward ring: charcoal-glyph stones in a circle about 100 paces across, keeping a breach's Gloam IN. Mistwraiths (Lv 15).
+- Cave full of unlit lanterns Antho collected.
+- Ashka: juvenile storm-drake Lv 9, blue-grey, gold eyes, torn wing (crossbow bolt), sparks, sends pictures and feelings ("Same blood?").
+- Antho: barefoot, gaunt, wild black beard and hair, torn Warden cloak, burn-scarred hands. Shadows pour off him. ERROR panel. Clarity 14 at the worst point, raised by singing the Lantern Song together to 34, then 41 from kin proximity.
+- Antho's account: the Murmur tore a hole in the kitchen; Seren sang into it, said "Look after your brother, Antho. I'll keep the door," walked in, and it closed from the other side; the fire was the backlash. He searched east, as far as the Blightmarch, and Saltreach for Arion during his first two years. He killed some Wardens (or the thing in him did).
+- Antho said Lex's seal "was supposed to hold... he made yours different, I saw him do it."
+- Lex Lv 13 (quest complete). Wren arrives with her arrow drawn on Antho.
