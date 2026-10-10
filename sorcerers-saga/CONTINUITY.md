@@ -150,3 +150,68 @@ Running record of levels, stats, skills, items and facts established in the text
 - Lv 21 allocation (12), done immediately: MIG 37 AGI 36 VIT 45 INT 33 SPI 83 RES 35. HP 450, MP 830. Seal integrity 31%. Authority 34/100. Sanction and Unbind locked.
 - Elric sent Quill EAST at night and claimed Saltreach (which is west). Lex said nothing; Elric knows Lex saw.
 - PLAN NOTE: Elric has been in contact with Morvane for years, telling himself he's spying for Arion's sake. His full turn comes at Ch 25. In Highcrest he shows Lex an innocuous-seeming reply "from a contact in the eastern containment" to allay suspicion and plants evidence on Seraphine. He also lowered the vault wards two years ago so Seraphine would flee with the ledgers (to destabilize the Spire and keep a scapegoat). Revealed in the Interlude.
+
+### Ch 17
+- Highcrest: built on a mountain. Lower Town is crowded. The Spire is a white needle with the Great Stone pulsing silver-blue. Castle with a blue banner and silver crown.
+- Wanted notices: Lexander and Anthoren Harrow, 1,000 crowns each; Seraphine Ilvane, 2,000.
+- Hedda Vorne: huge one-armed ex-Warden armorer (22 years); lost her arm to a Gloamed knight in the eastern march 8 years ago. Runs a chandlery (candle-and-bell sign) with a forge in the back.
+- Crafted: Wren 50 arrows (KNIT), 10 with Rimewarden cold, and a leaf-blade knife (TRUE); Seraphine a steel crossbow prod and a trigger that won't load upside down; Garrick's armor (BULWARK on the breastplate); THE KEEPER'S LANTERN (Masterwork: ARDENT + HUSH ×12, Clarity floor +15, decay −40%, cheaper Hollow powers); Ashka's silver wing-frame (KNIT, STEADFAST, HOMEWARD), which lets her glide. Title: Dragon-Friend. Runic Forging Journeyman 1.
+- Wren's mother Maren Ashdown, brothers Tam and Robbie, Hilde brought them. Physic Master Odo Fenwick on Fennel Street: the grey-lung is slowed, not cured; "what I need is for it to stop." "Don't try. Do."
+- Lower Town Stone flags: WEIGHT COMMON+, DENY RARE/EPIC, set by Warden-Adjutant Corvis, authorized by the Office of the High Warden. The girl Kindled as Laborer wanted to be a Healer (she helps the Sisters at the Lantern House).
+- A young woman in a grey cloak handing out bread ("What would you have chosen?") saw Lex's gold eyes. Blue silk shoe with a silver crown: PRINCESS LYSANDRA (Elric recognized her).
+- Quill's reply from "H." in the eastern containment (seemingly genuine). Elric apologized for the Saltreach lie.
+- Inquisitor-General Vane raids at midnight.
+
+### Ch 18
+- LUCIUS VANE: Grand Inquisitor (Epic), Tier III Lv 63. Tall, thin, black coat, slate eyes. SEVERANCE CHAINS cut the Lattice connection. Lex broke them by drawing on his Root-layer class ("What is yours, it cannot"). Antho is immune ("There's no silver in me").
+- Oathkeeper's runes shook off a chain.
+- Hedda stayed behind to stall Vane. Her fate is unknown.
+- In the Old Drains a High Warden passkey fell from Seraphine's pack ("not mine"). Elric pocketed it.
+- Rivergate: Captain Elowen Dunmore of the Knights of the Silver Lattice let them pass and embraced Garrick. Her mother kept Garrick's letters. One of her knights is Sir Aldous.
+- Daxian Roole (relieved of command; the High Warden ordered him to falsify his report and he refused) took them upriver by barge to the Ferrow landing. He is going back to face trial and has hidden copies of his true report.
+- Lex Lv 22.
+
+### Ch 19
+- The lodestone pulls toward a notch between two peaks.
+- True Sight on Seraphine: Lv 40, INT 52, Inscribe Master 1, no oaths or bindings, passkey bonds NONE. The passkey's bearer signature is scrubbed.
+- Storm: Elric drinks lightning. Ashka was struck by lightning: Lv 9 → 14, now adolescent (dog-sized), wing damage 61% → 38%. She FLIES.
+- Lex and Wren hold hands: "Not for you. With you."
+- Lv 22 allocation: MIG 38 AGI 37 VIT 47 INT 34 SPI 86 RES 36. Seal integrity 26%, Authority 41.
+- Ember fears it may merge back into Arion or end.
+- Mirrormere is reached.
+
+### Ch 20
+- Calling the Way: the lodestone is given to the lake with a drop of blood from each brother (the lodestone is absorbed). A silver road appears and Avaloria appears on its island.
+- Mirror trials: Lex's capped future self ("I'm going to find out"); Wren flying, Epic class, Lv 51 (her mirror went dark, waiting); Garrick with Mara and Elowen (shattered); Seraphine honored in a library (shattered: "I'd rather be useful"); Antho's Murmur-self (shattered: "I keep the door"; the Murmur said "For now").
+- Elric's mirror: his young self on a white throne in the Heart, Tier IV Lv 99, Authority 100/100, class WARDEN-ARCHITECT (Ember read it through the obscuring), alone. It went dark, not shattered.
+
+### Ch 21
+- 365 steps up to the temple. "BLOOD OF THE ROOT RECOGNIZED... WELCOME HOME." Companions permitted under guardianship.
+- Lumen Wardens (12, Lv 22–26) built around a Root glyph "Yield to the blood." Lex commanded them (Prerogative COMMAND, −5 Authority).
+- Lex Lv 24: TIER I COMPLETE, Sanction not granted. Wren: "Now you know."
+- Bridge of Two Hands (shared Authority) over a chasm to the Hollow. Elric, crossing, whispered "not yet" into the Hollow, and the Murmur listened.
+- Anvil of Ascent: the Founders' Gate overrode the Warden Sanction amendment ("added 300 years ago"). Trial: Lex reforged Anvilsong and removed the flaws of hate (for Antho and for his father) and smaller regrets. He tempered the fear "everyone leaves" with a new rune, STAY.
+- ANVILSONG → MASTERWORK: ARDENT (+40%, −8 mana), STEADFAST, HOMEWARD (100 paces), VEY "The Hand Held Out" (once a day, give up to half your health or mana to another), STAY (can't be severed from loved ones by Lattice or Hollow workings). "And the hands it held."
+- TIER II ADEPT. Lv 24 → 27. Tier II gift: KINDLE (imbue allies' weapons with fire). SANCTION unlocked. UNBIND still locked (requires Tier III and Authority 60+).
+- Elric: "Some of us have to earn what others are born holding."
+
+### Ch 22
+- Arion's projection: "Hello, boys." Elric wept; Arion: "You deserved better than me."
+- Revelations: the Lattice is a net and a lid; the Gloam is the hunger's breath; the Lattice is failing. He sealed them to hide them from the Order, from the hunger, and "from other things" (withheld). Antho's seal was a "lid" that needed Arion's hand; Lex's took 97 Authority. Arion "was sure" he'd be back before Antho turned 16. He felt the door close "from the other side" (he never says Seren died). Vhessa: "Something went wrong," with full truth deferred.
+- Ember spoke aloud to Arion: "I'm not you... I'm Ember." Seren used to throw bread at Arion over his jokes.
+- Arion is dying (about a year left). The plan: move the crystal to the Twin Stone under FORT CALDRIS (on the Vhessan border, a cellar under the keep). The waking ritual needs a full moon. Two of the blood share the Anchor's weight while Arion wakes; then three of the blood mend the net from inside. Elric: "I have friends... I've always been beside you."
+- From the chasm, a woman's voice singing the Lantern Song. Ember: "The hunger doesn't sing."
+- ALERT: the Way was crossed; a stolen partial Root signature. SORROWMAW (Gloam-wyrm Lv 58, a corrupted storm-drake). MORVANE: chalk-white skin, black Gloam veins, long white hair and coat, white eyes.
+
+### Ch 23
+- Wren kissed Lex in the chamber before running to the stair.
+- Lv 27 allocation (30): MIG 44 AGI 43 VIT 54 INT 39 SPI 102 RES 41. HP 540, MP 1020. Authority 26.
+- Kindle first used (Wren's arrows, Oathkeeper). The Hand Held Out healed Garrick.
+- SORROWMAW = Ashka's FATHER. A flicker of gold eyes; he swept her aside but didn't kill her.
+- Morvane's first name is CORVIN. He walks on Gloam. He "quiets" the Lumen Wardens (they turned grey). He got his stolen Root from Arion in Vhessa ("some of his Root came off in my hands"). Goal: rewrite the Lattice so all threads run through him: "One will. One quiet."
+- Morvane touching the crystal dropped Lattice integrity from 71% to 64%. Seal integrity 26 → 17.
+- RECKONING unlocked: costs all shared Authority. "What is lawful, stands. What is stolen, burns. What is hollow, is unmade." It burned the stolen Root out of Morvane and tore most of his Gloam away, but not the deepest knot. For a moment he was Corvin, with brown eyes ("Arion?"). He said to Elric only: "Elric."
+- Lattice 66%. Seal integrity 14%. Lex's Authority 0.
+- Arion admits he did something to Morvane in Vhessa and promises to tell everything once he's out.
+- Lex Lv 30 (18 unspent; SPI 108, INT 42). Antho Lv 38. Title: THE RECKONING. WORLD NOTICE: "The blood of the Founder walks the world again."
+- Lex and Wren's second, proper kiss on the stair. Ember: someone told Morvane where to look.
