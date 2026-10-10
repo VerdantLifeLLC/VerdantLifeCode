@@ -6,13 +6,16 @@ An epic fantasy LitRPG series about two estranged brothers, Lex and Antho, the h
 |---|---|---|---|
 | **Book One: The Sorcerer's Reckoning** | Prologue, 40 chapters (Part One: The Awakening; Part Two: The Shadow's Descent) | ~216,000 | 703 |
 | **Book Two: The Sorcerer's Legacy** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Key of Shadows; Part Two: Echoes of the Past) | ~196,000 | 659 |
+| **Book Three: The Sorcerer's Hollow** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: A Light in the Window; Part Two: The Moth and the Flame) | ~200,000 | 713 |
+
+The series is planned as five books. Books Four (*The Sorcerer's Crown*) and Five (*The Sorcerer's Dawn*) are outlined in `BIBLE.md` section 9.
 
 ## Files
 
 | Path | What it is |
 |---|---|
-| `book1/chapters/`, `book2/chapters/` | The manuscripts, one Markdown file per chapter |
-| `BIBLE.md` | Series bible: the System's rules, world, characters, secrets, chapter plans (section 7b is the revised Book Two plan) |
+| `book1/chapters/`, `book2/chapters/`, `book3/chapters/` | The manuscripts, one Markdown file per chapter |
+| `BIBLE.md` | Series bible: the System's rules, world, characters, secrets, chapter plans (7b is the revised Book Two plan; 9 is the arc for Books Three to Five; 10 to 10c are the Book Three plan and changes) |
 | `CONTINUITY.md` | Running ledger of levels, stats, skills, items and plot facts, chapter by chapter |
 | `ORIGINAL-OUTLINE.md` | The author's original outline both books grew from |
 | `build.py` | Builds the KDP 6 x 9 paperback interiors (PDF) and Word files |
@@ -27,6 +30,7 @@ An epic fantasy LitRPG series about two estranged brothers, Lex and Antho, the h
 pip install reportlab python-docx fonttools
 python3 build.py              # both books, PDF + DOCX
 python3 build.py book2        # one book
+python3 build.py book3        # Book Three (author The Skill Junky, published by Verdant Life LLC)
 python3 build.py book1 --pdf-only
 python3 covers.py             # covers for both books (white paper)
 python3 covers.py book2 --paper cream

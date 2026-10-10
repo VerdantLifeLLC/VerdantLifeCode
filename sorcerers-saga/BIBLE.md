@@ -2,7 +2,8 @@
 
 Book One: **The Sorcerer's Reckoning**
 Book Two: **The Sorcerer's Legacy**
-(Series continues: Book Three working title *The Sorcerer's Hollow*.)
+Book Three: **The Sorcerer's Hollow**
+(The series ends with Book Five. See section 9.)
 
 Genre: epic fantasy LitRPG / progression fantasy. Third person past tense, mostly Lex's point of view, with Antho chapters (more of them in Book Two) and a few interludes (Elric, Arion, Wren). Rated PG-13: battles and peril, no explicit content, no profanity beyond "damn" / "hells."
 
@@ -567,3 +568,14 @@ Lex starts at WORLDFORGER Lv 90 (no Root, so he can no longer see threads; he mi
 - **Wenna Harrow's box** (found in the Harrow cellar, Ch 8) holds a moth carved and crossed out, her letter to Seren ("We break the ground. We never take the crown. We never let a moth in."), and the empty pressed hollow of a seven-pointed crown. Wenna "took the crown where it belongs". That is a Book Four thread.
 - **Ember** holds Arion's own memories from before the seal, including meeting Seren on the Spire steps. Some are still locked partitions. (Possible Book Four or Five gift: Ember can give Seren Arion's side of their story.)
 - **Arion's ageing:** he looks about 48 at the wedding, 55 a month later, 58 to 60 by spring, then **ten years in one night** (Ch 10), so about 70 by late spring. It is speeding up, like water held back by a dam.
+
+### 10c. Book Three — as finished (supersedes 10 and 10b where they differ)
+- **File order:** chapters 30 and 31 swapped during drafting. File 30 is "The Old Man and the Moth" (Arion's rescue) and file 31 is "The Cradle". The Interlude is file 21, so printed Part Two chapter numbers run one lower than file numbers.
+- **Lark Vey**, Lex and Wren's daughter, is born on the rubble of Duskhold on Lantern Night, during the climax (not in Book Four). She has square hands too big for the rest of her. Brannoc gave her a horseshoe nail.
+- **Arion does not die in Book Three.** After pouring Maelis's light back he is older than anyone. On Lantern Night his hand slips from Antho's, but he lives, and Mal "makes room" in his time: a year or two of ordinary ageing. He dies in Book Four as planned.
+- **Maelis's end:** Hask's pick finds her fault and Lex taps it. Everything she ever drank pours home through the breach and relights every Dimmed person at once. Seren gives her a lamp; a gift stays where stolen light leaks, so for once she is warm, and she comes apart into light.
+- **Kell** dies holding Maelis's wings and is taken into Mal's middle as a third light beside Malachi and Aurelian. Her black stone at the pool reads "She held on."
+- **Mal:** Pim names the Well after the only name it ever asked for. The net: "HOLLOW — Named: MAL. By a boy who made room. After an old man who stayed." It is now a small pool where the Vhessa breach was, and the Blightmarch has turned green.
+- **Ivy Moss** is HOLLOWKEEPER (Unique). **Silas Hask** guards the pool with Kell's stick (the Queen's sentence). His grey-lung came back; Mal made room in his lungs, so he breathes better but is not cured.
+- **The Ferryman** gave Seren one memory as a gift, not a refund: the Spire steps.
+- **Oszric** carries Maelis's silver-wire crown against his heart. The crack in the Veil came from a finger's depth of Seren's blood carried west by Maelis's last moth. More blood is needed to open it fully: a Book Four driver.

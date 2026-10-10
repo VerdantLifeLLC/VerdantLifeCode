@@ -55,6 +55,17 @@ BOOKS = {
         "epigraph": ("If the dark comes calling, don't you mind—\na lantern's lit for the ones behind.",
                      "Ashbourne lullaby"),
     },
+    "book3": {
+        "title": "The Sorcerer's Hollow",
+        "number": "Book Three",
+        "file": "The-Sorcerers-Hollow",
+        "author": "The Skill Junky",
+        "publisher": "Verdant Life LLC",
+        "dedication": "For mothers who walk the long way home,\nand for everyone who waited up.",
+        "epigraph": ("We break the ground.\nWe never take the crown.\nWe never let a moth in.",
+                     "The rule of the Harrow women"),
+        "next": "Book Four of %s<br/><i>The Sorcerer's Crown</i>",
+    },
 }
 
 # ---------------------------------------------------------------- fonts
@@ -209,7 +220,7 @@ class SceneBreak(Flowable):
 class BookDoc(BaseDocTemplate):
     def __init__(self, path, book, **kw):
         super().__init__(path, pagesize=(PAGE_W, PAGE_H), leftMargin=INSIDE, rightMargin=OUTSIDE,
-                         topMargin=TOP, bottomMargin=BOTTOM, title=book["title"], author=AUTHOR,
+                         topMargin=TOP, bottomMargin=BOTTOM, title=book["title"], author=book.get("author", AUTHOR),
                          subject=SERIES, **kw)
         self.book = book
         fw = PAGE_W - INSIDE - OUTSIDE
@@ -395,12 +406,13 @@ def front_matter(book, S, toc):
     fl += [Spacer(1, 10), Ornament(70), Spacer(1, 10)]
     fl += [Paragraph("%s of %s" % (book["number"], SERIES), ParagraphStyle(
         "ts", parent=S["center"], fontName="Garamond-Italic", fontSize=14, leading=18))]
-    fl += [Spacer(1, 2.6 * inch), Paragraph(AUTHOR.upper(), S["partnum"])]
+    fl += [Spacer(1, 2.6 * inch), Paragraph(book.get("author", AUTHOR).upper(), S["partnum"])]
     fl += [PageBreak()]
     # copyright (verso)
     cp = [
         "%s<br/>%s of %s" % (book["title"], book["number"], SERIES),
-        "Copyright © 2026 %s. All rights reserved." % AUTHOR,
+        "Copyright © 2026 %s. All rights reserved." % book.get("author", AUTHOR),
+    ] + (["Published by %s." % book["publisher"]] if book.get("publisher") else []) + [
         "No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.",
         "This is a work of fiction. Names, characters, places and events are products of the author's imagination. Any resemblance to actual persons, living or dead, is coincidental.",
         "First edition.",
@@ -495,8 +507,8 @@ def build_pdf(key):
     # back matter
     story += [Marker("recto"), Marker("opener", ""), Spacer(1, 2.6 * inch),
               Paragraph("THE STORY CONTINUES", S["chnum"]), Spacer(1, 8), Ornament(50), Spacer(1, 10),
-              Paragraph(("Book Two of %s<br/><i>The Sorcerer's Legacy</i>" if key == "book1" else
-                         "Book Three of %s<br/><i>coming soon</i>") % SERIES, S["center"])]
+              Paragraph((book.get("next") or ("Book Two of %s<br/><i>The Sorcerer's Legacy</i>" if key == "book1" else
+                         "Book Three of %s<br/><i>coming soon</i>")) % SERIES, S["center"])]
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, "%s-KDP-6x9-Interior.pdf" % book["file"])
     doc = BookDoc(path, book)
@@ -566,9 +578,11 @@ def build_docx(key):
 
     center(book["title"].upper(), 26, bold=True, before=140, font="Cinzel")
     center("%s of %s" % (book["number"], SERIES), 13, italic=True, before=12)
-    center(AUTHOR, 12, before=160)
+    center(book.get("author", AUTHOR), 12, before=160)
     page_break()
-    center("Copyright © 2026 %s. All rights reserved." % AUTHOR, 9, before=300)
+    center("Copyright © 2026 %s. All rights reserved." % book.get("author", AUTHOR), 9, before=300)
+    if book.get("publisher"):
+        center("Published by %s." % book["publisher"], 9)
     center("This is a work of fiction.", 9)
     page_break()
     center(book["dedication"], 12, italic=True, before=180)
