@@ -45,6 +45,7 @@ PAPER = {"white": 0.002252, "cream": 0.0025}   # KDP spine inches per page
 BOOKS = {
     "book1": {
         "file": "The-Sorcerers-Reckoning",
+        "kdp_width": 13.984,   # full cover width KDP asked for (in)
         "pre": "THE SORCERER'S", "main": "RECKONING", "number": "BOOK ONE",
         "sky": ("#05060f", "#120a1e", "#3b1206"), "glow": "#ff9a3c", "accent": "#f3c873",
         "tagline": "Every Ceiling can be broken.",
@@ -550,13 +551,15 @@ def paperback(key, paper, total_width_in=None):
     b = BOOKS[key]
     pages = page_count(key)
     sw = pages * PAPER[paper] * inch
+    total_width_in = total_width_in or b.get("kdp_width")
     if total_width_in:
         sw = total_width_in * inch - 2 * (TRIM_W + BLEED)
     total_w = BLEED + TRIM_W + sw + TRIM_W + BLEED
     total_h = BLEED + TRIM_H + BLEED
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, "%s-KDP-Paperback-Cover.pdf" % b["file"])
-    c = Canvas(path, pagesize=(total_w, total_h))
+    vector = os.path.join(OUT, "_%s-vector.pdf" % b["file"])
+    c = Canvas(vector, pagesize=(total_w, total_h))
     c.setTitle("%s %s — paperback cover" % (b["pre"].title(), b["main"].title()))
     c.setAuthor(AUTHOR)
     c.translate(BLEED, BLEED)        # origin at the trim's bottom-left of the back cover
@@ -581,8 +584,20 @@ def paperback(key, paper, total_width_in=None):
     front_type(c, b, front_x, W, H, b["accent"])
     c.showPage()
     c.save()
+    # Flatten: KDP's converter rejects very complex vector art with transparency,
+    # so the upload PDF holds a single 300 dpi image at the exact cover size.
     png = path[:-4] + ".png"
-    subprocess.run(["pdftoppm", "-r", "300", "-singlefile", "-png", path, png[:-4]], check=True)
+    subprocess.run(["pdftoppm", "-r", "300", "-singlefile", "-png", vector, png[:-4]], check=True)
+    jpg = os.path.join(OUT, "_%s-flat.jpg" % b["file"])
+    Image.open(png).convert("RGB").save(jpg, quality=95, dpi=(300, 300))
+    c = Canvas(path, pagesize=(total_w, total_h))
+    c.setTitle("%s %s — paperback cover" % (b["pre"].title(), b["main"].title()))
+    c.setAuthor(AUTHOR)
+    c.drawImage(jpg, 0, 0, width=total_w, height=total_h)
+    c.showPage()
+    c.save()
+    os.remove(jpg)
+    os.remove(vector)
     print("%s: %d pages, %s paper, spine %.4f in, cover %.4f x %.4f in -> %s" % (
         b["main"].title(), pages, paper, sw / inch, total_w / inch, total_h / inch, os.path.relpath(path, HERE)))
     return sw
