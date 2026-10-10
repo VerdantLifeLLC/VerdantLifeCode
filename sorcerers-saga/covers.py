@@ -32,7 +32,8 @@ FONTS = os.path.join(HERE, "fonts")
 OUT = os.path.join(HERE, "output", "covers")
 
 SERIES = "The Lattice Chronicles"
-AUTHOR = "VerdantLife LLC"
+AUTHOR = "The Skill Junky"
+PUBLISHER = "Verdant Life LLC"
 TRIM_W, TRIM_H = 6 * inch, 9 * inch
 BLEED = 0.125 * inch
 SAFE = 0.375 * inch          # keep live text this far inside the trim
@@ -504,7 +505,7 @@ def back_panel(c, b, x0, W, H):
     c.setFont("Garamond-Italic", 10)
     c.drawString(x0 + SAFE + 0.1 * inch, SAFE + 0.4 * inch, "%s of %s" % (b["number"].title(), SERIES))
     c.setFont("Cinzel", 8.5)
-    c.drawString(x0 + SAFE + 0.1 * inch, SAFE + 0.18 * inch, AUTHOR.upper())
+    c.drawString(x0 + SAFE + 0.1 * inch, SAFE + 0.18 * inch, PUBLISHER.upper())
 
 
 def spine(c, b, sx, sw, H):
