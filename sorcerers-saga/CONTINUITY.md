@@ -112,3 +112,41 @@ Running record of levels, stats, skills, items and facts established in the text
 - Song of Leaves (2/3). Lex Lv 19 (18 unspent; SPI 72, INT 31). Antho 33. WREN HIT THE CEILING AT 24.
 - Ember reveals Unbind exists, locked in Lex's panel.
 - Near-kiss interrupted by Garrick. A woman in spectacles with a crossbow stands at the house of leaves.
+
+### Ch 13
+- Seraphine Ilvane: 29, ex-junior archivist at the Spire, [Lattice Scribe] Rare. Thin, spectacles, messy dark hair, grey robe with the pin torn off. Fled two winters ago after finding the Kindling ledgers were rigged (98% of Rare-grade classes in the last century went to nobles or Warden families; a "flag" weights a child's Kindling). Someone came to her room with a knife. She lives in the Leafbound Archive (one of seven Founders' libraries).
+- Aurelian Vey: first Founder, a Listener AND a smith; he "forged" the Lattice. "To bind the will of men, and to bind the hunger beneath." Vey sigil: an open hand with a flame, "the hand that holds the light out for others" (Anvilsong's fourth rune).
+- THE BOOK OF MAKING (Aurelian's smith's book) found by Lex. Ember can read its notes (including a rune that "lets a blade cut light").
+- Arion signed out the Avaloria Codex 3 days after returning from Vhessa; vanished from the rolls 2 months later.
+- The Spire's breach map shows ~25 breaches, the origin in Vhessa (16 years ago), and one in the Greyspine.
+- Morvane: Warden-Commander, went east with Arion. His aide's letter (about 10 years old): he doesn't sleep or eat, is pale, gathers "the Quiet." The aide died two weeks later. Morvane commands the eastern containment and never comes to the Spire.
+- Seraphine's bounty: 2,000 crowns. Elric watches her "like a coin on the ground."
+- Seraphine and Antho: a spark ("Your case is clinical").
+
+### Ch 14
+- Elric teaches the Spire method of "Circles" (structure power, then release). New skill: Ironskin (damage reduction, 2 mana/sec).
+- Roole reported the truth, was relieved of command and recalled to Highcrest. Inquisitor-General Vane now hunts them. Bounties doubled to 1,000 crowns each.
+- Elric went east to the edge of the Blightmarch: the Gloamed stand in organized formations.
+- Antho's Clarity drops a few points near Elric. The Murmur: "Hungry one. He's hungry too."
+- Gloamhound attack at night while Elric was off "scouting." Seraphine shot her first hound. Seraphine leans on Antho.
+- Wren saw Elric write and burn three letters.
+- Elric privately casts suspicion on Seraphine (the vault wards).
+- They reached the Drowned Barrows (a Sundering battlefield, forty thousand dead in one day).
+
+### Ch 15
+- Lv 19 allocation (18): MIG 35 AGI 34 VIT 42 INT 31 SPI 76 RES 33. HP 420, MP 760.
+- Drowned Dead (347). Bind doesn't work on them (not Gloam). Antho's Grave-Speech recovered their names (Tobin of the Ford, Aldo, Gavin, Bel who sang, Marrick, Hessa, Garth, Ilyan the smith...). Seraphine wrote them into the Lattice with Inscribe (now MASTER 1). Lex carved them into the causeway with a new rune, REMEMBRANCE ("I was here"). Runic Forging Apprentice 9. Hidden quest THE ROLL OF THE DROWNED.
+- Levels: Lex 21, Antho 35, Seraphine 40. Antho's Grave-Speech Expert 1.
+- Barrow-King: a sorcerer-king of the Sundering, bound by Aurelian, his people's names erased by the Lattice. He sang the Song of the Dead (3/3). Lodestone: "Seek the waters that hold the sky."
+- Vision: Arion in a giant crystal in a white domed chamber with a black-glass floor. He opened his grey eyes and mouthed "Lexander," then "Anthoren." MEMORY PARTITION 4 unlocked. Ember: "I'm so sorry I left."
+- Barrow-King: "One who walks beside you counts your steps for another" (looked toward Elric and Seraphine at the back, then at everyone).
+
+### Ch 16
+- Elric pushes suspicion onto Seraphine. Antho defends her. Lex keeps everyone. Wren names Seraphine "Spectacles."
+- Ember now remembers the sealing night and cutting itself from Arion: "I'm what he left on the anvil." Lex: "You're the part of him that stayed."
+- Antho wants to ask Arion why his seal was weaker.
+- Mirrormere ("the waters that hold the sky") is NE beyond the Greyspine's northern arm. 3–4 weeks the safe way, 2 weeks by road past Highcrest.
+- Highcrest motives: Wren's mother (physic on Fennel Street), Garrick's daughter Elowen, Elric's "friends" and his contact near the Spire, plus supplies and a forge.
+- Lv 21 allocation (12), done immediately: MIG 37 AGI 36 VIT 45 INT 33 SPI 83 RES 35. HP 450, MP 830. Seal integrity 31%. Authority 34/100. Sanction and Unbind locked.
+- Elric sent Quill EAST at night and claimed Saltreach (which is west). Lex said nothing; Elric knows Lex saw.
+- PLAN NOTE: Elric has been in contact with Morvane for years, telling himself he's spying for Arion's sake. His full turn comes at Ch 25. In Highcrest he shows Lex an innocuous-seeming reply "from a contact in the eastern containment" to allay suspicion and plants evidence on Seraphine. He also lowered the vault wards two years ago so Seraphine would flee with the ledgers (to destabilize the Spire and keep a scapegoat). Revealed in the Interlude.
