@@ -7,7 +7,10 @@ For each book this writes:
   output/covers/<file>-Front-Cover.jpg           front only, 6 x 9 trim, 300 dpi (2.5:3.75 ratio)
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
-Usage: python3 covers.py [book1|book2] [--paper white|cream]
+Usage: python3 covers.py [book1|book2] [--paper white|cream] [--width INCHES]
+
+--width sets the full cover width KDP reports (e.g. 13.984); the spine is
+derived from it instead of from the interior page count.
 The spine width is computed from the interior PDF's page count, so build the
 interiors first (python3 build.py).
 """
@@ -543,10 +546,12 @@ def spine(c, b, sx, sw, H):
 
 
 # ---------------------------------------------------------------- outputs
-def paperback(key, paper):
+def paperback(key, paper, total_width_in=None):
     b = BOOKS[key]
     pages = page_count(key)
     sw = pages * PAPER[paper] * inch
+    if total_width_in:
+        sw = total_width_in * inch - 2 * (TRIM_W + BLEED)
     total_w = BLEED + TRIM_W + sw + TRIM_W + BLEED
     total_h = BLEED + TRIM_H + BLEED
     os.makedirs(OUT, exist_ok=True)
@@ -617,9 +622,13 @@ def main():
     if "--paper" in args:
         paper = args[args.index("--paper") + 1]
         args = [a for a in args if a not in ("--paper", paper)]
+    width = None
+    if "--width" in args:
+        width = float(args[args.index("--width") + 1])
+        args = [a for a in args if a not in ("--width", args[args.index("--width") + 1])]
     register_fonts()
     for key in (args or ["book1", "book2"]):
-        paperback(key, paper)
+        paperback(key, paper, width)
         ebook_front(key, 6, 9, 1800, 2700, "Front-Cover")
         ebook_front(key, 6, 9.6, 1600, 2560, "Kindle-Cover")
 
