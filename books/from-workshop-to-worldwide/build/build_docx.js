@@ -15,7 +15,11 @@ const TOC = process.argv[3] && fs.existsSync(process.argv[3]) ? JSON.parse(fs.re
 
 const C = { G: '1F4D3A', G2: '2F6B4F', SAGE: '8DB596', LSAGE: 'DCEBDD', CREAM: 'F7F1E3', COPPER: 'C0703A', TAN: 'E8C48A', INK: '26302B', GRAY: '6E7A73', LGRAY: 'E4E7E2', WHITE: 'FFFFFF', PALE: 'EEF5EE', WARM: 'FBF3EC', LIGHT: 'FAF7EF', TPL: 'FCFAF5' };
 const SERIF = 'Source Serif 4', SANS = 'Montserrat', HEAVY = 'Montserrat ExtraBold';
-const TW = 9900; // text width in DXA (6.875 in)
+// FORMAT=hardcover builds the 8.25 x 11 in hardcover version (inside 0.875 in, outside 0.625 in)
+const HC = process.env.FORMAT === 'hardcover';
+const PAGE_W = HC ? 11880 : 12240, OUTSIDE = HC ? 900 : 1080, INSIDE = 1260;
+const TW = PAGE_W - INSIDE - OUTSIDE; // text width in DXA (6.875 in paperback, 6.75 in hardcover)
+const TW_IN = TW / 1440;
 const NONE = { style: BorderStyle.NONE, size: 0, color: 'FFFFFF' };
 const NOBORDERS = { top: NONE, bottom: NONE, left: NONE, right: NONE, insideHorizontal: NONE, insideVertical: NONE };
 
@@ -48,7 +52,7 @@ const numbering = {
 
 // ---------- images ----------
 function pngSize(buf) { return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) }; }
-function image(id, maxWin = 6.875, maxHin = 3.7) {
+function image(id, maxWin = TW_IN, maxHin = 3.7) {
   const buf = fs.readFileSync(path.join(HERE, '_png', id + '.png'));
   const { w, h } = pngSize(buf);
   let W = maxWin * 96, H = W * h / w;
@@ -209,7 +213,7 @@ const emptyHF = () => ({
   headers: { default: new Header({ children: [new Paragraph({ children: [] })] }), even: new Header({ children: [new Paragraph({ children: [] })] }), first: new Header({ children: [new Paragraph({ children: [] })] }) },
   footers: { default: new Footer({ children: [new Paragraph({ children: [] })] }), even: new Footer({ children: [new Paragraph({ children: [] })] }), first: new Footer({ children: [new Paragraph({ children: [] })] }) },
 });
-const PAGE = { size: { width: 12240, height: 15840 }, margin: { top: 1224, bottom: 1224, left: 1260, right: 1080, header: 620, footer: 620 } };
+const PAGE = { size: { width: PAGE_W, height: 15840 }, margin: { top: 1224, bottom: 1224, left: INSIDE, right: OUTSIDE, header: 620, footer: 620 } };
 
 // ---------- sections ----------
 const center = (children, opts = {}) => new Paragraph({ alignment: AlignmentType.CENTER, ...opts, children });
@@ -294,7 +298,7 @@ for (const b of blocks) {
     } else { chapLabel = ''; }
     kids.push(new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { before: b.t === 'chapter' ? 0 : 300, after: 120 }, children: [new TextRun({ text: b.title })] }));
     kids.push(new Paragraph({ spacing: { after: 360 }, children: [new TextRun({ text: '━━━', color: C.COPPER, size: pt(14) })] }));
-    if (b.fig) kids.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 300 }, children: [image(b.fig, 6.875, 3.6)] }));
+    if (b.fig) kids.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 300 }, children: [image(b.fig, TW_IN, 3.6)] }));
     current = { properties: { type: recto ? SectionType.ODD_PAGE : SectionType.NEXT_PAGE, page: { ...PAGE, pageNumbers }, titlePage: true }, ...hf(b.title), children: kids, _lead: true };
     sections.push(current);
     continue;

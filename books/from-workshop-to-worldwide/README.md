@@ -19,6 +19,7 @@ by **The Skill Junky** · published by **Verdant Life LLC**
 | `Cover-Hardcover-8.25x11-BlackWhiteInterior-148pages.pdf` | **KDP hardcover (case laminate) cover** for the B&W interior |
 | `Cover-Hardcover-8.25x11-PremiumColorInterior-148pages.pdf` | Hardcover cover if you choose premium color ink |
 | `Manuscript-Paperback-8.5x11.docx` | Editable Word version of the paperback (fonts embedded, mirrored margins) |
+| `Manuscript-Hardcover-8.25x11.docx` | Editable Word version of the hardcover (8.25 × 11, fonts embedded, mirrored margins) |
 | `eBook-From-Workshop-to-Worldwide.epub` | **Kindle eBook manuscript** (EPUB 3; passes EPUBCheck with 0 errors and 0 warnings) |
 | `Cover-eBook-1600x2560.jpg` | **Kindle eBook cover** (1600 × 2560 px, 1.6:1, RGB JPG) |
 

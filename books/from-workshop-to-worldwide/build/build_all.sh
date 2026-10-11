@@ -24,5 +24,12 @@ $SOFFICE --headless --convert-to pdf --outdir _lo _draft2.docx >/dev/null 2>&1
 python3 toc_pages.py _lo/_draft2.pdf _tocpages.json >/dev/null
 node build_docx.js _draft.docx _tocpages.json
 python3 postprocess_docx.py _draft.docx ../output/Manuscript-Paperback-8.5x11.docx
+# Word, hardcover 8.25 x 11 (same two-pass contents numbering)
+FORMAT=hardcover node build_docx.js _draft_hc.docx
+python3 postprocess_docx.py _draft_hc.docx _draft_hc2.docx
+$SOFFICE --headless --convert-to pdf --outdir _lo _draft_hc2.docx >/dev/null 2>&1
+python3 toc_pages.py _lo/_draft_hc2.pdf _tocpages_hc.json >/dev/null
+FORMAT=hardcover node build_docx.js _draft_hc.docx _tocpages_hc.json
+python3 postprocess_docx.py _draft_hc.docx ../output/Manuscript-Hardcover-8.25x11.docx
 python3 build_epub.py                                  # Kindle eBook
 echo "Done. Paperback pages: $PAGES  Hardcover pages: $HCPAGES"
