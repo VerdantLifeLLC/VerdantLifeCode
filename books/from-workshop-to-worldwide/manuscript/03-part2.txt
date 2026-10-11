@@ -1,0 +1,338 @@
+@part Two | Making It Real | Set up your business properly, build a brand people remember, and create quality you can repeat. | fig-part-real
+
+@chapter 4 | Making It Official
+
+There is a moment when a side project becomes a business. Usually it happens quietly — the first time a stranger pays you.
+
+From that moment, you have responsibilities: to your customers, to the government, and to yourself. The good news is that setting up a small business properly is far simpler and less expensive than most people fear. Most of it can be done online in a weekend.
+
+@figure fig-setup-path | The typical setup path for a small business. Each step builds on the one before it.
+
+@box warning | Not Legal or Tax Advice
+The information in this chapter is general and written primarily for readers in the United States. Requirements vary by state, county, city, and country, and they change over time. Always confirm requirements with your state and local government, and consider a brief consultation with an accountant or attorney. Your local Small Business Development Center (SBDC) or SCORE chapter offers free or low-cost guidance.
+@end
+
+## Step 1: Choose a Business Structure
+
+Your business structure determines how you are taxed and how much personal liability you carry.
+
+- **Sole proprietorship** — The default. If you start selling without registering anything, you are a sole proprietor. It is simple and inexpensive, but there is no legal separation between you and the business. If the business is sued, your personal assets may be at risk.
+- **Limited Liability Company (LLC)** — Registered with your state for a filing fee that varies widely by state. An LLC creates a legal separation between your personal assets and business debts, as long as you keep business and personal finances separate. For tax purposes, a single-member LLC is usually treated much like a sole proprietorship, which keeps taxes simple.
+- **Corporations (S-corp or C-corp)** — More paperwork and formality. Usually not necessary at the start, though some growing businesses elect S-corp tax treatment later to manage taxes. This is a conversation for your accountant.
+
+Many makers and service providers start as sole proprietors and form an LLC once sales are steady or once they take on work with higher risk — such as working inside customers' homes or selling products people use with children, food, or the body.
+
+## Step 2: Register Your Business Name
+
+If you operate under any name other than your own legal name, most states and counties require you to register it. This is often called a **DBA** ("doing business as"), an assumed name, or a fictitious business name. If you form an LLC, your LLC name is registered as part of the formation.
+
+Before you fall in love with a name, check that it is available:
+
+- Your state's business entity search
+- The U.S. Patent and Trademark Office trademark search
+- Domain name availability
+- Social media handle availability
+- A simple web search for businesses using similar names in your field
+
+## Step 3: Get an EIN
+
+An **Employer Identification Number (EIN)** is like a Social Security number for your business. It is free from the IRS and can be obtained online in minutes. Even if you have no employees, an EIN lets you open a business bank account and keeps you from handing out your Social Security number on forms. Only apply directly through the IRS website — you never need to pay a third party for an EIN.
+
+## Step 4: Licenses, Permits, and Special Rules
+
+Depending on your location and what you sell, you may need:
+
+- **A general business license** from your city or county
+- **A home occupation permit** if you operate from home
+- **A sales tax permit** (also called a seller's permit) from your state
+- **Professional or trade licenses** for certain services such as electrical, plumbing, HVAC, cosmetology, childcare, or general contracting above certain dollar thresholds
+
+Some products have special rules:
+
+- **Food** — Many states have "cottage food" laws that allow certain low-risk foods to be made at home and sold directly to customers, often with labeling requirements and sales limits. Rules vary greatly by state.
+- **Children's products** — Products designed primarily for children 12 and under are subject to federal safety requirements in the U.S., including testing and certification for things like lead content. Research this before selling toys, kids' clothing, or children's décor.
+- **Cosmetics, candles, and soaps** — Labeling rules and ingredient requirements may apply, and claims about health benefits can trigger additional regulation.
+- **Electrical and safety items** — Products that plug in, hold weight, or could cause injury carry higher liability.
+
+Call or visit your city or county clerk's office and simply ask: *"I'm starting a small business selling [your offer] from home. What licenses or permits do I need?"* Clerks answer this question every day.
+
+## Step 5: Understand Sales Tax
+
+Sales tax rules depend on your state and on where you sell.
+
+- In most U.S. states, large online marketplaces such as Etsy, Amazon, and eBay collect and remit sales tax on your behalf for sales made through their platforms.
+- When you sell through your own website, at craft fairs, or directly to local customers, you are usually responsible for collecting and remitting sales tax yourself.
+- Many states do not tax most services, but some do. Check your state's rules for your specific service.
+
+Your state's department of revenue website explains how to register, what to collect, and how often to file.
+
+## Step 6: Open a Separate Bank Account
+
+This is one of the most important steps in this entire book.
+
+**Never mix business and personal money.** Open a dedicated business checking account and route every business dollar in and out of it. A separate account:
+
+- Makes bookkeeping and taxes dramatically easier
+- Helps protect the liability shield of an LLC
+- Shows you, at a glance, whether your business is actually making money
+- Makes you look professional to customers and payment platforms
+
+## Step 7: Protect Yourself With Insurance
+
+Insurance protects everything you are building.
+
+- **General liability insurance** covers injuries or property damage you cause — essential for service providers working in customers' homes.
+- **Product liability insurance** covers harm caused by a product you made. Some craft fairs and retailers require it.
+- **Home-based business coverage** — Most homeowner's and renter's policies exclude business equipment and inventory. Ask your agent about a business endorsement or a separate policy.
+- **Commercial auto** — If you drive to jobs, confirm that your personal auto policy covers business use.
+
+Many insurers offer affordable policies designed for makers, artisans, and small service businesses.
+
+## Step 8: Put Your Policies in Writing
+
+Clear policies prevent most disputes. Before your first sale, write down:
+
+- **For products:** processing time, shipping methods, returns and exchanges, damaged-item procedure, and custom-order policies (custom orders are usually non-refundable once production begins).
+- **For services:** what is and is not included, how you quote, deposits, cancellation and rescheduling terms, payment terms, and what happens if the customer is not satisfied.
+
+For larger service jobs, use a simple written agreement or quote that the customer signs or approves in writing. It does not need to be complicated. It needs to be clear.
+
+## Step 9: Understand Your Tax Responsibilities
+
+When you work for yourself, no one withholds taxes from your income. In the U.S., you are generally responsible for income tax and self-employment tax (which covers Social Security and Medicare) on your business profit. Once you expect to owe a meaningful amount, the IRS expects estimated tax payments during the year, typically quarterly.
+
+A simple habit protects you: **set aside a percentage of every payment for taxes** in a separate savings account. Many small business owners set aside 25% to 30% of profit. Chapter 14 shows you how.
+
+@box example | Maya and Marcus Make It Official
+Maya registers a DBA for "Cedar & Pine Sign Co.," gets a free EIN, registers for a state sales tax permit for her craft fair sales, opens a business checking account, and adds a business endorsement to her homeowner's insurance. Marcus forms an LLC because he works inside customers' homes, purchases a general liability policy, confirms the size of jobs he can legally take without a contractor's license, and writes a one-page service agreement.
+@end
+
+@worksheet Chapter 4: Business Setup Checklist | Check off each step as you complete it.
+@table Step | Notes / Account Numbers / Dates | Done ; rows: Chose business structure / Searched name availability / Registered DBA or LLC / Obtained EIN / City or county business license / Home occupation permit (if needed) / Sales tax permit (if needed) / Trade or professional license (if needed) / Product-specific rules researched / Opened business bank account / Purchased insurance / Wrote shop or service policies / Created tax savings account / Chose a bookkeeping method
+### Helpful Contacts
+@field City / county clerk:
+@field State business registration office:
+@field Accountant or tax preparer:
+@field Insurance agent:
+@field Local SBDC or SCORE mentor:
+@end
+
+@actions
+Choose your business structure and register your name.
+Get your free EIN directly from the IRS.
+Ask your city or county which licenses and permits apply to you.
+Open a separate business bank account.
+Get insurance quotes and write your policies.
+@end
+
+@chapter 5 | Building a Brand People Remember
+
+Most people misunderstand branding. They think branding means a logo.
+
+A logo is part of branding. It is not branding.
+
+A brand is the emotional experience customers associate with your business — what they feel, expect, and say about you when you're not in the room.
+
+Think about the businesses you trust. Why do you trust them?
+
+Because they consistently meet expectations.
+
+Trust is the foundation of every strong brand.
+
+@figure fig-brand-touchpoints | Your brand is built at every touchpoint, not just in your logo.
+
+## Step 1: Choose a Simple Name
+
+The best business names are:
+
+- Easy to spell
+- Easy to remember
+- Easy to pronounce
+- Available as a domain and on social media
+
+A customer should be able to hear your business name once and remember it later.
+
+Avoid complicated names, trendy misspellings, and long phrases. Be cautious about names that limit your future — "Bob's Birdhouses" is a hard name to grow if you later sell furniture.
+
+Simple almost always wins.
+
+**Naming approaches that work:**
+
+- **Your name** — "Lisa Martin Pottery." Personal and trustworthy, especially for services.
+- **Descriptive** — "Northside Furniture Assembly." Instantly clear about what you do and where.
+- **Evocative** — "Cedar & Pine Sign Co." Creates a feeling and a style.
+- **Place-based** — "Blue Ridge Candle Works." Builds local pride and connection.
+
+## Step 2: Write Your Mission Statement
+
+A mission statement explains who you serve and why you exist. Keep it to one sentence:
+
+*"We create __________ for __________ so they can __________."*
+
+**Examples:**
+
+- "We create handcrafted cedar décor for homeowners so they can personalize and beautify their property."
+- "We assemble and install furniture for busy families so they can enjoy their homes without the frustration."
+
+Your mission statement guides every decision. When you are unsure whether to add a product, accept a job, or try a marketing idea, ask: *Does this serve our mission?*
+
+## Step 3: Define Your Brand Personality
+
+If your business were a person, how would it talk and dress? Choose three words that describe your brand's personality — for example, *rustic, warm, and dependable* or *modern, playful, and bold*.
+
+Those three words guide your colors, fonts, photos, packaging, and the way you write messages to customers.
+
+## Step 4: Create Simple Visual Identity
+
+You don't need an expensive designer to start. You need consistency.
+
+- **Logo** — A clean wordmark (your business name in a good font) is enough to begin. It should be readable at small sizes, on a phone screen, and in one color.
+- **Colors** — Choose two main colors and one accent color. Use them everywhere.
+- **Fonts** — Choose one font for headings and one for body text.
+- **Photo style** — Decide on backgrounds, lighting, and mood, and keep them consistent.
+
+Write these choices down in a one-page brand guide so that everything you create looks like it belongs together.
+
+## Step 5: Write a Tagline
+
+A tagline is a short phrase that captures your promise. Examples:
+
+- Handcrafted With Purpose.
+- Built To Last.
+- Made By Hand. Made To Matter.
+- On Time. Done Right.
+- We Show Up.
+
+## Step 6: Deliver on Your Promise
+
+Your brand is built through actions. Customers remember:
+
+- Product quality and workmanship
+- Communication and responsiveness
+- Packaging and presentation
+- Delivery speed and punctuality
+- How you handle problems
+
+Every customer interaction strengthens or weakens your reputation. Over time, reputation becomes your greatest advertising asset.
+
+@quote Your logo gets attention. Your reputation gets referrals.
+
+@box service | For Service Providers: You Are the Brand
+In a service business, customers often meet *you* before they meet your work. Your appearance, your vehicle, how quickly you reply, whether you arrive on time, and whether you leave the space cleaner than you found it all communicate your brand. A branded shirt and a clean, professional message cost little and build enormous trust.
+@end
+
+@worksheet Chapter 5: Business Identity Builder | Shape the brand customers will remember.
+### Business Name Ideas
+@table # | Name Idea | Domain Available? | Social Available? ; 6 ; numbered
+@field My chosen business name:
+### Mission Statement
+"We create / provide ____________________ for ____________________ so they can ____________________."
+@lines 2
+### Brand Personality — Three Words
+@fieldrow Word 1 ; Word 2 ; Word 3
+### Visual Identity
+@fieldrow Main color 1 ; Main color 2 ; Accent color
+@fieldrow Heading font ; Body font
+@field Photo style (background, lighting, mood):
+### Tagline
+Examples: Handcrafted With Purpose. Built To Last. On Time. Done Right.
+@field My tagline:
+@end
+
+@actions
+Choose a business name and confirm it is available.
+Write your one-sentence mission statement.
+Choose three brand personality words.
+Create a simple wordmark logo, color palette, and font pair.
+Write your tagline and a one-page brand guide.
+@end
+
+@chapter 6 | Creating Consistent Quality
+
+Launching too early creates unnecessary pressure. Launching without standards creates unhappy customers.
+
+Before you open your doors, you need to know that you can deliver the same excellent result — every time, for every customer.
+
+## For Makers: Build Inventory Before You Launch
+
+Creating some inventory before opening your store gives you confidence and flexibility. Producing several examples of your product teaches valuable lessons. You discover:
+
+- Production bottlenecks
+- Material needs and supplier issues
+- Common defects
+- Packaging challenges
+
+Most importantly, you learn your **true production time**. Knowing exactly how long something takes to make is essential for pricing and planning.
+
+## Batch Your Work
+
+Making one item at a time from start to finish is slow. Professionals work in **batches**: cut all the pieces, then sand all the pieces, then finish all the pieces, then package everything. Each setup happens once instead of five times, and your hands get faster through repetition.
+
+@figure fig-batch | Batching groups the same task across many units, saving setup time and improving consistency.
+
+## For Service Providers: Design Your Service Delivery
+
+A service is a product too — it just happens in real time. Map every step a customer experiences, from the first message to the final payment:
+
+1. Inquiry received and answered
+2. Quote or estimate given
+3. Appointment booked and confirmed
+4. Reminder sent the day before
+5. Arrival on time, introduction, and walk-through
+6. Work completed to standard
+7. Cleanup and final walk-through with the customer
+8. Payment collected
+9. Thank-you and review request sent
+10. Follow-up for future service
+
+When every job follows the same steps, quality becomes predictable. Predictable quality becomes reputation.
+
+@figure fig-service-blueprint | A service blueprint maps every step from first contact to follow-up.
+
+## Create Quality Standards
+
+Professional businesses operate using standards. Every product or job should meet those standards before it is considered finished.
+
+Ask yourself:
+
+- Would I proudly display this product in my own home?
+- Would I give it as a gift?
+- Would I pay full price for this job if I were the customer?
+- Would I feel comfortable if this product or job represented my business online?
+
+If not, improve it.
+
+Turn your standards into a written **quality checklist**. For a product, it might include finish smoothness, color accuracy, hardware secure, no visible glue, and clean packaging. For a service, it might include all items level and secure, all packaging removed, area vacuumed, and customer walk-through completed.
+
+Customers notice details. Quality creates repeat buyers.
+
+## Source Materials Reliably
+
+Consistency depends on your suppliers. Identify at least two sources for every critical material. Buy samples before buying in bulk. Keep a supplier list with prices, lead times, and contact information. As you grow, buying in larger quantities can significantly reduce your cost per unit — but don't buy in bulk until your product is proven.
+
+@box example | Maya Finds Her Bottleneck
+Maya's time study reveals that painting letters takes twice as long as anything else. She buys a set of reusable stencils and switches to batch painting on Sundays. Her production time drops from 90 minutes to 55 minutes per sign — a 39% improvement that goes straight to her profit.
+@end
+
+@worksheet Chapter 6: Production Planning & Time Study | Map your process and measure it.
+@field Product or service:
+@table Step | Description | Time (1st try) | Time (5th try) | Tools / Materials Needed ; 8 ; numbered
+@fieldrow Total time (1st) ; Total time (5th)
+@field My biggest bottleneck is:
+@field How I can batch or simplify it:
+@lines 2
+@end
+
+@worksheet Chapter 6: Quality Standards Checklist | Every item must pass before it goes to a customer.
+@table Quality Standard | How I Check It ; 10
+### Supplier List
+@table Material | Supplier | Price | Lead Time | Backup Supplier ; 5
+@end
+
+@actions
+Produce at least five units (or complete at least three jobs) before your official launch.
+Complete a time study and identify your bottleneck.
+Write a quality checklist.
+Map your service blueprint or production flow.
+Create a supplier list with backups.
+@end

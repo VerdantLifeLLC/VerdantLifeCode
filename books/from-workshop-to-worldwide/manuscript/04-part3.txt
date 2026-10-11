@@ -1,0 +1,388 @@
+@part Three | Getting Ready to Sell | Choose where to sell, let your photos do the talking, write listings that sell, and launch. | fig-part-sell
+
+@chapter 7 | Choosing Where to Sell
+
+You don't need to be everywhere. You need to be where your customers already look.
+
+Every sales channel has strengths and trade-offs. The right choice depends on what you sell, who buys it, and how much time you have.
+
+@figure fig-channels | Sales channels range from borrowed audiences (marketplaces) to owned audiences (your website and email list).
+
+## Online Marketplaces
+
+Marketplaces such as **Etsy**, **Amazon Handmade**, and **eBay** come with millions of shoppers already searching. You pay for that access through listing fees, transaction fees, payment processing fees, and optional advertising.
+
+- **Strengths:** built-in traffic, trusted checkout, sales tax often handled for you, fast setup.
+- **Trade-offs:** fees, intense competition, rules that can change, and limited control over your customer relationships.
+
+Etsy is the natural home for handmade, vintage, personalized, and craft-supply items. Amazon Handmade requires an application but offers enormous reach. eBay works well for unique, collectible, and refurbished items.
+
+## Social Commerce
+
+**Facebook Marketplace**, **Facebook and Instagram shops**, **Pinterest**, and **TikTok Shop** let customers discover and buy where they already spend time. Local Facebook Marketplace and community groups are especially powerful for bulky items that are expensive to ship and for local services.
+
+## Your Own Website
+
+Platforms such as **Shopify**, **Squarespace**, **Wix**, and **WooCommerce** let you build your own store. You keep more control and more of each sale, and you own the customer relationship — but you are responsible for bringing in your own traffic.
+
+Most successful handmade businesses eventually use **both**: a marketplace for discovery and their own website for repeat customers, custom orders, and higher margins.
+
+## Local and In-Person Sales
+
+Craft fairs, farmers' markets, holiday markets, pop-up events, and consignment in local shops let customers touch your work and meet you. In-person sales are excellent for getting feedback, building a local following, and collecting email addresses.
+
+## Wholesale
+
+Selling in bulk to boutiques and gift shops can produce larger orders, but at roughly half your retail price. Make sure your pricing supports it before you pursue wholesale (see Chapter 3).
+
+## Channels for Service Providers
+
+Service customers usually search locally and rely on trust. The most important channels are:
+
+- **Google Business Profile** — Free, and often the single most valuable listing for a local service. It puts you on Google Maps and in local search results, and it collects reviews.
+- **Neighborhood platforms** — Nextdoor and local Facebook groups, where neighbors ask each other for recommendations every day.
+- **Lead marketplaces** — Thumbtack, Angi, TaskRabbit, Care.com, Rover, and similar platforms that connect customers with providers, usually for a fee per lead or per job.
+- **Freelance marketplaces** — Upwork, Fiverr, and similar platforms for services delivered remotely, such as design, writing, editing, bookkeeping, and virtual assistance.
+- **Referral partners** — Real estate agents, property managers, furniture stores, interior designers, and other businesses whose customers need your service.
+- **Your own website** — Even a simple one-page site with your services, service area, reviews, and a booking or contact form makes you look established.
+
+## Choosing Your Launch Channels
+
+Start with **one primary channel** and **one secondary channel**. Master them before adding more.
+
+A good rule of thumb:
+
+- **Products that ship easily:** Etsy (primary) + Instagram or Pinterest (secondary)
+- **Bulky or local products:** Facebook Marketplace and local markets (primary) + your own website (secondary)
+- **Local services:** Google Business Profile (primary) + Nextdoor or local Facebook groups (secondary)
+- **Remote services:** A freelance marketplace (primary) + LinkedIn or a simple website (secondary)
+
+@box tip | Rent Attention, Own Relationships
+Marketplaces and social media are rented land — the rules can change overnight. From day one, invite customers onto land you own: an email list, a text list, or your own website. A list of 500 happy customers is one of the most valuable assets a small business can have.
+@end
+
+@box example | Maya and Marcus Choose Their Channels
+Maya opens an Etsy shop as her primary channel and uses Instagram to show her process. She also books a booth at two fall craft fairs. Marcus creates a Google Business Profile, joins three neighborhood Facebook groups, and introduces himself to two local furniture stores whose customers often ask, "Do you know anyone who can assemble this?"
+@end
+
+@worksheet Chapter 7: Sales Channel Planner | Choose where you will sell first.
+@table Channel | Are My Customers Here? | Cost / Fees | Effort Required | Score (1–10) ; rows: Etsy / Amazon Handmade / eBay / Facebook Marketplace / Instagram / Pinterest / TikTok / My own website / Craft fairs & markets / Local shops / Google Business Profile / Nextdoor & local groups / Lead or freelance marketplaces
+@field My primary channel:
+@field My secondary channel:
+@field How I will build a list I own (email, text, website):
+@end
+
+@actions
+Research the fees and rules of your top two channels.
+Choose one primary and one secondary channel.
+Set up your Google Business Profile if you offer a local service.
+Decide how you will collect customer emails from day one.
+@end
+
+@chapter 8 | Becoming Your Own Salesperson Through Photography
+
+Online customers cannot touch your products. They cannot feel the weight. They cannot examine the craftsmanship. They cannot meet you before they hire you.
+
+The camera must do all of that work for you.
+
+Product and portfolio photography is not a luxury. It is one of the most important sales tools available.
+
+Often, the difference between poor sales and strong sales is not the product itself. It is the presentation.
+
+## You Already Own the Camera
+
+A modern smartphone is more than enough to take professional-looking photos. What matters far more than the camera is **light**, **background**, and **consistency**.
+
+## Step 1: Master Natural Light
+
+Use natural light whenever possible. Set up near a large window with indirect daylight — not harsh direct sun. Turn off overhead lights, which add yellow tints and uneven shadows.
+
+Place a piece of white foam board on the side opposite the window. It acts as a **reflector**, bouncing light back into the shadows. This one inexpensive trick makes photos look dramatically more professional.
+
+@figure fig-photo-setup | A simple window-light setup. A white foam board bounces light into the shadows.
+
+## Step 2: Choose a Clean Background
+
+- **White or light gray** for clean, catalog-style photos. A sheet of poster board curved from the table up the wall (a "sweep") creates a seamless background with no visible horizon line.
+- **Natural textures** — wood, linen, slate, or concrete — for lifestyle and mood shots that match your brand.
+
+Keep backgrounds simple. The product is the star.
+
+## Step 3: Take the Essential Shots
+
+Every product listing should include a complete set of images that answers customers' questions before they ask.
+
+@figure fig-shot-list | The essential product shot list. Together, these images replace the experience of holding the product.
+
+1. **Hero shot** — the product, front and center, on a clean background. This is your thumbnail.
+2. **Angles** — side and back views.
+3. **Details** — close-ups of texture, joinery, stitching, finish, or materials.
+4. **Scale** — the product in a hand, beside a common object, or in use, so customers understand its size.
+5. **Lifestyle** — the product in a real setting, such as a sign by a front door or a necklace being worn.
+6. **Variations** — available colors, sizes, or personalization options.
+7. **Packaging** — what the customer will receive, especially if it makes a good gift.
+
+## Step 4: Use Your Phone Like a Pro
+
+- Wipe the lens before every session.
+- Turn on the grid lines to keep the horizon straight and use the rule of thirds.
+- Tap the screen to focus on the most important detail.
+- Don't use digital zoom — move closer instead.
+- Shoot from your customer's natural viewing angle.
+- Use a small tripod and a timer to avoid blur.
+- Take many shots; keep the best.
+
+## Step 5: Edit Lightly and Honestly
+
+Use a free editing app to straighten, crop, brighten, and correct white balance so whites look white. Keep colors accurate. Never edit a photo so heavily that the real product disappoints — that creates returns and bad reviews.
+
+## Focus on Clarity
+
+Every photograph should clearly communicate:
+
+- Size
+- Quality
+- Color
+- Materials
+- Details
+
+Customers should understand exactly what they will receive. Uncertainty reduces sales. Clarity increases them.
+
+Photography is not about artistic perfection. It is about building confidence.
+
+## For Service Providers: Show the Transformation
+
+Service customers can't hold your work in advance, so your photos must prove your results and introduce you as a person.
+
+- **Before-and-after photos** — Take them from the same angle, in the same light. They are the most persuasive images a service business can have. Always ask the customer's permission and avoid showing personal information, house numbers, or faces.
+- **Work in progress** — Shows skill, care, and professionalism.
+- **A friendly, professional headshot** — People hire people. Smile, look at the camera, and wear what you wear on the job.
+- **Your tools, vehicle, and uniform** — Signals that you are an established business.
+
+@box action | Build a Photo Station
+Dedicate one corner of your home to photography: a table near a window, a white sweep, two foam boards, a phone tripod, and a small box of props that match your brand. When the station is always ready, you photograph new work immediately instead of putting it off.
+@end
+
+@worksheet Chapter 8: Photography Checklist | Use this before and during every photo session.
+### Before Taking Photos
+@check Product cleaned and inspected
+@check Background clean and wrinkle-free
+@check Natural window light available (no harsh sun)
+@check Overhead lights turned off
+@check Reflector board in place
+@check Camera lens cleaned
+@check Tripod and timer ready
+### Required Product Photos
+@check Hero shot (front, clean background)
+@check Side and back angles
+@check Close-up details
+@check Scale comparison
+@check Lifestyle image
+@check Variations
+@check Packaging image
+### Service Provider Photos
+@check Before-and-after pairs (with permission)
+@check Work-in-progress shots
+@check Professional headshot
+@check Tools, vehicle, and uniform
+@end
+
+@actions
+Set up a permanent photo station near a window.
+Photograph your launch offer using the complete shot list.
+Edit lightly for accuracy and consistency.
+If you offer a service, collect before-and-after photos from every job.
+@end
+
+@chapter 9 | Writing Listings That Sell
+
+Good listings answer questions. Great listings eliminate doubts.
+
+Every product description or service page should help a customer move closer to a buying decision. It should explain what the offer is, who it is for, why it is better, and exactly what happens next.
+
+@figure fig-listing-anatomy | The anatomy of a listing that sells. Each part answers a question in the customer's mind.
+
+## Step 1: Write a Searchable Title
+
+On marketplaces, your title helps customers find you. Use the words customers actually type — the phrases you discovered in Chapter 2.
+
+Lead with the most important words. Be specific.
+
+- **Weak:** "Beautiful Sign"
+- **Strong:** "Personalized Cedar Address Sign — Outdoor House Number Plaque, Handmade Wood Sign"
+
+For services, put your service and location together: "Furniture Assembly & TV Mounting in Springfield — Same-Week Appointments."
+
+## Step 2: Open With the Outcome
+
+The first sentence matters most. Many shoppers read only the first line or two. Tell customers what the offer will do for them.
+
+*"This handcrafted cedar address sign gives your home instant curb appeal — and helps guests and deliveries find you the first time."*
+
+## Step 3: Sell Benefits, Not Just Features
+
+A **feature** is a fact about your product or service. A **benefit** is what that fact does for the customer.
+
+Instead of saying:
+
+"This sign is made of cedar."
+
+Explain:
+
+"This cedar sign is designed to withstand outdoor weather conditions while maintaining its rustic appearance."
+
+Instead of saying:
+
+"I bring my own tools."
+
+Explain:
+
+"I arrive fully equipped, so there is nothing for you to buy, borrow, or prepare."
+
+People buy outcomes. They buy solutions. They buy benefits.
+
+## Step 4: Answer Every Question
+
+After the benefits, provide the details that remove doubt:
+
+- Dimensions and weight
+- Materials and finishes
+- Colors and personalization options
+- Care instructions
+- Production time and shipping time
+- What's included and what isn't
+- Service area, availability, and how to book
+- Your guarantee or return policy
+
+## Step 5: Add Trust
+
+Include your story in a few sentences, the number of happy customers or five-star reviews, and your guarantee. A short, honest story about why you make what you make or why you started your service creates a human connection that big companies cannot match.
+
+## Step 6: Make the Next Step Obvious
+
+End with a clear call to action:
+
+- "Choose your size and color, add your house number, and click *Add to cart*."
+- "Message me a photo of your item for a flat-rate quote within 24 hours."
+- "Book your appointment online — most jobs are scheduled within a week."
+
+Always write with the customer in mind.
+
+@box tip | Read It Out Loud
+Read your listing out loud before you publish it. If you stumble, simplify the sentence. If a friend can't explain what you sell after reading it once, rewrite it.
+@end
+
+@worksheet Chapter 9: Product Listing Template | Fill in the blanks, then polish.
+@field Product title (searchable keywords):
+### Opening Description
+"This handcrafted ____________________ is designed for ____________________ who want ____________________."
+@lines 2
+@table Features (facts) | Benefits (what it does for the customer) ; 4
+@fieldrow Dimensions ; Materials
+@fieldrow Colors / options ; Care instructions
+@fieldrow Production time ; Shipping time
+@field My story (2–3 sentences):
+@lines 2
+@field Guarantee / return policy:
+@field Call to action:
+@end
+
+@worksheet Chapter 9: Service Page Template | A clear page that turns visitors into bookings.
+@field Service name and location:
+@field The problem I solve:
+@field The result the customer gets:
+@field What's included:
+@field What's not included:
+@field Service area:
+@field Pricing (or "starting at"):
+@field How to book:
+@field My guarantee:
+@field Why customers trust me (reviews, experience, insurance):
+@lines 2
+@end
+
+@actions
+Write a searchable title using real customer search phrases.
+Rewrite every feature as a benefit.
+Answer every common question in your listing or service page.
+Add your story, your guarantee, and a clear call to action.
+@end
+
+@chapter 10 | Launching Your Store
+
+At some point, preparation must become action.
+
+This moment is where many people hesitate. They worry their store is not ready. Their photos are not perfect. Their listings need improvement. Their logo could be better.
+
+The reality is simple.
+
+A store that launches imperfectly can still improve. A store that never launches cannot make a sale.
+
+@quote Progress beats perfection. Launch, learn, and improve.
+
+## Progress Beats Perfection
+
+Build a store that is professional, honest, and complete. Then launch. Gather real customer feedback. Improve from there.
+
+Business growth comes from action, not endless preparation.
+
+## The Minimum Launch Standard
+
+You are ready to launch when you have:
+
+- At least one offer with excellent photos and a complete listing or service page
+- Clear pricing that includes profit
+- Written policies for shipping, returns, cancellations, or service terms
+- A way to accept payment
+- Inventory on hand or a clear production or booking timeline
+- Your business setup basics from Chapter 4
+- A short list of people you will tell on launch day
+
+That's it. Everything else can be improved after you open.
+
+## Plan a Launch Week, Not a Launch Day
+
+A launch is not one announcement. It is a series of reasons for people to pay attention:
+
+- **Before launch:** Share behind-the-scenes photos and tell people the date.
+- **Launch day:** Announce that you're open, with a clear link and a simple offer.
+- **Days two to five:** Share the story behind your business, a customer's reaction, a process video, and a reminder that a launch offer ends soon.
+- **End of week:** Thank everyone who supported you and share what's next.
+
+## Consider a Launch Offer
+
+A limited-time incentive gives people a reason to act now: free shipping, a small discount for the first ten customers, a free add-on, or priority booking. Keep it simple, and give it a clear end date.
+
+## Get Your First Reviews
+
+Reviews are the currency of online trust. Your first few customers are your most important. Over-deliver for them, follow up personally, and politely ask for an honest review. Never offer payment or discounts in exchange for positive reviews — it violates most platforms' rules and erodes trust.
+
+@box example | Launch Week
+Maya announces on Instagram that her Etsy shop opens Saturday at 9 a.m., with free shipping for the first ten orders. She sells seven signs in the first week — five to people she knows and two to strangers who found her through Etsy search. Marcus announces his business in three neighborhood groups with before-and-after photos from his pilot jobs and books five appointments.
+@end
+
+@worksheet Chapter 10: Launch Readiness Checklist | You are ready when everything essential is checked.
+### Essential
+@check At least one complete, well-photographed listing or service page
+@check Pricing that includes profit
+@check Shipping, return, cancellation, or service policies written
+@check Payment method set up and tested
+@check Inventory ready or production/booking timeline set
+@check Business setup basics complete (Chapter 4)
+@check Launch announcement written
+@check List of at least 25 people to tell
+### Helpful (but not required)
+@check Launch offer with a clear end date
+@check Social media profiles complete
+@check Email or text signup in place
+@check Thank-you note or card for orders
+@field My launch date:
+@field My launch offer:
+@end
+
+@actions
+Confirm you meet the Minimum Launch Standard.
+Choose a launch date and put it on your calendar.
+Plan a full launch week of announcements.
+Launch — even if it isn't perfect.
+@end

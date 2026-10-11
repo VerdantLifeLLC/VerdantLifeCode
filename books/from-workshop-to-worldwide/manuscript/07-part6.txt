@@ -1,0 +1,369 @@
+@part Six | The Entrepreneur's Toolkit | Your 30-day launch plan, first-year plan, scorecards, and ready-to-use templates. | fig-part-toolkit
+
+@chapter 19 | The 30-Day Launch Plan
+
+Thirty days from now, you can have a real business with a real offer, a real store or booking page, and real customers — or at least real conversations with them.
+
+This plan turns everything in this book into daily actions. Each day has a single clear task and a measurable goal. Most tasks take one to two hours. If a day takes longer, keep going the next day. The point is momentum.
+
+@figure fig-30day | Four weeks, four stages: validate, build, set up, and launch.
+
+@box tip | Makers and Service Providers
+Where the plan differs for products and services, both versions are shown. Follow the one that fits your business — or both, if you are building a hybrid.
+@end
+
+## Week 1 — Validate the Opportunity
+
+@day 1 | Write down 20 product or service ideas. | 20 ideas completed. | Chapter 1
+@day 2 | Research every idea on marketplaces, Google, and local platforms. Record price, reviews, and competition. | Research completed. | Chapter 1
+@day 3 | Score your ideas and select your top five opportunities. | Five finalists selected. | Chapter 1
+@day 4 | Calculate profitability for all five using the pricing calculators. | Understand real margins. | Chapter 3
+@day 5 | Choose your launch offer and describe your ideal customer. | One clear winner. | Chapters 1–2
+@day 6 | Products: build Prototype Version One. Services: plan your service steps and perform a practice job. | Offer exists in real life. | Chapter 6
+@day 7 | Collect honest feedback from five people who match your ideal customer. | Improvements identified. | Chapter 2
+
+## Week 2 — Build a Real Offer
+
+@day 8 | Improve your prototype or service process based on feedback. | Version Two complete. | Chapter 2
+@day 9 | Products: create Product #1 and time every step. Services: write your service menu and packages. | Time study started. | Chapters 3, 6
+@day 10 | Products: create Product #2. Services: write your quote and booking process. | Process documented. | Chapter 6
+@day 11 | Products: create Product #3. Services: write your service agreement and policies. | Policies drafted. | Chapter 4
+@day 12 | Products: create Product #4. Services: offer two introductory jobs to real customers. | Real-world test underway. | Chapter 2
+@day 13 | Products: create Product #5. Services: complete introductory jobs and take before-and-after photos. | Proof collected. | Chapter 8
+@day 14 | Purchase packaging or service supplies. Write your quality checklist. | Five sale-ready products or a proven service. | Chapter 6
+
+## Week 3 — Build the Business
+
+@day 15 | Choose your business name and check availability. | Name selected. | Chapter 5
+@day 16 | Write your mission statement and tagline; choose colors and fonts. | Brand guide complete. | Chapter 5
+@day 17 | Register your business, get your EIN, and open a business bank account. | Business is official. | Chapter 4
+@day 18 | Products: open your Etsy shop or online store. Services: create your Google Business Profile and booking page. | Storefront created. | Chapter 7
+@day 19 | Set up your main social media profile and email signup. | Marketing channels ready. | Chapter 12
+@day 20 | Photograph your products or portfolio using the full shot list. | Professional photos complete. | Chapter 8
+@day 21 | Write your listings or service page using the templates. | Store infrastructure complete. | Chapter 9
+
+## Week 4 — Launch and Sell
+
+@day 22 | Publish your listings or service page. Test your checkout or booking process. | You are open for business. | Chapter 10
+@day 23 | Publish your first social media posts announcing your launch. | Launch announced. | Chapter 12
+@day 24 | Personally contact your list of family, friends, and supporters. | 25+ personal messages sent. | Chapter 11
+@day 25 | Join local community groups and introduce your business helpfully. | Three groups joined. | Chapter 11
+@day 26 | Post a behind-the-scenes or process video. | Process content published. | Chapter 12
+@day 27 | Contact five potential customers or referral partners directly. | Five outreach conversations. | Chapter 11
+@day 28 | Run a launch promotion with a clear end date. | Promotion live. | Chapter 10
+@day 29 | Review traffic, messages, sales, and feedback. Ask early customers for reviews. | Data reviewed and lessons recorded. | Chapter 14
+@day 30 | Celebrate, then set next month's goals. | First sale completed or active leads generated. | Chapter 18
+
+@worksheet 30-Day Launch Tracker | Check off each day as you complete it.
+@table Day | Task Completed? | Notes / Results ; 30 ; numbered
+@end
+
+@chapter 20 | The First-Year Success Plan
+
+A launch is a beginning, not a finish line. The first year is where a business learns to stand on its own.
+
+This plan gives you a focus for each month. Focus is powerful. It is far better to do one important thing well each month than to do twelve things poorly.
+
+@figure fig-year | Twelve months, twelve focused milestones.
+
+@month 1 | Launch. | Complete the 30-Day Launch Plan and make your first sales.
+@month 2 | Collect your first reviews. | Over-deliver for early customers and ask every one of them for an honest review.
+@month 3 | Reach 25 sales or jobs. | Market consistently using your weekly rhythm and content calendar.
+@month 4 | Improve quality and efficiency. | Use feedback and time studies to refine your offer and your process.
+@month 5 | Add a second product or service. | Validate it first with a small test or pilot.
+@month 6 | Reach 100 sales or jobs. | Review your mid-year numbers and adjust your prices.
+@month 7 | Introduce bundles or packages. | Increase your average order value.
+@month 8 | Create repeat customers. | Start an email list routine and a follow-up system; launch a recurring plan if you offer services.
+@month 9 | Begin simple advertising. | Test a small budget on your best-performing offer and track the results.
+@month 10 | Improve systems and automation. | Write SOPs, save templates, and adopt tools that save time.
+@month 11 | Prepare for your busy season. | Plan holiday or seasonal offers, inventory, and scheduling.
+@month 12 | Evaluate your year. | Review your numbers, celebrate progress, and decide whether to pursue full-time business.
+
+@worksheet First-Year Milestone Tracker | Record your progress every month.
+@table Month | Focus | Revenue | Profit | Sales / Jobs | Milestone Met? ; 12 ; numbered
+@end
+
+@chapter 21 | Scorecards and Templates
+
+Use these tools every day, every week, and every month. Make copies as often as you need.
+
+## Scorecards
+
+Businesses are built through small actions repeated consistently. The **Daily Scorecard** asks five simple questions at the end of every day. If you can answer "yes" to most of them most days, your business is moving forward — even when sales are slow. The **Weekly Review** takes thirty minutes and helps you look back honestly, learn from what happened, and choose your top priorities for the week ahead. Use the **Monthly Financial Scorecard** in Chapter 14 at the end of every month.
+
+@box tip | Make Copies
+Photocopy the scorecards on the following pages or recreate them in a notebook or spreadsheet. The habit matters far more than the format.
+@end
+
+@worksheet The Entrepreneur's Daily Scorecard | Answer these five questions at the end of every day.
+@table Question | Mon | Tue | Wed | Thu | Fri | Sat | Sun ; rows: Did I create or deliver something today? / Did I market today? / Did I improve my business today? / Did I learn something new today? / Did I move one step closer to my goal?
+@field This week's biggest win:
+@field Next week's top priority:
+@end
+
+@worksheet The Weekly Review | Spend 30 minutes every week looking back and planning ahead.
+@fieldrow Week of ; Sales / jobs this week
+@fieldrow Revenue this week ; Profit this week
+@field What worked well:
+@lines 2
+@field What didn't work:
+@lines 2
+@field Customer feedback I received:
+@lines 2
+@field My top three priorities for next week:
+@lines 3
+@end
+
+@pagebreak
+
+## Customer Communication Templates
+
+Copy these templates into your phone, email, or store's saved replies. Personalize them, but keep the structure. Replace the words in brackets with your own information.
+
+@template Order Confirmation (Products)
+Hello [Name],
+
+Thank you for your order! I've received it and will begin production right away.
+
+Your estimated completion date is [date], and I'll send tracking information as soon as your order ships.
+
+If you have any questions, just reply to this message.
+
+Thank you for supporting my small business.
+
+Best regards,
+[Your name]
+[Business name]
+@end
+
+@template Shipping Notification
+Hello [Name],
+
+Good news — your order has shipped!
+
+Tracking number: [number]
+Estimated delivery: [date]
+
+Thank you again for supporting my business. I hope you enjoy your [product].
+
+Best regards,
+[Your name]
+@end
+
+@template Delay Notice
+Hello [Name],
+
+I want to give you a quick update on your order. Because of [brief reason], your order will be ready by [new date] instead of [original date].
+
+I'm sorry for the delay, and I appreciate your patience. I want to make sure your [product] meets my quality standards before it leaves my workshop. If this new timing doesn't work for you, please let me know and we'll find a solution.
+
+Best regards,
+[Your name]
+@end
+
+@template Review Request
+Hello [Name],
+
+I hope you're enjoying your [product / completed project].
+
+If you have a moment, I would greatly appreciate an honest review. Customer feedback helps small businesses grow and helps future customers make informed decisions.
+
+[Link to review page]
+
+Thank you again for your support.
+
+Best regards,
+[Your name]
+@end
+
+@template Inquiry Response (Services)
+Hello [Name],
+
+Thank you for reaching out! I'd be glad to help with [service].
+
+To give you an accurate quote, could you send me:
+• A photo of [item or area]
+• Your address or neighborhood
+• A few days and times that work for you
+
+My [service] typically starts at [price], and most appointments are scheduled within [timeframe].
+
+I look forward to helping you.
+
+Best regards,
+[Your name]
+[Business name] | [Phone]
+@end
+
+@template Quote / Estimate (Services)
+Hello [Name],
+
+Thank you for the opportunity to quote your project. Here are the details:
+
+Service: [description]
+Includes: [what is included]
+Not included: [exclusions]
+Price: [amount]
+Deposit: [amount, if applicable]
+Estimated time: [duration]
+
+To book, simply reply "Approved" and choose a date. This quote is valid for [number] days.
+
+Best regards,
+[Your name]
+@end
+
+@template Appointment Confirmation and Reminder
+Hello [Name],
+
+You're confirmed for [service] on [day, date] between [time window] at [address].
+
+Please [any preparation, e.g., "clear the area" or "have parts unboxed"]. I'll text you when I'm on my way.
+
+Need to reschedule? Just reply at least [24/48] hours in advance.
+
+See you soon!
+[Your name]
+@end
+
+@template Job Completion and Thank You
+Hello [Name],
+
+Thank you for choosing [Business name]! It was a pleasure helping you with [service].
+
+Your receipt is attached. If anything isn't right, please let me know within [timeframe] and I'll make it right.
+
+If you were happy with the work, I'd be grateful for a quick review: [link]. And if you know anyone who needs help with [service], I'd love to help them too.
+
+Best regards,
+[Your name]
+@end
+
+@template Handling a Complaint
+Hello [Name],
+
+Thank you for letting me know, and I'm truly sorry about [issue]. That's not the experience I want any customer to have.
+
+Here's what I'd like to do to make it right: [replacement / repair / refund / return visit].
+
+Please let me know if that works for you, or if there is anything else I can do.
+
+Sincerely,
+[Your name]
+@end
+
+@template Follow-Up (30 Days Later)
+Hello [Name],
+
+I hope you're doing well! It's been about a month since your [order / service], and I wanted to check in. How is your [product / project] holding up?
+
+If you ever need anything else — or know someone who might — I'm always happy to help.
+
+Best regards,
+[Your name]
+@end
+
+## Recommended Resources
+
+These organizations and tools can help you along the way. Services, fees, and features change over time, so always check current details on each provider's website.
+
+### Free Business Help (United States)
+
+- **U.S. Small Business Administration (SBA)** — guides to planning, launching, and managing a business at sba.gov.
+- **Small Business Development Centers (SBDCs)** — free one-on-one advising in every state.
+- **SCORE** — free mentoring from experienced business owners.
+- **Internal Revenue Service (IRS)** — free EIN applications and small-business tax information at irs.gov.
+- **Your state's Secretary of State and Department of Revenue** — business registration and sales tax permits.
+- **Your local library** — many libraries offer free business databases, workshops, and meeting rooms.
+
+### Tools by Category
+
+- **Marketplaces:** Etsy, Amazon Handmade, eBay, Facebook Marketplace
+- **Website and store builders:** Shopify, Squarespace, Wix, WooCommerce
+- **Local and service platforms:** Google Business Profile, Nextdoor, Thumbtack, Angi, TaskRabbit
+- **Freelance platforms:** Upwork, Fiverr
+- **Bookkeeping:** QuickBooks, Xero, Wave, FreshBooks
+- **Payments and invoicing:** Square, Stripe, PayPal
+- **Design and photo editing:** Canva, Adobe Express, Snapseed
+- **Email marketing:** Mailchimp, Kit, MailerLite
+- **Scheduling:** Calendly, Square Appointments, Acuity Scheduling
+
+@unnumbered Final Thoughts | fig-final
+
+Entrepreneurship is not a destination. It is a process of continual improvement.
+
+You will make mistakes. You will learn lessons. You will face setbacks.
+
+Every successful entrepreneur has.
+
+The businesses that endure are not necessarily built by the most talented people.
+
+They are built by the people who continue.
+
+The people who learn.
+
+The people who adapt.
+
+The people who keep moving forward long after excitement fades.
+
+Your future business is not hidden behind some secret strategy. It begins with a simple decision.
+
+Create something valuable.
+
+Offer it to the world.
+
+Learn from the response.
+
+Then do it again.
+
+And again.
+
+And again.
+
+That is how workshops become companies.
+
+That is how skills become careers.
+
+That is how side projects become livelihoods.
+
+That is how entrepreneurs are made.
+
+@unnumbered A Final Note From the Author
+
+The purpose of this book is not merely to help you sell products or services.
+
+It is to help you build an asset.
+
+Every product you design, every customer you serve, every review you earn, and every process you improve becomes part of something larger than a side hustle.
+
+You are building a business.
+
+Businesses are not built in a single day, a single month, or even a single year. They are built through thousands of small decisions made consistently over time.
+
+The entrepreneur who succeeds is rarely the smartest person in the room. More often, it is the person who remains committed after the excitement wears off.
+
+Create value.
+
+Serve customers.
+
+Improve continuously.
+
+Do those three things long enough, and the workshop that once produced hobbies — or the skills that once earned only thanks — can become a company that changes your life.
+
+I can't wait to see what you build.
+
+— The Skill Junky
+
+@unnumbered About the Author
+
+**The Skill Junky** is a lifelong learner, maker, and entrepreneur who believes that the skills people already have — in their hands, their heads, and their hearts — are the foundation of meaningful, independent work. Driven by an insatiable curiosity for learning how things are made, fixed, and sold, The Skill Junky writes practical, no-nonsense guides that help everyday people turn what they know and love into real income.
+
+From Workshop to Worldwide is written for anyone who has ever been told, "You should sell these," or "You should charge for that" — and is finally ready to do it.
+
+@unnumbered About Verdant Life LLC
+
+**Verdant Life LLC** publishes practical books and resources that help people grow — in skill, in independence, and in livelihood. Our guides are designed to be used, not just read: clear steps, honest advice, and tools you can put to work today.
+
+@unnumbered Notes
+
+@lines 19

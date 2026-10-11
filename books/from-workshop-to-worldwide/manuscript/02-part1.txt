@@ -1,0 +1,391 @@
+@part One | Foundations | Choose the right offer, prove people want it, and understand the money before you spend it. | fig-part-foundations
+
+@chapter 1 | Start With the Right Offer
+
+The first decision you make will influence every decision that follows.
+
+Choose the right offer, and growth becomes easier. Choose the wrong one, and every sale feels like an uphill battle.
+
+The greatest mistake new entrepreneurs make is assuming that the thing they enjoy making — or the work they enjoy doing — is automatically the thing customers want to buy.
+
+Sometimes that is true. Often it is not.
+
+## The Sweet Spot
+
+Successful businesses sit at the intersection of three important factors:
+
+1. **What you enjoy creating or doing.**
+2. **What you can deliver consistently.**
+3. **What customers will pay for.**
+
+@figure fig-sweet-spot | Your business lives where enjoyment, consistency, and customer demand overlap.
+
+All three matter.
+
+If you love making something that nobody wants to buy, you have a hobby.
+
+If customers want it but you dislike making it, you will eventually burn out.
+
+If you love it and people want it, but you cannot produce it consistently — because the materials are unreliable, the process is too slow, or the quality varies — you will disappoint the customers you work so hard to attract.
+
+A profitable business requires passion, demand, *and* the ability to deliver.
+
+## Step 1: Take Inventory of Your Skills
+
+Before you decide what to sell, take an honest inventory of what you can do. Most people underestimate themselves here. Skills you take for granted are often skills other people would gladly pay for.
+
+Think in four categories:
+
+- **Hands** — things you build, make, repair, or physically do. Woodworking, sewing, baking, cleaning, landscaping, assembling, painting.
+- **Head** — things you know. Bookkeeping, tutoring, writing, software, organizing, planning, teaching.
+- **Eye** — things you see that others don't. Design, photography, decorating, color, style, layout.
+- **Heart** — ways you care for people, animals, or places. Pet sitting, senior help, childcare, coaching, event hosting.
+
+Ask the people who know you best: *"What do you always ask me to help with?"* Their answers are market research.
+
+## Step 2: Decide — Products, Services, or Both?
+
+Products and services are built differently, and each has real advantages.
+
+@figure fig-product-service | Products, services, and hybrids each have distinct strengths. Many durable businesses combine both.
+
+**Products** can be made once and sold anywhere. They can ship across the country while you sleep. They can be photographed, listed, and discovered online. But they require materials, inventory, packaging, and shipping — and they tie up money before you are paid.
+
+**Services** usually require little upfront money. You can start this week with tools you already own. Margins are often high because you are selling your skill, not raw materials. But your income is tied to your hours, and most services are limited to a geographic area or a time zone.
+
+**Hybrids** combine both. A product business adds a service — custom design, installation, repair, or workshops. A service business adds a product — maintenance kits, prints, templates, or branded supplies. Hybrids smooth out seasonal swings and give customers more ways to buy from you.
+
+@box tip | Starting Advice
+If you have limited money to invest, a service is often the fastest path to your first dollar. If you have limited time to trade, a product is often the better long-term path. Many entrepreneurs start with a service to fund the product side of the business.
+@end
+
+## Step 3: Brainstorm Without Judging
+
+Now generate options. Write down at least twenty products or services you could realistically offer. Don't edit yourself yet. Quantity creates quality — the best idea is rarely the first one.
+
+Good prompts:
+
+- What do people already ask me to make or do for them?
+- What do I own (tools, equipment, a vehicle, a space) that could produce income?
+- What do I see people complaining about that I could solve?
+- What could I make or do *better* than what is currently available?
+- What could I teach?
+
+## Step 4: Research Before You Build
+
+Before investing hundreds of dollars in materials or equipment, spend time researching.
+
+For **products**, look at online marketplaces such as Etsy, Amazon Handmade, eBay, and Facebook Marketplace. For **services**, search Google Maps, Nextdoor, Thumbtack, Angi, local Facebook groups, and freelance marketplaces like Upwork or Fiverr.
+
+Study offers similar to yours. Pay attention to:
+
+- Pricing
+- Customer reviews
+- Product or service descriptions
+- Popular variations and packages
+- Common customer complaints
+
+Reviews are particularly valuable. Customers often tell you exactly what they wish a product or provider had done differently. Those comments can become your competitive advantage.
+
+@box action | Mine the Reviews
+Pick five competitors. Read their three-, two-, and one-star reviews. Write down every complaint that appears more than once. Each repeated complaint is a promise you can make that they are not keeping: "Arrives without damage." "Shows up on time." "Answers messages the same day."
+@end
+
+## Step 5: Start Small
+
+Many first-time sellers believe they need an entire catalog before launching. Many first-time service providers believe they must offer every possible service.
+
+They do not.
+
+A single excellent product can build an entire business. A single clearly defined service can fill a calendar.
+
+Focus on one item or one service that people genuinely want and that you can deliver repeatedly with consistent quality.
+
+Master one offer. Expand later.
+
+@box example | Maya Chooses Her Offer
+Maya lists twenty-three ideas — cutting boards, planters, coat racks, signs, and more. Her research shows that personalized cedar house-number signs sell steadily, ship easily, and draw complaints about faded paint and cracked wood. Maya knows how to seal cedar so it lasts outdoors. She chooses a single launch product: a personalized cedar address sign.
+@end
+
+@box example | Marcus Chooses His Offer
+Marcus could offer a dozen services, but he notices most requests from neighbors are the same: assembling furniture and mounting TVs and shelves. These jobs are quick, need only tools he already owns, and don't require a contractor's license in his area for small work. He chooses one clearly defined service: "Furniture Assembly & Wall Mounting."
+@end
+
+@worksheet Chapter 1: Offer Discovery | List at least 20 products or services you could realistically offer.
+@table # | Product or Service Idea | Product, Service, or Both? ; 20 ; numbered
+@end
+
+@worksheet Chapter 1: Offer Evaluation Matrix | Score your top five ideas from 1 (poor) to 10 (excellent) in each category.
+@table Criteria | Idea 1 | Idea 2 | Idea 3 | Idea 4 | Idea 5 ; rows: Idea name / Customer demand / Profit potential / Ease of delivery / Startup cost (10 = low) / Shipping or travel simplicity / Personal enjoyment / Repeat purchase potential / TOTAL
+The highest total becomes your launch offer. If two ideas tie, choose the one you can start with the least money.
+@field My launch offer is:
+@field Why I chose it:
+@lines 2
+@end
+
+@actions
+Complete the Skills Inventory by asking three people what they always ask you to help with.
+Decide whether you are starting with a product, a service, or a hybrid.
+Brainstorm at least twenty ideas.
+Research five competitors and record their repeated complaints.
+Choose one launch offer.
+@end
+
+@chapter 2 | Validate Before You Build
+
+The most expensive words in business are *"I'm sure people will buy this."*
+
+Validation is the process of proving — with evidence instead of hope — that real customers will pay real money for your offer. It is the cheapest insurance you will ever buy.
+
+You don't need a perfect answer. You need enough evidence to justify the next step.
+
+@figure fig-validation | Validation moves from cheap signals to strong proof. Each step costs a little more and tells you a lot more.
+
+## The Validation Ladder
+
+Think of validation as a ladder. Each rung gives stronger evidence than the one below.
+
+1. **Interest** — People say they like it. (Weak evidence. Friends are polite.)
+2. **Search** — People are actively looking for it online. (Better.)
+3. **Competition** — Others are already selling it successfully. (Good. Competition proves a market exists.)
+4. **Commitment** — People give you their email, phone number, or time. (Strong.)
+5. **Money** — People pay, place a deposit, or pre-order. (The only proof that truly counts.)
+
+Climb as high as you can before spending serious money.
+
+## Step 1: Check Search Demand
+
+Type phrases your customers would use into the search bars of Etsy, Amazon, Google, and Pinterest. Watch the suggestions that appear as you type. Those suggestions show what people actually search for.
+
+For services, search "[your service] near me" and "[your service] [your town]." Look at how many local businesses appear, how many reviews they have, and how recently those reviews were written. Lots of recent reviews means steady local demand.
+
+## Step 2: Study Competitors Without Fear
+
+Many new entrepreneurs panic when they find competitors.
+
+Don't.
+
+Competition is evidence. If nobody is selling what you plan to sell, it may be because nobody wants it.
+
+Your job is not to find an empty market. Your job is to find a way to be **clearly better for a specific customer**. Better can mean:
+
+- Higher quality or longer lasting
+- Faster delivery or quicker response
+- More personal or more customizable
+- Better communication and reliability
+- Serving a group others ignore (pet owners, seniors, small offices, left-handed people, a particular hobby)
+
+## Step 3: Define Your Ideal Customer
+
+You can't sell to everyone. Trying to do so makes your message vague and your marketing expensive.
+
+Picture one specific person who would love your offer. Give them a name. Where do they live? What do they care about? What problem are they trying to solve? Where do they spend time online and in person? What would make them hesitate?
+
+The clearer this picture, the easier every later chapter becomes — branding, photography, listings, and marketing all speak to this one person.
+
+## Step 4: Test With Real People
+
+Before you build inventory or print business cards, test.
+
+**For products:** build a prototype and show it to people who match your ideal customer — not just family. Ask what they would pay, what they would change, and who they would buy it for. Better yet, offer it for pre-order.
+
+**For services:** offer your service to three to five people at an introductory price in exchange for honest feedback and a review. Time yourself. Note every question they ask. Those questions will become your website's FAQ.
+
+@box warning | Beware of Polite Feedback
+"That's so cute!" is not validation. "I'll take two — can you have them by Friday?" is validation. Pay attention to what people *do*, not what they *say*.
+@end
+
+## Step 5: Get to the First Dollar
+
+The strongest validation is a sale. Find a way to collect real money as early as possible, even on a small scale: a pre-order, a deposit, a paid pilot job, a booth at a local market, or a post in a community group.
+
+The first dollar changes everything. It turns a hobby into a business in your own mind.
+
+@box example | Maya and Marcus Validate
+Maya posts a photo of her prototype sign in a local community group with the words "Taking five pre-orders for October." She gets nine requests and collects deposits from six people. Marcus offers three neighbors a 50%-off introductory assembly job in exchange for honest reviews. Two of them book him again within a month. Both have climbed to the top rung: money.
+@end
+
+@worksheet Chapter 2: Validation Scorecard | Record evidence, not opinions.
+@table Validation Step | What I Did | What I Learned | Done? ; rows: Searched online marketplaces / Searched Google and maps / Studied 5 competitors / Defined my ideal customer / Tested with 5 real people / Collected a pre-order, deposit, or payment
+### My Ideal Customer
+@field Name (imaginary):
+@field Age range and life situation:
+@field The problem they want solved:
+@field Where they spend time online:
+@field Where they spend time locally:
+@field What would make them hesitate to buy:
+@field What would make them say "yes":
+### How I Will Be Clearly Better
+@lines 3
+@end
+
+@actions
+Search for your offer on at least three platforms and record what you find.
+Write a one-paragraph description of your ideal customer.
+Test your offer with five people who match that description.
+Collect your first pre-order, deposit, or paid job.
+@end
+
+@chapter 3 | Understanding the Economics of Your Business
+
+A business exists for one purpose: to generate profit.
+
+That statement often surprises makers and service providers because they focus on creating and helping. Creation is important. Helping is important. But a business that does not make money eventually stops creating and stops helping.
+
+One of the most dangerous habits among new entrepreneurs is underpricing.
+
+They calculate the cost of materials — or they compare themselves to the cheapest competitor — and ignore everything else.
+
+Unfortunately, materials are often the smallest expense.
+
+## The True Cost of What You Sell
+
+The real costs of a product or service include:
+
+- **Materials** — everything that goes into the product or is used up on the job
+- **Labor** — your time, at a fair hourly rate
+- **Packaging and shipping supplies** — boxes, mailers, tape, labels, inserts
+- **Marketplace and payment fees** — listing fees, transaction fees, card processing fees
+- **Travel** — fuel, vehicle wear, parking, and travel time for services
+- **Advertising** — paid promotion, samples, business cards
+- **Equipment wear and tear** — tools, blades, bits, machines, and software that eventually need replacing
+- **Overhead** — insurance, licenses, phone, internet, website, utilities
+- **Taxes** — income tax, self-employment tax, and any sales tax you must collect
+
+Every one of these costs matters.
+
+@figure fig-price-stack | What is really inside a fair price. Materials are often the smallest slice.
+
+## Pay Yourself Properly
+
+Your time has value.
+
+If a project takes three hours to build, those three hours must be included in your pricing. If a service call takes two hours plus forty minutes of driving, all two hours and forty minutes must be paid for.
+
+Too many makers and service providers unintentionally create jobs that pay less than minimum wage.
+
+A business should create freedom. Not exhaustion.
+
+Choose an hourly rate that reflects your skill and what you would expect to earn working for someone else with similar skills — then add to it, because as a business owner you carry risks and costs that an employee does not.
+
+When customers buy from you, they are not merely buying wood, leather, metal, plastic, or an hour of work. They are buying:
+
+- Your knowledge
+- Your craftsmanship
+- Your experience
+- Your reliability
+- Your time
+
+Never apologize for charging appropriately.
+
+## Pricing Products: The Cost-Plus Method
+
+The simplest reliable way to price a handmade product is to add up your true costs and then add profit.
+
+1. **Materials** — add up the cost of every material used in one unit.
+2. **Labor** — multiply your production hours by your hourly rate.
+3. **Overhead per unit** — estimate monthly overhead and divide by the number of units you expect to sell in a month.
+4. **Fees** — estimate marketplace and payment fees as a percentage of your price (check your platform's current fee schedule).
+5. **Profit** — add a profit margin, typically 20% to 50%, so the *business* earns money in addition to paying you for your labor.
+
+@box example | Maya Prices Her Sign
+Materials (cedar, sealant, paint, hardware): $14. Labor: 1.5 hours at $25 per hour = $37.50. Packaging: $4. Overhead per sign: about $3. Subtotal: $58.50. Allowing roughly 10% of the selling price for fees and a 25% profit margin brings her to about $90. Her cheapest competitors charge $45 — but their reviews mention fading and cracking. Maya prices at $89, explains why her sign lasts, and sells out her first batch.
+@end
+
+@box tip | Wholesale and Retail
+If you ever plan to sell to shops, remember that retailers typically buy at about half of the retail price. Price your products so that you can still make a profit at wholesale. If you can't, your retail price is probably too low.
+@end
+
+## Pricing Services: Four Models
+
+Services can be priced in several ways. Each fits different situations.
+
+@figure fig-service-pricing | Four common ways to price a service, from simplest to most scalable.
+
+- **Hourly** — simple and fair for unpredictable work. The downside: customers watch the clock, and you earn less as you get faster.
+- **Per project (flat rate)** — a set price for a defined result. Customers love the certainty, and you earn more as you become more efficient. You must define the scope carefully.
+- **Packages** — bundles of services at tiered prices, such as *Basic, Standard,* and *Premium*. Packages make choosing easy and naturally encourage customers to spend more.
+- **Recurring (retainer or subscription)** — a fixed monthly fee for ongoing service, such as lawn care, cleaning, bookkeeping, or maintenance. Recurring revenue is the most stable income a small business can have.
+
+Whatever model you choose, include travel time, preparation, cleanup, communication, and invoicing. A "one-hour" job almost never takes one hour.
+
+@box example | Marcus Moves to Flat Rates
+Marcus started at $30 per hour. He soon realized he was assembling a standard bookcase in 40 minutes — and earning $20 for it. He switched to flat rates: $65 for a standard bookcase, $85 for a TV mount, $45 for each additional item. His customers prefer knowing the price in advance, and his average earnings per hour more than doubled.
+@end
+
+## Know Your Break-Even Point
+
+Your break-even point is the number of sales you need each month just to cover your fixed costs. Every sale above that number produces profit.
+
+**Break-even sales = Monthly fixed costs ÷ Profit per sale**
+
+If your fixed costs (insurance, software, phone, website, equipment payments) are $300 per month and each sale earns $30 after materials and fees, you need 10 sales per month to break even. Sale number eleven is your first profitable sale of the month.
+
+@figure fig-break-even | Below the break-even point you lose money. Above it, every sale adds profit.
+
+## Psychology of Price
+
+Price communicates quality. A price that is too low can make customers wonder what is wrong with your work.
+
+- **Don't compete on being cheapest.** Someone can always charge less. Compete on value.
+- **Offer three options.** When customers see a good, better, and best option, most choose the middle — and some choose the best.
+- **Raise prices as demand grows.** If you are booked solid or selling out, your prices are too low.
+- **Explain your price.** Tell customers what makes your work last longer, look better, or save them time.
+
+@worksheet Chapter 3: Product Pricing Calculator | Complete one calculator for each product.
+@field Product:
+### Materials Cost (per unit)
+@field Primary material: $
+@field Paint / finishing / supplies: $
+@field Hardware / components: $
+@field Packaging: $
+@field Other: $
+@field Total materials: $
+### Labor
+@fieldrow Hours required ; Hourly rate goal: $
+@field Labor cost (hours × rate): $
+### Business Expenses (per unit)
+@field Marketplace & payment fees: $
+@field Advertising: $
+@field Equipment & overhead: $
+@field Total business expenses: $
+### Price
+@field True product cost (materials + labor + expenses): $
+@field Desired profit (20%–50%): $
+@field Recommended retail price: $
+@field Wholesale price (if applicable): $
+@end
+
+@worksheet Chapter 3: Service Pricing Calculator | Complete one calculator for each service.
+@field Service:
+### Time
+@fieldrow Hands-on time (hours) ; Travel time (hours)
+@fieldrow Prep / cleanup time ; Admin & communication time
+@field Total time per job (hours):
+### Costs
+@field Hourly rate goal: $
+@field Labor cost (total time × rate): $
+@field Materials / supplies used: $
+@field Travel cost (fuel, mileage): $
+@field Overhead per job: $
+@field Total cost per job: $
+### Price
+@field Desired profit (20%–50%): $
+@field Recommended flat rate: $
+### Package Ideas
+@table Package | What's Included | Price ; rows: Basic / Standard / Premium
+@end
+
+@worksheet Chapter 3: Break-Even Calculator | Know the number you must hit every month.
+@table Fixed Monthly Cost | Amount ; rows: Insurance / Phone & internet (business share) / Website & software / Licenses & permits (monthly share) / Equipment payments / Marketing / Other / TOTAL FIXED COSTS
+@field Average profit per sale (price − materials − fees): $
+@field Break-even sales per month (fixed costs ÷ profit per sale):
+@field My monthly sales goal (must exceed break-even):
+@end
+
+@actions
+Calculate the true cost of your launch offer, including your time.
+Set a price that includes profit — not just costs.
+If you offer a service, choose a pricing model and create three packages.
+Calculate your monthly break-even point.
+@end

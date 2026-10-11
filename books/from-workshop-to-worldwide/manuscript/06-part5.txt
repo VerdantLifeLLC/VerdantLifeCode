@@ -1,0 +1,356 @@
+@part Five | Running and Growing | Manage money like an owner, build systems, grow wisely, and decide when to go full time. | fig-part-grow
+
+@chapter 14 | Managing Money Like a Business Owner
+
+Many entrepreneurs love making products or serving customers. Few enjoy accounting.
+
+Unfortunately, success requires both.
+
+Money measures reality. Your feelings about how the business is doing can be wrong. Your numbers can't.
+
+## Track Everything
+
+Monitor:
+
+- Revenue
+- Expenses
+- Profit
+- Advertising costs
+- Shipping costs
+- Inventory
+- Taxes owed and set aside
+
+Financial clarity allows smart decisions. Business owners who understand their numbers are more resilient during difficult periods.
+
+## Choose a Simple Bookkeeping System
+
+Your system should be simple enough that you actually use it.
+
+- **Spreadsheet** — fine for very small businesses. Record every sale and expense with the date, amount, category, and a note.
+- **Accounting software** — tools such as QuickBooks, Xero, Wave, or FreshBooks connect to your business bank account and categorize transactions automatically. Most save more time than they cost.
+- **Marketplace reports** — Etsy, Amazon, Shopify, and payment processors provide sales and fee reports. Download them monthly.
+
+Set a weekly **money hour** — the same time every week — to record transactions, file receipts, and review your numbers. Fifteen minutes a week is far easier than fifteen hours in April.
+
+## Keep Your Receipts
+
+Save receipts for every business expense, ideally as photos or scans in a dedicated folder or app. Common deductible expenses for small businesses may include materials, tools, equipment, packaging, shipping, software, advertising, business mileage, a portion of phone and internet, and a home office that meets IRS requirements. Ask your tax professional what applies to you.
+
+## Track Mileage
+
+If you drive for your business — to jobs, suppliers, the post office, or markets — record the date, destination, purpose, and miles for every trip. A mileage-tracking app makes this almost automatic. For service businesses, business mileage can be one of the largest deductions.
+
+## Use a Simple Money System
+
+One of the easiest ways to stay in control is to divide every dollar that comes in among a few separate bank accounts, each with a job.
+
+@figure fig-money-flow | Divide incoming revenue among accounts with specific jobs so taxes, profit, and your paycheck are never an afterthought.
+
+1. **Income** — all revenue arrives here.
+2. **Operating expenses** — money for materials, fees, supplies, and bills.
+3. **Taxes** — a fixed percentage of every payment, set aside and untouched until tax time.
+4. **Owner's pay** — what you pay yourself on a regular schedule.
+5. **Profit and reserve** — savings for emergencies, slow seasons, and future investment.
+
+Start with small percentages if money is tight — even 5% to profit builds the habit. Adjust the percentages as the business grows.
+
+## Know Your Key Numbers
+
+Every month, calculate these five numbers:
+
+1. **Revenue** — total sales.
+2. **Cost of goods sold** — materials and direct costs for what you sold.
+3. **Gross profit** — revenue minus cost of goods sold.
+4. **Net profit** — gross profit minus all other expenses.
+5. **Profit margin** — net profit divided by revenue. This shows how much of every dollar you keep.
+
+Also track your **average order value**, your **best-selling product or service**, and your **customer acquisition cost** — how much you spend on marketing to gain each new customer.
+
+## Plan for Taxes
+
+Remember from Chapter 4: when you work for yourself, no one withholds taxes for you. Set money aside from every payment, make estimated payments as required, and keep organized records. Working with a tax professional for your first year or two is one of the best investments a new business can make.
+
+@box warning | Watch Cash Flow
+Profit and cash are not the same thing. A business can be profitable on paper and still run out of cash if money is tied up in inventory, customers pay late, or a big expense arrives all at once. Keep a reserve, collect deposits on custom work, and invoice promptly.
+@end
+
+@box example | Maya's Money Hour
+Every Sunday evening, Maya spends twenty minutes on her business finances. She downloads her Etsy sales report, photographs her receipts, and moves 25% of the week's profit into her tax savings account. At the end of her first quarter, she knows exactly what she earned, what she owes, and which sign sizes are most profitable. Her small signs, she discovers, earn twice the profit per hour of her large ones.
+@end
+
+@worksheet Chapter 14: Monthly Financial Scorecard | Complete at the end of every month.
+@field Month:
+@table Category | Amount ; rows: Sales revenue / Cost of goods (materials) / Shipping & packaging costs / Marketplace & payment fees / Advertising / Other expenses / NET PROFIT / Profit margin (net profit ÷ revenue) / Amount set aside for taxes / Owner's pay / Added to profit reserve
+@fieldrow Number of orders or jobs ; Average order value
+@field Best-selling product or service:
+@field Biggest lesson learned:
+@lines 2
+@end
+
+@worksheet Chapter 14: Money System Setup | Give every dollar a job.
+@table Account | Purpose | Percentage of Revenue | Opened? ; rows: Income / Operating expenses / Taxes / Owner's pay / Profit & reserve
+@field My weekly money hour (day and time):
+@field Bookkeeping tool I will use:
+@field Mileage tracking method:
+@field Tax professional:
+@end
+
+@actions
+Choose a bookkeeping system and schedule your weekly money hour.
+Set up separate accounts for taxes and profit.
+Begin tracking receipts and mileage today.
+Complete your first Monthly Financial Scorecard.
+@end
+
+@chapter 15 | Creating Systems for Growth
+
+Success creates new challenges. More orders require more organization.
+
+Without systems, growth becomes chaos.
+
+A system is simply a repeatable way of doing something. Systems transform businesses because they allow you to deliver the same quality faster, with less stress — and eventually, they allow someone else to help you.
+
+## Document Every Process
+
+Anything done repeatedly should be documented. Record:
+
+- Production steps
+- Packaging procedures
+- Shipping workflow
+- Booking and scheduling steps
+- Customer communication templates
+- Quality checks
+- Weekly and monthly administrative tasks
+
+These written instructions are called **standard operating procedures (SOPs)**. They don't need to be fancy. A checklist with photos is often perfect. A short video of you doing the task works too.
+
+@figure fig-systems-cycle | The system improvement cycle: do it, document it, simplify it, and eventually delegate it.
+
+## Templates Save Hours
+
+Write your most common messages once and reuse them: order confirmations, shipping notices, quote responses, booking confirmations, review requests, and answers to frequently asked questions. You'll find ready-to-use templates in Part Six.
+
+## Use Simple Tools
+
+The right tools remove repetitive work:
+
+- **Scheduling and booking tools** let service customers book and receive automatic reminders.
+- **Invoicing and payment apps** send professional invoices and accept cards.
+- **Shipping label tools** connect to your store and print labels in batches.
+- **Accounting software** categorizes transactions automatically.
+- **A shared calendar and task list** keep production and appointments organized.
+
+Choose tools that solve a problem you actually have. Don't adopt software just because it's popular.
+
+## Protect Your Time
+
+Your time is the scarcest resource in your business. Protect it with **time blocking**: assign specific blocks of your week to specific types of work.
+
+- Production or service delivery
+- Packing and shipping
+- Marketing and content
+- Administration and money
+- Learning and improvement
+
+Doing similar tasks together, in protected blocks, is far more efficient than switching between them all day.
+
+## When to Get Help
+
+Eventually, you won't be able to do everything yourself. Signs that it is time to get help include turning down profitable work, slipping quality, and working long hours on low-value tasks.
+
+Start by outsourcing the tasks that are least valuable for you to do personally: bookkeeping, packing, cleaning, sanding, social media scheduling, or administrative work. Your documented systems make training much easier.
+
+Before hiring anyone, learn the rules about employees versus independent contractors in your state. Misclassifying workers can be costly. This is another good conversation for your accountant.
+
+@box example | Marcus Builds a System
+Marcus noticed that he spent nearly an hour a day answering texts about pricing and availability. He created an online booking page with his flat-rate menu, wrote five saved text replies, and set up automatic appointment reminders. He got back about five hours a week — time he now uses to take two more paid jobs.
+@end
+
+@worksheet Chapter 15: Standard Operating Procedure Template | Document one process at a time.
+@fieldrow Process name ; Last updated
+@field When this process is used:
+@field Tools and materials needed:
+@table Step | Instructions | Quality Check ; 10 ; numbered
+@field Common mistakes to avoid:
+@lines 2
+@end
+
+@worksheet Chapter 15: Weekly Time-Blocking Plan | Protect time for every part of your business.
+@table Time Block | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday ; rows: Morning / Midday / Afternoon / Evening
+### Tasks I Could Delegate or Automate
+@table Task | Hours Per Week | Automate or Delegate? | Tool or Person ; 5
+@end
+
+@actions
+Write SOPs for your three most repeated tasks.
+Save templates for your five most common messages.
+Choose tools that remove repetitive work.
+Create a weekly time-blocking plan.
+@end
+
+@chapter 16 | Growing Beyond the First Sale
+
+The first sale proves your concept. The next goal is consistency.
+
+Ask yourself: *How can this business become easier to buy from?*
+
+## Grow Smart, Not Just Big
+
+There are only a few ways to grow a business:
+
+1. **More customers** — reach new people.
+2. **More purchases per customer** — help customers buy more often.
+3. **Larger purchases** — increase the average order value.
+4. **Better margins** — earn more profit from each sale.
+
+Growth does not always require new customers. Often it starts by serving existing customers better.
+
+@figure fig-growth-levers | Four levers of growth. Pulling more than one creates compounding results.
+
+## Growth Ideas for Makers
+
+- **Product variations** — new sizes, colors, finishes, and personalization options.
+- **Product bundles** — matching sets and gift sets at a slightly better value.
+- **Seasonal offerings** — holiday, wedding season, back-to-school, and graduation designs.
+- **Personalization options** — names, dates, and custom messages often support higher prices.
+- **Wholesale and consignment** — placing products in local shops.
+- **Custom and commission work** — premium projects for customers who want something unique.
+- **Workshops and classes** — teach your craft in person or online.
+- **Digital products** — patterns, plans, templates, or tutorials based on your expertise.
+
+## Growth Ideas for Service Providers
+
+- **Recurring plans** — monthly or seasonal maintenance at a predictable price.
+- **Add-on services** — related services offered during the same visit.
+- **Premium packages** — faster scheduling, extra care, or extended guarantees.
+- **New service areas** — expand to nearby neighborhoods or remote clients.
+- **Partnerships** — steady referrals from businesses with the same customers.
+- **Products** — sell related supplies, kits, or branded items.
+- **Team growth** — bring in help to take more jobs simultaneously.
+
+## Raise Your Prices
+
+As your skills, reputation, and demand grow, your prices should grow too. If you are consistently sold out or fully booked, your prices are too low. Raise prices in reasonable steps, communicate them in advance to loyal customers, and pay attention to the results. Most businesses lose far fewer customers than they fear — and earn more for less work.
+
+## Listen to Your Customers
+
+Your customers will tell you how to grow. Notice the requests that come up again and again. Ask your best customers what else they wish you offered. Then test new ideas with a small batch or a pilot before you fully commit — the same validation process you learned in Chapter 2.
+
+@box example | Maya's Bundle
+Customers kept asking Maya for a matching mailbox number. She created a "Curb Appeal Set" — her address sign plus a small matching mailbox plaque — priced at $119. One in three customers now chooses the set, raising her average order value by more than 10%.
+@end
+
+@worksheet Chapter 16: Growth Planner | Brainstorm ideas for every growth lever.
+@table Growth Lever | Ideas | Cost to Test | Priority (1–5) ; rows: More customers / More frequent purchases / Larger purchases / Better margins
+### My Next Three Growth Experiments
+@table Experiment | Start Date | How I'll Measure Success | Result ; 3 ; numbered
+@end
+
+@actions
+Identify one idea for each of the four growth levers.
+Create one bundle, package, or recurring plan.
+Review your prices and plan your next increase.
+Ask five customers what else they wish you offered.
+@end
+
+@chapter 17 | Mistakes Every Entrepreneur Should Avoid
+
+Every business makes mistakes. The goal is not perfection. The goal is learning.
+
+Here are the most common mistakes new makers and service providers make — and how to avoid them.
+
+@figure fig-mistakes | The ten most common early mistakes — and the habit that prevents each one.
+
+1. **Underpricing.** Charging too little attracts difficult customers, leaves no room for growth, and burns you out. *Fix:* Use the pricing calculators in Chapter 3 and include your time, overhead, and profit.
+
+2. **Poor communication.** Slow replies and silence during delays destroy trust faster than almost anything. *Fix:* Use templates and reply within one business day.
+
+3. **Ignoring customer feedback.** Customers tell you what to fix and what to create next. *Fix:* Read every review and record repeated themes.
+
+4. **Launching too many products or services at once.** It spreads your time, money, and marketing too thin. *Fix:* Master one offer, then expand.
+
+5. **Waiting for perfection.** Perfectionism is often fear in disguise. *Fix:* Launch at the Minimum Launch Standard and improve from there.
+
+6. **Mixing personal and business money.** It hides the truth about profit and creates tax headaches. *Fix:* Open a separate business account immediately.
+
+7. **Not setting aside taxes.** A large, unexpected tax bill can sink a young business. *Fix:* Set aside a percentage of every payment.
+
+8. **Skipping the basics of protection.** No insurance, no written policies, no agreements. *Fix:* Complete the Business Setup Checklist in Chapter 4.
+
+9. **Inconsistent marketing.** Posting in bursts, then disappearing. *Fix:* Follow a simple weekly rhythm.
+
+10. **Trying to do everything alone forever.** Growth stalls when every task depends on you. *Fix:* Document systems and delegate low-value tasks.
+
+The most successful entrepreneurs learn quickly and adapt constantly.
+
+Failure is information. Use it.
+
+@quote Failure is information. Use it.
+
+@worksheet Chapter 17: Mistake Audit | Be honest. Every "yes" is an opportunity.
+@table Mistake | Am I Making It? (Y/N) | What I Will Change ; rows: Underpricing / Poor communication / Ignoring feedback / Too many offers at once / Waiting for perfection / Mixing personal and business money / Not setting aside taxes / Skipping insurance or policies / Inconsistent marketing / Doing everything alone
+@end
+
+@chapter 18 | From Side Hustle to Sustainable Business
+
+Eventually, a question begins to emerge:
+
+*Could this become my full-time income?*
+
+The answer depends on consistency.
+
+Not excitement. Not hope. Not one unusually good month.
+
+## Look for Evidence
+
+A business becomes sustainable when it continues performing well over time. Look for:
+
+- **Stable sales** for at least six to twelve months
+- **Positive cash flow** after paying yourself
+- **Repeat customers** and referrals
+- **Predictable demand**, including an understanding of your slow seasons
+- **Capacity** — the ability to produce or deliver enough to replace your income
+
+## Do the Math
+
+Calculate the business profit you would need to replace your current income. Remember that, as a self-employed person, you may need to cover expenses your employer currently pays for, such as health insurance, retirement contributions, and the employer share of payroll taxes, and you will not have paid time off.
+
+**Required monthly profit = Personal monthly expenses + Health insurance + Retirement savings + Taxes + Buffer**
+
+Then compare that number with what your business actually produces — on average, over many months, not just your best month.
+
+@figure fig-transition | The transition path. Build a runway of savings and steady profit before you make the leap.
+
+## Build a Runway
+
+Before leaving a job, build a financial cushion. Many advisors suggest having six months or more of personal living expenses saved, in addition to a separate business reserve. The larger your runway, the calmer your decisions will be.
+
+## Transition Gradually
+
+The leap doesn't have to be a leap. Consider stepping down gradually: reduce your hours at your job, take a part-time position, or set a specific trigger, such as *"When my business averages $4,000 in monthly profit for six consecutive months, I will give notice."*
+
+Patience is a competitive advantage. Those willing to build steadily often outperform those seeking quick results.
+
+@box example | Marcus Makes the Move
+Eighteen months after his first paid job, Marcus's business has produced steady profit for nine straight months, with a waiting list of customers and two referral partners. He has six months of personal expenses saved. He reduces his day job to three days a week, hires a part-time helper, and sets a date to go full time six months later — on his own terms.
+@end
+
+@worksheet Chapter 18: Full-Time Readiness Assessment | Answer honestly, using real numbers.
+@table Readiness Measure | Current Status | Ready? (Y/N) ; rows: Months of stable sales / Average monthly profit (last 6 months) / Profit needed to replace my income / Repeat customer percentage / Months of personal expenses saved / Business cash reserve / Health insurance plan / Capacity to meet demand / Support from family
+### Income Replacement Calculation
+@field Personal monthly expenses: $
+@field Health insurance (monthly): $
+@field Retirement savings (monthly): $
+@field Taxes (estimated monthly): $
+@field Buffer: $
+@field Required monthly profit: $
+@field My transition trigger:
+@lines 2
+@end
+
+@actions
+Calculate the monthly profit you need to replace your income.
+Track six to twelve months of real performance.
+Build a personal runway and a business reserve.
+Write your transition trigger.
+@end

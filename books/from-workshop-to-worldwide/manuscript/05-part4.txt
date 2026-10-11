@@ -1,0 +1,268 @@
+@part Four | Customers and Marketing | Find your first customers, market consistently, and deliver an experience people talk about. | fig-part-customers
+
+@chapter 11 | Finding Your First Customers
+
+Your first customers are the hardest to obtain.
+
+Your tenth customer is easier. Your hundredth customer is easier still.
+
+Momentum matters.
+
+@figure fig-circles | Start with the people closest to you and work outward. Each circle opens the next.
+
+## Start With Your Existing Network
+
+Friends, family members, coworkers, neighbors, church or club members, local groups, and social media followers all represent potential supporters. They may not all buy, but many will share, recommend, and cheer you on.
+
+Many entrepreneurs feel uncomfortable promoting themselves. That reluctance is natural.
+
+However, if you genuinely believe your product or service provides value, sharing it is not selfish.
+
+It is service.
+
+People cannot buy what they do not know exists.
+
+## Make a List of 50
+
+Write down fifty people you know. Next to each name, write whether they might buy, might refer someone, or might simply share your post. Then contact them personally — not with a mass message, but one at a time.
+
+A personal message works far better than a public post:
+
+*"Hi Jenna! I wanted you to be one of the first to know — I've officially started a business making personalized cedar signs. I'd love for you to take a look, and if you know anyone who's moved into a new home recently, I'd be so grateful if you passed it along."*
+
+## Go Where Your Customers Gather
+
+Return to your ideal customer description from Chapter 2. Where do they spend time?
+
+- **Online communities** — local Facebook groups, Nextdoor, Reddit communities, hobby forums. Be helpful first. Follow each group's rules about promotion.
+- **Local events** — craft fairs, farmers' markets, school fundraisers, community festivals, home shows.
+- **Complementary businesses** — gift shops, coffee shops, real estate agents, wedding planners, hardware stores, property managers.
+
+## Use Direct Outreach for Services
+
+Service businesses can grow quickly with simple, respectful outreach:
+
+- Introduce yourself to five businesses whose customers need your service, and leave a card or a flyer.
+- Offer real estate agents and property managers a dependable person for move-in and move-out tasks.
+- Ask every satisfied customer, "Do you know anyone else who could use help with this?"
+- Post a helpful tip in a neighborhood group with a before-and-after photo.
+
+## Turn Customers Into Referrals
+
+Your best marketing department is your list of happy customers. Make referrals easy:
+
+- Include two business cards in every order or leave two after every job — one to keep and one to share.
+- Offer a simple referral thank-you, such as a discount on the next order for both the customer and the friend they refer.
+- Follow up after the purchase and ask how everything is going. Happy customers often offer referrals without being asked.
+
+@box tip | The Follow-Up Is Where the Money Is
+Most small businesses never follow up with past customers. A short, friendly message thirty days after a purchase — "How is the sign holding up?" or "How's the new bookshelf?" — generates reviews, repeat purchases, and referrals at almost no cost.
+@end
+
+@worksheet Chapter 11: My First 50 | Who will you personally tell about your business?
+@table # | Name | Buy / Refer / Share | Contacted? ; 25 ; numbered
+@end
+
+@worksheet Chapter 11: Where My Customers Gather | Plan where you will show up.
+@table Place (online or local) | What I Will Do There | Date ; 8
+### Referral Partners
+@table Business | Contact Person | Why Their Customers Need Me | Contacted? ; 5
+@end
+
+@actions
+List fifty people you know and contact them personally.
+Join three places where your ideal customers gather.
+Contact five potential referral partners.
+Create a simple referral thank-you offer.
+@end
+
+@chapter 12 | The Power of Consistent Marketing
+
+Marketing is not manipulation. Marketing is communication.
+
+Your goal is simply to show people what you do.
+
+Many makers and service providers disappear into their workshops — or into their workdays — and assume great work will automatically attract customers.
+
+Unfortunately, markets do not work that way.
+
+Visibility creates opportunity. Consistency creates visibility.
+
+## You Don't Need to Be a Content Creator
+
+You do not need to become a full-time content creator. You simply need to regularly show:
+
+- **What** you make or do
+- **How** you make it or do it
+- **Why** you make it or do it
+
+Customers enjoy seeing craftsmanship. The process often sells as effectively as the product.
+
+## The Four Content Pillars
+
+When you don't know what to post, choose one of these four pillars. Rotate through them, and you'll never run out of ideas.
+
+@figure fig-content-pillars | Four content pillars. Rotate through them and you'll always have something meaningful to share.
+
+1. **Show** — finished products, completed jobs, before-and-after photos.
+2. **Process** — behind the scenes, time-lapse videos, your workshop, your tools, your materials.
+3. **Teach** — tips, care instructions, how-to advice, common mistakes to avoid.
+4. **Connect** — your story, customer stories and reviews, milestones, lessons learned, and the people behind the business.
+
+## Pick One Platform and Show Up
+
+It is better to post three times a week on one platform than once a month on five. Choose the platform where your ideal customers spend time:
+
+- **Instagram and Pinterest** — visual products, home décor, jewelry, art, food.
+- **Facebook** — local customers, community groups, and older audiences.
+- **TikTok and YouTube Shorts** — process videos and personalities.
+- **Google Business Profile posts** — local services.
+- **LinkedIn** — business-to-business and professional services.
+
+## Build an Email List
+
+Email remains one of the most effective — and least expensive — ways to reach customers, because you own the list. Social platforms can change their algorithms overnight. Your email list stays yours.
+
+Collect emails at checkout, at craft fairs, on your website, and after service jobs (with permission). Then send a simple, friendly email once or twice a month: a new product, a seasonal reminder, a helpful tip, or a behind-the-scenes story.
+
+## Reviews and Testimonials
+
+Reviews are marketing that customers write for you. After every positive experience, ask for a review on the platform that matters most — your marketplace shop or your Google Business Profile. Share your best reviews (with permission) in your posts and on your website.
+
+Respond to every review, positive or negative, politely and promptly. A calm, helpful response to a negative review often builds more trust than a page full of perfect ratings.
+
+## Paid Advertising — Later
+
+Paid ads can amplify what already works. They rarely fix what doesn't. Wait until you have proven offers, good photos, strong reviews, and a clear idea of your profit per sale. Then start small, test one ad at a time, and track every dollar.
+
+## Create a Simple Marketing Rhythm
+
+Consistency beats intensity. A simple weekly rhythm might be:
+
+- **Monday** — share a finished product or completed job (Show)
+- **Wednesday** — share a behind-the-scenes clip (Process)
+- **Friday** — share a tip or a customer review (Teach or Connect)
+- **Once a month** — send an email to your list
+
+Batch your content: take photos and short videos while you work, then schedule a week's posts in a single sitting.
+
+@box example | Marcus Shows His Work
+Marcus doesn't enjoy social media, so he keeps it simple. After each job he takes one before-and-after photo, and every Monday he posts the best one to his Google Business Profile and his neighborhood group with a two-sentence caption. Within three months, his profile has 31 five-star reviews, and new customers often tell him, "I've been seeing your posts."
+@end
+
+@worksheet Chapter 12: Content Idea Bank | Fill each pillar with at least five ideas.
+@table Show | Process | Teach | Connect ; 6
+@end
+
+@worksheet Chapter 12: 4-Week Content Calendar | Plan one month of consistent marketing.
+@table Week | Day 1 Post | Day 2 Post | Day 3 Post | Email? ; rows: Week 1 / Week 2 / Week 3 / Week 4
+@field My main platform:
+@field My posting days and times:
+@field How I collect email addresses:
+@end
+
+@actions
+Choose one main marketing platform.
+Fill your content idea bank with twenty ideas.
+Plan four weeks of content and schedule it.
+Start an email list and ask every happy customer for a review.
+@end
+
+@chapter 13 | Shipping and the Customer Experience
+
+The purchase experience does not end when payment is received.
+
+It ends when the customer receives the product — or when the job is finished and the customer is happy.
+
+Everything in between is part of what they are paying for.
+
+@figure fig-journey | The customer journey. Every stage is a chance to earn trust — or lose it.
+
+## For Makers: Pack It Like It Matters
+
+A damaged shipment can destroy weeks of effort. Protect products properly.
+
+@figure fig-packaging | Protective packaging in layers: a sturdy box, cushioning, a protected product, and a personal touch.
+
+- **Use sturdy boxes** with at least two inches of cushioning on every side for fragile items.
+- **Wrap the product** in tissue, kraft paper, or bubble wrap, and fill empty space so nothing shifts.
+- **Shake test:** Close the box and shake it gently. If anything moves, add more cushioning.
+- **Add a personal touch:** a handwritten thank-you note, care instructions, and a business card. These small details turn a delivery into an experience.
+- **Seal and label clearly**, and keep a copy of your shipping label.
+
+## Shipping Methods and Costs
+
+Compare carriers — USPS, UPS, FedEx, and regional carriers — for your typical package size and weight. Most marketplaces and e-commerce platforms offer discounted shipping labels. Weigh and measure your packed product before setting shipping prices, since carriers charge for both weight and size.
+
+Decide how you will present shipping costs:
+
+- **Calculated shipping** — the customer pays the exact rate.
+- **Flat-rate shipping** — one simple price for all orders.
+- **Free shipping** — the cost is built into your product price. Many shoppers prefer this, and some marketplaces favor listings that offer it.
+
+## Communicate at Every Step
+
+Customers relax when they know what's happening. Send a message when:
+
+1. The order is received (and when production begins, for custom work)
+2. The order ships, with tracking information
+3. A delay occurs — before the customer has to ask
+4. A few days after delivery, to make sure everything arrived safely
+
+## For Service Providers: The Experience Is the Product
+
+For a service business, customer experience is everything. Customers judge you on far more than the finished work:
+
+- **Response time** — Reply to inquiries quickly, ideally the same day.
+- **Clear quotes** — Explain what is included and what it costs, in writing.
+- **Punctuality** — Arrive in your promised window. If you're running late, call before the window starts.
+- **Respect for the space** — Wear shoe covers, protect floors, and clean up completely.
+- **The final walk-through** — Show the customer the finished work and ask, "Is there anything you'd like me to adjust?"
+- **Easy payment** — Accept cards and digital payments, and send a professional receipt.
+
+## Handling Problems Gracefully
+
+Problems will happen. A package will get lost. A product will arrive damaged. A job will not go perfectly.
+
+How you respond defines your brand far more than the problem itself.
+
+1. **Respond quickly** and acknowledge the problem.
+2. **Apologize** sincerely, without blame or excuses.
+3. **Fix it** — replace, repair, refund, or redo.
+4. **Follow up** to make sure the customer is satisfied.
+5. **Learn** — change the process so it doesn't happen again.
+
+A positive experience often leads to:
+
+- Reviews
+- Repeat customers
+- Referrals
+
+The customer experience is part of the product. Treat it that way.
+
+@quote How you handle a problem defines your brand more than the problem itself.
+
+@worksheet Chapter 13: Shipping & Packaging Plan | For makers.
+@table Product | Packed Weight | Box Size | Packaging Cost | Shipping Cost | Carrier ; 4
+@field Shipping price strategy (calculated / flat / free):
+@field Processing time I promise:
+### Unboxing Experience
+@check Thank-you note
+@check Care instructions
+@check Business card (two — one to share)
+@check Branded sticker or tissue
+@check Review request card
+@end
+
+@worksheet Chapter 13: Customer Experience Map | Make every stage excellent.
+@table Stage | What Happens Now | How I Can Make It Better ; rows: Discover / Inquire or browse / Buy or book / Wait (production or appointment) / Receive or service day / After the sale / Review and referral
+### My Problem-Resolution Policy
+@lines 3
+@end
+
+@actions
+Create a packing process that passes the shake test, or a service-day checklist.
+Choose your shipping strategy and carriers.
+Write messages for each stage of the customer journey.
+Write your problem-resolution policy.
+@end

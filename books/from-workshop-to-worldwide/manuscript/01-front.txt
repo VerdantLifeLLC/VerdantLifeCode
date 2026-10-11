@@ -1,0 +1,119 @@
+@unnumbered Introduction | fig-scene-workshop
+
+Every successful business begins with a simple idea.
+
+Not a business plan. Not a logo. Not a website.
+
+An idea.
+
+Somewhere, a person looks at a problem, a passion, or a skill and asks a simple question:
+
+*"Could I make a living doing this?"*
+
+For most people, the question ends there. For entrepreneurs, it becomes a journey.
+
+The truth is that we live in one of the greatest periods in history to build a business. A woodworker in Washington can sell a handcrafted sign to a customer in Florida. A leatherworker can build a global customer base from a garage workshop. A hobbyist with a 3D printer can reach thousands of buyers without ever opening a storefront. A person who is good at fixing things, organizing closets, tutoring math, editing résumés, grooming dogs, or detailing cars can fill a calendar with paying clients using little more than a phone and a reputation.
+
+For the first time in history, an individual craftsperson or skilled professional can compete with large companies.
+
+Not because they have more money. Not because they have more resources.
+
+But because customers crave authenticity.
+
+People want products with stories. They want products made by real people. They want craftsmanship instead of mass production. And when they hire someone to help them, they want a real person who shows up, cares about the result, and stands behind the work.
+
+@quote Customers are not just buying a thing or a service. They are buying the person behind it.
+
+This book is not about becoming an internet celebrity.
+
+It is not about getting rich overnight.
+
+It is about building a real business — a business built on your skills, your work ethic, and your willingness to create value for others.
+
+## Products, Services, or Both
+
+Throughout this book you will see two kinds of entrepreneurs.
+
+**Makers** create physical products: signs, candles, jewelry, furniture, soap, prints, clothing, pottery, leather goods, 3D-printed parts, baked goods, and a thousand other things.
+
+**Service providers** sell their skills and time: repairs, cleaning, lawn care, photography, tutoring, bookkeeping, pet care, design, coaching, installation, event help, and countless other ways of solving problems for people.
+
+Many of the most resilient small businesses are **both**. The woodworker who sells signs also offers custom installation. The photographer who sells sessions also sells prints. The baker who sells cookies also teaches decorating classes.
+
+The principles in this book apply to all three. Where the steps differ, you will find guidance for each path, marked clearly so you can follow the one that fits you.
+
+## Two Entrepreneurs to Learn From
+
+To make the steps concrete, we will follow two example entrepreneurs throughout the book. They are composites — built from the patterns that show up again and again in real small businesses — and they represent the two paths you might take.
+
+@box example | Meet Maya — The Maker
+Maya works full time and spends her evenings in a small garage workshop. She loves working with cedar and has been making signs as gifts for friends for years. Everyone tells her she should sell them. She has never run a business, and she is not sure where to start.
+@end
+
+@box example | Meet Marcus — The Service Provider
+Marcus is the person his whole neighborhood calls when something breaks. He can hang shelves, assemble furniture, fix a leaky faucet, and patch drywall. He has been helping neighbors for free or for a few dollars. He wonders whether his skills could become a real side business — and maybe someday a full-time one.
+@end
+
+You will see how Maya and Marcus apply each chapter. Their decisions will not be perfect. Neither will yours. That is part of the point.
+
+If you are ready to turn what you make — or what you know how to do — into what you sell, this book will show you how, one step at a time.
+
+@unnumbered How to Use This Book
+
+This is a working book. It is meant to be written in, marked up, dog-eared, and carried to your workbench or your truck.
+
+It is organized into six parts that follow the natural order of building a business:
+
+1. **Foundations** — choosing what to sell, proving that people want it, and understanding the money.
+2. **Making It Real** — setting up your business legally, building a brand, and creating consistent quality.
+3. **Getting Ready to Sell** — choosing where to sell, photographing your work, writing listings, and launching.
+4. **Customers and Marketing** — finding your first customers, marketing consistently, and delivering an experience people talk about.
+5. **Running and Growing** — managing money, building systems, growing, and deciding when to go full time.
+6. **The Entrepreneur's Toolkit** — the 30-Day Launch Plan, the First-Year Success Plan, scorecards, and ready-to-use templates.
+
+@figure fig-book-map | The six parts of this book follow the natural path from idea to sustainable business.
+
+## Each Chapter Follows the Same Pattern
+
+- **The idea** — why the step matters and what successful owners do differently.
+- **The steps** — specific actions, in order.
+- **Product and service notes** — guidance for your specific path.
+- **The worksheet** — decisions you make on paper before you make them with money.
+- **Your action steps** — a short checklist so you know exactly what to do next.
+
+## Do the Worksheets
+
+It is tempting to read straight through and promise yourself you will come back to the exercises later.
+
+Please don't.
+
+Reading creates understanding. Writing creates decisions. A business is built out of decisions.
+
+If you are reading the eBook edition, keep a dedicated notebook beside you and copy each worksheet's questions into it. If you are reading the paperback, write directly on the pages. Use a pencil if you like — your answers will change as you learn, and that is exactly how it should be.
+
+@box tip | A Note on Laws and Taxes
+This book includes general information about business registration, taxes, and insurance, written primarily for readers in the United States. Rules vary by state, county, city, and country, and they change over time. Treat this information as a starting map, not legal or tax advice. When in doubt, a short conversation with a local accountant, attorney, or your Small Business Development Center can save you money and stress.
+@end
+
+@worksheet The Entrepreneur's Declaration | Complete this before you read the rest of the book.
+### Why do I want this business?
+Write your answer in one sentence.
+@lines 3
+### What am I planning to sell?
+@check Products I make
+@check Services I provide
+@check Both
+@lines 2
+### What financial goals am I pursuing?
+@field My first monthly sales goal: $
+@field My first monthly profit goal: $
+@field My 12-month revenue goal: $
+@field Hours per week I can commit:
+### What will success look like one year from today?
+@lines 5
+### What is the biggest fear or obstacle standing in my way?
+@lines 3
+### My commitment
+I commit to completing the worksheets in this book and taking one action toward my business every week.
+@fieldrow Signature ; Date
+@end
