@@ -38,10 +38,8 @@ by **The Skill Junky** · published by **Verdant Life LLC**
 KDP asks whether any content is AI-generated. The manuscript was expanded from the author's original material, and the illustrations and covers were created with an AI assistant (Claude).
 Answer KDP's AI-content questions based on how much you review and edit before publishing.
 
-### Suggested listing details
-- **Categories:** Business & Economics › Small Business; Business & Economics › Entrepreneurship; Crafts & Hobbies › Business (or Home-Based Businesses)
-- **Keywords:** sell handmade products online; start a small business workbook; side hustle to full time; how to price handmade items; Etsy business guide for beginners; start a service business; small business planner worksheets
-- **Description:** Turn what you make, and what you know, into a real business. *From Workshop to Worldwide* is a practical, step-by-step guide for makers and service providers. It shows how to choose the right offer, prove people will pay for it, price for real profit, set up the business legally, photograph and list your work, find your first customers, and grow toward full-time income. It includes 33 worksheets, 10 ready-to-use customer templates, a 30-day launch plan, and a first-year success plan.
+### Listing details
+The description, categories, keywords, and tips for getting the book seen are in [`output/KDP-Listing.md`](output/KDP-Listing.md).
 
 ## Editing and rebuilding
 
