@@ -250,6 +250,52 @@ html,body {{ margin:0; padding:0; width:{W:.4f}in; height:{H:.4f}in; background:
     return html, {"spine_in": spine, "width_in": round(W, 4), "height_in": H, "pages": pages, "ink": ink}
 
 
+# KDP hardcover (case laminate). Values from KDP's hardcover template conventions:
+# 0.591 in (15 mm) wrap on every outer edge, boards 0.197 in wider and 0.236 in taller than the trim,
+# spine = page thickness + 0.189 in for the boards, and a ~0.394 in (10 mm) hinge beside the spine.
+HC_TRIM_W = 8.25
+HC_WRAP, HC_BOARD_W, HC_BOARD_H, HC_SPINE_ADD, HC_HINGE = 0.591, 0.197, 0.236, 0.189, 0.394
+
+
+def hardcover(pages, ink):
+    spine = round(pages * PAPER[ink] + HC_SPINE_ADD, 4)
+    panel = HC_TRIM_W + HC_BOARD_W           # visible board width (back and front)
+    vis_h = TRIM_H + HC_BOARD_H              # visible board height
+    W = 2 * HC_WRAP + 2 * panel + spine
+    H = 2 * HC_WRAP + vis_h
+    fx = HC_WRAP + panel + spine             # front board left edge (at the spine)
+    head_pad = 0.394 + 0.35                  # keep title clear of the hinge
+    geo = front_geometry(panel, vis_h, "in", HC_WRAP, HC_WRAP, HC_WRAP)
+    geo += f".front .head {{ left:{head_pad:.3f}in !important; right:{HC_WRAP + 0.5:.3f}in !important; }}\n"
+    geo += f".front .seal {{ left:{head_pad:.3f}in !important; }}\n"
+    html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
+{FACES}
+@page {{ size:{W:.4f}in {H:.4f}in; margin:0; }}
+html,body {{ margin:0; padding:0; width:{W:.4f}in; height:{H:.4f}in; background:{G}; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
+.sheet {{ position:relative; width:{W:.4f}in; height:{H:.4f}in; overflow:hidden; }}
+{FRONT_CSS}{BACK_CSS}{SPINE_CSS}
+.front {{ left:{fx:.4f}in; top:0; width:{panel + HC_WRAP:.4f}in; height:{H:.4f}in; }}
+{geo}
+.back {{ left:0; top:0; width:{HC_WRAP + panel:.4f}in; height:{H:.4f}in; box-sizing:border-box; padding:{HC_WRAP + 0.75:.3f}in {HC_HINGE + 0.5:.3f}in 0 {HC_WRAP + 0.7:.3f}in; }}
+.bk-pub {{ left:{HC_WRAP + 0.7:.3f}in; bottom:{HC_WRAP + 0.62:.3f}in; }}
+.spine {{ left:{HC_WRAP + panel:.4f}in; top:0; width:{spine:.4f}in; height:{H:.4f}in; }}
+</style></head><body><div class="sheet">{back_html()}{spine_html(spine)}{front_html()}</div>{FIT_JS}</body></html>"""
+    meta = {"spine_in": spine, "width_in": round(W, 4), "height_in": round(H, 4), "pages": pages, "ink": ink, "type": "hardcover",
+            "panel_in": panel, "wrap_in": HC_WRAP, "hinge_in": HC_HINGE}
+    return html, meta
+
+
+def hc_guides_overlay(meta):
+    W, H, s, p, w, hg = meta["width_in"], meta["height_in"], meta["spine_in"], meta["panel_in"], meta["wrap_in"], meta["hinge_in"]
+    r = lambda x, y, ww, hh, c, extra="": f'<rect x="{x}" y="{y}" width="{ww}" height="{hh}" fill="none" stroke="{c}" stroke-width="0.012" {extra}/>'
+    g = [r(w, w, W - 2 * w, H - 2 * w, "#ff00ff"),
+         r(w + p, 0, s, H, "#ff00ff"),
+         f'<rect x="{w + p - hg}" y="0" width="{hg}" height="{H}" fill="#ff0000" fill-opacity="0.18"/>',
+         f'<rect x="{w + p + s}" y="0" width="{hg}" height="{H}" fill="#ff0000" fill-opacity="0.18"/>',
+         f'<rect x="{w + p - hg - 0.25 - 2.0}" y="{H - w - 0.25 - 1.2}" width="2" height="1.2" fill="#ffff00" fill-opacity="0.5"/>']
+    return f'<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0;width:{W}in;height:{H}in;z-index:99" viewBox="0 0 {W} {H}">{"".join(g)}</svg>'
+
+
 def ebook(wpx=1600, hpx=2560):
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 {FACES}
@@ -274,12 +320,20 @@ def guides_overlay(meta):
 
 if __name__ == "__main__":
     pages = int(sys.argv[1])
+    hc_pages = int(sys.argv[2]) if len(sys.argv) > 2 else None
     out = {}
     for ink in ("bw", "color"):
         html, meta = paperback(pages, ink)
+        meta["out"] = f"Cover-Paperback-{'BlackWhiteInterior' if ink == 'bw' else 'ColorInterior'}-{pages}pages.pdf"
         open(os.path.join(HERE, f"_cover-{ink}.html"), "w").write(html)
         open(os.path.join(HERE, f"_cover-{ink}-guides.html"), "w").write(html.replace('</div><script>', guides_overlay(meta) + '</div><script>'))
         out[ink] = meta
+        if hc_pages:
+            html, meta = hardcover(hc_pages, ink)
+            meta["out"] = f"Cover-Hardcover-8.25x11-{'BlackWhiteInterior' if ink == 'bw' else 'PremiumColorInterior'}-{hc_pages}pages.pdf"
+            open(os.path.join(HERE, f"_cover-hc-{ink}.html"), "w").write(html)
+            open(os.path.join(HERE, f"_cover-hc-{ink}-guides.html"), "w").write(html.replace('</div><script>', hc_guides_overlay(meta) + '</div><script>'))
+            out["hc-" + ink] = meta
     open(os.path.join(HERE, "_ebook-cover.html"), "w").write(ebook())
     json.dump(out, open(os.path.join(HERE, "_cover-meta.json"), "w"), indent=1)
     print(json.dumps(out))

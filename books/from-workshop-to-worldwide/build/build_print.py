@@ -244,7 +244,23 @@ def front_matter(fig_src):
 """
 
 
-def build_html(variant, page_reset=1):
+FORMATS = {
+    # name: (trim width, inside margin, outside margin, output file prefix)
+    "paperback": (8.5, 0.875, 0.75, "Interior-Paperback-8.5x11"),
+    "hardcover": (8.25, 0.875, 0.625, "Interior-Hardcover-8.25x11"),
+}
+
+
+def page_css(fmt):
+    w, inside, outside, _ = FORMATS[fmt]
+    css = CSS.replace("size: 8.5in 11in;", f"size: {w}in 11in;")
+    css = css.replace("margin: 0.85in 0.75in 0.85in 0.875in;", f"margin: 0.85in {outside}in 0.85in {inside}in;")
+    css = css.replace("margin-left: 0.75in; margin-right: 0.875in;", f"margin-left: {outside}in; margin-right: {inside}in;")
+    css = css.replace("margin-left: 0.875in; margin-right: 0.75in;", f"margin-left: {inside}in; margin-right: {outside}in;")
+    return css
+
+
+def build_html(variant, page_reset=1, fmt="paperback"):
     blocks = load()
     secs = split_sections(blocks)
     figdir = "svg-gray" if variant == "bw" else "svg-color"
@@ -284,7 +300,7 @@ def build_html(variant, page_reset=1):
             cls = "unnumbered recto" if h["title"] in ("Introduction", "Final Thoughts") else "unnumbered"
         inner = "".join(render_block(b, ctx) for b in s["body"])
         body.append(f'<section class="{cls}{start}" id="{sid}">{head}{inner}</section>')
-    css = CSS.replace("FONTS", "file://" + FONTS).replace("PAGERESET", str(page_reset))
+    css = page_css(fmt).replace("FONTS", "file://" + FONTS).replace("PAGERESET", str(page_reset))
     if variant == "bw":
         css = to_gray(css)
     doc = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{BOOK["title"]}</title>'
@@ -297,14 +313,15 @@ def build_html(variant, page_reset=1):
 
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else "both"
+    fmt = sys.argv[2] if len(sys.argv) > 2 else "paperback"
     os.makedirs(OUT, exist_ok=True)
     for v in (["color", "bw"] if which == "both" else [which]):
         # pass 1 finds where the Introduction lands so it can be numbered page 1
-        doc = HTML(string=build_html(v), base_url=HERE).render()
+        doc = HTML(string=build_html(v, fmt=fmt), base_url=HERE).render()
         k = next(i for i, pg in enumerate(doc.pages) if "introduction" in pg.anchors) + 1
-        html_doc = build_html(v, 2 - k)
-        open(os.path.join(HERE, f"_interior-{v}.html"), "w").write(html_doc)
-        name = "Interior-Paperback-8.5x11-BlackWhite.pdf" if v == "bw" else "Interior-Paperback-8.5x11-Color.pdf"
+        html_doc = build_html(v, 2 - k, fmt)
+        open(os.path.join(HERE, f"_interior-{fmt}-{v}.html"), "w").write(html_doc)
+        name = FORMATS[fmt][3] + ("-BlackWhite.pdf" if v == "bw" else "-Color.pdf")
         doc = HTML(string=html_doc, base_url=HERE).render()
         doc.metadata.title = BOOK["title"]
         doc.metadata.authors = [BOOK["author"]]
