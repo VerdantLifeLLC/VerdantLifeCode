@@ -87,6 +87,7 @@ BOOKS = {
     },
     "book3": {
         "file": "The-Sorcerers-Hollow",
+        "kdp_width": 13.968,   # full cover width KDP asked for (in)
         "pre": "THE SORCERER'S", "main": "HOLLOW", "number": "BOOK THREE",
         "sky": ("#05040c", "#120b22", "#2b1733"), "glow": "#ffcf73", "accent": "#f3d18a",
         "tagline": "Never let a moth in.",
