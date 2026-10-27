@@ -66,6 +66,18 @@ BOOKS = {
                      "The rule of the Harrow women"),
         "next": "Book Four of %s<br/><i>The Sorcerer's Crown</i>",
     },
+    "book4": {
+        "title": "The Sorcerer's Crown",
+        "number": "Book Four",
+        "file": "The-Sorcerers-Crown",
+        "leading": 14.6,  # keeps the interior under KDP's 828-page paperback limit
+        "author": "The Skill Junky",
+        "publisher": "Verdant Life LLC",
+        "dedication": "For everyone who sat with someone at the end,\nand for everyone who left a light on.",
+        "epigraph": ("If the dark comes calling, love, don't you fear.\nThere's a light in the window, and I'm right here.",
+                     "The Lantern Song"),
+        "next": "Book Five of %s<br/><i>The Sorcerer's Dawn</i>",
+    },
 }
 
 # ---------------------------------------------------------------- fonts
@@ -492,7 +504,9 @@ def chapter_flowables(path, num, S, width):
 
 
 def build_pdf(key):
+    global BODY_LEAD
     book = BOOKS[key]
+    BODY_LEAD = book.get("leading", BODY_LEAD)
     S = styles()
     width = PAGE_W - INSIDE - OUTSIDE
     files = sorted(glob.glob(os.path.join(HERE, key, "chapters", "*.md")))

@@ -7,7 +7,7 @@ For each book this writes:
   output/covers/<file>-Front-Cover.jpg           front only, 6 x 9 trim, 300 dpi (2.5:3.75 ratio)
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
-Usage: python3 covers.py [book1|book2|book3] [--paper white|cream] [--width INCHES]
+Usage: python3 covers.py [book1|book2|book3|book4] [--paper white|cream] [--width INCHES]
 
 --width sets the full cover width KDP reports (e.g. 13.984); the spine is
 derived from it instead of from the interior page count.
@@ -103,6 +103,25 @@ BOOKS = {
             "world, the newborn Well when it rises, and the newest light of all: the one Wren is carrying.",
             "Two brothers must learn the hardest thing a smith and a warden can do. "
             "Not forge. Not hold. Make room.",
+        ],
+        "kicker": "The Lattice Chronicles continue.",
+    },
+    "book4": {
+        "file": "The-Sorcerers-Crown",
+        "pre": "THE SORCERER'S", "main": "CROWN", "number": "BOOK FOUR",
+        "sky": ("#06060a", "#15131b", "#2e2617"), "glow": "#ffd27a", "accent": "#f1d68f",
+        "tagline": "Somebody has to say no.",
+        "blurb": [
+            "One thread of the old net is left: the grey Veil at the edge of the world. And it is failing. "
+            "Behind it, the Crowned are waking, nine hundred years asleep in the grey country, and the kindest "
+            "of them is the most dangerous of all.",
+            "Oszric the Gilded King loves everyone. He only wants them safe. Everything he touches turns to "
+            "gold: stopped, kept, forever, with the eyes still moving. And he has walked out into the world "
+            "with his hands open.",
+            "Lex Vey is a father now, and his own father is running out of time. To keep the world from being "
+            "kept, two brothers must cross into a country where one day costs ten at home, find the Key at "
+            "the bottom of everything, and decide who will make its last turn.",
+            "Because whoever turns it goes with what it unwrites.",
         ],
         "kicker": "The Lattice Chronicles continue.",
     },
@@ -517,6 +536,105 @@ def lantern_ring(c, x0, w, y, n, rnd, hexcol):
         c.circle(x, yy, r, stroke=0, fill=1)
 
 
+def veil(c, x0, w, top, hem, rnd):
+    """The Veil coming down like a cloth: soft grey folds with a ragged, lifting hem."""
+    c.saveState()
+    folds = 26
+    for i in range(folds):
+        fx = x0 + w * i / folds
+        fw = w / folds * (1.4 + rnd.random() * 0.8)
+        drop = hem + math.sin(i * 0.9 + rnd.random()) * 12 + (rnd.random() - 0.5) * 10
+        a = 0.05 + rnd.random() * 0.07
+        c.setFillColor(Color(0.72, 0.72, 0.76, alpha=a))
+        p = c.beginPath()
+        p.moveTo(fx, top)
+        p.curveTo(fx + fw * 0.1, (top + drop) / 2, fx - fw * 0.1, drop + 30, fx + fw * 0.05, drop)
+        p.curveTo(fx + fw * 0.4, drop - 6, fx + fw * 0.6, drop + 4, fx + fw, drop + 2)
+        p.curveTo(fx + fw * 0.9, drop + 40, fx + fw * 1.05, (top + drop) / 2, fx + fw, top)
+        p.close()
+        c.drawPath(p, stroke=0, fill=1)
+    # fold highlights
+    for i in range(folds * 2):
+        fx = x0 + w * (i + rnd.random()) / (folds * 2)
+        c.setStrokeColor(Color(0.85, 0.84, 0.86, alpha=0.04 + rnd.random() * 0.05))
+        c.setLineWidth(0.6 + rnd.random() * 1.6)
+        c.line(fx, top, fx + (rnd.random() - 0.5) * 6, hem + rnd.random() * 30)
+    c.restoreState()
+
+
+def grey_crown(c, cx, base, w, accent):
+    """Hesper's crown: plain grey, seven points, nothing set in it."""
+    gold = HexColor(accent)
+    hb = w * 0.15                      # band height
+    sag = w * 0.045                    # the band curves a little, seen from just above
+    tips = [0.34, 0.42, 0.5, 0.58, 0.5, 0.42, 0.34]
+    left = cx - w / 2
+
+    def band_y(x):
+        t = (x - cx) / (w / 2)
+        return -sag * (1 - t * t)
+
+    def outline():
+        p = c.beginPath()
+        p.moveTo(left, base + band_y(left))
+        for i in range(1, 21):
+            x = left + w * i / 20
+            p.lineTo(x, base + band_y(x))
+        for k in range(6, -1, -1):
+            x1, x0 = left + w * (k + 1) / 7, left + w * k / 7
+            tx = (x0 + x1) / 2
+            p.lineTo(x1, base + hb + band_y(x1))
+            p.lineTo(tx, base + hb + band_y(tx) + w * tips[k])
+            p.lineTo(x0, base + hb + band_y(x0))
+        p.close()
+        return p
+
+    c.saveState()
+    c.setLineJoin(1)
+    for lw, a in ((18, 0.05), (9, 0.1), (4, 0.22)):
+        c.setStrokeColor(Color(gold.red, gold.green, gold.blue, alpha=a))
+        c.setLineWidth(lw)
+        c.drawPath(outline(), stroke=1, fill=0)
+    c.setFillColor(HexColor("#5e5c61"))
+    c.drawPath(outline(), stroke=0, fill=1)
+    # facets: the left half of each point catches the light
+    for k in range(7):
+        x0, x1 = left + w * k / 7, left + w * (k + 1) / 7
+        tx = (x0 + x1) / 2
+        ty = base + hb + band_y(tx) + w * tips[k]
+        p = c.beginPath()
+        p.moveTo(x0, base + hb + band_y(x0)); p.lineTo(tx, ty); p.lineTo(tx, base + hb + band_y(tx)); p.close()
+        c.setFillColor(Color(0.62, 0.6, 0.6, alpha=0.55))
+        c.drawPath(p, stroke=0, fill=1)
+    # the band: a lighter strip across its upper half, a shadow beneath
+    p = c.beginPath()
+    p.moveTo(left, base + hb + band_y(left))
+    for i in range(1, 21):
+        x = left + w * i / 20
+        p.lineTo(x, base + hb + band_y(x))
+    for i in range(20, -1, -1):
+        x = left + w * i / 20
+        p.lineTo(x, base + hb * 0.55 + band_y(x))
+    p.close()
+    c.setFillColor(Color(0.7, 0.68, 0.68, alpha=0.35))
+    c.drawPath(p, stroke=0, fill=1)
+    c.setStrokeColor(Color(gold.red, gold.green, gold.blue, alpha=0.9))
+    c.setLineWidth(1.0)
+    c.drawPath(outline(), stroke=1, fill=0)
+    c.restoreState()
+
+
+def rising_gold(c, cx, cy, spread, height, n, rnd, hexcol):
+    """Gold dust lifting on the first wind."""
+    for _ in range(n):
+        t = rnd.random() ** 1.5
+        x = cx + (rnd.random() - 0.5) * spread * (0.4 + t * 1.2)
+        y = cy + t * height
+        r = 0.35 + rnd.random() * 1.0
+        c.setFillColor(rgba(hexcol, 0.12 + (1 - t) * 0.6))
+        c.circle(x, y, r, stroke=0, fill=1)
+
+
 # ---------------------------------------------------------------- typography
 def spaced(c, text, x, y, font, size, fill, tracking=0.0, center=True, shadow=True):
     w = pdfmetrics.stringWidth(text, font, size) + tracking * (len(text) - 1)
@@ -601,6 +719,18 @@ def front_art(c, key, b, x0, W, H, seed):
         # ground
         c.setFillColor(HexColor("#050307"))
         c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.16 + BLEED, stroke=0, fill=1)
+    elif key == "book4":
+        # the Veil coming down, Hesper's grey crown in the gold, the given lanterns on the horizon
+        glow(c, x0 + W * 0.5, H * 0.3, W * 0.75, b["glow"], 0.55)
+        veil(c, x0 - BLEED, W + 2 * BLEED, H + BLEED, H * 0.5, rnd)
+        lattice(c, x0 + W / 2, H * 0.78, W * 1.15, H * 0.4, 26 * W / TRIM_W, 0.08, rnd)
+        mountains(c, x0, W, H * 0.17, [H * 0.07, H * 0.1, H * 0.06, H * 0.09], "#0b0a0f", 0.95, rnd)
+        glow(c, x0 + W * 0.5, H * 0.34, W * 0.36, "#ffe1a0", 0.7)
+        lantern_ring(c, x0 - BLEED, W + 2 * BLEED, H * 0.175, 52, rnd, b["glow"])
+        c.setFillColor(HexColor("#06050a"))
+        c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.17 + BLEED, stroke=0, fill=1)
+        rising_gold(c, x0 + W * 0.5, H * 0.2, W * 0.5, H * 0.34, 320, rnd, "#f5d68e")
+        grey_crown(c, x0 + W * 0.5, H * 0.235, W * 0.5, b["accent"])
     elif key == "book3":
         # the seventh circle, a moth drawn down toward Seren's lamp, the lantern-ring on the horizon
         lattice(c, x0 + W / 2, H * 0.72, W * 1.15, H * 0.5, 26 * W / TRIM_W, 0.16, rnd)
@@ -694,7 +824,7 @@ def spine(c, b, sx, sw, H):
     c.translate(sx + sw / 2, H)
     c.rotate(-90)
     cap = (sw - 4 * margin)
-    num = {"BOOK ONE": "I", "BOOK TWO": "II", "BOOK THREE": "III"}[b["number"]]
+    num = {"BOOK ONE": "I", "BOOK TWO": "II", "BOOK THREE": "III", "BOOK FOUR": "IV"}[b["number"]]
     c.setFillColor(gold)
     c.setFont("Cinzel-Bold", cap * 0.5)
     c.drawCentredString(0.75 * inch, -cap * 0.18, num)

@@ -656,3 +656,18 @@ Antho goes from Lv 90 to about 96, with Hollow ANSWERING and Gale COMMANDING. Wr
 37. **The Last Turn** (Lex). Elric puts on Hesper's crown. "Always second. Let it be nobody's net." He turns the Key. The net offers the crown and the crown says no. The Veil unwrites. Caddoc nods ("Hesper's") and falls with the thread. Elric goes. The Key breaks into bow, bit and blade, and Lex keeps them. Lex Lv 99.
 38. **Lantern Night** (Wren). Lark's first birthday. Lanterns everywhere. In the west the Veil comes down like a cloth. WORLD NOTICE: THE VEIL HAS FALLEN. The brothers come up out of the pool.
 - **Epilogue: The Edge of the World.** Oszric at the edge as the grey country and the world touch; the dust-dead drift; Ysenne with Rhosyn in glass chains. He steps onto green grass. At Harrow, Lex says good morning to the fire. It is glad. Lark babbles at it, and for a moment it almost sounds like words.
+
+### 11.4 Book Four — as finished (supersedes 11 to 11.3 where they differ)
+- **Time:** one day in the Outer Court is ten days in the world. The brothers cross at Midsummer and come home at dawn on Lantern Night. The reveal is in Ch 28.
+- **Oszric in the world:** he walks east slowly, visiting villages and offering to keep people. He follows Wren around the high country, then returns to Harrow. He knocks at the blue door (Ch 29) and takes tea (Ch 32). Seren gives him the lopsided white cup, and it goes gold. Lark's first word is "No", said to him.
+- **Arion** dies two nights before Lantern Night with Oszric in the room. The Ferryman comes for Arion and tells Oszric: "Not you... your punishment, not mine."
+- **Ember** pays its love for Lex for Seren's memories of Arion (Ch 33) and becomes the gold flame in the Ferryman's lantern. Seren remembers everything. Arion: "Leave a light on for me." Seren: "Too late."
+- **Arion's ghost** visits Elric in the Knot (Ch 35): "Beside."
+- **The last turn (Ch 37):** Elric, not either brother, wears Hesper's crown, refuses the net's crown ("Not me. Not ever.") and turns the Key, going with the Veil. Caddoc frees the brothers, nods "Hesper's" and steps off into the dark. The Key breaks into bow, bit and blade, which Lex keeps. The crown goes home in the basket ("it might have one more no in it"). The Lockward stays in the Knot. Thread count: 4,106,312 to 4,106,311. Lex is Lv 99.
+- **Rhosyn:** it was her roses, not her words, that gave the party away. She spends her thorns holding the gold servants back, and Ysenne takes her in glass chains (Ch 28). In the Epilogue Ysenne leads her down the white road.
+- **Ysenne** commands Orrin to let the brothers go ("I'm telling you").
+- **The kept** hum one word: *home*. When the Veil falls they walk east into the world. Ilda goes first; the world's snow does not turn gold under her.
+- **The dead** of the Court (the four coloured cousins and thousands of grey) drift east toward Mal on the first wind. They are not yet taken in. That is Book Five.
+- **Ch 38 (Lantern Night):** Lex's horn lantern for Seren is cut TOO LATE (page nine of the letter) and stands lit in the west window.
+- **Final chapter order:** 30 The Crack, 31 Fair Wind, 32 Tea with the Gilded King, 33 A Love for a Love, 34 Quiet, 35 The Grey One, 36 Down, 37 The Last Turn, 38 Lantern Night, 39 Epilogue: The Edge of the World.
+- **Hooks for Book Five:** Oszric in the world, cracked, with the gold cup and Mae's silver-wire crown ("We go and see everyone"). The net still has no Root, and its crown is still lying in the road. Hesper's crown may have one more no in it. The dead are on their way to a Hollow that is still little. Ilda and the nine thousand are walking home. There may be something of Ember in the Harrow hearth fire.

@@ -352,3 +352,54 @@ Files 00–39. The Interlude (file 21) is unnumbered, so Part Two's printed chap
 - **Mal (the Seventh Well, HOLLOW):** lies in the Blightmarch circle (now green). A pool where Duskhold's breach was, with three lights in its middle (Malachi, Aurelian, Kell). Keeper Ivy Moss (HOLLOWKEEPER); guard Silas Hask (DELVEBREAKER Lv 88, grey-lung eased) with Kell's stick, plus Kit and the Coldwater crew.
 - **Gone:** Maelis, Kell, Fenn, eleven Ashari (including Ruhaya) and others (23 at the rim).
 - **Threats:** the Veil has a crack. Oszric the Gilded King is awake; Ysenne, Caddoc and Rhosyn are stirring. They want the Harrow blood, the smith's child and the Key (the Veil is woven into the net, and only the Key can unwrite it). Elric is still holding the Key in the Knot. Hesper's seven-pointed crown is missing: Wenna "took it where it belongs".
+
+---
+
+# BOOK FOUR — running ledger (The Sorcerer's Crown)
+
+Files 00–39. The Interlude (file 20) is unnumbered, so Part Two's printed chapter numbers run one lower than the file numbers (file 21 = Chapter 20). Book Four runs from the end of winter, when Lark is three months old, to the next Lantern Night, her first birthday.
+
+**Time in the Outer Court:** one day there is ten days in the world. This is revealed in Ch 28.
+
+### Part One: The Last Thread (Prologue, Ch 1–19, Interlude)
+- **Prologue (Rhosyn):** The Thorn-Crowned in the Outer Court. Hesper's seven-pointed crown sits on the chair in the tenth tower, inside her thorns. It came thirty-two years ago, carried past her in a long grey hand.
+- **Ch 1–3 (Lex):** The bell rings flat. The gold field at the Veil holds Nan Ashby's son and forty sheep, all kept. Daxian Roole commands the Keepers of the Stones. Rhosyn's rose comes through the crack. The thread runs from the First Knot out to the edge.
+- **Ch 4–8:** Orrin offers the dying "to be kept". The Kept sit gold in their chairs, eyes moving. The Harrow Songs. Ysenne in glass. The Council of Lanterns. The Ferryman tells Antho that crossing needs room carried from Mal, so Ivy makes Hush-cups: each cup is 3 days of room for one person.
+- **Ch 9 (Lex/Hask):** Iron in the Deep. Caddoc rings the thread with iron. Lex reaches Lv 98.
+- **Ch 10–11:** Arion's year. Arion: "I turned back twice. On the steps." Wenna's pan was thrown at his proposal.
+- **Ch 12 (Wren):** Gold Dust. Hollow goes from ANSWERING to SPEAKING: Lex can make "room in front of" gilt before it sets. Tilda's hand and Brannoc's fingertips are gilded.
+- **Ch 13 (Seraphine):** Aurelian's margin note: the Veil's last turn waits until someone on this side can make room.
+- **Ch 14–18:** The Rose. Midsummer Eve. The Night of Glass: Wren's left fingers are gilded. What the Old Man Did. Blood on the Glass. Antho's line to the dead at the edge: "There's a pool in a green field. Full of room. It's still very little."
+- **Ch 19 (Lex):** The Crossing. Harrow blood opens the Veil, and the brothers and Hask go in. Oszric comes out the next day, smelling the Harrow on its edges.
+- **Interlude (Wenna):** Wenna's Fare. Thirty-two years ago, already dying, she paid the Ferryman her memory of Seren's father to carry the crown to the tenth tower.
+
+### Part Two: The Grey Country (Ch 21–38 = printed Ch 20–37, Epilogue)
+- **Ch 21–23:** The White Road. The nine thousand kept line it, humming one note: *home*. Oszric walks into the world. Roole is kept at the Greyfall east gate with his staff held crosswise. Pim makes the gilded spit-girl ILDA (about eight) cry and say "mam", and promises to come back when the pool is big.
+- **Ch 24–26:** The Glass Palace (Ysenne). Seren finishes the 21 letters. The Thorn Garden: Rhosyn does not betray them.
+- **Ch 27 (Lex):** The Tenth Tower. Antho lifts Hesper's crown and leaves Seren's stone on the chair.
+- **Ch 28 (Lex):** The Iron Road. Rhosyn gives all her thorns to hold back the gold servants, and Ysenne chains her in glass. The 10:1 reveal.
+- **Ch 29 (Seren):** The Knock. Oszric at the blue door. "I'll come back. For tea."
+- **Ch 30 (Antho):** The Crack. Hask is gilded to the elbow. A coin of gold sits on Antho's left hand.
+- **Ch 31 (Wren):** Fair Wind.
+- **Ch 32 (Lex):** Tea with the Gilded King. Seren gives Oszric the lopsided white cup (Brannoc made the handle wrong), and it goes gold. "Nobody's ever made me anything." His father died of a wasting thing over a year, with Cad (aged eleven) holding his hand, while Oszric stood outside the door. Arion: "You should have gone in. He'd have liked you there." Arion dies two nights before Lantern Night with Oszric present. The Ferryman comes and tells Oszric: "Not you... your punishment, not mine."
+- **Ch 33 (Seren):** A Love for a Love. Ember pays its love for Lex for Seren's memories of Arion. Ember becomes the gold flame in the Ferryman's lantern. Seren remembers everything. Arion: "Leave a light on for me." Seren: "Too late." Eighteen letters are in the box; the last three are in Seren's drawer.
+- **Ch 34 (Lex):** Quiet. There is no Ember in Lex's head. His panel: Lv 98; Flame and Stone COMMANDING; Tide, Gale and Hollow SPEAKING; Shade and Radiance ANSWERING.
+- **Ch 35 (Elric):** The Grey One. Arion's ghost visits Elric: "Beside."
+- **Ch 36 (Lex):** Down to the Knot.
+- **Ch 37 (Lex):** The Last Turn. Elric wears Hesper's crown, refuses the net's crown ("Not me. Not ever.") and turns the Key, and goes with what it unwrites. Caddoc frees the brothers, nods "Hesper's" and steps off into the dark. The Key breaks into bow, bit and blade. Lex keeps the three pieces. The crown goes in the basket ("it might have one more no in it"). The Lockward is left in the Knot. The thread count goes from 4,106,312 to 4,106,311. Lex reaches Lv 99 ("He let someone else go first."). WORLD NOTICEs: THE KEY OF SHADOWS HAS BEEN TURNED FOR THE LAST TIME, and THE VEIL HAS FALLEN.
+- **Ch 38 (Wren):** Lantern Night. The Veil falls at midnight, and a wind smelling of dust and roses comes in. The brothers land at dawn: "It's still her birthday." Seren unwraps Lex's horn lantern, with TOO LATE cut into its base, and Lex sets it lit in the west window. Lark says "No" all night. Her first word, "No", was said to Oszric in Ch 32.
+- **Epilogue (Oszric, then Lex):** The Edge of the World. Oszric carries the gold cup and Mae's silver-wire crown. He feels Hesper's "no" come up the thread and watches the Veil fall like a cloth. Ysenne comes down the white road leading Rhosyn on a glass chain. Rhosyn felt Caddoc fall with the thread, nodding. The nine thousand kept walk east, humming *home*. Ilda steps onto the snow, and the snow does not go gold. The dead rise: the four cousins (bronze, bone, copper and coral) and thousands of grey dust-dead, all drifting east toward Mal. Oszric: "We go and see everyone." He steps into the world; the snow under him goes gold. At Harrow, Lark babbles "Mmo-ning" at the fire, the flames lean toward her, and Lex half hears something small, dry and courteous in the fire.
+
+## Book Four end-state (for Book Five)
+- **Lex:** 26. WORLDFORGER, Tier IV, **Lv 99**, the top of the tier. Flame and Stone COMMANDING; Tide, Gale and Hollow SPEAKING; Shade and Radiance ANSWERING. **No Ember.** Ember paid its love for Lex and is the gold flame in the Ferryman's lantern, though the hearth fire may hold an echo. Holds the Key's three pieces (bow, bit and blade) and Hesper's plain grey crown in the basket. The Lockward is left in the Knot. The net still has no Root. The crown in the road is still there, and he does not want it.
+- **Wren:** MISTWALKER, Gale COMMANDING. Her left fingers are gilded.
+- **Lark:** one year old, born Lantern Night. Dark grey eyes going green, six teeth. She says "No" (first said to Oszric) and is trying "morning".
+- **Antho:** THRESHOLD WARDEN, Hollow ANSWERING, Gale COMMANDING. A coin of gold on his left hand. Keeps the Lantern Keep with Seraphine and Pim.
+- **Seren:** has all her memories of Arion back. The TOO LATE horn lantern stands in the west window at Harrow.
+- **Hask:** gilded to the elbow.
+- **Tilda:** her hand is gilded. **Brannoc:** his fingertips are gilded.
+- **Roole:** kept, at the Greyfall east gate.
+- **Gone:** Arion (buried by the stream at Harrow), Elric (went with the Veil), Caddoc (fell with the thread, nodding), Ember (to the Ferryman).
+- **Lanterns:** 1,113 (Book Three's end count), all lit and given on Lantern Night.
+- **The world:** The Veil has fallen and the edge is open ground. The white road runs from the old edge to the Court's towers (glass, iron, gold, bone). The nine thousand kept walk east into the world, humming *home*; gilt does not spread to the world's snow on its own. The Outer Court's dead (the four coloured cousins and thousands of grey) are drifting east toward Mal, who is still little. Ivy and Pim are on the rim.
+- **The Crowned:** Oszric is in the world with the gold cup and Mae's crown, saying "We go and see everyone". His certainty is cracked. Ysenne is free, with Rhosyn in glass chains. Rhosyn is spent and grey. Orrin is in the Court.
