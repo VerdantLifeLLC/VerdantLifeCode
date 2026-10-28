@@ -671,3 +671,95 @@ Antho goes from Lv 90 to about 96, with Hollow ANSWERING and Gale COMMANDING. Wr
 - **Ch 38 (Lantern Night):** Lex's horn lantern for Seren is cut TOO LATE (page nine of the letter) and stands lit in the west window.
 - **Final chapter order:** 30 The Crack, 31 Fair Wind, 32 Tea with the Gilded King, 33 A Love for a Love, 34 Quiet, 35 The Grey One, 36 Down, 37 The Last Turn, 38 Lantern Night, 39 Epilogue: The Edge of the World.
 - **Hooks for Book Five:** Oszric in the world, cracked, with the gold cup and Mae's silver-wire crown ("We go and see everyone"). The net still has no Root, and its crown is still lying in the road. Hesper's crown may have one more no in it. The dead are on their way to a Hollow that is still little. Ilda and the nine thousand are walking home. There may be something of Ember in the Harrow hearth fire.
+
+---
+
+## 12. BOOK FIVE: THE SORCERER'S DAWN (chapter plan — the last book)
+
+**Setting:** opens at Midwinter, about seven weeks after the Veil fell (Lark is a year and two months old). Part One runs through the winter to the spring equinox. Part Two runs to **Midsummer dawn**, the shortest night, when the door is made and the sun rises over the grey country for the first time in nine hundred years. The Epilogue is six years later. Files 00–39: Prologue, Part One (01–19), Interlude (20, unnumbered), Part Two (21–38), Epilogue (39). Printed Part Two chapter numbers run one lower than file numbers.
+
+**Levels.**
+- **Lex:** WORLDFORGER Lv 99 all book until Ch 31.
+  - Attunements: Tide COMMANDING (Ch 7), Gale COMMANDING (Ch 10), Shade COMMANDING (Ch 12, skipping a stage with Antho beside him), Radiance COMMANDING (Ch 13, learned from Seren: light you give away), Hollow COMMANDING (Ch 23). All seven COMMANDING from Ch 23. Flame offers BECOMING at the forging (Ch 33), and he says no.
+  - Ch 31: **Lv 100.** The net offers TIER V — SOVEREIGN and the crown. He refuses. Class: **SMITH**. Grade: **Common**. Ceiling: none.
+- **Antho:** THRESHOLD WARDEN Lv 96 → 97 (Ch 12) → 98 (Ch 15). Frozen Ch 19–31. Ch 34: Lv 100. He refuses SOVEREIGN and becomes **DOORKEEPER**, Common.
+- **Wren:** MISTWALKER Lv 71 → 72 (Ch 10) → 73 (Ch 18). Frozen. Lv 75 by Ch 37.
+- **The freeze (Ch 19–31):** with Ysenne half-seated at the Heart, the net stops all growth. No experience, no level-ups, and Kindlings show the child only their own face. Panels read YOU ARE WHAT YOU ARE. Attunement is UNTRACKED, so the Wells are not frozen, and the door is of the Wells.
+
+### 12.1 The engine of the book
+- **The open edge.** With the Veil gone, the world and the grey country simply touch. The grey country is a place with all its room drunk away, and now it drinks the world's room through the open edge. **The greying** creeps east about a mile a day:
+  - bread won't rise, seeds won't sprout, eggs won't hatch;
+  - cuts close slowly;
+  - people feel *stopped*.
+
+  The grey dust drifts east on the wind. Lanterns that are *given* slow it (Ch 13), and the freeze speeds it (Ch 19). By Midsummer it is in the birch wood at Harrow.
+- **The dead.** The Outer Court's dead (the four coloured cousins and thousands of grey) drift east to Mal and wait round the rim as columns of dust. **Mal is too little to take them**: "*[...if I let them all in I'll stop...]*". Where they linger the green circle greys.
+- **What the Crowned drank is Mal.** When Caddoc fell with the thread, a heavy cold piece of Mal came home and Mal grew (Ch 3). The three living Crowned (Oszric, Ysenne, Rhosyn) still hold most of what was drunk. Mal can grow big enough only if they **pour it back**, as Hesper did at the Drinking. Pouring back ends deathlessness. Lex's rule: *we don't take it. We ask.*
+- **A door, not a wall.** Malachi's note in the Codex: *Aurelian built a wall because a wall needs one Well. A door needs all seven, and a smith who can hear every one.* The new edge is **forged, not woven**: of the Wells, not the net. It is a threshold that asks, along the whole length of the edge, taught by one physical door standing on the white road where the Veil hung. Through it lies **Mal's room**: for the dead, the way home; for the grey country, room at last. The door is made of:
+  - **leaf:** Old Mag's apple wood (the tree that bloomed in snow);
+  - **threshold:** the cracked Ashbourne Lattice Stone that once told Lex he was a Smith;
+  - **hinges:** the Key's bow, bit and blade, reforged;
+  - **bell:** Malachi's (Hesper's) bell, which rings when someone on the other side is sad;
+  - **latch:** **the crown in the road**, unmade by the one who refused it, so it can say both yes and no;
+  - **paint:** Harrow blue, mixed by Seren.
+
+  Every Well goes into it: Flame (Lex, Kestrel, the Ashari), Stone, Tide (Teo, the Undertow's quench), Gale (Wren, the First Breath), Shade (Antho: the hinge-dark), Radiance (given lanterns; Seren), and Hollow (Mal, Ivy, Pim, Seraphine: the opening itself).
+- **The crown in the road.** The net still has no Root. Its centre, the gold anvil at the Heart (Aurelian's Tomb, across the grey river under the Drowned Country), is empty. **Ysenne** walks into the net through the Lattice Stones, which are glass to her, and goes for the centre. The Root has only ever answered to **Vey blood**, so she needs a Vey hand: Lex, Antho or Lark. Lark is Vey, Harrow and *new*. Half-seated without one (Ch 19), Ysenne can only freeze the net as regent. With Lark's hand she could crown herself: every panel a mirror, every person fixed as what they are now, nothing new ever again.
+- **Endings:**
+  - **Ysenne** has never seen her own face; mirrors show her everyone but herself, and she wants the net to look at her. At the Heart the net reads her: NOT OF THIS NET — NO RECORD. In Rhosyn's eyes she sees herself at last ("Oh. There I am.") and comes apart into glass dust. Rhosyn carries it to Mal.
+  - **Rhosyn** pours back first (Ch 15). She becomes a mortal woman of about forty and plants roses at Harrow.
+  - **Oszric** learns from Old Mag's death (Ch 8), from tea with Seren, from Brannoc and from Lark's *No* that an ending can be borne. His keeping is one grip: he cannot let one go without letting all go, himself included (Ch 17). At Midsummer dawn he puts on Hesper's crown, and **its last no** is no to keeping. Everything kept is unkept:
+    - Roole, Col Ashby, Tilda's hand, Hask's arm, Wren's fingers, Brannoc's fingertips;
+    - the nine thousand, who come apart gently into dust and go home through the door;
+    - Ilda, with her mother.
+
+    Oszric pours back and goes through the door holding Rhosyn's hand ("I went in"). The Ferryman: "*Now you're on my list.*"
+- **Ember.** In the Ferryman's lantern, without its love for Lex (Interlude). Ch 8: at Old Mag's death it greets Lex politely as a stranger. Ch 29: it rows them to the Heart. Ch 36: the Ferryman, with a door at the edge now, sets his lantern down and gives the flame back to the Harrow hearth. "*A love for a love was the price. The rest isn't mine to keep.*" Ember remembers everything except loving Lex, and has to learn it again, as Seren learned Arion. Ch 38: it calls him *Lex* again.
+- **Lark** says *No* to the Root (Ch 30), as she said it to a king.
+
+### 12.2 Chapter plan
+- **Prologue: The Glass Queen** (Ysenne). The night the Veil fell. Rhosyn in glass chains. Ysenne looks into every pane, pool and lantern in the world and in none of them is her own face. The crown in the road. "*I'll need a child.*"
+
+**PART ONE: THE OPEN EDGE**
+1. **Good Morning** (Lex). Midwinter at Harrow. Grief: the grave by the stream, the TOO LATE lantern, the basket (Key pieces, crown). Panel: Lv 99, and the empty place. Elowen's raven: the Kept are walking into the Westmarch, and at Westerling the bread won't rise. Hook: Ivy's message from Mal: the dead are here and it is too little.
+2. **The Bread That Wouldn't Rise** (Lex). Westerling and the old edge with Wren and Elowen. The greying; Seraphine's measure, a mile a day. Nan Ashby and gold Col. The white road and the towers. Fire poured west vanishes like water into sand. Hook: a gold giant came to a farm for tea, asked after everyone's grandmothers and asked the way to Ashbourne.
+3. **The Dead at the Rim** (Antho). Mal's pool: Ivy, Pim, Hask, Kit. The dead round the rim, and the four cousins' names. Mal felt Caddoc's piece come home. What the Crowned drank is Mal. Hook: Pim asks the dead for "the bread-woman", and one grey column bends.
+4. **Seven Wells** (Lex). Council at the Forge. Malachi's note: a door needs seven. Lex's attunements. The plan in three parts: the door, asking the Crowned, the lanterns. Hook: there's a gold giant on the green.
+5. **The King on the Green** (Lex). Oszric beside the cracked Stone. The gold cup. "Cad's gone." Lex asks him to pour back: no, his household would go through the door. Old Mag invites him onto her step. Hook: "Sit with me, lad. When it's time."
+6. **Mist on Glass** (Wren). Ysenne in Caldor's mirrors, showing people themselves; the mirror-gazers. Lark's bathwater: "your daughter is a key." Horn panes; Wren's gold fingers and the bow. Hook: Rhosyn's voice in a puddle: Ysy is going into the Stones.
+7. **The Undertow** (Lex). With Teo. The vow kept. Tide COMMANDING; the quench that remembers. Hook: the bell — Old Mag.
+8. **Ninety-Seven Years** (Lex). Old Mag dies with Oszric holding her hand, not keeping her. The Ferryman, and Ember in the lantern: "*Good evening. Have we met?*" "Still not you." She leaves Lex the apple tree.
+9. **Tea for Two** (Seren). A widow's winter. The grey book's last page. Oszric comes back for tea. The forbidden verse of the Lantern Song. Hook: "Ysy asked me to bring her the child. I haven't said no."
+10. **The First Breath** (Wren). Wren, Lex and Lark in the eye of the storm. Gale COMMANDING. Hook: every Lattice Stone in Caldor opens an eye.
+11. **The Stones Look Back** (Lex). A Kindling that shows a girl only her face. Ysenne in Lex's own panel. Seraphine: she's walking the threads to the Heart, and she needs a Vey hand. Hook: "Your daughter's hands are very square."
+12. **The Hinge** (Antho). The brothers in Shade's starlit dark; grief for their father. Shade COMMANDING; Antho Lv 97. Hook: the green circle is greying.
+13. **One Thousand One Hundred and Thirteen** (Lex). Seren teaches Radiance: give it away. Every Keep lantern carried west and given; Radiance COMMANDING; the grey slows. Hook: Pim has gone west to keep his promise.
+14. **Back Down the White Road** (Pim). Into the open grey country. Ilda, walking. The empty glass palace. Hask's pick finds the fault in Rhosyn's chains. Orrin lets them go. Hook: "Take me to the pool."
+15. **The Rose Goes Home** (Seren). Rhosyn pours back at Mal's pool. Roses round the rim. Mal grows and takes in the cousins and hundreds more. Antho Lv 98. Hook: every glass in the Keep cracks: "*Rosie. What have you done?*"
+16. **The Apple Tree** (Lex). Felling Mag's tree in blossom. Digging up the cracked Lattice Stone. Seraphine's design for the door. Hook: Oszric: "*Ysy says if I bring her the child the net will keep everyone. No doors at all.*"
+17. **What the King Kept** (Oszric). Among his Kept. Roole at the Greyfall gate; he tries to let one go and can't. All or nothing. He says no to Ysenne: his first no.
+18. **The Lantern Line** (Wren). The given lanterns along the grey front. Orrin's grey-storm. Ysenne's first reflections step out of the ice; mist undoes them. Wren Lv 73. Hook: every Stone goes dark.
+19. **The Empty Chair** (Lex). Ysenne reaches the Heart and sits half-crowned. WORLD NOTICE: A CLAIMANT SITS AT THE HEART. THE NET IS STILL. Hook: "*Bring me the child by Midsummer, or I'll keep the whole world exactly as it is.*"
+
+**Interlude (file 20): The Lantern.** Ember in the Ferryman's lantern, crossing with Arion. Arion on the far shore: "*Look after him. You'll like him. You did before.*" Ember begins Volume Three: *The Book of What Is*.
+
+**PART TWO: THE SORCERER'S DAWN**
+21. **Still** (Lex). The world under the freeze. The Wells answer anyway. Midsummer is the deadline. Hook: the latch must say yes and no.
+22. **Rosie** (Rhosyn). A mortal at Harrow: bread, rain, roses on Arion's grave. Hook: "*Ysy can't see herself. She never could.*"
+23. **The Iron of the Key** (Lex). Hinges from bow, bit and blade. Hollow COMMANDING: all seven. Hook: Oszric at the Forge door.
+24. **Brannoc** (Brannoc). The smith and the king: Mattie, outliving people, fingertips. Hook: "*If I let go, I go through that.*"
+25. **Ilda** (Pim). Ilda reaches the pool and her mother's dust, and can't go in while she's kept.
+26. **The Grey at Harrow** (Seren). The grey in the birch wood. The TOO LATE lantern holds the window.
+27. **The Reflections** (Lex). Reflections step out of every glass at the Forge. Lex against himself, crowned. At Harrow, Ysenne's hand comes out of the stream and Lark is gone.
+28. **Through the Glass** (Wren). The Mistwalker walks the glass road after her daughter.
+29. **The River** (Antho). Antho, Lex and Rhosyn at the grey river. The Ferryman rows them free ("I'd like to see how it ends"). Ember, courteous and curious.
+30. **The Heart** (Lex). Ysenne at the gold anvil with Lark. The offer. Wren steps out of the glass. Lark says *No*.
+31. **A Hundred** (Lex). Ysenne gives him the hundredth to tempt him. TIER V — SOVEREIGN: refused. SMITH, Common. He takes the crown out of the road and it is metal in his hand. NOT OF THIS NET. "*Oh. There I am.*" WORLD NOTICE: THE NET BELONGS TO NO ONE. The freeze breaks.
+32. **Midsummer Eve** (Seren). Everyone goes west. Lanterns along the whole edge. Oszric asks Rosie to walk him to the door.
+33. **The Forging of the Door** (Lex). All seven Wells; everyone gives something. Flame offers BECOMING and Lex says no.
+34. **The Doorkeeper** (Antho). Lv 100. SOVEREIGN refused: DOORKEEPER. He opens it.
+35. **The Last No** (Oszric). Hesper's crown on his head. He opens his hand and everything kept goes free. He pours back and goes through.
+36. **Dawn** (Lex). The sun over the grey country. The Ferryman sets his lantern down. Ember comes home. Ilda goes in with her mother. Roole steps out of the gate.
+37. **The Book of What Is** (Lex). Summer. The grey goes back and the west greens. Ember learning him again. Antho and Seraphine go to live by the door.
+38. **Lantern Night** (Wren). Lark's second birthday. "*Good morning, Lex.*"
+- **Epilogue: A Forge, a Child, a Lantern.** Six years on. Lark makes her first lantern and they carry it to the door.
