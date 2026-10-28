@@ -403,3 +403,44 @@ Files 00–39. The Interlude (file 20) is unnumbered, so Part Two's printed chap
 - **Lanterns:** 1,113 (Book Three's end count), all lit and given on Lantern Night.
 - **The world:** The Veil has fallen and the edge is open ground. The white road runs from the old edge to the Court's towers (glass, iron, gold, bone). The nine thousand kept walk east into the world, humming *home*; gilt does not spread to the world's snow on its own. The Outer Court's dead (the four coloured cousins and thousands of grey) are drifting east toward Mal, who is still little. Ivy and Pim are on the rim.
 - **The Crowned:** Oszric is in the world with the gold cup and Mae's crown, saying "We go and see everyone". His certainty is cracked. Ysenne is free, with Rhosyn in glass chains. Rhosyn is spent and grey. Orrin is in the Court.
+
+# BOOK FIVE — running ledger (The Sorcerer's Dawn)
+
+### Part One: The Open Edge (Prologue, Ch 1–19, Interlude)
+- **Prologue (Ysenne):** The night the Veil fell. Rhosyn chained in the hall of the long mirror; Orrin steward. The net turns Ysenne away at the Ashbourne Stone. She sees Lark, and Lark looks back. A green bud appears in Rhosyn's crown.
+- **Ch 1 (Lex):** Midwinter, 49 mornings. Lark (14 months) walks; words: no, mmo-ning, mam, da, ash, gog, hot. Wren's left first two fingers and thumb are gold; Brannoc (65) has gold fingertips. The grave reads ARION VEY / He turned back twice. Elowen's letter: the grey is at Westerling, nine miles in.
+- **Ch 2 (Antho):** 1,113 lanterns (the tin one is Arion's). At the pool: Ivy (16), Pim (about 15), Hask (gold to the elbow), Kit (19). What the Crowned drank is Mal; Caddoc's share came home. "We ask." The bread-woman's column bends: "Ilda?"
+- **Ch 3–5:** Bread won't rise, cuts won't close, fire poured west vanishes. The council at the Forge, and Malachi's note: "A door needs all seven." Volunteers: Teo (18, Tide), Wren (Gale), Antho (Shade), Seren (Radiance), and later Mal (Hollow). Oszric on the green: 412 grandmothers; one hold over nine thousand. Old Mag (96): "Sit with me, lad. When it's time."
+- **Ch 6–8:** Ysenne in Lark's bathwater. The rose message. Tide COMMANDING at the Undertow ("Out. And back."), and the shell, "the turn". Old Mag dies at noon (97); Oszric holds her hand without keeping her. Biscuit the cat goes to Davy Pruett; the tree goes to Lex. The Ferryman: "Still not you... I noticed."
+- **Ch 9–13:** Mag's funeral (Agathe, 93). Ysenne has had no reflection since the pool. Gale COMMANDING (the First Breath); Wren Lv 72. The Stones look back (Posy Tull); Stones covered and chained. Shade COMMANDING ("Every mould is a dark"); Antho Lv 97. Radiance COMMANDING (the HERE lantern given to Nan Ashby); 556 lanterns sent east, 556 west.
+- **Ch 14–15:** Pim, Hask and Kit go west and free Rhosyn (Hask's left-handed pick). Ilda says "Mam". Rhosyn pours back and becomes a mortal woman of about 40; the cousins go into Mal; Antho Lv 98. Seraphine's spectacles shatter: "Rosie. What have you done?"
+- **Ch 16–19:** The apple tree is felled and still blooms; eleven planks. Oszric's first "No" to Ysenne, after Lark's. Lantern line: Ada Fell killed; Wren Lv 73 ("This is what I was"). WORLD NOTICE: A CLAIMANT SITS AT THE HEART / THE NET IS STILL. Deadline Midsummer, 84 days.
+- **Interlude (Ember):** The crossing with Arion, who turns back a third time. Volume Three, *The Book of What Is*.
+
+### Part Two: The Sorcerer's Dawn (Ch 21–38 = printed Ch 20–37, Epilogue)
+- **Ch 21–24:** The frame goes to the green; Tom Pruett builds the leaf; Seraphine is pregnant. Rosie: Ysy wants someone looking back. Hinges forged from bow, bit and blade, quenched in the turn; Hollow COMMANDING (all seven). Brannoc and the King: banked versus kept; "I'll hold it for you." The King leaves holding a white petal.
+- **Ch 25 (Pim):** 61 days. Ilda (gold, 912 years kept) can't enter the pool; the water goes hard under her. Her mother is MAUD ("Maudie"), the palace bread-woman. The bread rises at the pool; the dust comes indoors: "That's happy." 308 kept at the pool, each met by their dead (Jory and his brother). The King practises letting go: Ilda's little finger turns pink and frays. Pim's note to Lex ends "Tell him her name was Maudie."
+- **Ch 26 (Seren):** The grey reaches Harrow in June. TOO LATE holds a ring two yards wide. Seren keeps the grave with light from her own hands. The stream backs up into a mirror pond. STILL HERE is cut under TOO LATE. Lark's face appears in the pond from the Forge yard.
+- **Ch 27 (Lex):** Ysenne's hand at the yard stream marks Lex's wrist white ("Not you"). Lex turns the stream with Stone. The grey reaches Ashbourne two days before Midsummer and goes round the lantern ring, but the mill-pond inside it goes to mirror. Reflections come out of the lantern panes. Lex fights his crowned self and breaks ribs. Antho's dark defeats them. Lark, the only light, goes to the mill-pond and is taken. Rhosyn's palms are cut to the bone. Wren goes down the glass.
+- **Ch 28 (Wren):** The glass road (every kept reflection). The Drowned Country. The Heart: white hall, gold anvil, crown, chair. Lark points at the mist; Wren comes out.
+- **Ch 29 (Antho):** The Ferryman is called. Four cross (Antho, Lex, Rhosyn, Oszric). Hesper's crown goes to Oszric. "Good morning" from Ember, unbidden. The six lanterns in the Drowned Country square are still lit.
+- **Ch 30 (Lex):** YOU ARE WHAT YOU ARE. Lark has no panel. Mal's room lets Lex say "Lark". WILL YOU HOLD IT? "No." A ROOT CAN ONLY BE GIVEN. Lex XP 1,241,000/1,241,000: LEVEL 100.
+- **Ch 31 (Lex):** SOVEREIGN declined. **SMITH, Common, Lv 100, Ceiling NONE.** The crown becomes the latch (NO RECORD); Lark strikes the last blow. Ysenne sees herself in Rhosyn's eyes and comes apart into glass dust; Rhosyn carries it. THE NET BELONGS TO NO ONE; the freeze breaks at Midsummer dawn.
+- **Ch 32 (Seren):** Pim's note reaches Oszric: "Maudie." "Will you ask Rosie if she'll walk me to the door?" The Ashbourne Stone (2,881 Kindlings) is raised: THRESHOLD. 400+ walk the green road west for 19 days. The gold stops spreading from Oszric. At the old edge, Lex says "Here". Malachi's bell rings.
+- **Ch 33 (Lex):** The seven give: Teo, Wren, Antho, Seren, Brannoc, Mal, and Lex (Flame; BECOMING refused). Bell bracket and keeper forged; the latch drops; the wind stops; the edge draws into the frame. Everyone paints; Lark's handprint goes under the latch. A knock.
+- **Ch 34 (Antho):** **DOORKEEPER, Common, Lv 100.** Beyond the door is Mal's room, with the pool at the bottom (Pim waves). The Ferryman comes in and sits. Oszric puts on Hesper's crown: "Walk me to the door."
+- **Ch 35 (Oszric):** The last no. All the gilt goes (Roole, Col Ashby, Brannoc, Tilda, Wren, Antho's coin, Hask). Bet Dale dies. The nine thousand become dust, each met by their dead. Oszric pours back, becomes an old man, and is written on the Ferryman's list ("Good"). At the pool: Ysenne's dust and Mae's crown go in; Hesper's crown goes to Rosie. He dies holding Pim's and Rosie's hands. Orrin follows.
+- **Ch 36 (Lex):** Sunrise; colour returns. WORLD NOTICE: THE EDGE OF THE WORLD IS A DOOR / "Mind the step." Ember is given back. The Ferryman walks east. Ilda and Maudie go in together. Mal: "I'm whole now." Roole walks out of the Court and knocks (11 days).
+- **Ch 37 (Lex):** Sixteen days home. Hedgehog snoring. Ember in Lex's hearth calls him "smith". "Because I love you." Antho and Seraphine live by the door; **ARION "Ari" VEY born in August**. Pim returns Hes's crown; Lark: "Yes."
+- **Ch 38 (Wren):** Lantern Night, Lark's second birthday. The ILDA lantern from Pim. "You've got ash on your nose... Good morning, Lex."
+- **Epilogue (Lex):** Six years on. Lark (8) makes a lantern with YES on the base. Brannoc (71) dies at the door, holding it, and goes to Mattie. The Ferryman returns to sit with him. The door village has the Last House inn (Roole: THE DEAD DRINK FREE). Lex and Wren's second daughter is MATTIE (4).
+
+## Series end-state
+- **Lex:** SMITH, Common, Lv 100, Ceiling none. At the Forge and at Harrow with Wren, Lark and Mattie. Ember lives in the hearth and knows him again.
+- **Wren:** MISTWALKER. Her fingers are flesh; she relearned the bow with both hands.
+- **Lark:** apprentice smith. Makes lanterns. Holds Hes's crown, which has a yes in it.
+- **Antho:** DOORKEEPER, Common, Lv 100. Lives by the door at the end of the road with Seraphine and Ari.
+- **Seren:** at Harrow with the TOO LATE / STILL HERE lantern and Wenna's lamp.
+- **Rhosyn:** mortal, at Mal's pool with Pim and Ivy, growing roses.
+- **Gone:** Old Mag, Ada Fell, Bet Dale, Ysenne, Oszric, Orrin, the nine thousand, and (in the epilogue) Brannoc.
+- **The world:** The net belongs to no one and asks rather than takes. The crown is a latch. The edge of the world is a door into Mal's room, and Mal is whole. The Ferryman has retired.

@@ -7,7 +7,7 @@ For each book this writes:
   output/covers/<file>-Front-Cover.jpg           front only, 6 x 9 trim, 300 dpi (2.5:3.75 ratio)
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
-Usage: python3 covers.py [book1|book2|book3|book4] [--paper white|cream] [--width INCHES]
+Usage: python3 covers.py [book1|book2|book3|book4|book5] [--paper white|cream] [--width INCHES]
 
 --width sets the full cover width KDP reports (e.g. 13.984); the spine is
 derived from it instead of from the interior page count.
@@ -124,6 +124,27 @@ BOOKS = {
             "Because whoever turns it goes with what it unwrites.",
         ],
         "kicker": "The Lattice Chronicles continue.",
+    },
+    "book5": {
+        "file": "The-Sorcerers-Dawn",
+        "pre": "THE SORCERER'S", "main": "DAWN", "number": "BOOK FIVE",
+        "sky": ("#070c22", "#2c2d55", "#d9895a"), "glow": "#ffcf8a", "accent": "#f3d9a0",
+        "tagline": "Somebody has to open the door.",
+        "blurb": [
+            "The Veil has fallen, and the edge of the world is open. Out of the grey country a stillness is "
+            "coming east, a mile a day. Bread won't rise. Cuts won't close. Snow lies like snow in a painting, "
+            "and nothing makes a sound.",
+            "At the heart of the net, in the chair where the Root once sat, the Glass Queen holds every thread "
+            "of it still. She has never told a lie. She has never once seen her own face. And she has a single "
+            "demand: bring her the smith's small daughter by Midsummer, or she lets go and the grey takes "
+            "everything.",
+            "Lex Vey has a Key in three pieces, a cracked Stone, a blooming apple tree, a bell, a pot of blue "
+            "paint, and a note in a dead man's hand: let him make a door. A gold king is sitting on the village "
+            "green, asking how everyone's grandmother died.",
+            "The last book of the Lattice Chronicles. Some things are kept. Some things are finished. And "
+            "a door needs all seven Wells.",
+        ],
+        "kicker": "The final book of the Lattice Chronicles.",
     },
 }
 
@@ -636,6 +657,78 @@ def rising_gold(c, cx, cy, spread, height, n, rnd, hexcol):
 
 
 # ---------------------------------------------------------------- typography
+def dawn_door(c, cx, base, w, h, rnd, accent):
+    """The blue door standing ajar on its threshold at the end of the road, the room behind it full of stars."""
+    c.saveState()
+    # threshold stone
+    c.setFillColor(HexColor("#5a5b62"))
+    c.rect(cx - w * 1.15, base - h * 0.05, w * 2.3, h * 0.05, stroke=0, fill=1)
+    c.setFillColor(HexColor("#3a3b42"))
+    c.rect(cx - w * 1.15, base - h * 0.065, w * 2.3, h * 0.015, stroke=0, fill=1)
+    # frame
+    fw = w * 0.09
+    c.setFillColor(HexColor("#2a1c12"))
+    c.rect(cx - w / 2 - fw, base, w + 2 * fw, h + fw, stroke=0, fill=1)
+    # the room beyond: soft dark with stars
+    c.setFillColor(HexColor("#0a0d24"))
+    c.rect(cx - w / 2, base, w, h, stroke=0, fill=1)
+    for _ in range(40):
+        x = cx - w / 2 + rnd.random() * w
+        y = base + rnd.random() * h
+        c.setFillColor(Color(1, 0.95, 0.85, alpha=0.4 + rnd.random() * 0.6))
+        c.circle(x, y, 0.3 + rnd.random() * 0.7, stroke=0, fill=1)
+    glow(c, cx, base + h * 0.12, w * 0.3, "#ffe3a8", 0.5, steps=20)
+    # the leaf, swung out toward us on its left hinges
+    c.setFillColor(HexColor("#2f5f93"))
+    p = c.beginPath()
+    hx = cx - w / 2
+    p.moveTo(hx, base)
+    p.lineTo(hx, base + h)
+    p.lineTo(hx + w * 0.55, base + h * 1.04)
+    p.lineTo(hx + w * 0.55, base - h * 0.04)
+    p.close()
+    c.drawPath(p, stroke=0, fill=1)
+    # planks and the gold edge of the light
+    c.setStrokeColor(Color(0.1, 0.2, 0.35, alpha=0.6))
+    c.setLineWidth(0.5)
+    for k in range(1, 5):
+        x = hx + w * 0.55 * k / 5
+        c.line(x, base - h * 0.04 * k / 5, x, base + h + h * 0.04 * k / 5)
+    c.setStrokeColor(rgba(accent, 0.9))
+    c.setLineWidth(1.1)
+    c.line(hx + w * 0.55, base - h * 0.04, hx + w * 0.55, base + h * 1.04)
+    # hinges and latch
+    c.setFillColor(HexColor("#111114"))
+    for fy in (0.82, 0.18):
+        c.rect(hx, base + h * fy, w * 0.22, h * 0.025, stroke=0, fill=1)
+    c.setFillColor(rgba(accent, 1))
+    c.circle(hx + w * 0.5, base + h * 0.5, w * 0.025, stroke=0, fill=1)
+    # blossom on the leaf
+    for _ in range(26):
+        x = hx + rnd.random() * w * 0.55
+        y = base + rnd.random() * h
+        c.setFillColor(Color(1, 0.86 + rnd.random() * 0.1, 0.9, alpha=0.85))
+        c.circle(x, y, 0.6 + rnd.random() * 0.8, stroke=0, fill=1)
+    # bell on its bracket
+    by = base + h + fw
+    c.setStrokeColor(HexColor("#111114"))
+    c.setLineWidth(0.9)
+    c.line(cx, by, cx, by + h * 0.05)
+    c.setFillColor(HexColor("#b98a45"))
+    c.circle(cx, by + h * 0.035, w * 0.05, stroke=0, fill=1)
+    c.restoreState()
+    # light spilling out over the threshold
+    glow(c, cx, base - h * 0.02, w * 0.9, "#ffd89a", 0.45, steps=30)
+
+
+def drifting_petals(c, cx, cy, spread, n, rnd):
+    for _ in range(n):
+        x = cx + (rnd.random() - 0.5) * spread
+        y = cy + (rnd.random() - 0.3) * spread * 0.6
+        c.setFillColor(Color(1, 0.88 + rnd.random() * 0.1, 0.92, alpha=0.35 + rnd.random() * 0.5))
+        c.ellipse(x - 1.2, y - 0.6, x + 1.2, y + 0.6, stroke=0, fill=1)
+
+
 def spaced(c, text, x, y, font, size, fill, tracking=0.0, center=True, shadow=True):
     w = pdfmetrics.stringWidth(text, font, size) + tracking * (len(text) - 1)
     sx = x - w / 2 if center else x
@@ -731,6 +824,35 @@ def front_art(c, key, b, x0, W, H, seed):
         c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.17 + BLEED, stroke=0, fill=1)
         rising_gold(c, x0 + W * 0.5, H * 0.2, W * 0.5, H * 0.34, 320, rnd, "#f5d68e")
         grey_crown(c, x0 + W * 0.5, H * 0.235, W * 0.5, b["accent"])
+    elif key == "book5":
+        # the first sunrise over the grey country; the door at the end of the road, the lantern road behind
+        stars(c, x0, H * 0.55, W, H * 0.45, 70, rnd, ymin_frac=0.6)
+        glow(c, x0 + W * 0.5, H * 0.2, W * 0.95, b["glow"], 0.75)
+        glow(c, x0 + W * 0.5, H * 0.2, W * 0.32, "#fff0c8", 0.85)
+        mountains(c, x0, W, H * 0.2, [H * 0.03, H * 0.05, H * 0.025, H * 0.045], "#1a1a2c", 0.9, rnd)
+        c.setFillColor(HexColor("#0b0d16"))
+        c.rect(x0 - BLEED, -BLEED, W + 2 * BLEED, H * 0.2 + BLEED, stroke=0, fill=1)
+        # the road
+        c.setFillColor(HexColor("#1d2a22"))
+        p = c.beginPath()
+        p.moveTo(x0 + W * 0.18, -BLEED)
+        p.lineTo(x0 + W * 0.47, H * 0.2)
+        p.lineTo(x0 + W * 0.53, H * 0.2)
+        p.lineTo(x0 + W * 0.82, -BLEED)
+        p.close()
+        c.drawPath(p, stroke=0, fill=1)
+        for i in range(14):
+            t = i / 14.0
+            yy = H * 0.2 * (1 - t) ** 1.6
+            for side in (-1, 1):
+                xx = x0 + W * 0.5 + side * (W * 0.035 + W * 0.3 * (1 - yy / (H * 0.2)))
+                r = 0.6 + 2.6 * (1 - yy / (H * 0.2))
+                glow(c, xx, yy + r, r * 7, b["glow"], 0.4, steps=8)
+                c.setFillColor(rgba(b["glow"], 0.95))
+                c.circle(xx, yy + r, r, stroke=0, fill=1)
+        lantern_ring(c, x0 - BLEED, W + 2 * BLEED, H * 0.205, 40, rnd, b["glow"])
+        dawn_door(c, x0 + W * 0.5, H * 0.205, W * 0.16, W * 0.32, rnd, b["accent"])
+        drifting_petals(c, x0 + W * 0.56, H * 0.3, W * 0.4, 60, rnd)
     elif key == "book3":
         # the seventh circle, a moth drawn down toward Seren's lamp, the lantern-ring on the horizon
         lattice(c, x0 + W / 2, H * 0.72, W * 1.15, H * 0.5, 26 * W / TRIM_W, 0.16, rnd)
@@ -824,7 +946,7 @@ def spine(c, b, sx, sw, H):
     c.translate(sx + sw / 2, H)
     c.rotate(-90)
     cap = (sw - 4 * margin)
-    num = {"BOOK ONE": "I", "BOOK TWO": "II", "BOOK THREE": "III", "BOOK FOUR": "IV"}[b["number"]]
+    num = {"BOOK ONE": "I", "BOOK TWO": "II", "BOOK THREE": "III", "BOOK FOUR": "IV", "BOOK FIVE": "V"}[b["number"]]
     c.setFillColor(gold)
     c.setFont("Cinzel-Bold", cap * 0.5)
     c.drawCentredString(0.75 * inch, -cap * 0.18, num)

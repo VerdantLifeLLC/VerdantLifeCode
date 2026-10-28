@@ -78,6 +78,18 @@ BOOKS = {
                      "The Lantern Song"),
         "next": "Book Five of %s<br/><i>The Sorcerer's Dawn</i>",
     },
+    "book5": {
+        "title": "The Sorcerer's Dawn",
+        "number": "Book Five",
+        "file": "The-Sorcerers-Dawn",
+        "author": "The Skill Junky",
+        "publisher": "Verdant Life LLC",
+        "dedication": "For everyone who kept a window,\nand for everyone who opened the door.",
+        "epigraph": ("And if you go walking where I can't see,\nLeave a light in the window, love, and come home to me.",
+                     "The Lantern Song"),
+        "end": "THE END",  # final book: no "story continues" page
+        "next": "Here ends %s.<br/><i>Thank you for leaving a light on.</i>",
+    },
 }
 
 # ---------------------------------------------------------------- fonts
@@ -520,7 +532,7 @@ def build_pdf(key):
         total += words
     # back matter
     story += [Marker("recto"), Marker("opener", ""), Spacer(1, 2.6 * inch),
-              Paragraph("THE STORY CONTINUES", S["chnum"]), Spacer(1, 8), Ornament(50), Spacer(1, 10),
+              Paragraph(book.get("end", "THE STORY CONTINUES"), S["chnum"]), Spacer(1, 8), Ornament(50), Spacer(1, 10),
               Paragraph((book.get("next") or ("Book Two of %s<br/><i>The Sorcerer's Legacy</i>" if key == "book1" else
                          "Book Three of %s<br/><i>coming soon</i>")) % SERIES, S["center"])]
     os.makedirs(OUT, exist_ok=True)

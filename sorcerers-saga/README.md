@@ -8,15 +8,16 @@ An epic fantasy LitRPG series about two estranged brothers, Lex and Antho, the h
 | **Book Two: The Sorcerer's Legacy** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Key of Shadows; Part Two: Echoes of the Past) | ~196,000 | 659 |
 | **Book Three: The Sorcerer's Hollow** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: A Light in the Window; Part Two: The Moth and the Flame) | ~200,000 | 713 |
 | **Book Four: The Sorcerer's Crown** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Last Thread; Part Two: The Grey Country) | ~221,000 | 805 |
+| **Book Five: The Sorcerer's Dawn** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Open Edge; Part Two: The Sorcerer's Dawn) | ~196,000 | 735 |
 
-The series is planned as five books and ends with Book Five, *The Sorcerer's Dawn*, outlined in `BIBLE.md` section 9.4 and set up by the Book Four end-state in `CONTINUITY.md`.
+The series is complete in five books. Book Five, *The Sorcerer's Dawn*, ends the Lattice Chronicles; its plan and as-written changes are in `BIBLE.md` section 12, and the series end-state is at the bottom of `CONTINUITY.md`.
 
 ## Files
 
 | Path | What it is |
 |---|---|
-| `book1/chapters/` to `book4/chapters/` | The manuscripts, one Markdown file per chapter |
-| `BIBLE.md` | Series bible: the System's rules, world, characters, secrets, chapter plans (7b is the revised Book Two plan; 9 is the arc for Books Three to Five; 10 to 10c are the Book Three plan and changes; 11 to 11.4 are the Book Four plan and changes) |
+| `book1/chapters/` to `book5/chapters/` | The manuscripts, one Markdown file per chapter |
+| `BIBLE.md` | Series bible: the System's rules, world, characters, secrets, chapter plans (7b is the revised Book Two plan; 9 is the arc for Books Three to Five; 10 to 10c are the Book Three plan and changes; 11 to 11.4 are the Book Four plan and changes; 12 to 12.3 are the Book Five plan and changes) |
 | `CONTINUITY.md` | Running ledger of levels, stats, skills, items and plot facts, chapter by chapter |
 | `ORIGINAL-OUTLINE.md` | The author's original outline both books grew from |
 | `build.py` | Builds the KDP 6 x 9 paperback interiors (PDF) and Word files |
@@ -33,11 +34,13 @@ python3 build.py              # both books, PDF + DOCX
 python3 build.py book2        # one book
 python3 build.py book3        # Book Three (author The Skill Junky, published by Verdant Life LLC)
 python3 build.py book4        # Book Four (same; leading 14.6 to stay under KDP's 828-page limit)
+python3 build.py book5        # Book Five (default leading; final book, back page reads THE END)
 python3 build.py book1 --pdf-only
 python3 covers.py             # covers for both books (white paper)
 python3 covers.py book2 --paper cream
 python3 covers.py book3              # KDP width 13.968 is set in covers.py
 python3 covers.py book4              # spine from the 805-page interior: 14.063 x 9.25 in
+python3 covers.py book5              # spine from the 735-page interior: 13.905 x 9.25 in
 ```
 
 Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
