@@ -113,6 +113,7 @@ BOOKS = {
     },
     "book4": {
         "file": "The-Sorcerers-Crown",
+        "kdp_width_7x10": 16.027,   # full 7 x 10 cover width KDP asked for (in)
         "pre": "THE SORCERER'S", "main": "CROWN", "number": "BOOK FOUR",
         "sky": ("#06060a", "#15131b", "#2e2617"), "glow": "#ffd27a", "accent": "#f1d68f",
         "tagline": "Somebody has to say no.",
@@ -977,8 +978,7 @@ def paperback(key, paper, total_width_in=None, trim="6x9"):
     pages = page_count(key, trim)
     tw, th = TRIMS[trim][0] * inch, TRIMS[trim][1] * inch
     sw = pages * PAPER[paper] * inch
-    if trim == "6x9":
-        total_width_in = total_width_in or b.get("kdp_width")
+    total_width_in = total_width_in or b.get("kdp_width" if trim == "6x9" else "kdp_width_" + trim)
     if total_width_in:
         sw = total_width_in * inch - 2 * (tw + BLEED)
     total_w = BLEED + tw + sw + tw + BLEED

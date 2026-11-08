@@ -42,7 +42,7 @@ python3 covers.py book2 --paper cream
 python3 covers.py book3              # KDP width 13.968 is set in covers.py
 python3 covers.py book4              # spine from the 812-page interior: 14.079 x 9.25 in
 python3 covers.py book5              # spine from the 735-page interior: 13.905 x 9.25 in
-python3 covers.py book4 --trim 7x10  # 7 x 10 wrap from the 738-page interior: 15.912 x 10.25 in
+python3 covers.py book4 --trim 7x10  # 7 x 10 wrap at the KDP-requested 16.027 x 10.25 in (kdp_width_7x10)
 ```
 
 Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
