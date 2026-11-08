@@ -70,7 +70,8 @@ BOOKS = {
         "title": "The Sorcerer's Crown",
         "number": "Book Four",
         "file": "The-Sorcerers-Crown",
-        "leading": 14.6,  # keeps the interior under KDP's 828-page paperback limit
+        "leading": 14.9,  # fills the 812-page target; 14.95+ jumps to 823
+        "pad_even": True,  # 811 + one blank verso = 812
         "author": "The Skill Junky",
         "publisher": "Verdant Life LLC",
         "dedication": "For everyone who sat with someone at the end,\nand for everyone who left a light on.",
@@ -284,6 +285,9 @@ class BookDoc(BaseDocTemplate):
                 else:
                     ins = [PageBreak(), Marker("blank"), PageBreak()] if self.page % 2 == 1 else [PageBreak()]
                 flowables[0:0] = ins
+            elif f.kind == "even":
+                if self.page % 2 == 1:
+                    flowables[0:0] = [PageBreak(), Marker("blank")]
             elif f.kind == "newpage":
                 if not empty:
                     flowables.insert(0, PageBreak())
@@ -535,6 +539,8 @@ def build_pdf(key):
               Paragraph(book.get("end", "THE STORY CONTINUES"), S["chnum"]), Spacer(1, 8), Ornament(50), Spacer(1, 10),
               Paragraph((book.get("next") or ("Book Two of %s<br/><i>The Sorcerer's Legacy</i>" if key == "book1" else
                          "Book Three of %s<br/><i>coming soon</i>")) % SERIES, S["center"])]
+    if book.get("pad_even"):
+        story.append(Marker("even"))  # blank final verso so the page count is even
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, "%s-KDP-6x9-Interior.pdf" % book["file"])
     doc = BookDoc(path, book)
@@ -570,7 +576,7 @@ def build_docx(key):
     pf = normal.paragraph_format
     pf.space_after = Pt(0)
     pf.space_before = Pt(0)
-    pf.line_spacing = Pt(15.2)
+    pf.line_spacing = Pt(book.get("leading", 15.2))
     pf.first_line_indent = Inches(0.22)
     pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     pf.widow_control = True
