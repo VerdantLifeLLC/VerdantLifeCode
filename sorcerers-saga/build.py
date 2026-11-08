@@ -5,6 +5,7 @@ Usage:
     python3 build.py            # both books
     python3 build.py book1      # one book
     python3 build.py book1 --pdf-only
+    python3 build.py book4 --trim 7x10   # 7 x 10 in edition (default trim is 6x9)
 
 Chapter file conventions (book*/chapters/*.md, built in filename order):
   - Optional first line "@@PART <title>" starts a new part on its own right-hand page.
@@ -152,10 +153,32 @@ def with_fallback(text, which, fb):
 
 
 # ---------------------------------------------------------------- page geometry
+# Trim sizes (inches; body type in points). Pick one with --trim; 6x9 is the default.
+# A book's own "leading" override is tuned for 6x9 and only applies there.
+TRIMS = {
+    "6x9": dict(w=6, h=9, inside=0.85, outside=0.6, top=0.8, bottom=0.75, size=11.5, lead=15.2),
+    "7x10": dict(w=7, h=10, inside=0.95, outside=0.7, top=0.85, bottom=0.8, size=12, lead=16),
+}
+TRIM = "6x9"
 PAGE_W, PAGE_H = 6 * inch, 9 * inch
 INSIDE, OUTSIDE = 0.85 * inch, 0.6 * inch
 TOP, BOTTOM = 0.8 * inch, 0.75 * inch
 BODY_SIZE, BODY_LEAD = 11.5, 15.2
+
+
+def set_trim(name):
+    global TRIM, PAGE_W, PAGE_H, INSIDE, OUTSIDE, TOP, BOTTOM, BODY_SIZE
+    t = TRIMS[name]
+    TRIM = name
+    PAGE_W, PAGE_H = t["w"] * inch, t["h"] * inch
+    INSIDE, OUTSIDE = t["inside"] * inch, t["outside"] * inch
+    TOP, BOTTOM = t["top"] * inch, t["bottom"] * inch
+    BODY_SIZE = t["size"]
+
+
+def leading_for(book):
+    t = TRIMS[TRIM]
+    return book.get("leading", t["lead"]) if TRIM == "6x9" else t["lead"]
 
 GREY = Color(0.93, 0.93, 0.93)
 DARK = Color(0.25, 0.25, 0.25)
@@ -522,7 +545,7 @@ def chapter_flowables(path, num, S, width):
 def build_pdf(key):
     global BODY_LEAD
     book = BOOKS[key]
-    BODY_LEAD = book.get("leading", BODY_LEAD)
+    BODY_LEAD = leading_for(book)
     S = styles()
     width = PAGE_W - INSIDE - OUTSIDE
     files = sorted(glob.glob(os.path.join(HERE, key, "chapters", "*.md")))
@@ -542,7 +565,7 @@ def build_pdf(key):
     if book.get("pad_even"):
         story.append(Marker("even"))  # blank final verso so the page count is even
     os.makedirs(OUT, exist_ok=True)
-    path = os.path.join(OUT, "%s-KDP-6x9-Interior.pdf" % book["file"])
+    path = os.path.join(OUT, "%s-KDP-%s-Interior.pdf" % (book["file"], TRIM))
     doc = BookDoc(path, book)
     doc.multiBuild(story)
     pages = doc.page
@@ -561,9 +584,10 @@ def build_docx(key):
     book = BOOKS[key]
     doc = Document()
     sec = doc.sections[0]
-    sec.page_width, sec.page_height = Inches(6), Inches(9)
-    sec.left_margin, sec.right_margin = Inches(0.85), Inches(0.6)
-    sec.top_margin, sec.bottom_margin = Inches(0.8), Inches(0.75)
+    t = TRIMS[TRIM]
+    sec.page_width, sec.page_height = Inches(t["w"]), Inches(t["h"])
+    sec.left_margin, sec.right_margin = Inches(t["inside"]), Inches(t["outside"])
+    sec.top_margin, sec.bottom_margin = Inches(t["top"]), Inches(t["bottom"])
     sec.gutter = Inches(0)
     settings = doc.settings.element
     mirror = OxmlElement("w:mirrorMargins")
@@ -572,11 +596,11 @@ def build_docx(key):
     normal = doc.styles["Normal"]
     normal.font.name = "EB Garamond"
     normal.element.rPr.rFonts.set(qn("w:eastAsia"), "EB Garamond")
-    normal.font.size = Pt(11.5)
+    normal.font.size = Pt(t["size"])
     pf = normal.paragraph_format
     pf.space_after = Pt(0)
     pf.space_before = Pt(0)
-    pf.line_spacing = Pt(book.get("leading", 15.2))
+    pf.line_spacing = Pt(leading_for(book))
     pf.first_line_indent = Inches(0.22)
     pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     pf.widow_control = True
@@ -673,13 +697,18 @@ def build_docx(key):
                     r.italic = b[1] == "error"
                 doc.add_paragraph()
         page_break()
-    path = os.path.join(OUT, "%s-KDP-6x9.docx" % book["file"])
+    path = os.path.join(OUT, "%s-KDP-%s.docx" % (book["file"], TRIM))
     doc.save(path)
     print("Word file -> %s" % os.path.relpath(path, HERE))
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    argv = sys.argv[1:]
+    if "--trim" in argv:
+        i = argv.index("--trim")
+        set_trim(argv[i + 1])
+        del argv[i:i + 2]
+    args = [a for a in argv if not a.startswith("--")]
     keys = args or ["book1", "book2"]
     register_fonts()
     for k in keys:

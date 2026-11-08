@@ -8,6 +8,10 @@ For each book this writes:
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
 Usage: python3 covers.py [book1|book2|book3|book4|book5] [--paper white|cream] [--width INCHES]
+                         [--trim 6x9|7x10]
+
+--trim 7x10 writes only the wrap, as <file>-KDP-7x10-Paperback-Cover.pdf/.png,
+sized from the 7x10 interior (python3 build.py <book> --trim 7x10).
 
 --width sets the full cover width KDP reports (e.g. 13.984); the spine is
 derived from it instead of from the interior page count.
@@ -37,7 +41,8 @@ OUT = os.path.join(HERE, "output", "covers")
 SERIES = "The Lattice Chronicles"
 AUTHOR = "The Skill Junky"
 PUBLISHER = "Verdant Life LLC"
-TRIM_W, TRIM_H = 6 * inch, 9 * inch
+TRIM_W, TRIM_H = 6 * inch, 9 * inch   # reference trim: art and type are designed at 6 x 9
+TRIMS = {"6x9": (6, 9), "7x10": (7, 10)}
 BLEED = 0.125 * inch
 SAFE = 0.375 * inch          # keep live text this far inside the trim
 PAPER = {"white": 0.002252, "cream": 0.0025}   # KDP spine inches per page
@@ -158,8 +163,8 @@ def register_fonts():
     pdfmetrics.registerFont(TTFont("Garamond-Semi", f("EBGaramond-600-normal.ttf")))
 
 
-def page_count(key):
-    pdf = os.path.join(HERE, "output", "%s-KDP-6x9-Interior.pdf" % BOOKS[key]["file"])
+def page_count(key, trim="6x9"):
+    pdf = os.path.join(HERE, "output", "%s-KDP-%s-Interior.pdf" % (BOOKS[key]["file"], trim))
     out = subprocess.run(["pdfinfo", pdf], capture_output=True, text=True, check=True).stdout
     return int([l for l in out.splitlines() if l.startswith("Pages:")][0].split()[1])
 
@@ -967,25 +972,28 @@ def spine(c, b, sx, sw, H):
 
 
 # ---------------------------------------------------------------- outputs
-def paperback(key, paper, total_width_in=None):
+def paperback(key, paper, total_width_in=None, trim="6x9"):
     b = BOOKS[key]
-    pages = page_count(key)
+    pages = page_count(key, trim)
+    tw, th = TRIMS[trim][0] * inch, TRIMS[trim][1] * inch
     sw = pages * PAPER[paper] * inch
-    total_width_in = total_width_in or b.get("kdp_width")
+    if trim == "6x9":
+        total_width_in = total_width_in or b.get("kdp_width")
     if total_width_in:
-        sw = total_width_in * inch - 2 * (TRIM_W + BLEED)
-    total_w = BLEED + TRIM_W + sw + TRIM_W + BLEED
-    total_h = BLEED + TRIM_H + BLEED
+        sw = total_width_in * inch - 2 * (tw + BLEED)
+    total_w = BLEED + tw + sw + tw + BLEED
+    total_h = BLEED + th + BLEED
     os.makedirs(OUT, exist_ok=True)
-    path = os.path.join(OUT, "%s-KDP-Paperback-Cover.pdf" % b["file"])
+    tag = "" if trim == "6x9" else "%s-" % trim
+    path = os.path.join(OUT, "%s-KDP-%sPaperback-Cover.pdf" % (b["file"], tag))
     vector = os.path.join(OUT, "_%s-vector.pdf" % b["file"])
     c = Canvas(vector, pagesize=(total_w, total_h))
     c.setTitle("%s %s — paperback cover" % (b["pre"].title(), b["main"].title()))
     c.setAuthor(AUTHOR)
     c.translate(BLEED, BLEED)        # origin at the trim's bottom-left of the back cover
-    W, H = TRIM_W, TRIM_H
-    back_x, spine_x, front_x = 0, TRIM_W, TRIM_W + sw
-    full_w = 2 * TRIM_W + sw
+    W, H = tw, th
+    back_x, spine_x, front_x = 0, tw, tw + sw
+    full_w = 2 * tw + sw
     c.saveState()
     p = c.beginPath(); p.rect(-BLEED, -BLEED, full_w + 2 * BLEED, H + 2 * BLEED); c.clipPath(p, stroke=0)
     c.translate(-BLEED, -BLEED)
@@ -1018,8 +1026,8 @@ def paperback(key, paper, total_width_in=None):
     c.save()
     os.remove(jpg)
     os.remove(vector)
-    print("%s: %d pages, %s paper, spine %.4f in, cover %.4f x %.4f in -> %s" % (
-        b["main"].title(), pages, paper, sw / inch, total_w / inch, total_h / inch, os.path.relpath(path, HERE)))
+    print("%s %s: %d pages, %s paper, spine %.4f in, cover %.4f x %.4f in -> %s" % (
+        b["main"].title(), trim, pages, paper, sw / inch, total_w / inch, total_h / inch, os.path.relpath(path, HERE)))
     return sw
 
 
@@ -1061,9 +1069,15 @@ def main():
     if "--width" in args:
         width = float(args[args.index("--width") + 1])
         args = [a for a in args if a not in ("--width", args[args.index("--width") + 1])]
+    trim = "6x9"
+    if "--trim" in args:
+        trim = args[args.index("--trim") + 1]
+        args = [a for a in args if a not in ("--trim", trim)]
     register_fonts()
     for key in (args or ["book1", "book2"]):
-        paperback(key, paper, width)
+        paperback(key, paper, width, trim)
+        if trim != "6x9":
+            continue   # the front and Kindle images don't depend on the print trim
         ebook_front(key, 6, 9, 1800, 2700, "Front-Cover")
         ebook_front(key, 6, 9.6, 1600, 2560, "Kindle-Cover")
 

@@ -21,7 +21,7 @@ The series is complete in five books. Book Five, *The Sorcerer's Dawn*, ends the
 | `CONTINUITY.md` | Running ledger of levels, stats, skills, items and plot facts, chapter by chapter |
 | `ORIGINAL-OUTLINE.md` | The author's original outline both books grew from |
 | `build.py` | Builds the KDP 6 x 9 paperback interiors (PDF) and Word files |
-| `output/` | The built books: `*-KDP-6x9-Interior.pdf` (upload-ready interior) and `*-KDP-6x9.docx` (editable) |
+| `output/` | The built books: `*-KDP-6x9-Interior.pdf` (upload-ready interior) and `*-KDP-6x9.docx` (editable), plus `*-KDP-7x10-*` for 7 x 10 editions |
 | `covers.py` | Builds the covers: full-wrap KDP paperback covers (back, spine and front, 0.125 in bleed, spine sized from the interior page count), a 6 x 9 front cover and a 1600 x 2560 Kindle cover |
 | `output/covers/` | The built covers |
 | `fonts/` | EB Garamond, Cinzel and IBM Plex Mono (SIL Open Font License); DejaVu Sans / Sans Mono as glyph fallback (see `DejaVu-LICENSE.txt`) |
@@ -35,15 +35,19 @@ python3 build.py book2        # one book
 python3 build.py book3        # Book Three (author The Skill Junky, published by Verdant Life LLC)
 python3 build.py book4        # Book Four (same; leading 14.9 plus a blank final verso = exactly 812 pages)
 python3 build.py book5        # Book Five (default leading; final book, back page reads THE END)
+python3 build.py book4 --trim 7x10   # Book Four, 7 x 10 edition: 738 pages
 python3 build.py book1 --pdf-only
 python3 covers.py             # covers for both books (white paper)
 python3 covers.py book2 --paper cream
 python3 covers.py book3              # KDP width 13.968 is set in covers.py
 python3 covers.py book4              # spine from the 812-page interior: 14.079 x 9.25 in
 python3 covers.py book5              # spine from the 735-page interior: 13.905 x 9.25 in
+python3 covers.py book4 --trim 7x10  # 7 x 10 wrap from the 738-page interior: 15.912 x 10.25 in
 ```
 
 Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
+
+7 x 10 edition (`--trim 7x10`, Book Four so far): inside 0.95 in, outside 0.7 in, top 0.85 in, bottom 0.8 in, EB Garamond 12/16. Files are named `*-KDP-7x10-Interior.pdf`, `*-KDP-7x10.docx` and `covers/*-KDP-7x10-Paperback-Cover.pdf`; the 6 x 9 files are unchanged.
 
 ## Manuscript conventions
 
