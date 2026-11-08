@@ -72,7 +72,8 @@ BOOKS = {
         "number": "Book Four",
         "file": "The-Sorcerers-Crown",
         "leading": 14.9,  # with the trims in ch21 and ch38: 810 pages
-        "pad_even": True,  # 809 + one blank verso = 810
+        "no_blanks": True,  # KDP upload: no blank pages anywhere
+        "isbn": "9798140949440",
         "author": "The Skill Junky",
         "publisher": "Verdant Life LLC",
         "dedication": "For everyone who sat with someone at the end,\nand for everyone who left a light on.",
@@ -302,7 +303,10 @@ class BookDoc(BaseDocTemplate):
         if isinstance(f, Marker):
             flowables.pop(0)
             empty = self._curPageFlowableCount == 0
-            if f.kind == "recto":
+            if f.kind in ("recto", "even") and self.book.get("no_blanks"):
+                if f.kind == "recto" and not empty:
+                    flowables.insert(0, PageBreak())
+            elif f.kind == "recto":
                 if empty:
                     ins = [] if self.page % 2 == 1 else [Marker("blank"), PageBreak()]
                 else:
@@ -450,7 +454,7 @@ def front_matter(book, S, toc):
     fl = []
     fl += [Spacer(1, 2.2 * inch), Paragraph(book["title"].upper(), S["parttitle"])]
     fl += [Marker("newpage")]
-    fl += [PageBreak(), Marker("blank"), PageBreak()]
+    fl += [] if book.get("no_blanks") else [PageBreak(), Marker("blank"), PageBreak()]
     # title page (recto)
     fl += [Spacer(1, 1.6 * inch), Paragraph(book["title"].upper(), ParagraphStyle(
         "tt", parent=S["parttitle"], fontSize=28, leading=36))]
@@ -467,13 +471,14 @@ def front_matter(book, S, toc):
         "No part of this book may be reproduced in any form without written permission from the publisher, except for brief quotations in reviews.",
         "This is a work of fiction. Names, characters, places and events are products of the author's imagination. Any resemblance to actual persons, living or dead, is coincidental.",
         "First edition.",
+    ] + (["ISBN: %s" % book["isbn"]] if book.get("isbn") else []) + [
     ]
     fl += [Spacer(1, 4.2 * inch)] + [Paragraph(x, ParagraphStyle("cp", parent=S["small"], spaceAfter=7)) for x in cp]
     fl += [PageBreak()]
     # dedication (recto)
     fl += [Spacer(1, 2.4 * inch), Paragraph(inline(book["dedication"]).replace("\n", "<br/>"),
                                             ParagraphStyle("ded", parent=S["center"], fontName="Garamond-Italic", fontSize=12, leading=17))]
-    fl += [PageBreak(), Marker("blank"), PageBreak()]
+    fl += [PageBreak()] if book.get("no_blanks") else [PageBreak(), Marker("blank"), PageBreak()]
     # contents (recto)
     fl += [Paragraph("CONTENTS", S["chtitle"]), Spacer(1, 6), Ornament(40), Spacer(1, 10), toc]
     fl += [Marker("recto")]
@@ -640,6 +645,9 @@ def build_docx(key):
     if book.get("publisher"):
         center("Published by %s." % book["publisher"], 9)
     center("This is a work of fiction.", 9)
+    if book.get("isbn"):
+        center("First edition.", 9)
+        center("ISBN: %s" % book["isbn"], 9)
     page_break()
     center(book["dedication"], 12, italic=True, before=180)
     page_break()

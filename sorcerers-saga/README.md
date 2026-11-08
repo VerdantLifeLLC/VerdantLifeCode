@@ -7,7 +7,7 @@ An epic fantasy LitRPG series about two estranged brothers, Lex and Antho, the h
 | **Book One: The Sorcerer's Reckoning** | Prologue, 40 chapters (Part One: The Awakening; Part Two: The Shadow's Descent) | ~216,000 | 703 |
 | **Book Two: The Sorcerer's Legacy** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Key of Shadows; Part Two: Echoes of the Past) | ~196,000 | 659 |
 | **Book Three: The Sorcerer's Hollow** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: A Light in the Window; Part Two: The Moth and the Flame) | ~200,000 | 713 |
-| **Book Four: The Sorcerer's Crown** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Last Thread; Part Two: The Grey Country) | ~221,000 | 810 |
+| **Book Four: The Sorcerer's Crown** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Last Thread; Part Two: The Grey Country) | ~221,000 | 802 |
 | **Book Five: The Sorcerer's Dawn** | Prologue, 37 chapters, an Interlude and an Epilogue (Part One: The Open Edge; Part Two: The Sorcerer's Dawn) | ~196,000 | 735 |
 
 The series is complete in five books. Book Five, *The Sorcerer's Dawn*, ends the Lattice Chronicles; its plan and as-written changes are in `BIBLE.md` section 12, and the series end-state is at the bottom of `CONTINUITY.md`.
@@ -33,14 +33,14 @@ pip install reportlab python-docx fonttools
 python3 build.py              # both books, PDF + DOCX
 python3 build.py book2        # one book
 python3 build.py book3        # Book Three (author The Skill Junky, published by Verdant Life LLC)
-python3 build.py book4        # Book Four (same; leading 14.9 plus a blank final verso = exactly 810 pages)
+python3 build.py book4        # Book Four (same; leading 14.9, no blank pages, ISBN 9798140949440 = 802 pages)
 python3 build.py book5        # Book Five (default leading; final book, back page reads THE END)
 python3 build.py book4 --trim 7x10   # Book Four, 7 x 10 edition: 736 pages
 python3 build.py book1 --pdf-only
 python3 covers.py             # covers for both books (white paper)
 python3 covers.py book2 --paper cream
 python3 covers.py book3              # KDP width 13.968 is set in covers.py
-python3 covers.py book4 --paper groundwood   # 810 pages: 1.951 in spine, 14.201 x 9.25 in
+python3 covers.py book4 --paper groundwood   # 802 pages: 1.931 in spine, 14.181 x 9.25 in
 python3 covers.py book5              # spine from the 735-page interior: 13.905 x 9.25 in
 python3 covers.py book4 --trim 7x10  # 7 x 10 wrap, 736 pages: 16.022 x 10.25 in (kdp_width_7x10)
 ```
