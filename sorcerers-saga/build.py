@@ -71,8 +71,8 @@ BOOKS = {
         "title": "The Sorcerer's Crown",
         "number": "Book Four",
         "file": "The-Sorcerers-Crown",
-        "leading": 14.9,  # fills the 812-page target; 14.95+ jumps to 823
-        "pad_even": True,  # 811 + one blank verso = 812
+        "leading": 14.9,  # with the trims in ch21 and ch38: 810 pages
+        "pad_even": True,  # 809 + one blank verso = 810
         "author": "The Skill Junky",
         "publisher": "Verdant Life LLC",
         "dedication": "For everyone who sat with someone at the end,\nand for everyone who left a light on.",

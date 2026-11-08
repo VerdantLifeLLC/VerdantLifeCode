@@ -7,7 +7,7 @@ For each book this writes:
   output/covers/<file>-Front-Cover.jpg           front only, 6 x 9 trim, 300 dpi (2.5:3.75 ratio)
   output/covers/<file>-Kindle-Cover.jpg          ebook cover, 1600 x 2560
 
-Usage: python3 covers.py [book1|book2|book3|book4|book5] [--paper white|cream] [--width INCHES]
+Usage: python3 covers.py [book1|book2|book3|book4|book5] [--paper white|cream|groundwood] [--width INCHES]
                          [--trim 6x9|7x10]
 
 --trim 7x10 writes only the wrap, as <file>-KDP-7x10-Paperback-Cover.pdf/.png,
@@ -45,7 +45,8 @@ TRIM_W, TRIM_H = 6 * inch, 9 * inch   # reference trim: art and type are designe
 TRIMS = {"6x9": (6, 9), "7x10": (7, 10)}
 BLEED = 0.125 * inch
 SAFE = 0.375 * inch          # keep live text this far inside the trim
-PAPER = {"white": 0.002252, "cream": 0.0025}   # KDP spine inches per page
+PAPER = {"white": 0.002252, "cream": 0.0025,   # KDP spine inches per page
+         "groundwood": 0.002408}   # from KDP's own 1.777 in spine for 738 pages
 
 BOOKS = {
     "book1": {
@@ -113,7 +114,7 @@ BOOKS = {
     },
     "book4": {
         "file": "The-Sorcerers-Crown",
-        "kdp_width_7x10": 16.027,   # full 7 x 10 cover width KDP asked for (in)
+        "kdp_width_7x10": 16.022,   # KDP asked 16.027 at 738 pages; 736 pages now
         "pre": "THE SORCERER'S", "main": "CROWN", "number": "BOOK FOUR",
         "sky": ("#06060a", "#15131b", "#2e2617"), "glow": "#ffd27a", "accent": "#f1d68f",
         "tagline": "Somebody has to say no.",
