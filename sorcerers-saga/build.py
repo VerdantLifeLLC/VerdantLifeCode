@@ -73,6 +73,8 @@ BOOKS = {
         "file": "The-Sorcerers-Crown",
         "leading": 14.9,  # with the trims in ch21 and ch38: 810 pages
         "no_blanks": True,  # KDP upload: no blank pages anywhere
+        # KDP wants a 0.875 in gutter for 701-828 pages; same text width as 0.85/0.6
+        "margins": (0.9, 0.55),
         "isbn": "9798140949440",
         "author": "The Skill Junky",
         "publisher": "Verdant Life LLC",
@@ -175,6 +177,12 @@ def set_trim(name):
     INSIDE, OUTSIDE = t["inside"] * inch, t["outside"] * inch
     TOP, BOTTOM = t["top"] * inch, t["bottom"] * inch
     BODY_SIZE = t["size"]
+
+
+def margins_for(book):
+    """(inside, outside) in inches: a book's own 6x9 override, else the trim's."""
+    t = TRIMS[TRIM]
+    return book.get("margins", (t["inside"], t["outside"])) if TRIM == "6x9" else (t["inside"], t["outside"])
 
 
 def leading_for(book):
@@ -548,9 +556,10 @@ def chapter_flowables(path, num, S, width):
 
 
 def build_pdf(key):
-    global BODY_LEAD
+    global BODY_LEAD, INSIDE, OUTSIDE
     book = BOOKS[key]
     BODY_LEAD = leading_for(book)
+    INSIDE, OUTSIDE = [m * inch for m in margins_for(book)]
     S = styles()
     width = PAGE_W - INSIDE - OUTSIDE
     files = sorted(glob.glob(os.path.join(HERE, key, "chapters", "*.md")))
@@ -591,7 +600,7 @@ def build_docx(key):
     sec = doc.sections[0]
     t = TRIMS[TRIM]
     sec.page_width, sec.page_height = Inches(t["w"]), Inches(t["h"])
-    sec.left_margin, sec.right_margin = Inches(t["inside"]), Inches(t["outside"])
+    sec.left_margin, sec.right_margin = [Inches(m) for m in margins_for(book)]
     sec.top_margin, sec.bottom_margin = Inches(t["top"]), Inches(t["bottom"])
     sec.gutter = Inches(0)
     settings = doc.settings.element

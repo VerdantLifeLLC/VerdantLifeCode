@@ -45,7 +45,7 @@ python3 covers.py book5              # spine from the 735-page interior: 13.905 
 python3 covers.py book4 --trim 7x10  # 7 x 10 wrap, 736 pages: 16.022 x 10.25 in (kdp_width_7x10)
 ```
 
-Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
+Interior spec: 6 x 9 in trim, no bleed, mirrored margins (inside 0.85 in, outside 0.6 in, top 0.8 in, bottom 0.75 in), EB Garamond 11.5/15.2, chapters open on recto, running heads and folios. Book Four's 6 x 9 edition overrides this for KDP's 701-828-page rule (0.875 in minimum gutter): inside 0.9 in, outside 0.55 in, no blank pages. System panels (`:::system`, `:::root`, `:::error`) are set in IBM Plex Mono.
 
 7 x 10 edition (`--trim 7x10`, Book Four so far): inside 0.95 in, outside 0.7 in, top 0.85 in, bottom 0.8 in, EB Garamond 12/16. Files are named `*-KDP-7x10-Interior.pdf`, `*-KDP-7x10.docx` and `covers/*-KDP-7x10-Paperback-Cover.pdf`; the 6 x 9 files are unchanged.
 
